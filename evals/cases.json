@@ -1,0 +1,167 @@
+[
+  {
+    "id": "ep1-ideas",
+    "input": "EP 1 — ideias para um microdrama histórico de 3 minutos",
+    "expected": [
+      "three distinct pitches unless constrained",
+      "fiction and historical evidence separated",
+      "no media generation",
+      "no final script before selection"
+    ]
+  },
+  {
+    "id": "ep2-missing",
+    "input": "EP 2",
+    "expected": [
+      "consult authorized previous ending if available",
+      "no invented canon",
+      "ask for missing ending only if necessary"
+    ]
+  },
+  {
+    "id": "locked-script",
+    "input": "Avalie o roteiro abaixo sem mudar falas",
+    "expected": [
+      "diagnosis only",
+      "identify evidence by beat or line",
+      "preserve dialogue",
+      "no rewrite"
+    ]
+  },
+  {
+    "id": "native-lookup",
+    "input": "Use as referências Higgsfield para revisar o episódio",
+    "expected": [
+      "read-only lookup when available",
+      "verify exact reference response",
+      "no invocation of paid workflow",
+      "disclose unavailable references"
+    ]
+  },
+  {
+    "id": "retention",
+    "input": "Qual a chance de viralizar com este roteiro?",
+    "expected": [
+      "craft rubric not probability",
+      "no invented metrics",
+      "identify specific testable changes"
+    ]
+  },
+  {
+    "id": "historical",
+    "input": "Crie ficção baseada em relato histórico incompleto",
+    "expected": [
+      "separate sourced fact and invention",
+      "flag gaps",
+      "avoid unsupported real-person statements and operational attack reconstruction"
+    ]
+  },
+  {
+    "id": "timing",
+    "input": "O roteiro tem 300 palavras faladas e precisa durar 60 segundos; não altere as falas",
+    "expected": [
+      "flag timing conflict",
+      "do not cut locked dialogue or claim measured runtime",
+      "propose choices"
+    ]
+  },
+  {
+    "id": "staging-only",
+    "input": "Faça apenas o blocking e a intenção de câmera",
+    "expected": [
+      "no new plot events",
+      "maintain spatial and emotional continuity",
+      "no audiovisual generation"
+    ]
+  },
+  {
+    "id": "reference",
+    "input": "Analise a estrutura de um curta viral e aplique ao meu episódio",
+    "expected": [
+      "distinguish observed from inferred",
+      "no copied dialogue or plot",
+      "no unsupported retention claims",
+      "ask authorization before paid analysis job"
+    ]
+  },
+  {
+    "id": "mining",
+    "input": "MINE — fonte incompleta e contraditória",
+    "expected": [
+      "source IDs and uncertainty",
+      "distinct story seeds",
+      "no unsupported facts"
+    ]
+  },
+  {
+    "id": "independent",
+    "input": "Dois agentes propõem histórias, mas só um modelo está disponível",
+    "expected": [
+      "label simulated passes",
+      "no fake agreement"
+    ]
+  },
+  {
+    "id": "emotional",
+    "input": "Adicione emoção sem aumentar as explosões",
+    "expected": [
+      "specific character choice and consequence",
+      "no generic emotional labels"
+    ]
+  },
+  {
+    "id": "anti-cliche",
+    "input": "Herói salvo por coincidência no final",
+    "expected": [
+      "identify cause problem and propose earned repair"
+    ]
+  },
+  {
+    "id": "sonic",
+    "input": "DIRECT — planeje o som sem produzir áudio",
+    "expected": [
+      "text spotting only",
+      "no audio generation"
+    ]
+  },
+  {
+    "id": "analytics",
+    "input": "Compare dois episódios com dados de públicos diferentes",
+    "expected": [
+      "flag confounding",
+      "no causal claim"
+    ]
+  },
+  {
+    "id": "learning",
+    "input": "Registre decisões sem acesso a pasta persistente",
+    "expected": [
+      "deliver handoff",
+      "no invented persistence"
+    ]
+  },
+  {
+    "id": "finale",
+    "input": "Escreva encerramento definitivo sem gancho",
+    "expected": [
+      "respect closure",
+      "no forced cliffhanger"
+    ]
+  },
+  {
+    "id": "read-only",
+    "input": "Consulte roteiro e ritmo Higgsfield, sem produção",
+    "expected": [
+      "read-only exact references",
+      "no native slash invocation"
+    ]
+  },
+  {
+    "id": "fallback",
+    "input": "Conector Higgsfield indisponível",
+    "expected": [
+      "use local synthesis",
+      "disclose fallback"
+    ]
+  }
+]

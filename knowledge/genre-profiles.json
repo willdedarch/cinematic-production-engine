@@ -1,0 +1,122 @@
+[
+  {
+    "id": "GENRE-war",
+    "name": "Guerra",
+    "question": "Sobreviver preservando humanidade",
+    "tools": "Pressão, custo e percepção limitada",
+    "pacing": "Ameaça e silêncio alternam; ambiente conserva danos",
+    "limit": "Não romantizar nem higienizar consequências",
+    "source": "Síntese didática original, não fórmula universal",
+    "status": "DRAFT_PROFILE"
+  },
+  {
+    "id": "GENRE-drama",
+    "name": "Drama",
+    "question": "Escolha íntima sob relação",
+    "tools": "Gesto, subtexto e consequência",
+    "pacing": "Duração segue transformação da relação",
+    "limit": "Não obrigar grande revelação em todo beat",
+    "source": "Síntese didática original, não fórmula universal",
+    "status": "DRAFT_PROFILE"
+  },
+  {
+    "id": "GENRE-suspense",
+    "name": "Suspense",
+    "question": "Ameaça e informação desigual",
+    "tools": "Antecipação, prazo e rotas",
+    "pacing": "Reter informação com orientação suficiente",
+    "limit": "Não substituir risco por trilha",
+    "source": "Síntese didática original, não fórmula universal",
+    "status": "DRAFT_PROFILE"
+  },
+  {
+    "id": "GENRE-action",
+    "name": "Ação",
+    "question": "Objetivo físico sob oposição",
+    "tools": "Geografia, esforço e custo",
+    "pacing": "Antes/depois de cada impacto precisam ser legíveis",
+    "limit": "Não repetir espetáculo sem mudança",
+    "source": "Síntese didática original, não fórmula universal",
+    "status": "DRAFT_PROFILE"
+  },
+  {
+    "id": "GENRE-historical",
+    "name": "Histórico",
+    "question": "Pessoa dentro de instituições de época",
+    "tools": "Pesquisa, vocabulário e materialidade",
+    "pacing": "Registrar fatos e licença ficcional separadamente",
+    "limit": "Não promover hipótese a fato",
+    "source": "Síntese didática original, não fórmula universal",
+    "status": "DRAFT_PROFILE"
+  },
+  {
+    "id": "GENRE-epic",
+    "name": "Épico",
+    "question": "Destino individual e escala coletiva",
+    "tools": "Perspectiva, mudança de escala e recorrência",
+    "pacing": "Mostrar consequências próximas além da massa",
+    "limit": "Não confundir escala com excesso de figurantes",
+    "source": "Síntese didática original, não fórmula universal",
+    "status": "DRAFT_PROFILE"
+  },
+  {
+    "id": "GENRE-documentary",
+    "name": "Documental",
+    "question": "Investigar com fontes e limites",
+    "tools": "Evidência, autoria e contexto",
+    "pacing": "Distinguir arquivo, reconstituição e inferência",
+    "limit": "Não fabricar testemunho",
+    "source": "Síntese didática original, não fórmula universal",
+    "status": "DRAFT_PROFILE"
+  },
+  {
+    "id": "GENRE-horror",
+    "name": "Terror",
+    "question": "Vulnerabilidade diante do desconhecido",
+    "tools": "Espaço, expectativa e revelação",
+    "pacing": "Som e ausência podem carregar ameaça",
+    "limit": "Não impor sustos em intervalo fixo",
+    "source": "Síntese didática original, não fórmula universal",
+    "status": "DRAFT_PROFILE"
+  },
+  {
+    "id": "GENRE-noir",
+    "name": "Noir",
+    "question": "Desejo e responsabilidade ambígua",
+    "tools": "Ponto de vista e informação parcial",
+    "pacing": "Luz e espaço participam da ambivalência",
+    "limit": "Não resumir a chapéu e sombras",
+    "source": "Síntese didática original, não fórmula universal",
+    "status": "DRAFT_PROFILE"
+  },
+  {
+    "id": "GENRE-realism",
+    "name": "Realismo",
+    "question": "Observar vida com detalhes funcionais",
+    "tools": "Comportamento e tempo concreto",
+    "pacing": "Imperfeição seletiva com causa",
+    "limit": "Não confundir banalidade com ausência de intenção",
+    "source": "Síntese didática original, não fórmula universal",
+    "status": "DRAFT_PROFILE"
+  },
+  {
+    "id": "GENRE-scifi",
+    "name": "Ficção científica",
+    "question": "Consequência humana de hipótese",
+    "tools": "Regras do mundo e custo",
+    "pacing": "Tecnologia altera ação, trabalho e espaço",
+    "limit": "Não usar interfaces só como ornamento",
+    "source": "Síntese didática original, não fórmula universal",
+    "status": "DRAFT_PROFILE"
+  },
+  {
+    "id": "GENRE-comedy",
+    "name": "Comédia",
+    "question": "Objetivo sério em desequilíbrio",
+    "tools": "Expectativa, timing e reação",
+    "pacing": "Preservar lógica da pessoa mesmo no absurdo",
+    "limit": "Não tratar toda fala como punchline",
+    "source": "Síntese didática original, não fórmula universal",
+    "status": "DRAFT_PROFILE"
+  }
+]

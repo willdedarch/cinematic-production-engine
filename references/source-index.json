@@ -1,0 +1,135 @@
+[
+  {
+    "id": "COOKE-ANAM",
+    "title": "Cooke — Introduction to anamorphic lenses",
+    "locator": "https://cookeoptics.com/news-and-events/an-introduction-to-anamorphic-lenses/",
+    "consultation_limit": "Página consultada; crédito de stills; direitos de redistribuição não confirmados",
+    "checked_at": "2026-11-24"
+  },
+  {
+    "id": "PANAVISION-C",
+    "title": "Panavision C Series",
+    "locator": "https://en-gb.panavision.com/camera-and-optics/advanced-solutions/product-detail/c-c-series",
+    "consultation_limit": "Fabricante; características variam por lente; não é teste independente",
+    "checked_at": "2026-11-24"
+  },
+  {
+    "id": "ZEISS-RADIANCE",
+    "title": "ZEISS Supreme Prime Radiance",
+    "locator": "https://www.zeiss.com/photonics-and-optics/us/cinematography/lenses/supreme-prime-radiance-lenses.html",
+    "consultation_limit": "Fabricante; não comprova qualidade em todo modelo de IA",
+    "checked_at": "2026-11-24"
+  },
+  {
+    "id": "KODAK-GLOSSARY",
+    "title": "Kodak glossary",
+    "locator": "https://www.kodak.com/en/motion/page/glossary-of-motion-picture-terms/",
+    "consultation_limit": "Terminologia de película; aparência digital depende do pipeline",
+    "checked_at": "2026-11-24"
+  },
+  {
+    "id": "ARRI-1917",
+    "title": "ARRI — camera movement of 1917",
+    "locator": "https://www.arri.com/news-en/the-immersive-camera-movement-of-1917-",
+    "consultation_limit": "Entrevista de produção consultada; contexto específico",
+    "checked_at": "2026-11-24"
+  },
+  {
+    "id": "ASC-1917",
+    "title": "ASC — Goldfinch and 1917",
+    "locator": "https://theasc.com/article/lives-under-siege-the-goldfinch-and-1917/",
+    "consultation_limit": "Artigo de profissionais consultado; sem generalizar solução",
+    "checked_at": "2026-11-24"
+  },
+  {
+    "id": "ASC-RYAN",
+    "title": "ASC — Saving Private Ryan cinematography",
+    "locator": "https://theasc.com/article/saving-private-ryan-cinematography-kaminski/",
+    "consultation_limit": "Entrevista consultada; sem copiar cenas",
+    "checked_at": "2026-11-24"
+  },
+  {
+    "id": "ASC-BR2049",
+    "title": "ASC — Deakins Blade Runner 2049",
+    "locator": "https://theasc.com/article/deakins-blade-runner-2049/",
+    "consultation_limit": "Artigo e um still observado diretamente; focal, movimento e filme integral não inferidos",
+    "checked_at": "2026-11-24"
+  },
+  {
+    "id": "ASC-DUNKIRK",
+    "title": "ASC — Dunkirk event part 7",
+    "locator": "https://theasc.com/video/dunkirk-hoyte-van-hoytema-asc-fsf-nsc-part-7/",
+    "consultation_limit": "Descrição consultada; vídeo integral não assistido",
+    "checked_at": "2026-11-24"
+  },
+  {
+    "id": "DIRECTORSKILL",
+    "title": "DirectorSKILL entry point",
+    "locator": "https://raw.githubusercontent.com/wuwangzhang1216/DirectorSKILL/main/SKILL.md",
+    "consultation_limit": "45 documentos selecionados lidos integralmente; escopo e exclusões em sources/current-source-audit.json",
+    "checked_at": "2026-11-24"
+  },
+  {
+    "id": "SW-SCENE",
+    "title": "Screenwriting Skills — scene craft",
+    "locator": "https://raw.githubusercontent.com/jtydhr88/screenwriting-skills/main/plugins/screenwriting/skills/sw-scene-craft/SKILL.md",
+    "consultation_limit": "Módulo selecionado; pluralismo narrativo preservado",
+    "checked_at": "2026-11-24"
+  },
+  {
+    "id": "SW-STORY",
+    "title": "Screenwriting Skills — story structure",
+    "locator": "https://raw.githubusercontent.com/jtydhr88/screenwriting-skills/main/plugins/screenwriting/skills/sw-story-structure/SKILL.md",
+    "consultation_limit": "Módulo selecionado; paradigmas são opções",
+    "checked_at": "2026-11-24"
+  },
+  {
+    "id": "PITCH-DRAMA-PAGE",
+    "title": "Higgsfield — Script to finished video",
+    "locator": "https://higgsfield.ai/enterprise-help-center/platform/script-to-finished-video",
+    "consultation_limit": "Página consultada; ZIP oficial retornou 403 e não foi auditado",
+    "checked_at": "2026-11-24"
+  },
+  {
+    "id": "HF-SCRIPT",
+    "title": "Higgsfield staging",
+    "locator": "connector:/short-drama/references/script",
+    "consultation_limit": "Consulta nativa somente leitura; não redistribuir texto integral",
+    "checked_at": "2026-11-24"
+  },
+  {
+    "id": "HF-PICTURES",
+    "title": "Higgsfield pictures",
+    "locator": "connector:/short-drama/references/pictures",
+    "consultation_limit": "Consulta nativa; adaptação preserva GEO em vez de ampliar sala por default",
+    "checked_at": "2026-11-24"
+  },
+  {
+    "id": "HF-PACING",
+    "title": "Higgsfield pacing",
+    "locator": "connector:/short-drama/references/pacing",
+    "consultation_limit": "Amostra de metodologia consultada; sem prova causal de retenção",
+    "checked_at": "2026-11-24"
+  },
+  {
+    "id": "HF-SOUND",
+    "title": "Higgsfield sound",
+    "locator": "connector:/short-drama/references/sound",
+    "consultation_limit": "Heurística contextual; não regra universal",
+    "checked_at": "2026-11-24"
+  },
+  {
+    "id": "CINEMA-SHOT",
+    "title": "Cinema Skills shot list",
+    "locator": "https://raw.githubusercontent.com/Benitoow/cinema-skills/main/skills/shot-list/SKILL.md",
+    "consultation_limit": "Fonte candidata verificada, não identidade histórica presumida do V3",
+    "checked_at": "2026-11-24"
+  },
+  {
+    "id": "EX-LAST-WATER",
+    "title": "CPE — A última água",
+    "locator": "examples/last-water/production.md",
+    "consultation_limit": "Material autoral didático; mídia não gerada",
+    "checked_at": "2026-11-24"
+  }
+]

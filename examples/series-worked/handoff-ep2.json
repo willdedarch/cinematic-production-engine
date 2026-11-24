@@ -1,0 +1,315 @@
+{
+  "episode_id": "SERIE-AGUA-EP2",
+  "project_id": "SERIE-AGUA",
+  "episode_number": 2,
+  "facts": {
+    "audience_knowledge": [
+      {
+        "beat": "SH01",
+        "key": "agua",
+        "kind": "audience_knowledge",
+        "sequence": 11,
+        "subject": "AUDIENCE",
+        "value": "escassa",
+        "episode_id": "SERIE-AGUA-EP1",
+        "episode_number": 1,
+        "source": {
+          "table": "Decisions",
+          "id": "D-CANON-1",
+          "revision": 1,
+          "record_sha256": "615c0991502f73ecc8e53535ec7721525c46e993597923dfcf14fc4dc8536bca",
+          "message": "SYNTHETIC-DEMO-CANON",
+          "reason": "O som breve da água denuncia a escassez na chegada."
+        }
+      }
+    ],
+    "character_knowledge": [
+      {
+        "beat": "SH04",
+        "key": "agua",
+        "kind": "character_knowledge",
+        "sequence": 42,
+        "subject": "LIA",
+        "value": "escassa",
+        "episode_id": "SERIE-AGUA-EP1",
+        "episode_number": 1,
+        "source": {
+          "table": "Decisions",
+          "id": "D-CANON-2",
+          "revision": 1,
+          "record_sha256": "82b7f056e4bdfd2249eb8ac8cace86075cb3b078290017e230387f30479d125d",
+          "message": "SYNTHETIC-DEMO-CANON",
+          "reason": "Ao servir uma porção na tampa, Lia vê quão pouca água resta."
+        }
+      },
+      {
+        "beat": "SH06",
+        "key": "chegada",
+        "kind": "character_knowledge",
+        "sequence": 63,
+        "subject": "DAVI",
+        "value": "desconhecida",
+        "episode_id": "SERIE-AGUA-EP1",
+        "episode_number": 1,
+        "source": {
+          "table": "Decisions",
+          "id": "D-CANON-3",
+          "revision": 1,
+          "record_sha256": "f3a43dea5824000a9a670566d5aa35f4469c276eff37d7f7478a0c89156c7087",
+          "message": "SYNTHETIC-DEMO-CANON",
+          "reason": "Ele ouve a buzina e não vê quem chega."
+        }
+      }
+    ],
+    "location": [
+      {
+        "beat": "SH01",
+        "key": "porta",
+        "kind": "location",
+        "sequence": 16,
+        "subject": "ESTACAO",
+        "value": "W1 oeste",
+        "episode_id": "SERIE-AGUA-EP1",
+        "episode_number": 1,
+        "source": {
+          "table": "Decisions",
+          "id": "D-CANON-6",
+          "revision": 1,
+          "record_sha256": "3a2b8ec954cfa13104e9684b40351892a502aac77bc65420260a2da4ee317a87",
+          "message": "SYNTHETIC-DEMO-CANON",
+          "reason": "A planta aprovada no ensaio conserva a entrada."
+        }
+      }
+    ],
+    "open_question": [
+      {
+        "beat": "SH06",
+        "key": "chegada",
+        "kind": "open_question",
+        "sequence": 67,
+        "subject": "ESTACAO",
+        "value": "quem acionou a buzina?",
+        "episode_id": "SERIE-AGUA-EP1",
+        "episode_number": 1,
+        "source": {
+          "table": "Decisions",
+          "id": "D-CANON-7",
+          "revision": 1,
+          "record_sha256": "d26e17ae1e365bb71497f0dc2798a70f9a00e248a48f03d1145d0261b9ff2bc7",
+          "message": "SYNTHETIC-DEMO-CANON",
+          "reason": "O episódio termina antes da resposta."
+        }
+      }
+    ],
+    "prop": [
+      {
+        "beat": "SH06",
+        "key": "posse",
+        "kind": "prop",
+        "sequence": 65,
+        "subject": "CANTIL",
+        "value": "Lia.direita",
+        "episode_id": "SERIE-AGUA-EP1",
+        "episode_number": 1,
+        "source": {
+          "table": "Decisions",
+          "id": "D-CANON-5",
+          "revision": 1,
+          "record_sha256": "d566aeb8a3f6e0b687f75ea6a0104b8c85cb709a300d3a7fa144cc2b88345bae",
+          "message": "SYNTHETIC-DEMO-CANON",
+          "reason": "Lia troca a mão em quadro depois da entrega."
+        }
+      }
+    ],
+    "relationship": [
+      {
+        "beat": "SH05",
+        "key": "cuidado",
+        "kind": "relationship",
+        "previous_decision_id": "D-EARLY-CARE",
+        "sequence": 54,
+        "subject": "LIA+DAVI",
+        "value": "recíproco",
+        "episode_id": "SERIE-AGUA-EP1",
+        "episode_number": 1,
+        "source": {
+          "table": "Decisions",
+          "id": "D-CANON-4",
+          "revision": 1,
+          "record_sha256": "a4117ebcf5b0220fd604a3b65ec0007feec6efa29620eae055018c2a340fb29f",
+          "message": "SYNTHETIC-DEMO-CANON",
+          "reason": "Davi aceita beber antes de Lia."
+        }
+      }
+    ]
+  },
+  "timeline": [
+    {
+      "beat": "SH01",
+      "key": "agua",
+      "kind": "audience_knowledge",
+      "sequence": 11,
+      "subject": "AUDIENCE",
+      "value": "escassa",
+      "episode_id": "SERIE-AGUA-EP1",
+      "episode_number": 1,
+      "source": {
+        "table": "Decisions",
+        "id": "D-CANON-1",
+        "revision": 1,
+        "record_sha256": "615c0991502f73ecc8e53535ec7721525c46e993597923dfcf14fc4dc8536bca",
+        "message": "SYNTHETIC-DEMO-CANON",
+        "reason": "O som breve da água denuncia a escassez na chegada."
+      }
+    },
+    {
+      "beat": "SH01",
+      "key": "porta",
+      "kind": "location",
+      "sequence": 16,
+      "subject": "ESTACAO",
+      "value": "W1 oeste",
+      "episode_id": "SERIE-AGUA-EP1",
+      "episode_number": 1,
+      "source": {
+        "table": "Decisions",
+        "id": "D-CANON-6",
+        "revision": 1,
+        "record_sha256": "3a2b8ec954cfa13104e9684b40351892a502aac77bc65420260a2da4ee317a87",
+        "message": "SYNTHETIC-DEMO-CANON",
+        "reason": "A planta aprovada no ensaio conserva a entrada."
+      }
+    },
+    {
+      "beat": "SH03",
+      "key": "cuidado",
+      "kind": "relationship",
+      "sequence": 30,
+      "subject": "LIA+DAVI",
+      "value": "oferta unilateral de Davi",
+      "episode_id": "SERIE-AGUA-EP1",
+      "episode_number": 1,
+      "source": {
+        "table": "Decisions",
+        "id": "D-EARLY-CARE",
+        "revision": 1,
+        "record_sha256": "3fb106d2d1710e4b8d6f738f9bb803a0a999433ea5666b7b703c0792d187db53",
+        "message": "SYNTHETIC-DEMO-CANON",
+        "reason": "Davi oferece a água. Lia ainda tenta devolver-lhe o cantil."
+      }
+    },
+    {
+      "beat": "SH04",
+      "key": "agua",
+      "kind": "character_knowledge",
+      "sequence": 42,
+      "subject": "LIA",
+      "value": "escassa",
+      "episode_id": "SERIE-AGUA-EP1",
+      "episode_number": 1,
+      "source": {
+        "table": "Decisions",
+        "id": "D-CANON-2",
+        "revision": 1,
+        "record_sha256": "82b7f056e4bdfd2249eb8ac8cace86075cb3b078290017e230387f30479d125d",
+        "message": "SYNTHETIC-DEMO-CANON",
+        "reason": "Ao servir uma porção na tampa, Lia vê quão pouca água resta."
+      }
+    },
+    {
+      "beat": "SH05",
+      "key": "cuidado",
+      "kind": "relationship",
+      "previous_decision_id": "D-EARLY-CARE",
+      "sequence": 54,
+      "subject": "LIA+DAVI",
+      "value": "recíproco",
+      "episode_id": "SERIE-AGUA-EP1",
+      "episode_number": 1,
+      "source": {
+        "table": "Decisions",
+        "id": "D-CANON-4",
+        "revision": 1,
+        "record_sha256": "a4117ebcf5b0220fd604a3b65ec0007feec6efa29620eae055018c2a340fb29f",
+        "message": "SYNTHETIC-DEMO-CANON",
+        "reason": "Davi aceita beber antes de Lia."
+      }
+    },
+    {
+      "beat": "SH06",
+      "key": "chegada",
+      "kind": "character_knowledge",
+      "sequence": 63,
+      "subject": "DAVI",
+      "value": "desconhecida",
+      "episode_id": "SERIE-AGUA-EP1",
+      "episode_number": 1,
+      "source": {
+        "table": "Decisions",
+        "id": "D-CANON-3",
+        "revision": 1,
+        "record_sha256": "f3a43dea5824000a9a670566d5aa35f4469c276eff37d7f7478a0c89156c7087",
+        "message": "SYNTHETIC-DEMO-CANON",
+        "reason": "Ele ouve a buzina e não vê quem chega."
+      }
+    },
+    {
+      "beat": "SH06",
+      "key": "posse",
+      "kind": "prop",
+      "sequence": 65,
+      "subject": "CANTIL",
+      "value": "Lia.direita",
+      "episode_id": "SERIE-AGUA-EP1",
+      "episode_number": 1,
+      "source": {
+        "table": "Decisions",
+        "id": "D-CANON-5",
+        "revision": 1,
+        "record_sha256": "d566aeb8a3f6e0b687f75ea6a0104b8c85cb709a300d3a7fa144cc2b88345bae",
+        "message": "SYNTHETIC-DEMO-CANON",
+        "reason": "Lia troca a mão em quadro depois da entrega."
+      }
+    },
+    {
+      "beat": "SH06",
+      "key": "chegada",
+      "kind": "open_question",
+      "sequence": 67,
+      "subject": "ESTACAO",
+      "value": "quem acionou a buzina?",
+      "episode_id": "SERIE-AGUA-EP1",
+      "episode_number": 1,
+      "source": {
+        "table": "Decisions",
+        "id": "D-CANON-7",
+        "revision": 1,
+        "record_sha256": "d26e17ae1e365bb71497f0dc2798a70f9a00e248a48f03d1145d0261b9ff2bc7",
+        "message": "SYNTHETIC-DEMO-CANON",
+        "reason": "O episódio termina antes da resposta."
+      }
+    }
+  ],
+  "proposals": [
+    {
+      "beat": "SH06",
+      "key": "chegada",
+      "kind": "character_knowledge",
+      "sequence": 68,
+      "subject": "DAVI",
+      "value": "uma vizinha",
+      "episode_id": "SERIE-AGUA-EP1",
+      "episode_number": 1,
+      "source": {
+        "table": "Decisions",
+        "id": "D-DRAFT",
+        "revision": 1,
+        "record_sha256": "a8a2acb4e4962582a1dd2cdd003b94273517ab11dcec0fb6d4dce209eebfeb99",
+        "message": "SYNTHETIC-DEMO-CANON",
+        "reason": "Hipótese para revisão."
+      }
+    }
+  ],
+  "earlier_decisions": [],
+  "reusable_versions": []
+}

@@ -1,0 +1,271 @@
+{
+  "version": "1",
+  "fixed": true,
+  "scenarios": [
+    {
+      "id": "REG-01",
+      "competency": "originality",
+      "fixture": "examples/last-water/production.md",
+      "input": "Aplicar a competência originality sem mudar aprovados. Para arte, comparar uma alteração causalmente distinta.",
+      "expected_evidence": "Beat/plano/versão e razão observável; contraponto e limite",
+      "automated_test": "evals/test_knowledge.py",
+      "technical_status": "STRUCTURAL_CHECK_EXECUTED",
+      "artistic_status": "PENDING_HUMAN_REVIEW",
+      "failure_condition": "Métrica sem evidência, promessa de sincronização contínua, mudança silenciosa de aprovado ou resultado inventado"
+    },
+    {
+      "id": "REG-02",
+      "competency": "emotion",
+      "fixture": "examples/last-water/production.md",
+      "input": "Aplicar a competência emotion sem mudar aprovados. Para arte, comparar uma alteração causalmente distinta.",
+      "expected_evidence": "Beat/plano/versão e razão observável; contraponto e limite",
+      "automated_test": "evals/test_knowledge.py",
+      "technical_status": "STRUCTURAL_CHECK_EXECUTED",
+      "artistic_status": "PENDING_HUMAN_REVIEW",
+      "failure_condition": "Métrica sem evidência, promessa de sincronização contínua, mudança silenciosa de aprovado ou resultado inventado"
+    },
+    {
+      "id": "REG-03",
+      "competency": "suspense",
+      "fixture": "examples/last-water/production.md",
+      "input": "Aplicar a competência suspense sem mudar aprovados. Para arte, comparar uma alteração causalmente distinta.",
+      "expected_evidence": "Beat/plano/versão e razão observável; contraponto e limite",
+      "automated_test": "evals/test_knowledge.py",
+      "technical_status": "STRUCTURAL_CHECK_EXECUTED",
+      "artistic_status": "PENDING_HUMAN_REVIEW",
+      "failure_condition": "Métrica sem evidência, promessa de sincronização contínua, mudança silenciosa de aprovado ou resultado inventado"
+    },
+    {
+      "id": "REG-04",
+      "competency": "rhythm",
+      "fixture": "examples/last-water/production.md",
+      "input": "Aplicar a competência rhythm sem mudar aprovados. Para arte, comparar uma alteração causalmente distinta.",
+      "expected_evidence": "Beat/plano/versão e razão observável; contraponto e limite",
+      "automated_test": "evals/test_knowledge.py",
+      "technical_status": "STRUCTURAL_CHECK_EXECUTED",
+      "artistic_status": "PENDING_HUMAN_REVIEW",
+      "failure_condition": "Métrica sem evidência, promessa de sincronização contínua, mudança silenciosa de aprovado ou resultado inventado"
+    },
+    {
+      "id": "REG-05",
+      "competency": "causality",
+      "fixture": "examples/last-water/production.md",
+      "input": "Aplicar a competência causality sem mudar aprovados. Para arte, comparar uma alteração causalmente distinta.",
+      "expected_evidence": "Beat/plano/versão e razão observável; contraponto e limite",
+      "automated_test": "evals/test_knowledge.py",
+      "technical_status": "STRUCTURAL_CHECK_EXECUTED",
+      "artistic_status": "PENDING_HUMAN_REVIEW",
+      "failure_condition": "Métrica sem evidência, promessa de sincronização contínua, mudança silenciosa de aprovado ou resultado inventado"
+    },
+    {
+      "id": "REG-06",
+      "competency": "dialogue",
+      "fixture": "examples/last-water/production.md",
+      "input": "Aplicar a competência dialogue sem mudar aprovados. Para arte, comparar uma alteração causalmente distinta.",
+      "expected_evidence": "Beat/plano/versão e razão observável; contraponto e limite",
+      "automated_test": "evals/test_knowledge.py",
+      "technical_status": "STRUCTURAL_CHECK_EXECUTED",
+      "artistic_status": "PENDING_HUMAN_REVIEW",
+      "failure_condition": "Métrica sem evidência, promessa de sincronização contínua, mudança silenciosa de aprovado ou resultado inventado"
+    },
+    {
+      "id": "REG-07",
+      "competency": "performance",
+      "fixture": "examples/last-water/production.md",
+      "input": "Aplicar a competência performance sem mudar aprovados. Para arte, comparar uma alteração causalmente distinta.",
+      "expected_evidence": "Beat/plano/versão e razão observável; contraponto e limite",
+      "automated_test": "evals/test_knowledge.py",
+      "technical_status": "STRUCTURAL_CHECK_EXECUTED",
+      "artistic_status": "PENDING_HUMAN_REVIEW",
+      "failure_condition": "Métrica sem evidência, promessa de sincronização contínua, mudança silenciosa de aprovado ou resultado inventado"
+    },
+    {
+      "id": "REG-08",
+      "competency": "composition",
+      "fixture": "examples/last-water/production.md",
+      "input": "Aplicar a competência composition sem mudar aprovados. Para arte, comparar uma alteração causalmente distinta.",
+      "expected_evidence": "Beat/plano/versão e razão observável; contraponto e limite",
+      "automated_test": "evals/test_knowledge.py",
+      "technical_status": "STRUCTURAL_CHECK_EXECUTED",
+      "artistic_status": "PENDING_HUMAN_REVIEW",
+      "failure_condition": "Métrica sem evidência, promessa de sincronização contínua, mudança silenciosa de aprovado ou resultado inventado"
+    },
+    {
+      "id": "REG-09",
+      "competency": "photography",
+      "fixture": "examples/last-water/production.md",
+      "input": "Aplicar a competência photography sem mudar aprovados. Para arte, comparar uma alteração causalmente distinta.",
+      "expected_evidence": "Beat/plano/versão e razão observável; contraponto e limite",
+      "automated_test": "evals/test_knowledge.py",
+      "technical_status": "STRUCTURAL_CHECK_EXECUTED",
+      "artistic_status": "PENDING_HUMAN_REVIEW",
+      "failure_condition": "Métrica sem evidência, promessa de sincronização contínua, mudança silenciosa de aprovado ou resultado inventado"
+    },
+    {
+      "id": "REG-10",
+      "competency": "lenses",
+      "fixture": "examples/last-water/production.md",
+      "input": "Aplicar a competência lenses sem mudar aprovados. Para arte, comparar uma alteração causalmente distinta.",
+      "expected_evidence": "Beat/plano/versão e razão observável; contraponto e limite",
+      "automated_test": "evals/test_knowledge.py",
+      "technical_status": "STRUCTURAL_CHECK_EXECUTED",
+      "artistic_status": "PENDING_HUMAN_REVIEW",
+      "failure_condition": "Métrica sem evidência, promessa de sincronização contínua, mudança silenciosa de aprovado ou resultado inventado"
+    },
+    {
+      "id": "REG-11",
+      "competency": "depth",
+      "fixture": "examples/last-water/production.md",
+      "input": "Aplicar a competência depth sem mudar aprovados. Para arte, comparar uma alteração causalmente distinta.",
+      "expected_evidence": "Beat/plano/versão e razão observável; contraponto e limite",
+      "automated_test": "evals/test_knowledge.py",
+      "technical_status": "STRUCTURAL_CHECK_EXECUTED",
+      "artistic_status": "PENDING_HUMAN_REVIEW",
+      "failure_condition": "Métrica sem evidência, promessa de sincronização contínua, mudança silenciosa de aprovado ou resultado inventado"
+    },
+    {
+      "id": "REG-12",
+      "competency": "locations",
+      "fixture": "examples/last-water/production.md",
+      "input": "Aplicar a competência locations sem mudar aprovados. Para arte, comparar uma alteração causalmente distinta.",
+      "expected_evidence": "Beat/plano/versão e razão observável; contraponto e limite",
+      "automated_test": "evals/test_knowledge.py",
+      "technical_status": "STRUCTURAL_CHECK_EXECUTED",
+      "artistic_status": "PENDING_HUMAN_REVIEW",
+      "failure_condition": "Métrica sem evidência, promessa de sincronização contínua, mudança silenciosa de aprovado ou resultado inventado"
+    },
+    {
+      "id": "REG-13",
+      "competency": "geometry",
+      "fixture": "examples/last-water/production.md",
+      "input": "Aplicar a competência geometry sem mudar aprovados. Para arte, comparar uma alteração causalmente distinta.",
+      "expected_evidence": "Beat/plano/versão e razão observável; contraponto e limite",
+      "automated_test": "evals/test_knowledge.py",
+      "technical_status": "STRUCTURAL_CHECK_EXECUTED",
+      "artistic_status": "PENDING_HUMAN_REVIEW",
+      "failure_condition": "Métrica sem evidência, promessa de sincronização contínua, mudança silenciosa de aprovado ou resultado inventado"
+    },
+    {
+      "id": "REG-14",
+      "competency": "character-continuity",
+      "fixture": "examples/last-water/production.md",
+      "input": "Aplicar a competência character-continuity sem mudar aprovados. Para arte, comparar uma alteração causalmente distinta.",
+      "expected_evidence": "Beat/plano/versão e razão observável; contraponto e limite",
+      "automated_test": "evals/test_knowledge.py",
+      "technical_status": "STRUCTURAL_CHECK_EXECUTED",
+      "artistic_status": "PENDING_HUMAN_REVIEW",
+      "failure_condition": "Métrica sem evidência, promessa de sincronização contínua, mudança silenciosa de aprovado ou resultado inventado"
+    },
+    {
+      "id": "REG-15",
+      "competency": "props",
+      "fixture": "examples/last-water/production.md",
+      "input": "Aplicar a competência props sem mudar aprovados. Para arte, comparar uma alteração causalmente distinta.",
+      "expected_evidence": "Beat/plano/versão e razão observável; contraponto e limite",
+      "automated_test": "evals/test_knowledge.py",
+      "technical_status": "STRUCTURAL_CHECK_EXECUTED",
+      "artistic_status": "PENDING_HUMAN_REVIEW",
+      "failure_condition": "Métrica sem evidência, promessa de sincronização contínua, mudança silenciosa de aprovado ou resultado inventado"
+    },
+    {
+      "id": "REG-16",
+      "competency": "history",
+      "fixture": "examples/last-water/production.md",
+      "input": "Aplicar a competência history sem mudar aprovados. Para arte, comparar uma alteração causalmente distinta.",
+      "expected_evidence": "Beat/plano/versão e razão observável; contraponto e limite",
+      "automated_test": "evals/test_knowledge.py",
+      "technical_status": "STRUCTURAL_CHECK_EXECUTED",
+      "artistic_status": "PENDING_HUMAN_REVIEW",
+      "failure_condition": "Métrica sem evidência, promessa de sincronização contínua, mudança silenciosa de aprovado ou resultado inventado"
+    },
+    {
+      "id": "REG-17",
+      "competency": "prompt-compatibility",
+      "fixture": "templates/shared-state.test-fixture.json",
+      "input": "Aplicar a competência prompt-compatibility sem mudar aprovados. Para arte, comparar uma alteração causalmente distinta.",
+      "expected_evidence": "Guardas, autorização, estado e recibo conforme contrato",
+      "automated_test": "evals/test_prompt_compiler.py",
+      "technical_status": "STRUCTURAL_CHECK_EXECUTED",
+      "artistic_status": "NOT_APPLICABLE",
+      "failure_condition": "Métrica sem evidência, promessa de sincronização contínua, mudança silenciosa de aprovado ou resultado inventado"
+    },
+    {
+      "id": "REG-18",
+      "competency": "approvals",
+      "fixture": "templates/shared-state.test-fixture.json",
+      "input": "Aplicar a competência approvals sem mudar aprovados. Para arte, comparar uma alteração causalmente distinta.",
+      "expected_evidence": "Guardas, autorização, estado e recibo conforme contrato",
+      "automated_test": "evals/test_shared_state.py",
+      "technical_status": "STRUCTURAL_CHECK_EXECUTED",
+      "artistic_status": "NOT_APPLICABLE",
+      "failure_condition": "Métrica sem evidência, promessa de sincronização contínua, mudança silenciosa de aprovado ou resultado inventado"
+    },
+    {
+      "id": "REG-19",
+      "competency": "locks",
+      "fixture": "templates/shared-state.test-fixture.json",
+      "input": "Aplicar a competência locks sem mudar aprovados. Para arte, comparar uma alteração causalmente distinta.",
+      "expected_evidence": "Guardas, autorização, estado e recibo conforme contrato",
+      "automated_test": "evals/test_shared_state.py",
+      "technical_status": "STRUCTURAL_CHECK_EXECUTED",
+      "artistic_status": "NOT_APPLICABLE",
+      "failure_condition": "Métrica sem evidência, promessa de sincronização contínua, mudança silenciosa de aprovado ou resultado inventado"
+    },
+    {
+      "id": "REG-20",
+      "competency": "participation",
+      "fixture": "templates/shared-state.test-fixture.json",
+      "input": "Aplicar a competência participation sem mudar aprovados. Para arte, comparar uma alteração causalmente distinta.",
+      "expected_evidence": "Guardas, autorização, estado e recibo conforme contrato",
+      "automated_test": "evals/test_shared_state.py",
+      "technical_status": "STRUCTURAL_CHECK_EXECUTED",
+      "artistic_status": "NOT_APPLICABLE",
+      "failure_condition": "Métrica sem evidência, promessa de sincronização contínua, mudança silenciosa de aprovado ou resultado inventado"
+    },
+    {
+      "id": "REG-21",
+      "competency": "recovery",
+      "fixture": "templates/shared-state.test-fixture.json",
+      "input": "Aplicar a competência recovery sem mudar aprovados. Para arte, comparar uma alteração causalmente distinta.",
+      "expected_evidence": "Guardas, autorização, estado e recibo conforme contrato",
+      "automated_test": "evals/test_shared_state.py",
+      "technical_status": "STRUCTURAL_CHECK_EXECUTED",
+      "artistic_status": "NOT_APPLICABLE",
+      "failure_condition": "Métrica sem evidência, promessa de sincronização contínua, mudança silenciosa de aprovado ou resultado inventado"
+    },
+    {
+      "id": "REG-22",
+      "competency": "manual",
+      "fixture": "templates/shared-state.test-fixture.json",
+      "input": "Aplicar a competência manual sem mudar aprovados. Para arte, comparar uma alteração causalmente distinta.",
+      "expected_evidence": "Guardas, autorização, estado e recibo conforme contrato",
+      "automated_test": "evals/test_shared_state.py",
+      "technical_status": "STRUCTURAL_CHECK_EXECUTED",
+      "artistic_status": "NOT_APPLICABLE",
+      "failure_condition": "Métrica sem evidência, promessa de sincronização contínua, mudança silenciosa de aprovado ou resultado inventado"
+    },
+    {
+      "id": "REG-23",
+      "competency": "sheets",
+      "fixture": "templates/shared-state.test-fixture.json",
+      "input": "Aplicar a competência sheets sem mudar aprovados. Para arte, comparar uma alteração causalmente distinta.",
+      "expected_evidence": "Guardas, autorização, estado e recibo conforme contrato",
+      "automated_test": "evals/test_shared_state.py",
+      "technical_status": "STRUCTURAL_CHECK_EXECUTED",
+      "artistic_status": "NOT_APPLICABLE",
+      "failure_condition": "Métrica sem evidência, promessa de sincronização contínua, mudança silenciosa de aprovado ou resultado inventado"
+    },
+    {
+      "id": "REG-24",
+      "competency": "cost",
+      "fixture": "templates/shared-state.test-fixture.json",
+      "input": "Aplicar a competência cost sem mudar aprovados. Para arte, comparar uma alteração causalmente distinta.",
+      "expected_evidence": "Guardas, autorização, estado e recibo conforme contrato",
+      "automated_test": "evals/test_shared_state.py",
+      "technical_status": "STRUCTURAL_CHECK_EXECUTED",
+      "artistic_status": "NOT_APPLICABLE",
+      "failure_condition": "Métrica sem evidência, promessa de sincronização contínua, mudança silenciosa de aprovado ou resultado inventado"
+    }
+  ],
+  "scoring": "Qualitative evidence; automated structure does not establish artistic excellence."
+}

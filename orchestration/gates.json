@@ -1,0 +1,231 @@
+[
+  {
+    "id": "G0",
+    "name": "Projeto",
+    "depends": [],
+    "skippable": false,
+    "checks": [
+      "Escopo, formato e duração",
+      "Gênero e intensidade criativa",
+      "Modo e continuidade",
+      "Zero créditos e geração manual"
+    ],
+    "deliverable": "Brief e perfil criativo"
+  },
+  {
+    "id": "G1",
+    "name": "Pesquisa",
+    "depends": [
+      "G0"
+    ],
+    "skippable": true,
+    "checks": [
+      "Fontes ou material autorizado",
+      "Fatos separados de ficção",
+      "Sementes dramáticas e lacunas"
+    ],
+    "deliverable": "Mapa de pesquisa"
+  },
+  {
+    "id": "G2",
+    "name": "Ideação",
+    "depends": [
+      "G1"
+    ],
+    "skippable": true,
+    "checks": [
+      "Alternativas causalmente distintas",
+      "Conflito, consequência e gancho",
+      "Seleção explicitamente registrada"
+    ],
+    "deliverable": "Propostas e seleção"
+  },
+  {
+    "id": "G3",
+    "name": "Desenvolvimento",
+    "depends": [
+      "G2"
+    ],
+    "skippable": true,
+    "checks": [
+      "Beat sheet e duração",
+      "Causalidade, emoção e informação",
+      "Payoff e final"
+    ],
+    "deliverable": "Mapa narrativo"
+  },
+  {
+    "id": "G4",
+    "name": "Roteiro",
+    "depends": [
+      "G3"
+    ],
+    "skippable": false,
+    "checks": [
+      "Roteiro limpo e versionado",
+      "Script doctor e correções",
+      "Falas, continuidade e duração"
+    ],
+    "deliverable": "Screenplay aprovado"
+  },
+  {
+    "id": "G5",
+    "name": "Direção e look",
+    "depends": [
+      "G4"
+    ],
+    "skippable": false,
+    "checks": [
+      "Estilo e gênero traduzidos em decisões",
+      "Lentes, composição, cor e luz",
+      "Ambiente vivo e coerência visual"
+    ],
+    "deliverable": "Look bible"
+  },
+  {
+    "id": "G6",
+    "name": "Breakdown",
+    "depends": [
+      "G5"
+    ],
+    "skippable": false,
+    "checks": [
+      "Elenco e figurinos inventariados",
+      "Locações e props inventariados",
+      "Dependências e assets existentes"
+    ],
+    "deliverable": "Inventário de produção"
+  },
+  {
+    "id": "G7",
+    "name": "Casting",
+    "depends": [
+      "G6"
+    ],
+    "skippable": true,
+    "checks": [
+      "Identidade e silhueta",
+      "Figurino e estados",
+      "Referências manuais inspecionadas ou reutilizadas",
+      "Versões identificadas"
+    ],
+    "deliverable": "Fichas e assets de elenco"
+  },
+  {
+    "id": "G8",
+    "name": "Locations",
+    "depends": [
+      "G6"
+    ],
+    "skippable": true,
+    "checks": [
+      "GEO e âncoras aprovados",
+      "Perspectivas e escala",
+      "Materiais, luz, ambiente vivo",
+      "Referências manuais inspecionadas ou reutilizadas"
+    ],
+    "deliverable": "Pacote de locações"
+  },
+  {
+    "id": "G9",
+    "name": "Props",
+    "depends": [
+      "G6"
+    ],
+    "skippable": true,
+    "checks": [
+      "Época e material",
+      "Dimensão, dono, estado",
+      "Referências manuais inspecionadas ou reutilizadas"
+    ],
+    "deliverable": "Pacote de objetos"
+  },
+  {
+    "id": "G10",
+    "name": "Previs",
+    "depends": [
+      "G7",
+      "G8",
+      "G9"
+    ],
+    "skippable": false,
+    "checks": [
+      "Shot list com propósito e duração",
+      "Eixo, geometria e continuidade",
+      "Blocking, composição e atuação",
+      "Prompts preparados sem disparar geração"
+    ],
+    "deliverable": "Decupagem e prompt pack"
+  },
+  {
+    "id": "G11",
+    "name": "Look test manual",
+    "depends": [
+      "G10"
+    ],
+    "skippable": true,
+    "checks": [
+      "Testes externos ou referências equivalentes",
+      "Identidade, textura, ótica e luz",
+      "Correções e escolhas registradas"
+    ],
+    "deliverable": "Avaliação de testes importados"
+  },
+  {
+    "id": "G12",
+    "name": "Produção manual",
+    "depends": [
+      "G11"
+    ],
+    "skippable": true,
+    "checks": [
+      "Resultados externos ou reutilizados",
+      "Correspondência ao plano e estado",
+      "Versões e pendências registradas"
+    ],
+    "deliverable": "Inventário de planos manuais"
+  },
+  {
+    "id": "G13",
+    "name": "Pós-produção manual",
+    "depends": [
+      "G12"
+    ],
+    "skippable": true,
+    "checks": [
+      "Ordem e ritmo",
+      "Plano de som e cor",
+      "Resultado externo ou escopo textual identificado"
+    ],
+    "deliverable": "Plano editorial e resultado disponível"
+  },
+  {
+    "id": "G14",
+    "name": "QC",
+    "depends": [
+      "G13"
+    ],
+    "skippable": false,
+    "checks": [
+      "Continuidade e cobertura",
+      "Defeitos observados vs não verificáveis",
+      "Revisão do escopo entregue",
+      "Aprovação artística explícita"
+    ],
+    "deliverable": "Relatório QC do material disponível"
+  },
+  {
+    "id": "G15",
+    "name": "Aprendizado",
+    "depends": [
+      "G14"
+    ],
+    "skippable": true,
+    "checks": [
+      "Ledger atualizado",
+      "Decisões e hipóteses",
+      "Métricas reais ou ausência registrada"
+    ],
+    "deliverable": "Handoff e aprendizado"
+  }
+]

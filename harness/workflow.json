@@ -1,0 +1,12 @@
+{
+  "phases_source": "orchestration/gates.json",
+  "knowledge_router": "orchestration/knowledge-router.json",
+  "policies": "harness/policies.json",
+  "state_validator": "scripts/shared_state.py",
+  "artistic_validator": "scripts/judgment.py",
+  "entrypoint": "scripts/cpe.py",
+  "remote_io": "Existing connectors called by agent, never by local CLI",
+  "final_generation": "manual",
+  "approval_flow": "current read -> context -> draft -> review -> user message -> validated plan -> PREPARED -> fresh guards -> connector write -> independent readback -> CONFIRMED -> readback -> local checkpoint",
+  "events": "harness/events.json"
+}

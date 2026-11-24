@@ -1,0 +1,59 @@
+{
+  "shot": {
+    "table": "Shot List",
+    "id": "SH02",
+    "revision": 1,
+    "sha256": "d3c7d21625f2b7c5d75784d8d10778d084abcf01c68fdabddaf4ac44ccfeeddc"
+  },
+  "delivery": {
+    "kind": "MANUAL_PRODUCTION_EXPORT_NOT_EXECUTED",
+    "model_id": "seedance_2_5",
+    "output_type": "video",
+    "prompt": "Initial state: {\"cantil\":\"Davi.direita\",\"tampa\":\"roscada_no_cantil\"}\nAction: Lia pergunta se ainda tem água. Davi diz “Pra você” e passa o cantil fechado da sua direita para a direita de Lia. Ela observa a boca seca dele.\nPerformance: Tornar visível quanto a oferta custa a Davi.\nCamera: Médio de Lia com Davi no primeiro plano, ao sul do eixo.\nSound: Pergunta e resposta curtas sobre o ruído da sala.\nProtected: {\"cantil\":\"Lia.direita\",\"tampa\":\"roscada_no_cantil\"}",
+    "native_parameters": {
+      "mode": "omni_reference",
+      "resolution": "720p",
+      "generate_audio": true,
+      "duration": 10
+    },
+    "aspect_ratio": "16:9",
+    "reference_manifest": [
+      {
+        "id": "ART-DEMO-SH02",
+        "revision": 1,
+        "sha256": "def0a0f6d48ad862be7d3c7b9c87abe4cf700b817e46ac9925b495fbbdd07c95",
+        "uri": "examples/series-worked/frames/P02.png",
+        "role": "image_references",
+        "position": 1,
+        "rights_confirmed": true,
+        "rights": "Autoral, autorizado no ensaio"
+      }
+    ],
+    "protected": "{\"cantil\":\"Lia.direita\",\"tampa\":\"roscada_no_cantil\"}",
+    "warnings": [
+      "Attach each reference in the supported UI role; local labels are not native @bindings",
+      "Natural-language camera/light/acting intent is a request, not a verified native parameter or result.",
+      "Refresh capabilities at production time; catalog snapshot is not a generation benchmark."
+    ],
+    "catalog_checked_at": "2026-11-24T07:55:29.000Z",
+    "generation_tested": false,
+    "credits_consumed": 0,
+    "source_spec_sha256": "188ebceb8342c7815cf27e232dce3ed736e95bf3b7f2ece1c885c982871f2ebf"
+  },
+  "attachment_order": [
+    {
+      "id": "ART-DEMO-SH02",
+      "field": "image_references",
+      "position": 1,
+      "file": "examples/series-worked/frames/P02.png",
+      "revision": 1,
+      "sha256": "def0a0f6d48ad862be7d3c7b9c87abe4cf700b817e46ac9925b495fbbdd07c95"
+    }
+  ],
+  "return_checklist": [
+    "Identificar plano, versão e origem",
+    "Conferir duração e ação no take",
+    "Registrar direitos e revisão técnica/artística"
+  ],
+  "execution": "MANUAL"
+}

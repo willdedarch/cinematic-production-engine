@@ -1,0 +1,35 @@
+{
+  "kind": "NATIVE_IMAGE_LAB_EXECUTED",
+  "generations": 5,
+  "external_paid_calls": 0,
+  "human_feedback_storage": "private host workspace only",
+  "human_acceptance": "No acceptance is asserted for the study",
+  "reviewers": "Two new isolated contexts without inherited conversation turns, same model family; reversed order, no generation intent map or human feedback",
+  "images": [
+    {
+      "uri": "references/visual/shelter-entry.png",
+      "sha256": "9dfc116ee61a6b67cca199ac7ef66b5d410472748cd3a7dd092ab8f2c0e6e846"
+    },
+    {
+      "uri": "references/visual/shelter-light-variant.png",
+      "sha256": "92cd0da13f4c575206233d7ae04082f83a8225331b2e2e98973e04c807505b4d"
+    },
+    {
+      "uri": "references/visual/character-multiview.png",
+      "sha256": "82b036c0069cb595c05372045965bfd23d6eccbb8a7232f3696520abb48f7490"
+    },
+    {
+      "uri": "references/visual/character-duplicated-profile.png",
+      "sha256": "9fd8920fafed4f21eef2d11f956792e486cb28f4068464da513816cb48d1c9a5"
+    },
+    {
+      "uri": "references/visual/shelter-bundled-revision.png",
+      "sha256": "6d5f91781f30308598a056d0dcd44ce7fb8c36f75662edc5d17a79420def87fb"
+    }
+  ],
+  "limits": [
+    "Still images cannot establish motion, timing or sound",
+    "Edited variants may change more than requested",
+    "A preference between variants does not approve either"
+  ]
+}

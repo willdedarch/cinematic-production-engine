@@ -1,0 +1,2376 @@
+{
+  "schema_version": "3.1.0",
+  "common_columns": [
+    "id",
+    "project_id",
+    "episode_id",
+    "revision",
+    "updated_at",
+    "updated_by",
+    "is_test",
+    "last_op_id"
+  ],
+  "tables": {
+    "Projects": {
+      "columns": [
+        "id",
+        "project_id",
+        "episode_id",
+        "revision",
+        "updated_at",
+        "updated_by",
+        "is_test",
+        "last_op_id",
+        "name",
+        "mode",
+        "credits_allowed",
+        "generation_mode",
+        "status"
+      ],
+      "types": {
+        "id": "string",
+        "project_id": "string",
+        "episode_id": "string",
+        "revision": "integer",
+        "updated_at": "string",
+        "updated_by": "string",
+        "is_test": "boolean",
+        "last_op_id": "string",
+        "name": "string",
+        "mode": "string",
+        "credits_allowed": "integer",
+        "generation_mode": "string",
+        "status": "string"
+      },
+      "enums": {
+        "mode": [
+          "guided",
+          "manual",
+          "hybrid"
+        ],
+        "generation_mode": [
+          "manual"
+        ],
+        "status": [
+          "ACTIVE",
+          "ARCHIVED"
+        ]
+      },
+      "foreign_keys": {},
+      "primary_key": "id",
+      "required": [
+        "id",
+        "project_id",
+        "episode_id",
+        "revision",
+        "updated_at",
+        "updated_by",
+        "is_test"
+      ]
+    },
+    "Episodes": {
+      "columns": [
+        "id",
+        "project_id",
+        "episode_id",
+        "revision",
+        "updated_at",
+        "updated_by",
+        "is_test",
+        "last_op_id",
+        "title",
+        "episode_number",
+        "target_seconds",
+        "aspect_ratio",
+        "genre",
+        "continuity_ref",
+        "status"
+      ],
+      "types": {
+        "id": "string",
+        "project_id": "string",
+        "episode_id": "string",
+        "revision": "integer",
+        "updated_at": "string",
+        "updated_by": "string",
+        "is_test": "boolean",
+        "last_op_id": "string",
+        "title": "string",
+        "episode_number": "integer",
+        "target_seconds": "number",
+        "aspect_ratio": "string",
+        "genre": "string",
+        "continuity_ref": "string",
+        "status": "string"
+      },
+      "enums": {
+        "aspect_ratio": [
+          "9:16",
+          "16:9",
+          "1:1"
+        ],
+        "status": [
+          "ACTIVE",
+          "ARCHIVED"
+        ]
+      },
+      "foreign_keys": {},
+      "primary_key": "id",
+      "required": [
+        "id",
+        "project_id",
+        "episode_id",
+        "revision",
+        "updated_at",
+        "updated_by",
+        "is_test"
+      ]
+    },
+    "Workflow": {
+      "columns": [
+        "id",
+        "project_id",
+        "episode_id",
+        "revision",
+        "updated_at",
+        "updated_by",
+        "is_test",
+        "last_op_id",
+        "gate_id",
+        "name",
+        "status",
+        "depends_on",
+        "skippable",
+        "deliverable_ref",
+        "evidence",
+        "reason"
+      ],
+      "types": {
+        "id": "string",
+        "project_id": "string",
+        "episode_id": "string",
+        "revision": "integer",
+        "updated_at": "string",
+        "updated_by": "string",
+        "is_test": "boolean",
+        "last_op_id": "string",
+        "gate_id": "string",
+        "name": "string",
+        "status": "string",
+        "depends_on": "string",
+        "skippable": "boolean",
+        "deliverable_ref": "string",
+        "evidence": "string",
+        "reason": "string"
+      },
+      "enums": {
+        "gate_id": [
+          "G0",
+          "G1",
+          "G2",
+          "G3",
+          "G4",
+          "G5",
+          "G6",
+          "G7",
+          "G8",
+          "G9",
+          "G10",
+          "G11",
+          "G12",
+          "G13",
+          "G14",
+          "G15"
+        ],
+        "status": [
+          "PENDING",
+          "IN_PROGRESS",
+          "REVIEW_REQUIRED",
+          "APPROVED",
+          "LOCKED",
+          "CHANGES_REQUESTED",
+          "SKIPPED"
+        ]
+      },
+      "foreign_keys": {},
+      "primary_key": "id",
+      "required": [
+        "id",
+        "project_id",
+        "episode_id",
+        "revision",
+        "updated_at",
+        "updated_by",
+        "is_test"
+      ]
+    },
+    "Screenplays": {
+      "columns": [
+        "id",
+        "project_id",
+        "episode_id",
+        "revision",
+        "updated_at",
+        "updated_by",
+        "is_test",
+        "last_op_id",
+        "gate_id",
+        "version",
+        "title",
+        "text_or_ref",
+        "source_refs",
+        "status",
+        "supersedes_id"
+      ],
+      "types": {
+        "id": "string",
+        "project_id": "string",
+        "episode_id": "string",
+        "revision": "integer",
+        "updated_at": "string",
+        "updated_by": "string",
+        "is_test": "boolean",
+        "last_op_id": "string",
+        "gate_id": "string",
+        "version": "string",
+        "title": "string",
+        "text_or_ref": "string",
+        "source_refs": "string",
+        "status": "string",
+        "supersedes_id": "string"
+      },
+      "enums": {
+        "status": [
+          "DRAFT",
+          "REVIEW_REQUIRED",
+          "APPROVED",
+          "LOCKED",
+          "CHANGES_REQUESTED",
+          "ARCHIVED"
+        ]
+      },
+      "foreign_keys": {
+        "supersedes_id": "Screenplays"
+      },
+      "primary_key": "id",
+      "required": [
+        "id",
+        "project_id",
+        "episode_id",
+        "revision",
+        "updated_at",
+        "updated_by",
+        "is_test"
+      ]
+    },
+    "Characters": {
+      "columns": [
+        "id",
+        "project_id",
+        "episode_id",
+        "revision",
+        "updated_at",
+        "updated_by",
+        "is_test",
+        "last_op_id",
+        "gate_id",
+        "version",
+        "name",
+        "identity",
+        "costume",
+        "performance",
+        "reference_roles",
+        "asset_ref",
+        "status",
+        "supersedes_id"
+      ],
+      "types": {
+        "id": "string",
+        "project_id": "string",
+        "episode_id": "string",
+        "revision": "integer",
+        "updated_at": "string",
+        "updated_by": "string",
+        "is_test": "boolean",
+        "last_op_id": "string",
+        "gate_id": "string",
+        "version": "string",
+        "name": "string",
+        "identity": "string",
+        "costume": "string",
+        "performance": "string",
+        "reference_roles": "string",
+        "asset_ref": "string",
+        "status": "string",
+        "supersedes_id": "string"
+      },
+      "enums": {
+        "status": [
+          "DRAFT",
+          "REVIEW_REQUIRED",
+          "APPROVED",
+          "LOCKED",
+          "CHANGES_REQUESTED",
+          "ARCHIVED"
+        ]
+      },
+      "foreign_keys": {
+        "supersedes_id": "Characters"
+      },
+      "primary_key": "id",
+      "required": [
+        "id",
+        "project_id",
+        "episode_id",
+        "revision",
+        "updated_at",
+        "updated_by",
+        "is_test"
+      ]
+    },
+    "Locations": {
+      "columns": [
+        "id",
+        "project_id",
+        "episode_id",
+        "revision",
+        "updated_at",
+        "updated_by",
+        "is_test",
+        "last_op_id",
+        "gate_id",
+        "version",
+        "name",
+        "geo_version",
+        "anchors",
+        "dimensions",
+        "light_weather",
+        "state",
+        "asset_ref",
+        "status",
+        "supersedes_id"
+      ],
+      "types": {
+        "id": "string",
+        "project_id": "string",
+        "episode_id": "string",
+        "revision": "integer",
+        "updated_at": "string",
+        "updated_by": "string",
+        "is_test": "boolean",
+        "last_op_id": "string",
+        "gate_id": "string",
+        "version": "string",
+        "name": "string",
+        "geo_version": "string",
+        "anchors": "string",
+        "dimensions": "string",
+        "light_weather": "string",
+        "state": "string",
+        "asset_ref": "string",
+        "status": "string",
+        "supersedes_id": "string"
+      },
+      "enums": {
+        "status": [
+          "DRAFT",
+          "REVIEW_REQUIRED",
+          "APPROVED",
+          "LOCKED",
+          "CHANGES_REQUESTED",
+          "ARCHIVED"
+        ]
+      },
+      "foreign_keys": {
+        "supersedes_id": "Locations"
+      },
+      "primary_key": "id",
+      "required": [
+        "id",
+        "project_id",
+        "episode_id",
+        "revision",
+        "updated_at",
+        "updated_by",
+        "is_test"
+      ]
+    },
+    "Props": {
+      "columns": [
+        "id",
+        "project_id",
+        "episode_id",
+        "revision",
+        "updated_at",
+        "updated_by",
+        "is_test",
+        "last_op_id",
+        "gate_id",
+        "version",
+        "name",
+        "material_scale",
+        "owner_character_id",
+        "state",
+        "asset_ref",
+        "status",
+        "supersedes_id"
+      ],
+      "types": {
+        "id": "string",
+        "project_id": "string",
+        "episode_id": "string",
+        "revision": "integer",
+        "updated_at": "string",
+        "updated_by": "string",
+        "is_test": "boolean",
+        "last_op_id": "string",
+        "gate_id": "string",
+        "version": "string",
+        "name": "string",
+        "material_scale": "string",
+        "owner_character_id": "string",
+        "state": "string",
+        "asset_ref": "string",
+        "status": "string",
+        "supersedes_id": "string"
+      },
+      "enums": {
+        "status": [
+          "DRAFT",
+          "REVIEW_REQUIRED",
+          "APPROVED",
+          "LOCKED",
+          "CHANGES_REQUESTED",
+          "ARCHIVED"
+        ]
+      },
+      "foreign_keys": {
+        "owner_character_id": "Characters",
+        "supersedes_id": "Props"
+      },
+      "primary_key": "id",
+      "required": [
+        "id",
+        "project_id",
+        "episode_id",
+        "revision",
+        "updated_at",
+        "updated_by",
+        "is_test"
+      ]
+    },
+    "Cinematography": {
+      "columns": [
+        "id",
+        "project_id",
+        "episode_id",
+        "revision",
+        "updated_at",
+        "updated_by",
+        "is_test",
+        "last_op_id",
+        "gate_id",
+        "version",
+        "intent",
+        "sensor_reference",
+        "lens_family",
+        "focal_mm",
+        "camera_distance_m",
+        "composition",
+        "light",
+        "texture",
+        "motion",
+        "status",
+        "supersedes_id"
+      ],
+      "types": {
+        "id": "string",
+        "project_id": "string",
+        "episode_id": "string",
+        "revision": "integer",
+        "updated_at": "string",
+        "updated_by": "string",
+        "is_test": "boolean",
+        "last_op_id": "string",
+        "gate_id": "string",
+        "version": "string",
+        "intent": "string",
+        "sensor_reference": "string",
+        "lens_family": "string",
+        "focal_mm": "number",
+        "camera_distance_m": "number",
+        "composition": "string",
+        "light": "string",
+        "texture": "string",
+        "motion": "string",
+        "status": "string",
+        "supersedes_id": "string"
+      },
+      "enums": {
+        "lens_family": [
+          "spherical",
+          "anamorphic",
+          "vintage",
+          "custom"
+        ],
+        "status": [
+          "DRAFT",
+          "REVIEW_REQUIRED",
+          "APPROVED",
+          "LOCKED",
+          "CHANGES_REQUESTED",
+          "ARCHIVED"
+        ]
+      },
+      "foreign_keys": {
+        "supersedes_id": "Cinematography"
+      },
+      "primary_key": "id",
+      "required": [
+        "id",
+        "project_id",
+        "episode_id",
+        "revision",
+        "updated_at",
+        "updated_by",
+        "is_test"
+      ]
+    },
+    "Shot List": {
+      "columns": [
+        "id",
+        "project_id",
+        "episode_id",
+        "revision",
+        "updated_at",
+        "updated_by",
+        "is_test",
+        "last_op_id",
+        "gate_id",
+        "version",
+        "scene_beat",
+        "order",
+        "duration_s",
+        "purpose",
+        "location_id",
+        "character_ids",
+        "prop_ids",
+        "camera_blocking",
+        "action",
+        "start_end_state",
+        "sound_edit",
+        "status",
+        "supersedes_id"
+      ],
+      "types": {
+        "id": "string",
+        "project_id": "string",
+        "episode_id": "string",
+        "revision": "integer",
+        "updated_at": "string",
+        "updated_by": "string",
+        "is_test": "boolean",
+        "last_op_id": "string",
+        "gate_id": "string",
+        "version": "string",
+        "scene_beat": "string",
+        "order": "integer",
+        "duration_s": "number",
+        "purpose": "string",
+        "location_id": "string",
+        "character_ids": "string",
+        "prop_ids": "string",
+        "camera_blocking": "string",
+        "action": "string",
+        "start_end_state": "string",
+        "sound_edit": "string",
+        "status": "string",
+        "supersedes_id": "string"
+      },
+      "enums": {
+        "status": [
+          "DRAFT",
+          "REVIEW_REQUIRED",
+          "APPROVED",
+          "LOCKED",
+          "CHANGES_REQUESTED",
+          "ARCHIVED"
+        ]
+      },
+      "foreign_keys": {
+        "location_id": "Locations",
+        "supersedes_id": "Shot List"
+      },
+      "primary_key": "id",
+      "required": [
+        "id",
+        "project_id",
+        "episode_id",
+        "revision",
+        "updated_at",
+        "updated_by",
+        "is_test"
+      ]
+    },
+    "Prompts": {
+      "columns": [
+        "id",
+        "project_id",
+        "episode_id",
+        "revision",
+        "updated_at",
+        "updated_by",
+        "is_test",
+        "last_op_id",
+        "gate_id",
+        "version",
+        "target_table",
+        "target_id",
+        "model",
+        "model_checked_at",
+        "reference_roles",
+        "locked_constraints",
+        "prompt_text",
+        "native_parameters",
+        "unverified_suggestions",
+        "status",
+        "supersedes_id"
+      ],
+      "types": {
+        "id": "string",
+        "project_id": "string",
+        "episode_id": "string",
+        "revision": "integer",
+        "updated_at": "string",
+        "updated_by": "string",
+        "is_test": "boolean",
+        "last_op_id": "string",
+        "gate_id": "string",
+        "version": "string",
+        "target_table": "string",
+        "target_id": "string",
+        "model": "string",
+        "model_checked_at": "string",
+        "reference_roles": "string",
+        "locked_constraints": "string",
+        "prompt_text": "string",
+        "native_parameters": "string",
+        "unverified_suggestions": "string",
+        "status": "string",
+        "supersedes_id": "string"
+      },
+      "enums": {
+        "status": [
+          "DRAFT",
+          "REVIEW_REQUIRED",
+          "APPROVED",
+          "LOCKED",
+          "CHANGES_REQUESTED",
+          "ARCHIVED"
+        ]
+      },
+      "foreign_keys": {
+        "supersedes_id": "Prompts"
+      },
+      "primary_key": "id",
+      "required": [
+        "id",
+        "project_id",
+        "episode_id",
+        "revision",
+        "updated_at",
+        "updated_by",
+        "is_test"
+      ]
+    },
+    "Checklists": {
+      "columns": [
+        "id",
+        "project_id",
+        "episode_id",
+        "revision",
+        "updated_at",
+        "updated_by",
+        "is_test",
+        "last_op_id",
+        "workflow_id",
+        "gate_id",
+        "item_index",
+        "criterion",
+        "checked",
+        "evidence",
+        "observed_or_planned"
+      ],
+      "types": {
+        "id": "string",
+        "project_id": "string",
+        "episode_id": "string",
+        "revision": "integer",
+        "updated_at": "string",
+        "updated_by": "string",
+        "is_test": "boolean",
+        "last_op_id": "string",
+        "workflow_id": "string",
+        "gate_id": "string",
+        "item_index": "integer",
+        "criterion": "string",
+        "checked": "boolean",
+        "evidence": "string",
+        "observed_or_planned": "string"
+      },
+      "enums": {
+        "observed_or_planned": [
+          "planned",
+          "observed",
+          "not_accessible"
+        ]
+      },
+      "foreign_keys": {
+        "workflow_id": "Workflow"
+      },
+      "primary_key": "id",
+      "required": [
+        "id",
+        "project_id",
+        "episode_id",
+        "revision",
+        "updated_at",
+        "updated_by",
+        "is_test"
+      ]
+    },
+    "Approvals": {
+      "columns": [
+        "id",
+        "project_id",
+        "episode_id",
+        "revision",
+        "updated_at",
+        "updated_by",
+        "is_test",
+        "last_op_id",
+        "workflow_id",
+        "gate_id",
+        "gate_revision",
+        "decision",
+        "approver",
+        "user_message_ref",
+        "evidence",
+        "status"
+      ],
+      "types": {
+        "id": "string",
+        "project_id": "string",
+        "episode_id": "string",
+        "revision": "integer",
+        "updated_at": "string",
+        "updated_by": "string",
+        "is_test": "boolean",
+        "last_op_id": "string",
+        "workflow_id": "string",
+        "gate_id": "string",
+        "gate_revision": "integer",
+        "decision": "string",
+        "approver": "string",
+        "user_message_ref": "string",
+        "evidence": "string",
+        "status": "string"
+      },
+      "enums": {
+        "decision": [
+          "PENDING",
+          "APPROVE",
+          "LOCK",
+          "REVISE",
+          "SKIP"
+        ],
+        "status": [
+          "DRAFT",
+          "RECORDED",
+          "SUPERSEDED"
+        ]
+      },
+      "foreign_keys": {
+        "workflow_id": "Workflow"
+      },
+      "primary_key": "id",
+      "required": [
+        "id",
+        "project_id",
+        "episode_id",
+        "revision",
+        "updated_at",
+        "updated_by",
+        "is_test"
+      ]
+    },
+    "Continuity": {
+      "columns": [
+        "id",
+        "project_id",
+        "episode_id",
+        "revision",
+        "updated_at",
+        "updated_by",
+        "is_test",
+        "last_op_id",
+        "gate_id",
+        "entity_table",
+        "entity_id",
+        "scene_beat",
+        "before_state",
+        "event",
+        "after_state",
+        "source_ref",
+        "status"
+      ],
+      "types": {
+        "id": "string",
+        "project_id": "string",
+        "episode_id": "string",
+        "revision": "integer",
+        "updated_at": "string",
+        "updated_by": "string",
+        "is_test": "boolean",
+        "last_op_id": "string",
+        "gate_id": "string",
+        "entity_table": "string",
+        "entity_id": "string",
+        "scene_beat": "string",
+        "before_state": "string",
+        "event": "string",
+        "after_state": "string",
+        "source_ref": "string",
+        "status": "string"
+      },
+      "enums": {
+        "status": [
+          "DRAFT",
+          "CONFIRMED",
+          "CHANGES_REQUESTED"
+        ]
+      },
+      "foreign_keys": {},
+      "primary_key": "id",
+      "required": [
+        "id",
+        "project_id",
+        "episode_id",
+        "revision",
+        "updated_at",
+        "updated_by",
+        "is_test"
+      ]
+    },
+    "Decisions": {
+      "columns": [
+        "id",
+        "project_id",
+        "episode_id",
+        "revision",
+        "updated_at",
+        "updated_by",
+        "is_test",
+        "last_op_id",
+        "gate_id",
+        "topic",
+        "choice",
+        "rationale",
+        "user_message_ref",
+        "status"
+      ],
+      "types": {
+        "id": "string",
+        "project_id": "string",
+        "episode_id": "string",
+        "revision": "integer",
+        "updated_at": "string",
+        "updated_by": "string",
+        "is_test": "boolean",
+        "last_op_id": "string",
+        "gate_id": "string",
+        "topic": "string",
+        "choice": "string",
+        "rationale": "string",
+        "user_message_ref": "string",
+        "status": "string"
+      },
+      "enums": {
+        "status": [
+          "DRAFT",
+          "RECORDED",
+          "ARCHIVED"
+        ]
+      },
+      "foreign_keys": {},
+      "primary_key": "id",
+      "required": [
+        "id",
+        "project_id",
+        "episode_id",
+        "revision",
+        "updated_at",
+        "updated_by",
+        "is_test"
+      ]
+    },
+    "Revision History": {
+      "columns": [
+        "id",
+        "project_id",
+        "episode_id",
+        "revision",
+        "updated_at",
+        "updated_by",
+        "is_test",
+        "last_op_id",
+        "op_id",
+        "event",
+        "actor",
+        "authorization_ref",
+        "changes_json",
+        "guards_json",
+        "result",
+        "evidence_ref"
+      ],
+      "types": {
+        "id": "string",
+        "project_id": "string",
+        "episode_id": "string",
+        "revision": "integer",
+        "updated_at": "string",
+        "updated_by": "string",
+        "is_test": "boolean",
+        "last_op_id": "string",
+        "op_id": "string",
+        "event": "string",
+        "actor": "string",
+        "authorization_ref": "string",
+        "changes_json": "string",
+        "guards_json": "string",
+        "result": "string",
+        "evidence_ref": "string"
+      },
+      "enums": {
+        "event": [
+          "TEST_ONLY",
+          "PREPARED",
+          "CONFIRMED",
+          "INCOMPLETE",
+          "CONFLICT"
+        ]
+      },
+      "foreign_keys": {},
+      "primary_key": "id",
+      "required": [
+        "id",
+        "project_id",
+        "episode_id",
+        "revision",
+        "updated_at",
+        "updated_by",
+        "is_test"
+      ]
+    },
+    "Reference Library": {
+      "columns": [
+        "id",
+        "project_id",
+        "episode_id",
+        "revision",
+        "updated_at",
+        "updated_by",
+        "is_test",
+        "last_op_id",
+        "title",
+        "technique_id",
+        "source_ref",
+        "author",
+        "rights",
+        "context",
+        "limitations",
+        "provenance",
+        "status",
+        "supersedes_id"
+      ],
+      "types": {
+        "id": "string",
+        "project_id": "string",
+        "episode_id": "string",
+        "revision": "integer",
+        "updated_at": "string",
+        "updated_by": "string",
+        "is_test": "boolean",
+        "last_op_id": "string",
+        "title": "string",
+        "technique_id": "string",
+        "source_ref": "string",
+        "author": "string",
+        "rights": "string",
+        "context": "string",
+        "limitations": "string",
+        "provenance": "string",
+        "status": "string",
+        "supersedes_id": "string"
+      },
+      "enums": {
+        "status": [
+          "DRAFT",
+          "REVIEW_REQUIRED",
+          "APPROVED",
+          "LOCKED",
+          "REJECTED",
+          "ARCHIVED"
+        ]
+      },
+      "foreign_keys": {
+        "technique_id": "Techniques",
+        "supersedes_id": "Reference Library"
+      },
+      "primary_key": "id",
+      "required": [
+        "id",
+        "project_id",
+        "episode_id",
+        "revision",
+        "updated_at",
+        "updated_by",
+        "is_test"
+      ]
+    },
+    "Examples": {
+      "columns": [
+        "id",
+        "project_id",
+        "episode_id",
+        "revision",
+        "updated_at",
+        "updated_by",
+        "is_test",
+        "last_op_id",
+        "title",
+        "kind",
+        "department",
+        "source_ref",
+        "technique_id",
+        "expected",
+        "observed",
+        "limitations",
+        "status",
+        "supersedes_id"
+      ],
+      "types": {
+        "id": "string",
+        "project_id": "string",
+        "episode_id": "string",
+        "revision": "integer",
+        "updated_at": "string",
+        "updated_by": "string",
+        "is_test": "boolean",
+        "last_op_id": "string",
+        "title": "string",
+        "kind": "string",
+        "department": "string",
+        "source_ref": "string",
+        "technique_id": "string",
+        "expected": "string",
+        "observed": "string",
+        "limitations": "string",
+        "status": "string",
+        "supersedes_id": "string"
+      },
+      "enums": {
+        "status": [
+          "DRAFT",
+          "REVIEW_REQUIRED",
+          "APPROVED",
+          "LOCKED",
+          "REJECTED",
+          "ARCHIVED"
+        ]
+      },
+      "foreign_keys": {
+        "technique_id": "Techniques",
+        "supersedes_id": "Examples"
+      },
+      "primary_key": "id",
+      "required": [
+        "id",
+        "project_id",
+        "episode_id",
+        "revision",
+        "updated_at",
+        "updated_by",
+        "is_test"
+      ]
+    },
+    "Techniques": {
+      "columns": [
+        "id",
+        "project_id",
+        "episode_id",
+        "revision",
+        "updated_at",
+        "updated_by",
+        "is_test",
+        "last_op_id",
+        "name",
+        "department",
+        "when_to_use",
+        "procedure",
+        "tradeoff",
+        "example",
+        "validation",
+        "sources",
+        "status",
+        "supersedes_id"
+      ],
+      "types": {
+        "id": "string",
+        "project_id": "string",
+        "episode_id": "string",
+        "revision": "integer",
+        "updated_at": "string",
+        "updated_by": "string",
+        "is_test": "boolean",
+        "last_op_id": "string",
+        "name": "string",
+        "department": "string",
+        "when_to_use": "string",
+        "procedure": "string",
+        "tradeoff": "string",
+        "example": "string",
+        "validation": "string",
+        "sources": "string",
+        "status": "string",
+        "supersedes_id": "string"
+      },
+      "enums": {
+        "status": [
+          "DRAFT",
+          "REVIEW_REQUIRED",
+          "APPROVED",
+          "LOCKED",
+          "REJECTED",
+          "ARCHIVED"
+        ]
+      },
+      "foreign_keys": {
+        "supersedes_id": "Techniques"
+      },
+      "primary_key": "id",
+      "required": [
+        "id",
+        "project_id",
+        "episode_id",
+        "revision",
+        "updated_at",
+        "updated_by",
+        "is_test"
+      ]
+    },
+    "Creative Preferences": {
+      "columns": [
+        "id",
+        "project_id",
+        "episode_id",
+        "revision",
+        "updated_at",
+        "updated_by",
+        "is_test",
+        "last_op_id",
+        "category",
+        "department",
+        "context",
+        "preference",
+        "reason",
+        "feedback_ref",
+        "scope",
+        "status",
+        "supersedes_id"
+      ],
+      "types": {
+        "id": "string",
+        "project_id": "string",
+        "episode_id": "string",
+        "revision": "integer",
+        "updated_at": "string",
+        "updated_by": "string",
+        "is_test": "boolean",
+        "last_op_id": "string",
+        "category": "string",
+        "department": "string",
+        "context": "string",
+        "preference": "string",
+        "reason": "string",
+        "feedback_ref": "string",
+        "scope": "string",
+        "status": "string",
+        "supersedes_id": "string"
+      },
+      "enums": {
+        "status": [
+          "DRAFT",
+          "REVIEW_REQUIRED",
+          "APPROVED",
+          "LOCKED",
+          "REJECTED",
+          "ARCHIVED"
+        ]
+      },
+      "foreign_keys": {
+        "supersedes_id": "Creative Preferences"
+      },
+      "primary_key": "id",
+      "required": [
+        "id",
+        "project_id",
+        "episode_id",
+        "revision",
+        "updated_at",
+        "updated_by",
+        "is_test"
+      ]
+    },
+    "Model Compatibility": {
+      "columns": [
+        "id",
+        "project_id",
+        "episode_id",
+        "revision",
+        "updated_at",
+        "updated_by",
+        "is_test",
+        "last_op_id",
+        "model_id",
+        "catalog_ref",
+        "output_type",
+        "checked_at",
+        "generation_tested",
+        "limitations",
+        "status",
+        "supersedes_id"
+      ],
+      "types": {
+        "id": "string",
+        "project_id": "string",
+        "episode_id": "string",
+        "revision": "integer",
+        "updated_at": "string",
+        "updated_by": "string",
+        "is_test": "boolean",
+        "last_op_id": "string",
+        "model_id": "string",
+        "catalog_ref": "string",
+        "output_type": "string",
+        "checked_at": "string",
+        "generation_tested": "boolean",
+        "limitations": "string",
+        "status": "string",
+        "supersedes_id": "string"
+      },
+      "enums": {
+        "status": [
+          "DRAFT",
+          "REVIEW_REQUIRED",
+          "APPROVED",
+          "LOCKED",
+          "REJECTED",
+          "ARCHIVED"
+        ]
+      },
+      "foreign_keys": {
+        "supersedes_id": "Model Compatibility"
+      },
+      "primary_key": "id",
+      "required": [
+        "id",
+        "project_id",
+        "episode_id",
+        "revision",
+        "updated_at",
+        "updated_by",
+        "is_test"
+      ]
+    },
+    "Production Lessons": {
+      "columns": [
+        "id",
+        "project_id",
+        "episode_id",
+        "revision",
+        "updated_at",
+        "updated_by",
+        "is_test",
+        "last_op_id",
+        "department",
+        "context",
+        "hypothesis",
+        "observation",
+        "correction",
+        "evidence_ref",
+        "scope",
+        "status",
+        "supersedes_id"
+      ],
+      "types": {
+        "id": "string",
+        "project_id": "string",
+        "episode_id": "string",
+        "revision": "integer",
+        "updated_at": "string",
+        "updated_by": "string",
+        "is_test": "boolean",
+        "last_op_id": "string",
+        "department": "string",
+        "context": "string",
+        "hypothesis": "string",
+        "observation": "string",
+        "correction": "string",
+        "evidence_ref": "string",
+        "scope": "string",
+        "status": "string",
+        "supersedes_id": "string"
+      },
+      "enums": {
+        "status": [
+          "DRAFT",
+          "REVIEW_REQUIRED",
+          "APPROVED",
+          "LOCKED",
+          "REJECTED",
+          "ARCHIVED"
+        ]
+      },
+      "foreign_keys": {
+        "supersedes_id": "Production Lessons"
+      },
+      "primary_key": "id",
+      "required": [
+        "id",
+        "project_id",
+        "episode_id",
+        "revision",
+        "updated_at",
+        "updated_by",
+        "is_test"
+      ]
+    },
+    "Director Profiles": {
+      "columns": [
+        "id",
+        "project_id",
+        "episode_id",
+        "revision",
+        "updated_at",
+        "updated_by",
+        "is_test",
+        "last_op_id",
+        "title",
+        "intention",
+        "principle",
+        "application",
+        "sources",
+        "limitations",
+        "status",
+        "supersedes_id"
+      ],
+      "types": {
+        "id": "string",
+        "project_id": "string",
+        "episode_id": "string",
+        "revision": "integer",
+        "updated_at": "string",
+        "updated_by": "string",
+        "is_test": "boolean",
+        "last_op_id": "string",
+        "title": "string",
+        "intention": "string",
+        "principle": "string",
+        "application": "string",
+        "sources": "string",
+        "limitations": "string",
+        "status": "string",
+        "supersedes_id": "string"
+      },
+      "enums": {
+        "status": [
+          "DRAFT",
+          "REVIEW_REQUIRED",
+          "APPROVED",
+          "LOCKED",
+          "REJECTED",
+          "ARCHIVED"
+        ]
+      },
+      "foreign_keys": {
+        "supersedes_id": "Director Profiles"
+      },
+      "primary_key": "id",
+      "required": [
+        "id",
+        "project_id",
+        "episode_id",
+        "revision",
+        "updated_at",
+        "updated_by",
+        "is_test"
+      ]
+    },
+    "Genre Profiles": {
+      "columns": [
+        "id",
+        "project_id",
+        "episode_id",
+        "revision",
+        "updated_at",
+        "updated_by",
+        "is_test",
+        "last_op_id",
+        "name",
+        "question",
+        "tools",
+        "pacing",
+        "limitations",
+        "status",
+        "supersedes_id"
+      ],
+      "types": {
+        "id": "string",
+        "project_id": "string",
+        "episode_id": "string",
+        "revision": "integer",
+        "updated_at": "string",
+        "updated_by": "string",
+        "is_test": "boolean",
+        "last_op_id": "string",
+        "name": "string",
+        "question": "string",
+        "tools": "string",
+        "pacing": "string",
+        "limitations": "string",
+        "status": "string",
+        "supersedes_id": "string"
+      },
+      "enums": {
+        "status": [
+          "DRAFT",
+          "REVIEW_REQUIRED",
+          "APPROVED",
+          "LOCKED",
+          "REJECTED",
+          "ARCHIVED"
+        ]
+      },
+      "foreign_keys": {
+        "supersedes_id": "Genre Profiles"
+      },
+      "primary_key": "id",
+      "required": [
+        "id",
+        "project_id",
+        "episode_id",
+        "revision",
+        "updated_at",
+        "updated_by",
+        "is_test"
+      ]
+    },
+    "Visual Standards": {
+      "columns": [
+        "id",
+        "project_id",
+        "episode_id",
+        "revision",
+        "updated_at",
+        "updated_by",
+        "is_test",
+        "last_op_id",
+        "department",
+        "context",
+        "criterion",
+        "good_example_ref",
+        "bad_example_ref",
+        "limitations",
+        "status",
+        "supersedes_id"
+      ],
+      "types": {
+        "id": "string",
+        "project_id": "string",
+        "episode_id": "string",
+        "revision": "integer",
+        "updated_at": "string",
+        "updated_by": "string",
+        "is_test": "boolean",
+        "last_op_id": "string",
+        "department": "string",
+        "context": "string",
+        "criterion": "string",
+        "good_example_ref": "string",
+        "bad_example_ref": "string",
+        "limitations": "string",
+        "status": "string",
+        "supersedes_id": "string"
+      },
+      "enums": {
+        "status": [
+          "DRAFT",
+          "REVIEW_REQUIRED",
+          "APPROVED",
+          "LOCKED",
+          "REJECTED",
+          "ARCHIVED"
+        ]
+      },
+      "foreign_keys": {
+        "good_example_ref": "Examples",
+        "bad_example_ref": "Examples",
+        "supersedes_id": "Visual Standards"
+      },
+      "primary_key": "id",
+      "required": [
+        "id",
+        "project_id",
+        "episode_id",
+        "revision",
+        "updated_at",
+        "updated_by",
+        "is_test"
+      ]
+    },
+    "Evaluation Results": {
+      "columns": [
+        "id",
+        "project_id",
+        "episode_id",
+        "revision",
+        "updated_at",
+        "updated_by",
+        "is_test",
+        "last_op_id",
+        "target_table",
+        "target_id",
+        "target_revision",
+        "department",
+        "rubric_ref",
+        "reviewer",
+        "technical_result",
+        "artistic_result",
+        "evidence",
+        "limitations",
+        "decision",
+        "status",
+        "supersedes_id"
+      ],
+      "types": {
+        "id": "string",
+        "project_id": "string",
+        "episode_id": "string",
+        "revision": "integer",
+        "updated_at": "string",
+        "updated_by": "string",
+        "is_test": "boolean",
+        "last_op_id": "string",
+        "target_table": "string",
+        "target_id": "string",
+        "target_revision": "integer",
+        "department": "string",
+        "rubric_ref": "string",
+        "reviewer": "string",
+        "technical_result": "string",
+        "artistic_result": "string",
+        "evidence": "string",
+        "limitations": "string",
+        "decision": "string",
+        "status": "string",
+        "supersedes_id": "string"
+      },
+      "enums": {
+        "status": [
+          "DRAFT",
+          "REVIEW_REQUIRED",
+          "APPROVED",
+          "LOCKED",
+          "REJECTED",
+          "ARCHIVED"
+        ]
+      },
+      "foreign_keys": {
+        "supersedes_id": "Evaluation Results"
+      },
+      "primary_key": "id",
+      "required": [
+        "id",
+        "project_id",
+        "episode_id",
+        "revision",
+        "updated_at",
+        "updated_by",
+        "is_test"
+      ]
+    },
+    "Prompt Library": {
+      "columns": [
+        "id",
+        "project_id",
+        "episode_id",
+        "revision",
+        "updated_at",
+        "updated_by",
+        "is_test",
+        "last_op_id",
+        "name",
+        "model_id",
+        "intent_ref",
+        "compiled_ref",
+        "catalog_checked_at",
+        "generation_tested",
+        "observed",
+        "status",
+        "supersedes_id"
+      ],
+      "types": {
+        "id": "string",
+        "project_id": "string",
+        "episode_id": "string",
+        "revision": "integer",
+        "updated_at": "string",
+        "updated_by": "string",
+        "is_test": "boolean",
+        "last_op_id": "string",
+        "name": "string",
+        "model_id": "string",
+        "intent_ref": "string",
+        "compiled_ref": "string",
+        "catalog_checked_at": "string",
+        "generation_tested": "boolean",
+        "observed": "string",
+        "status": "string",
+        "supersedes_id": "string"
+      },
+      "enums": {
+        "status": [
+          "DRAFT",
+          "REVIEW_REQUIRED",
+          "APPROVED",
+          "LOCKED",
+          "REJECTED",
+          "ARCHIVED"
+        ]
+      },
+      "foreign_keys": {
+        "supersedes_id": "Prompt Library"
+      },
+      "primary_key": "id",
+      "required": [
+        "id",
+        "project_id",
+        "episode_id",
+        "revision",
+        "updated_at",
+        "updated_by",
+        "is_test"
+      ]
+    },
+    "Pairwise Comparisons": {
+      "columns": [
+        "id",
+        "project_id",
+        "episode_id",
+        "revision",
+        "updated_at",
+        "updated_by",
+        "is_test",
+        "last_op_id",
+        "target_id",
+        "target_revision",
+        "department",
+        "session_ref",
+        "reviewer_ids",
+        "order_results_json",
+        "outcome",
+        "divergences",
+        "human_decision_ref",
+        "limitations",
+        "status",
+        "supersedes_id"
+      ],
+      "types": {
+        "id": "string",
+        "project_id": "string",
+        "episode_id": "string",
+        "revision": "integer",
+        "updated_at": "string",
+        "updated_by": "string",
+        "is_test": "boolean",
+        "last_op_id": "string",
+        "target_id": "string",
+        "target_revision": "integer",
+        "department": "string",
+        "session_ref": "string",
+        "reviewer_ids": "string",
+        "order_results_json": "string",
+        "outcome": "string",
+        "divergences": "string",
+        "human_decision_ref": "string",
+        "limitations": "string",
+        "status": "string",
+        "supersedes_id": "string"
+      },
+      "enums": {
+        "status": [
+          "DRAFT",
+          "REVIEW_REQUIRED",
+          "APPROVED",
+          "LOCKED",
+          "REJECTED",
+          "ARCHIVED"
+        ]
+      },
+      "foreign_keys": {
+        "target_id": "Examples",
+        "supersedes_id": "Pairwise Comparisons"
+      },
+      "primary_key": "id",
+      "required": [
+        "id",
+        "project_id",
+        "episode_id",
+        "revision",
+        "updated_at",
+        "updated_by",
+        "is_test"
+      ]
+    },
+    "Human Feedback": {
+      "columns": [
+        "id",
+        "project_id",
+        "episode_id",
+        "revision",
+        "updated_at",
+        "updated_by",
+        "is_test",
+        "last_op_id",
+        "evaluation_id",
+        "target_table",
+        "target_id",
+        "target_revision",
+        "human_decision",
+        "user_message_ref",
+        "reason",
+        "evidence",
+        "preference_scope",
+        "context",
+        "status",
+        "supersedes_id"
+      ],
+      "types": {
+        "id": "string",
+        "project_id": "string",
+        "episode_id": "string",
+        "revision": "integer",
+        "updated_at": "string",
+        "updated_by": "string",
+        "is_test": "boolean",
+        "last_op_id": "string",
+        "evaluation_id": "string",
+        "target_table": "string",
+        "target_id": "string",
+        "target_revision": "integer",
+        "human_decision": "string",
+        "user_message_ref": "string",
+        "reason": "string",
+        "evidence": "string",
+        "preference_scope": "string",
+        "context": "string",
+        "status": "string",
+        "supersedes_id": "string"
+      },
+      "enums": {
+        "status": [
+          "DRAFT",
+          "REVIEW_REQUIRED",
+          "APPROVED",
+          "LOCKED",
+          "REJECTED",
+          "ARCHIVED"
+        ]
+      },
+      "foreign_keys": {
+        "evaluation_id": "Evaluation Results",
+        "supersedes_id": "Human Feedback"
+      },
+      "primary_key": "id",
+      "required": [
+        "id",
+        "project_id",
+        "episode_id",
+        "revision",
+        "updated_at",
+        "updated_by",
+        "is_test"
+      ]
+    },
+    "Failure Diagnostics": {
+      "columns": [
+        "id",
+        "project_id",
+        "episode_id",
+        "revision",
+        "updated_at",
+        "updated_by",
+        "is_test",
+        "last_op_id",
+        "target_table",
+        "target_id",
+        "target_revision",
+        "department",
+        "symptom",
+        "evidence",
+        "probable_cause",
+        "alternative_causes",
+        "missing_evidence",
+        "confidence",
+        "repair",
+        "protected",
+        "verification",
+        "status",
+        "supersedes_id"
+      ],
+      "types": {
+        "id": "string",
+        "project_id": "string",
+        "episode_id": "string",
+        "revision": "integer",
+        "updated_at": "string",
+        "updated_by": "string",
+        "is_test": "boolean",
+        "last_op_id": "string",
+        "target_table": "string",
+        "target_id": "string",
+        "target_revision": "integer",
+        "department": "string",
+        "symptom": "string",
+        "evidence": "string",
+        "probable_cause": "string",
+        "alternative_causes": "string",
+        "missing_evidence": "string",
+        "confidence": "string",
+        "repair": "string",
+        "protected": "string",
+        "verification": "string",
+        "status": "string",
+        "supersedes_id": "string"
+      },
+      "enums": {
+        "status": [
+          "DRAFT",
+          "REVIEW_REQUIRED",
+          "APPROVED",
+          "LOCKED",
+          "REJECTED",
+          "ARCHIVED"
+        ]
+      },
+      "foreign_keys": {
+        "supersedes_id": "Failure Diagnostics"
+      },
+      "primary_key": "id",
+      "required": [
+        "id",
+        "project_id",
+        "episode_id",
+        "revision",
+        "updated_at",
+        "updated_by",
+        "is_test"
+      ]
+    },
+    "Revision Results": {
+      "columns": [
+        "id",
+        "project_id",
+        "episode_id",
+        "revision",
+        "updated_at",
+        "updated_by",
+        "is_test",
+        "last_op_id",
+        "target_table",
+        "previous_id",
+        "previous_revision",
+        "current_id",
+        "current_revision",
+        "problem",
+        "changed_elements",
+        "protected_elements",
+        "resolved",
+        "persistent",
+        "introduced",
+        "technical_result",
+        "artistic_result",
+        "evidence",
+        "status",
+        "supersedes_id"
+      ],
+      "types": {
+        "id": "string",
+        "project_id": "string",
+        "episode_id": "string",
+        "revision": "integer",
+        "updated_at": "string",
+        "updated_by": "string",
+        "is_test": "boolean",
+        "last_op_id": "string",
+        "target_table": "string",
+        "previous_id": "string",
+        "previous_revision": "integer",
+        "current_id": "string",
+        "current_revision": "integer",
+        "problem": "string",
+        "changed_elements": "string",
+        "protected_elements": "string",
+        "resolved": "string",
+        "persistent": "string",
+        "introduced": "string",
+        "technical_result": "string",
+        "artistic_result": "string",
+        "evidence": "string",
+        "status": "string",
+        "supersedes_id": "string"
+      },
+      "enums": {
+        "status": [
+          "DRAFT",
+          "REVIEW_REQUIRED",
+          "APPROVED",
+          "LOCKED",
+          "REJECTED",
+          "ARCHIVED"
+        ]
+      },
+      "foreign_keys": {
+        "supersedes_id": "Revision Results"
+      },
+      "primary_key": "id",
+      "required": [
+        "id",
+        "project_id",
+        "episode_id",
+        "revision",
+        "updated_at",
+        "updated_by",
+        "is_test"
+      ]
+    },
+    "Experiments": {
+      "columns": [
+        "id",
+        "project_id",
+        "episode_id",
+        "revision",
+        "updated_at",
+        "updated_by",
+        "is_test",
+        "last_op_id",
+        "department",
+        "lab",
+        "objective",
+        "hypothesis",
+        "primary_variable",
+        "secondary_variables",
+        "protected",
+        "references",
+        "tool",
+        "authorized_max_variants",
+        "authorization_ref",
+        "variants_json",
+        "evaluation_criteria",
+        "expected",
+        "observed",
+        "limitations",
+        "human_decision_ref",
+        "lesson_ref",
+        "status",
+        "supersedes_id"
+      ],
+      "types": {
+        "id": "string",
+        "project_id": "string",
+        "episode_id": "string",
+        "revision": "integer",
+        "updated_at": "string",
+        "updated_by": "string",
+        "is_test": "boolean",
+        "last_op_id": "string",
+        "department": "string",
+        "lab": "string",
+        "objective": "string",
+        "hypothesis": "string",
+        "primary_variable": "string",
+        "secondary_variables": "string",
+        "protected": "string",
+        "references": "string",
+        "tool": "string",
+        "authorized_max_variants": "integer",
+        "authorization_ref": "string",
+        "variants_json": "string",
+        "evaluation_criteria": "string",
+        "expected": "string",
+        "observed": "string",
+        "limitations": "string",
+        "human_decision_ref": "string",
+        "lesson_ref": "string",
+        "status": "string",
+        "supersedes_id": "string"
+      },
+      "enums": {
+        "status": [
+          "DRAFT",
+          "REVIEW_REQUIRED",
+          "APPROVED",
+          "LOCKED",
+          "REJECTED",
+          "ARCHIVED"
+        ]
+      },
+      "foreign_keys": {
+        "supersedes_id": "Experiments"
+      },
+      "primary_key": "id",
+      "required": [
+        "id",
+        "project_id",
+        "episode_id",
+        "revision",
+        "updated_at",
+        "updated_by",
+        "is_test"
+      ]
+    },
+    "Artifact Registry": {
+      "columns": [
+        "id",
+        "project_id",
+        "episode_id",
+        "revision",
+        "updated_at",
+        "updated_by",
+        "is_test",
+        "last_op_id",
+        "kind",
+        "department",
+        "gate_id",
+        "version",
+        "uri",
+        "sha256",
+        "origin",
+        "rights",
+        "experiment_id",
+        "technical_review_id",
+        "artistic_review_id",
+        "approval_id",
+        "supersedes_id",
+        "status"
+      ],
+      "types": {
+        "id": "string",
+        "project_id": "string",
+        "episode_id": "string",
+        "revision": "integer",
+        "updated_at": "string",
+        "updated_by": "string",
+        "is_test": "boolean",
+        "last_op_id": "string",
+        "kind": "string",
+        "department": "string",
+        "gate_id": "string",
+        "version": "integer",
+        "uri": "string",
+        "sha256": "string",
+        "origin": "string",
+        "rights": "string",
+        "experiment_id": "string",
+        "technical_review_id": "string",
+        "artistic_review_id": "string",
+        "approval_id": "string",
+        "supersedes_id": "string",
+        "status": "string"
+      },
+      "enums": {
+        "status": [
+          "DRAFT",
+          "REVIEW_REQUIRED",
+          "APPROVED",
+          "LOCKED",
+          "REJECTED",
+          "ARCHIVED"
+        ],
+        "kind": [
+          "REFERENCE",
+          "TECHNICAL_PREVIS",
+          "ARTISTIC_PREVIS",
+          "NARRATIVE_PREVIS",
+          "VISUAL_DRAFT",
+          "PRODUCTION_EXPORT",
+          "FINAL_ASSET"
+        ]
+      },
+      "foreign_keys": {
+        "supersedes_id": "Artifact Registry",
+        "experiment_id": "Experiments",
+        "technical_review_id": "Evaluation Results",
+        "artistic_review_id": "Evaluation Results",
+        "approval_id": "Approvals"
+      },
+      "primary_key": "id",
+      "required": [
+        "id",
+        "project_id",
+        "episode_id",
+        "revision",
+        "updated_at",
+        "updated_by",
+        "is_test"
+      ]
+    },
+    "Tool Capabilities": {
+      "columns": [
+        "id",
+        "project_id",
+        "episode_id",
+        "revision",
+        "updated_at",
+        "updated_by",
+        "is_test",
+        "last_op_id",
+        "name",
+        "environment",
+        "availability",
+        "scope",
+        "evidence_ref",
+        "alternative",
+        "checked_at",
+        "status",
+        "supersedes_id"
+      ],
+      "types": {
+        "id": "string",
+        "project_id": "string",
+        "episode_id": "string",
+        "revision": "integer",
+        "updated_at": "string",
+        "updated_by": "string",
+        "is_test": "boolean",
+        "last_op_id": "string",
+        "name": "string",
+        "environment": "string",
+        "availability": "string",
+        "scope": "string",
+        "evidence_ref": "string",
+        "alternative": "string",
+        "checked_at": "string",
+        "status": "string",
+        "supersedes_id": "string"
+      },
+      "enums": {
+        "status": [
+          "DRAFT",
+          "REVIEW_REQUIRED",
+          "APPROVED",
+          "LOCKED",
+          "REJECTED",
+          "ARCHIVED"
+        ],
+        "availability": [
+          "AVAILABLE_VALIDATED",
+          "AVAILABLE_UNTESTED",
+          "UNAVAILABLE",
+          "NOT_AUTHORIZED",
+          "LIMITED",
+          "UNKNOWN"
+        ]
+      },
+      "foreign_keys": {
+        "supersedes_id": "Tool Capabilities"
+      },
+      "primary_key": "id",
+      "required": [
+        "id",
+        "project_id",
+        "episode_id",
+        "revision",
+        "updated_at",
+        "updated_by",
+        "is_test"
+      ]
+    },
+    "Execution Evidence": {
+      "columns": [
+        "id",
+        "project_id",
+        "episode_id",
+        "revision",
+        "updated_at",
+        "updated_by",
+        "is_test",
+        "last_op_id",
+        "run_id",
+        "event_type",
+        "department",
+        "operation",
+        "execution_state",
+        "context_ref",
+        "knowledge_used",
+        "validators",
+        "tools",
+        "result",
+        "evidence_ref",
+        "limitations",
+        "status",
+        "supersedes_id"
+      ],
+      "types": {
+        "id": "string",
+        "project_id": "string",
+        "episode_id": "string",
+        "revision": "integer",
+        "updated_at": "string",
+        "updated_by": "string",
+        "is_test": "boolean",
+        "last_op_id": "string",
+        "run_id": "string",
+        "event_type": "string",
+        "department": "string",
+        "operation": "string",
+        "execution_state": "string",
+        "context_ref": "string",
+        "knowledge_used": "string",
+        "validators": "string",
+        "tools": "string",
+        "result": "string",
+        "evidence_ref": "string",
+        "limitations": "string",
+        "status": "string",
+        "supersedes_id": "string"
+      },
+      "enums": {
+        "status": [
+          "DRAFT",
+          "REVIEW_REQUIRED",
+          "APPROVED",
+          "LOCKED",
+          "REJECTED",
+          "ARCHIVED"
+        ],
+        "execution_state": [
+          "PLANNED",
+          "REQUESTED",
+          "EXECUTED",
+          "RETURNED",
+          "VALIDATED",
+          "APPROVED",
+          "FAILED"
+        ]
+      },
+      "foreign_keys": {
+        "supersedes_id": "Execution Evidence"
+      },
+      "primary_key": "id",
+      "required": [
+        "id",
+        "project_id",
+        "episode_id",
+        "revision",
+        "updated_at",
+        "updated_by",
+        "is_test"
+      ]
+    },
+    "Checkpoints": {
+      "columns": [
+        "id",
+        "project_id",
+        "episode_id",
+        "revision",
+        "updated_at",
+        "updated_by",
+        "is_test",
+        "last_op_id",
+        "run_id",
+        "snapshot_ref",
+        "snapshot_sha256",
+        "source_read_at",
+        "sync_status",
+        "last_confirmed_op",
+        "pending",
+        "recovery_ref",
+        "status",
+        "supersedes_id"
+      ],
+      "types": {
+        "id": "string",
+        "project_id": "string",
+        "episode_id": "string",
+        "revision": "integer",
+        "updated_at": "string",
+        "updated_by": "string",
+        "is_test": "boolean",
+        "last_op_id": "string",
+        "run_id": "string",
+        "snapshot_ref": "string",
+        "snapshot_sha256": "string",
+        "source_read_at": "string",
+        "sync_status": "string",
+        "last_confirmed_op": "string",
+        "pending": "string",
+        "recovery_ref": "string",
+        "status": "string",
+        "supersedes_id": "string"
+      },
+      "enums": {
+        "status": [
+          "DRAFT",
+          "REVIEW_REQUIRED",
+          "APPROVED",
+          "LOCKED",
+          "REJECTED",
+          "ARCHIVED"
+        ]
+      },
+      "foreign_keys": {
+        "supersedes_id": "Checkpoints"
+      },
+      "primary_key": "id",
+      "required": [
+        "id",
+        "project_id",
+        "episode_id",
+        "revision",
+        "updated_at",
+        "updated_by",
+        "is_test"
+      ]
+    }
+  },
+  "statuses": [
+    "PENDING",
+    "IN_PROGRESS",
+    "REVIEW_REQUIRED",
+    "APPROVED",
+    "LOCKED",
+    "CHANGES_REQUESTED",
+    "SKIPPED"
+  ],
+  "asset_statuses": [
+    "DRAFT",
+    "REVIEW_REQUIRED",
+    "APPROVED",
+    "LOCKED",
+    "CHANGES_REQUESTED",
+    "ARCHIVED"
+  ],
+  "bounded_rows": 1000
+}

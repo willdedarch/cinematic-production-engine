@@ -1,0 +1,30 @@
+{
+  "kind": "CPE_TAKE_PAIR_1",
+  "pair_id": "PAIR-7c92252dffab492194a582d8ca4e10f3",
+  "spreadsheet_id": "UNBOUND",
+  "project_id": "TEST-CPE31",
+  "episode_id": "TEST-CPE31-EP1",
+  "is_test": true,
+  "question": "Qual versão cria uma expectativa mais legível entre o som e a revelação?",
+  "takes": {
+    "A": {
+      "id": "TEST-TAKE-SUS-01-2",
+      "revision": 1,
+      "version": 1,
+      "sha256": "9a9193f337566aa235a546047c9b1d8bcb497ef9f27d88b65a602572ff0a9770",
+      "mime": "video/mp4",
+      "duration_ms": 6000,
+      "has_audio": true
+    },
+    "B": {
+      "id": "TEST-TAKE-SUS-01-1",
+      "revision": 1,
+      "version": 1,
+      "sha256": "bcecf0d42f9728f75bd62cc5f3ae81577324394ab4b7ee0941e8e22838794ae5",
+      "mime": "video/mp4",
+      "duration_ms": 6000,
+      "has_audio": true
+    }
+  },
+  "pair_sha256": "06789fa8eaa9d1d536e829b5939286dcb214b51dddc7d3d408c3d90edec7696f"
+}

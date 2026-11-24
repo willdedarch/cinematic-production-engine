@@ -1,0 +1,9 @@
+# Editorial, sound e música (somente planejamento)
+Higgsfield Editing: julgar cada plano pelo que o público recebe naquele momento. Revisar junções, repetição de ação/fala, informação regressiva, intervalos sem função, continuidade e desfecho. Usar cortes por significado; preservar reação em evolução. A amostra Pacing tem 13 episódios de 9 séries: medidas são referência editorial, não evidência de efeito em retenção. Em ritmo apertado, retirar redundância; em ritmo respirado, manter mudança emocional legível. Não cortar por cronômetro isolado.
+
+Crie mapa editorial com entrada, informação nova, saída, ligação, risco de repetição e justificativa. Para cada beat sonoro: evento, emoção pretendida, fonte diegética, diálogo, silêncio ou intenção de trilha, entrada/saída e motivo. Evite empilhar acentos em toda mudança. Som do mundo pode carregar o impacto sozinho; silêncio deliberado pode fortalecer uma decisão. Se houver trilha solicitada, faça spotting textual: paleta adequada ao mundo, motivo original descrito em palavras, arco, pontos de mudança e relação com fala. Não gere música/áudio, não copie trilha existente.
+
+QC textual: separar planejado de observado; não alegar ouvir/ver ou medir arquivo não inspecionado. Para material existente, indicar evidência e incerteza. Nenhum render, mix ou medição de LUFS nesta skill.
+
+## Portador sonoro e revisão localizada — V3.1
+Para cada beat, registrar o som que já carrega a informação, eventual música e espaço de silêncio. Escolher um portador principal ajuda a evitar que impacto, sting e crescendo disputem a mesma virada. Isso é decisão de mix/encenação, não proibição universal de camadas. Primeiro observar áudio acessível; depois propor o que falta. Sem áudio ouvido, indicar intenção. Ver exemplo em `../examples/last-water/production.md`.

@@ -1,0 +1,359 @@
+[
+  {
+    "id": "REF-TECH-ANAMORPHIC",
+    "technique_id": "TECH-ANAMORPHIC",
+    "author": "CPE — diagrama original didático",
+    "uri": "references/visual/tech-anamorphic.svg",
+    "context": "Davi na borda esquerda; Lia à direita em segundo plano; janela fora do eixo para não velar o gesto da água.",
+    "license": "Material autoral incluído neste pacote; sem stills de terceiros.",
+    "limitations": "Diagrama técnico específico. Não é fotografia, atuação real, simulação completa nem exemplo de excelência.",
+    "source_ids": [
+      "COOKE-ANAM",
+      "PANAVISION-C"
+    ],
+    "kind": "TECHNICAL_DIAGRAM",
+    "sha256": "37400e0b3e8c760afd9ecf957edcd8833cdbedb52fa4c022b4d31b2e7521fd92"
+  },
+  {
+    "id": "REF-TECH-SPHERICAL",
+    "technique_id": "TECH-SPHERICAL",
+    "author": "CPE — diagrama original didático",
+    "uri": "references/visual/tech-spherical.svg",
+    "context": "35 mm em sensor 36×24 mm a 3 m: situar banco e porta no mesmo espaço.",
+    "license": "Material autoral incluído neste pacote; sem stills de terceiros.",
+    "limitations": "Diagrama técnico específico. Não é fotografia, atuação real, simulação completa nem exemplo de excelência.",
+    "source_ids": [
+      "COOKE-ANAM"
+    ],
+    "kind": "TECHNICAL_DIAGRAM",
+    "sha256": "bb4de4c32b7c361feb48e8710e155f4c1e7d1f8b28a6b8a4598f77402635f396"
+  },
+  {
+    "id": "REF-TECH-WIDE",
+    "technique_id": "TECH-WIDE",
+    "author": "CPE — diagrama original didático",
+    "uri": "references/visual/tech-wide.svg",
+    "context": "Plano baixo a 1,4 m de Davi, janela e banco convergem para a mão vazia.",
+    "license": "Material autoral incluído neste pacote; sem stills de terceiros.",
+    "limitations": "Diagrama técnico específico. Não é fotografia, atuação real, simulação completa nem exemplo de excelência.",
+    "source_ids": [
+      "DIRECTORSKILL"
+    ],
+    "kind": "TECHNICAL_DIAGRAM",
+    "sha256": "1fa9bd44166b0d3bfac858d168a1242ee8a2f7cdbec7d1dd384d7ba3699f7a5c"
+  },
+  {
+    "id": "REF-TECH-TELE",
+    "technique_id": "TECH-TELE",
+    "author": "CPE — diagrama original didático",
+    "uri": "references/visual/tech-tele.svg",
+    "context": "Reação de Lia a 6 m; Davi ocupa faixa desfocada no primeiro plano.",
+    "license": "Material autoral incluído neste pacote; sem stills de terceiros.",
+    "limitations": "Diagrama técnico específico. Não é fotografia, atuação real, simulação completa nem exemplo de excelência.",
+    "source_ids": [
+      "DIRECTORSKILL"
+    ],
+    "kind": "TECHNICAL_DIAGRAM",
+    "sha256": "3c0e37e893dfc1d973317450fe6f977a5fdeaf19a13ad162125ee414da2f5c89"
+  },
+  {
+    "id": "REF-TECH-DOF",
+    "technique_id": "TECH-DOF",
+    "author": "CPE — diagrama original didático",
+    "uri": "references/visual/tech-dof.svg",
+    "context": "A mão oferece água no primeiro plano; rosto de Lia nítido depois do gesto.",
+    "license": "Material autoral incluído neste pacote; sem stills de terceiros.",
+    "limitations": "Diagrama técnico específico. Não é fotografia, atuação real, simulação completa nem exemplo de excelência.",
+    "source_ids": [
+      "ZEISS-RADIANCE"
+    ],
+    "kind": "TECHNICAL_DIAGRAM",
+    "sha256": "142af04e3fbb5af6149094b3f3135d2691cfaf1e3327d7a7f2c8a0bc9ce9b10f"
+  },
+  {
+    "id": "REF-TECH-DEEP-STAGING",
+    "technique_id": "TECH-DEEP-STAGING",
+    "author": "CPE — diagrama original didático",
+    "uri": "references/visual/tech-deep-staging.svg",
+    "context": "Cantil no primeiro plano; Davi no médio; Lia perto do banco ao fundo.",
+    "license": "Material autoral incluído neste pacote; sem stills de terceiros.",
+    "limitations": "Diagrama técnico específico. Não é fotografia, atuação real, simulação completa nem exemplo de excelência.",
+    "source_ids": [
+      "DIRECTORSKILL",
+      "ASC-BR2049"
+    ],
+    "kind": "TECHNICAL_DIAGRAM",
+    "sha256": "0c41d1578e6c85f74ea230692b35b1ab23697e437c12ee6a3eeeb6cd6fc2751d"
+  },
+  {
+    "id": "REF-TECH-NATURAL-LIGHT",
+    "technique_id": "TECH-NATURAL-LIGHT",
+    "author": "CPE — diagrama original didático",
+    "uri": "references/visual/tech-natural-light.svg",
+    "context": "Janela E1 ilumina de lado; parede oeste fornece retorno fraco.",
+    "license": "Material autoral incluído neste pacote; sem stills de terceiros.",
+    "limitations": "Diagrama técnico específico. Não é fotografia, atuação real, simulação completa nem exemplo de excelência.",
+    "source_ids": [
+      "ARRI-1917"
+    ],
+    "kind": "TECHNICAL_DIAGRAM",
+    "sha256": "6ebb8def1b57caf757a7311694e9a660cc55f6a4b83dd291089b7031043df4bf"
+  },
+  {
+    "id": "REF-TECH-CHIAROSCURO",
+    "technique_id": "TECH-CHIAROSCURO",
+    "author": "CPE — diagrama original didático",
+    "uri": "references/visual/tech-chiaroscuro.svg",
+    "context": "Rosto de Davi permanece na sombra até ele mover o cantil para a faixa da janela.",
+    "license": "Material autoral incluído neste pacote; sem stills de terceiros.",
+    "limitations": "Diagrama técnico específico. Não é fotografia, atuação real, simulação completa nem exemplo de excelência.",
+    "source_ids": [
+      "ASC-BR2049"
+    ],
+    "kind": "TECHNICAL_DIAGRAM",
+    "sha256": "63da0b9ddb0a00f198ecd84a90b0a078d0b090550ee695cf5fcdcff408a2b4c8"
+  },
+  {
+    "id": "REF-TECH-ATMOSPHERE",
+    "technique_id": "TECH-ATMOSPHERE",
+    "author": "CPE — diagrama original didático",
+    "uri": "references/visual/tech-atmosphere.svg",
+    "context": "Poeira leve perto da janela; ar mais claro na faixa da mão.",
+    "license": "Material autoral incluído neste pacote; sem stills de terceiros.",
+    "limitations": "Diagrama técnico específico. Não é fotografia, atuação real, simulação completa nem exemplo de excelência.",
+    "source_ids": [
+      "ASC-BR2049"
+    ],
+    "kind": "TECHNICAL_DIAGRAM",
+    "sha256": "0f9e35a5082bf2c5f06c395cdae7c1d9b56cbc719857a1ae266e814c6789c209"
+  },
+  {
+    "id": "REF-TECH-SILHOUETTE",
+    "technique_id": "TECH-SILHOUETTE",
+    "author": "CPE — diagrama original didático",
+    "uri": "references/visual/tech-silhouette.svg",
+    "context": "Lia recusa com a palma aberta em perfil contra a janela.",
+    "license": "Material autoral incluído neste pacote; sem stills de terceiros.",
+    "limitations": "Diagrama técnico específico. Não é fotografia, atuação real, simulação completa nem exemplo de excelência.",
+    "source_ids": [
+      "ASC-BR2049"
+    ],
+    "kind": "TECHNICAL_DIAGRAM",
+    "sha256": "41c76aef04310fe347a2d5446f695670e4ac11daa02284ae845725d8f58194fe"
+  },
+  {
+    "id": "REF-TECH-BACKLIGHT",
+    "technique_id": "TECH-BACKLIGHT",
+    "author": "CPE — diagrama original didático",
+    "uri": "references/visual/tech-backlight.svg",
+    "context": "Borda de tecido e poeira recebem luz E1; rosto tem retorno discreto.",
+    "license": "Material autoral incluído neste pacote; sem stills de terceiros.",
+    "limitations": "Diagrama técnico específico. Não é fotografia, atuação real, simulação completa nem exemplo de excelência.",
+    "source_ids": [
+      "ARRI-1917"
+    ],
+    "kind": "TECHNICAL_DIAGRAM",
+    "sha256": "8910887214cbe5d2c7a0800a62e91888f8439c0c418603dc5419865049623cbe"
+  },
+  {
+    "id": "REF-TECH-TEXTURE",
+    "technique_id": "TECH-TEXTURE",
+    "author": "CPE — diagrama original didático",
+    "uri": "references/visual/tech-texture.svg",
+    "context": "Lã tem trama visível apenas no médio; metal tem riscos junto à tampa.",
+    "license": "Material autoral incluído neste pacote; sem stills de terceiros.",
+    "limitations": "Diagrama técnico específico. Não é fotografia, atuação real, simulação completa nem exemplo de excelência.",
+    "source_ids": [
+      "KODAK-GLOSSARY"
+    ],
+    "kind": "TECHNICAL_DIAGRAM",
+    "sha256": "403790ef716b3bcf3ef64e18a0e660e97a7cc175aa61a7d3c4116a786a3ee3b3"
+  },
+  {
+    "id": "REF-TECH-MATERIAL",
+    "technique_id": "TECH-MATERIAL",
+    "author": "CPE — diagrama original didático",
+    "uri": "references/visual/tech-material.svg",
+    "context": "Cantil de metal amassado reflete janela ampla; tira de couro tensiona na mão.",
+    "license": "Material autoral incluído neste pacote; sem stills de terceiros.",
+    "limitations": "Diagrama técnico específico. Não é fotografia, atuação real, simulação completa nem exemplo de excelência.",
+    "source_ids": [
+      "PITCH-DRAMA-PAGE"
+    ],
+    "kind": "TECHNICAL_DIAGRAM",
+    "sha256": "7a729cb1f9c2e1bd2d53191460b539fa3f54006d34e0c95c72343420165949c6"
+  },
+  {
+    "id": "REF-TECH-LIVING-WORLD",
+    "technique_id": "TECH-LIVING-WORLD",
+    "author": "CPE — diagrama original didático",
+    "uri": "references/visual/tech-living-world.svg",
+    "context": "Ao som distante, uma pessoa cruza a porta; o pano oscila por vento vindo de E1.",
+    "license": "Material autoral incluído neste pacote; sem stills de terceiros.",
+    "limitations": "Diagrama técnico específico. Não é fotografia, atuação real, simulação completa nem exemplo de excelência.",
+    "source_ids": [
+      "HF-SCRIPT",
+      "HF-PICTURES"
+    ],
+    "kind": "TECHNICAL_DIAGRAM",
+    "sha256": "4f288b01f268493e5c7b368dcceb6c791032254a142ff511e259a300a9c8d477"
+  },
+  {
+    "id": "REF-TECH-VERTICAL",
+    "technique_id": "TECH-VERTICAL",
+    "author": "CPE — diagrama original didático",
+    "uri": "references/visual/tech-vertical.svg",
+    "context": "Mão e cantil ocupam terço inferior; Lia aparece acima em profundidade.",
+    "license": "Material autoral incluído neste pacote; sem stills de terceiros.",
+    "limitations": "Diagrama técnico específico. Não é fotografia, atuação real, simulação completa nem exemplo de excelência.",
+    "source_ids": [
+      "CINEMA-SHOT"
+    ],
+    "kind": "TECHNICAL_DIAGRAM",
+    "sha256": "f37f2632faa60e8165c949de24d69514412e40a063846f7ce463fa8bacc8a048"
+  },
+  {
+    "id": "REF-TECH-BLOCKING",
+    "technique_id": "TECH-BLOCKING",
+    "author": "CPE — diagrama original didático",
+    "uri": "references/visual/tech-blocking.svg",
+    "context": "Davi deixa W1 e para antes do banco N1; Lia mantém uma distância de recusa.",
+    "license": "Material autoral incluído neste pacote; sem stills de terceiros.",
+    "limitations": "Diagrama técnico específico. Não é fotografia, atuação real, simulação completa nem exemplo de excelência.",
+    "source_ids": [
+      "HF-SCRIPT",
+      "DIRECTORSKILL"
+    ],
+    "kind": "TECHNICAL_DIAGRAM",
+    "sha256": "1e82069baee0442660cd20649b65089d96dd50aeeb80c3c6de90c8b6e41a093c"
+  },
+  {
+    "id": "REF-TECH-CHARACTER-SHEET",
+    "technique_id": "TECH-CHARACTER-SHEET",
+    "author": "CPE · geração conceitual nativa autorizada",
+    "uri": "references/visual/character-multiview.png",
+    "context": "Davi: nariz desviado, sobrancelha esquerda cortada; sem mudar mandíbula no perfil.",
+    "license": "Material autoral incluído neste pacote; sem stills de terceiros.",
+    "limitations": "Ficha gerada para inspeção. Lados, identidade e figurino precisam ser conferidos; aceite humano pendente.",
+    "source_ids": [
+      "HF-PICTURES"
+    ],
+    "kind": "SYNTHETIC_MULTIVIEW",
+    "sha256": "82b036c0069cb595c05372045965bfd23d6eccbb8a7232f3696520abb48f7490"
+  },
+  {
+    "id": "REF-TECH-LOCATION-SHEET",
+    "technique_id": "TECH-LOCATION-SHEET",
+    "author": "CPE — diagrama original didático",
+    "uri": "references/visual/tech-location-sheet.svg",
+    "context": "Sala 6×4 m; W1 porta oeste; E1 janela leste; N1 banco norte.",
+    "license": "Material autoral incluído neste pacote; sem stills de terceiros.",
+    "limitations": "Diagrama técnico específico. Não é fotografia, atuação real, simulação completa nem exemplo de excelência.",
+    "source_ids": [
+      "HF-PICTURES",
+      "DIRECTORSKILL"
+    ],
+    "kind": "TECHNICAL_DIAGRAM",
+    "sha256": "333bc27930f68c7fa17d08bdd1f0ce43e335fe4ecb4d08d8ab7978e85d4a5c45"
+  },
+  {
+    "id": "REF-TECH-PROP-SHEET",
+    "technique_id": "TECH-PROP-SHEET",
+    "author": "CPE — diagrama original didático",
+    "uri": "references/visual/tech-prop-sheet.svg",
+    "context": "Cantil começa com Davi/direita/tampa fechada; Lia recebe com esquerda/tampa aberta.",
+    "license": "Material autoral incluído neste pacote; sem stills de terceiros.",
+    "limitations": "Diagrama técnico específico. Não é fotografia, atuação real, simulação completa nem exemplo de excelência.",
+    "source_ids": [
+      "HF-SCRIPT",
+      "HF-PICTURES"
+    ],
+    "kind": "TECHNICAL_DIAGRAM",
+    "sha256": "96fd8e205e71c2beb957c07a097b52b13567fdce3e1fe179d1b68717d574337e"
+  },
+  {
+    "id": "REF-TECH-SPATIAL-CONTINUITY",
+    "technique_id": "TECH-SPATIAL-CONTINUITY",
+    "author": "CPE — diagrama original didático",
+    "uri": "references/visual/tech-spatial-continuity.svg",
+    "context": "Davi olha direita no plano A, Lia esquerda no B; master ancora o banco.",
+    "license": "Material autoral incluído neste pacote; sem stills de terceiros.",
+    "limitations": "Diagrama técnico específico. Não é fotografia, atuação real, simulação completa nem exemplo de excelência.",
+    "source_ids": [
+      "DIRECTORSKILL"
+    ],
+    "kind": "TECHNICAL_DIAGRAM",
+    "sha256": "9e9f29c35e7d80405c3c2718a7e4397535a8972c225f660503fee73edba5d1a9"
+  },
+  {
+    "id": "REF-TECH-PERFORMANCE",
+    "technique_id": "TECH-PERFORMANCE",
+    "author": "CPE — diagrama original didático",
+    "uri": "references/visual/tech-performance.svg",
+    "context": "Davi ensaia fechar a tampa, ouve a respiração de Lia e a oferece sem frase heroica.",
+    "license": "Material autoral incluído neste pacote; sem stills de terceiros.",
+    "limitations": "Diagrama técnico específico. Não é fotografia, atuação real, simulação completa nem exemplo de excelência.",
+    "source_ids": [
+      "HF-SCRIPT",
+      "SW-SCENE"
+    ],
+    "kind": "TECHNICAL_DIAGRAM",
+    "sha256": "0ad79ed0bc6bedfbc42675008de266be7c0ceb39c34be8ab31aeb52684c845b5"
+  },
+  {
+    "id": "LAB-SHELTER-ENTRY",
+    "technique_id": "TECH-LIVING-WORLD",
+    "uri": "references/visual/shelter-entry.png",
+    "author": "CPE · geração conceitual nativa autorizada",
+    "license": "Original synthetic concept image; no third-party still reproduced",
+    "kind": "SYNTHETIC_REVIEW_STUDY",
+    "context": "Estudo visual de hierarquia, encenação ou consistência. Ver pacote de avaliação.",
+    "limitations": "Não tratar como resultado de produção nem exemplo aprovado. O prompt não prova obediência.",
+    "source_ids": [
+      "LAB-NATIVE-14"
+    ],
+    "sha256": "9dfc116ee61a6b67cca199ac7ef66b5d410472748cd3a7dd092ab8f2c0e6e846"
+  },
+  {
+    "id": "LAB-SHELTER-LIGHT-VARIANT",
+    "technique_id": "TECH-LIVING-WORLD",
+    "uri": "references/visual/shelter-light-variant.png",
+    "author": "CPE · geração conceitual nativa autorizada",
+    "license": "Original synthetic concept image; no third-party still reproduced",
+    "kind": "SYNTHETIC_REVIEW_STUDY",
+    "context": "Estudo visual de hierarquia, encenação ou consistência. Ver pacote de avaliação.",
+    "limitations": "Não tratar como resultado de produção nem exemplo aprovado. O prompt não prova obediência.",
+    "source_ids": [
+      "LAB-NATIVE-14"
+    ],
+    "sha256": "92cd0da13f4c575206233d7ae04082f83a8225331b2e2e98973e04c807505b4d"
+  },
+  {
+    "id": "LAB-CHARACTER-DUPLICATED-PROFILE",
+    "technique_id": "TECH-LIVING-WORLD",
+    "uri": "references/visual/character-duplicated-profile.png",
+    "author": "CPE · geração conceitual nativa autorizada",
+    "license": "Original synthetic concept image; no third-party still reproduced",
+    "kind": "SYNTHETIC_REVIEW_STUDY",
+    "context": "Estudo visual de hierarquia, encenação ou consistência. Ver pacote de avaliação.",
+    "limitations": "Não tratar como resultado de produção nem exemplo aprovado. O prompt não prova obediência.",
+    "source_ids": [
+      "LAB-NATIVE-14"
+    ],
+    "sha256": "9fd8920fafed4f21eef2d11f956792e486cb28f4068464da513816cb48d1c9a5"
+  },
+  {
+    "id": "LAB-SHELTER-BUNDLED-REVISION",
+    "technique_id": "TECH-LIVING-WORLD",
+    "uri": "references/visual/shelter-bundled-revision.png",
+    "author": "CPE · geração conceitual nativa autorizada",
+    "license": "Original synthetic concept image; no third-party still reproduced",
+    "kind": "SYNTHETIC_REVIEW_STUDY",
+    "context": "Estudo visual de hierarquia, encenação ou consistência. Ver pacote de avaliação.",
+    "limitations": "Não tratar como resultado de produção nem exemplo aprovado. O prompt não prova obediência.",
+    "source_ids": [
+      "LAB-NATIVE-14"
+    ],
+    "sha256": "6d5f91781f30308598a056d0dcd44ce7fb8c36f75662edc5d17a79420def87fb"
+  }
+]

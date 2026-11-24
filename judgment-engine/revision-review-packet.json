@@ -1,0 +1,110 @@
+{
+  "kind": "REVIEW_PACKET_NOT_JUDGED",
+  "target": {
+    "id": "MAT-84-R2",
+    "revision": 2,
+    "uri": "work\\v3.1\\judgment-engine\\revision-candidate.txt",
+    "sha256": "d4fb5066d7c9cbaf43488f15f4a8fe631f3cd0bc04e2c1c54f4c769817ce5c2e"
+  },
+  "department": "story",
+  "context": {
+    "intention": "Uma decisão humana sobre receber uma carta antes de uma partida incerta. Preservar a agência de Nora e mostrar uma consequência sem heroísmo declarado.",
+    "genre": "drama de guerra ficcional",
+    "format": "cena curta textual, sem mídia produzida",
+    "protected": [
+      "dois adultos",
+      "guichê na parede norte",
+      "carta permanece o mesmo objeto"
+    ],
+    "limitations": "Não há rótulo humano nem resultado de público. Avaliar somente o texto."
+  },
+  "roles": [
+    "Creative Agent",
+    "Story Critic",
+    "Audience Critic",
+    "Chief Reviewer"
+  ],
+  "rubric": {
+    "id": "RUB-STORY",
+    "name": "Desenvolvimento de histórias",
+    "department": "story",
+    "objective": "Tornar desejo, oposição e escolha com custo uma cadeia singular.",
+    "criteria": [
+      "Desejo reconhecível pelas ações",
+      "Obstáculo provoca escolha em vez de coincidência",
+      "A consequência muda relação ou situação"
+    ],
+    "observable_indicators": [
+      {
+        "id": "RUB-STORY-C1",
+        "criterion": "Desejo reconhecível pelas ações",
+        "record": "Apontar trecho, quadro, beat, timecode ou diferença comparável que sustente este critério; declarar ausente quando não houver acesso."
+      },
+      {
+        "id": "RUB-STORY-C2",
+        "criterion": "Obstáculo provoca escolha em vez de coincidência",
+        "record": "Apontar trecho, quadro, beat, timecode ou diferença comparável que sustente este critério; declarar ausente quando não houver acesso."
+      },
+      {
+        "id": "RUB-STORY-C3",
+        "criterion": "A consequência muda relação ou situação",
+        "record": "Apontar trecho, quadro, beat, timecode ou diferença comparável que sustente este critério; declarar ausente quando não houver acesso."
+      }
+    ],
+    "levels": {
+      "1": "O objetivo desaparece sem consequência.",
+      "2": "Objetivo resolvido sem custo ou particularidade.",
+      "3": "Desejo, oposição e consequência legíveis, solução convencional.",
+      "4": "A escolha revela contradição da pessoa e altera a relação.",
+      "5": "Uma escolha concreta reorganiza tema, relação e leitura de detalhes anteriores."
+    },
+    "critical_failures": [
+      "Contradição causal que torna a escolha impossível ou fato inventado tratado como pesquisa."
+    ],
+    "examples": [
+      "CAL-MARA-STORY-L1",
+      "CAL-MARA-STORY-L2",
+      "CAL-MARA-STORY-L3",
+      "CAL-MARA-STORY-L4",
+      "CAL-MARA-STORY-L5"
+    ],
+    "source_ids": [
+      "SW-STORY",
+      "SW-SCENE"
+    ],
+    "diagnostic_questions": [
+      "Qual acontecimento muda a escolha?",
+      "O custo pertence a esta pessoa ou caberia em qualquer história?"
+    ],
+    "approval": [
+      "Confirmar versão, intenção, gênero, formato e restrições antes de julgar.",
+      "Technical Quality Gate não contém falha impeditiva no escopo efetivamente verificado.",
+      "Artistic Quality Gate possui justificativa própria, contraponto e evidência suficiente para a intenção; nível técnico não define nível artístico.",
+      "Registrar pendências e obter decisão humana pertinente antes de aprovar ou bloquear; nenhum nível designado neste arquivo constitui aprovação."
+    ],
+    "rejection": [
+      "Contradição causal que torna a escolha impossível ou fato inventado tratado como pesquisa.",
+      "Reprovar a afirmação sem evidência ou incompatível com a intenção; quando falta material essencial, usar NOT_EVALUABLE/PENDING em vez de inventar nota.",
+      "Uma entrega coerente porém genérica pode passar tecnicamente e continuar pedindo revisão artística; explicar a diferença com os critérios desta rubrica."
+    ],
+    "limitations": [
+      "O texto permite julgar relações propostas, mas não comprova eficácia emocional ou atenção real do público.",
+      "Níveis são ordinais e contextuais; não somar critérios para calcular excelência, nem tratar preferência estética como lei.",
+      "Níveis 4 e 5 nesta biblioteca são alvos didáticos sustentados por escolhas descritas; a classificação efetiva depende de observação, comparação e julgamento contextual.",
+      "Uma fonte profissional documenta decisões de uma obra; não valida automaticamente a aplicação em outro projeto."
+    ],
+    "correction": "Reescrever a menor ligação entre obstáculo, escolha e consequência; conservar premissa aprovada.",
+    "required_evidence": [
+      "Brief e intenção aprovados",
+      "Texto/versão acessível",
+      "Trechos e causalidade apontados",
+      "Restrições e protegidos do projeto"
+    ],
+    "calibration_status": "DIDACTIC_RUBRIC_NOT_HUMAN_VALIDATED"
+  },
+  "rubric_sha256": "355ca494a129c4af294b61cd21160c607e18cf3717544349d004cd3833ffd26a",
+  "calibration": [],
+  "material_text": "INT. SALA DA ESTAÇÃO — AMANHECER. Ivo, adulto, aproxima-se do guichê norte com uma carta dobrada. Nora, adulta, fecha a gaveta do balcão. A sirene corta o gesto dele; o polegar rasga a dobra úmida do envelope. Ivo cobre o rasgo e tenta entregar a carta pelo lado intacto. IVO: Leia quando eu já tiver ido. Nora não a recebe. NORA: Quero que você fique para a primeira linha. Ele descobre o rasgo e coloca a carta entre os dois. Nora a abre. O apito de partida soa. Ivo segura a alça da mochila. Um funcionário chama pela última vez. Ivo põe a mochila no chão. Nora aproxima a carta da janela e começa a ler.\n",
+  "media_status": "TEXT_ACCESSIBLE",
+  "observed_quality": null
+}

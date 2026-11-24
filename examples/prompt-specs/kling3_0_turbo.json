@@ -1,0 +1,12 @@
+{
+  "model_id": "kling3_0_turbo",
+  "intent": {
+    "initial_state": "Davi em W1, cantil na mão direita, tampa fechada",
+    "action": "Interrompe a tampa ao ouvir Lia; oferece a água sem trocar de mão",
+    "performance": "Olha a mão antes de erguer o olhar; Lia recusa com a palma",
+    "camera": "Fixa, a oeste do eixo, altura 1,3 m",
+    "protected": "Sala 6×4 m, E1 leste, N1 norte, identidade e figurino"
+  },
+  "parameters": {},
+  "aspect_ratio": "16:9"
+}

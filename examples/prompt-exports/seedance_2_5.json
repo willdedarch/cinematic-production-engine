@@ -1,0 +1,18 @@
+{
+  "kind": "MANUAL_PRODUCTION_EXPORT_NOT_EXECUTED",
+  "model_id": "seedance_2_5",
+  "output_type": "video",
+  "prompt": "Initial state: Davi em W1, cantil na mão direita, tampa fechada\nAction: Interrompe a tampa ao ouvir Lia; oferece a água sem trocar de mão\nPerformance: Olha a mão antes de erguer o olhar; Lia recusa com a palma\nCamera: Fixa, a oeste do eixo, altura 1,3 m\nProtected: Sala 6×4 m, E1 leste, N1 norte, identidade e figurino",
+  "native_parameters": {},
+  "aspect_ratio": "16:9",
+  "reference_manifest": [],
+  "protected": "Sala 6×4 m, E1 leste, N1 norte, identidade e figurino",
+  "warnings": [
+    "Natural-language camera/light/acting intent is a request, not a verified native parameter or result.",
+    "Refresh capabilities at production time; catalog snapshot is not a generation benchmark."
+  ],
+  "catalog_checked_at": "2026-11-24T07:55:29.000Z",
+  "generation_tested": false,
+  "credits_consumed": 0,
+  "source_spec_sha256": "65dba9715b1b516bc42b54cb6bb5662ac31e728c0ea77958282eae6a6ea965ae"
+}

@@ -1,0 +1,100 @@
+{
+  "kind": "EXPLORATORY_TEXTUAL_ABLATION",
+  "generation_context": "Four new agents started without inherited conversation turns",
+  "review_context": "Two new independent contexts without inherited turns or condition map; reversed presentation order",
+  "model_diversity": false,
+  "same_model_family": true,
+  "brief_n": 1,
+  "outputs_per_condition": 1,
+  "conditions": [
+    {
+      "id": "B17",
+      "condition": "Brief only",
+      "reading": [
+        "brief.txt"
+      ],
+      "self_review_requested": false,
+      "output_sha256": "283f41e2a66cf8517facd0d116cd5accc6afbf362b35789e33e0017ac05780cf",
+      "word_count": 1342,
+      "source_hashes": {
+        "brief.txt": "96b7d6a12e0117e9fe1485209fe370683fc2b2dd5ab95f4e988609fe72657980"
+      }
+    },
+    {
+      "id": "F62",
+      "condition": "Brief plus selected CPE methods",
+      "reading": [
+        "brief.txt",
+        "knowledge/collective-direction.md",
+        "engines/living-world.md",
+        "knowledge/source-methods.md"
+      ],
+      "self_review_requested": false,
+      "output_sha256": "1a6b7d5afec9a945678d87e8a8480bbec5b7788dcf115364cd127a5a91b8590a",
+      "word_count": 1212,
+      "source_hashes": {
+        "brief.txt": "96b7d6a12e0117e9fe1485209fe370683fc2b2dd5ab95f4e988609fe72657980",
+        "knowledge/collective-direction.md": "251a7eb0db53dfef9d0a40ce1032ff00640f48ae487535d74adbbab88942c9d1",
+        "engines/living-world.md": "7e1a8758be11c18e220edf3db18ffdc0eb5ce4cdd672bd1d71e298dbba66bc60",
+        "knowledge/source-methods.md": "7bbd6875f50671b4250fccd47c486307b65d9ed15227b50500d08b6adde78c88"
+      }
+    },
+    {
+      "id": "R94",
+      "condition": "Methods plus judgment protocol and same-agent revision",
+      "reading": [
+        "brief.txt",
+        "knowledge/collective-direction.md",
+        "engines/living-world.md",
+        "knowledge/source-methods.md",
+        "judgment-engine/protocol.md",
+        "judgment-engine/rubrics.json"
+      ],
+      "self_review_requested": true,
+      "output_sha256": "ac7b81e89ebd1ca6afdd7239b154ab8b65de65f8c446d07dc18d35aa0b40c230",
+      "word_count": 1144,
+      "source_hashes": {
+        "brief.txt": "96b7d6a12e0117e9fe1485209fe370683fc2b2dd5ab95f4e988609fe72657980",
+        "knowledge/collective-direction.md": "251a7eb0db53dfef9d0a40ce1032ff00640f48ae487535d74adbbab88942c9d1",
+        "engines/living-world.md": "7e1a8758be11c18e220edf3db18ffdc0eb5ce4cdd672bd1d71e298dbba66bc60",
+        "knowledge/source-methods.md": "7bbd6875f50671b4250fccd47c486307b65d9ed15227b50500d08b6adde78c88",
+        "judgment-engine/protocol.md": "44af24bfaa4501d3d47f98d8beef433462c15ddf7b488b0a8e8b4c705a5b685c",
+        "judgment-engine/rubrics.json": "25e47bb1f30727d1f92142eb98fb9ed001b52bf994a065cc752713dfa8cda11a"
+      }
+    },
+    {
+      "id": "W38",
+      "condition": "Same reading and revision plus private scoped negative feedback from another still study",
+      "reading": [
+        "brief.txt",
+        "knowledge/collective-direction.md",
+        "engines/living-world.md",
+        "knowledge/source-methods.md",
+        "judgment-engine/protocol.md",
+        "judgment-engine/rubrics.json"
+      ],
+      "private_feedback_included": false,
+      "self_review_requested": true,
+      "output_sha256": "d70a3e639df7c918b3ca9c08468c33e212979aa5f2197bff84fd8ab5a9e908f7",
+      "word_count": 1084,
+      "source_hashes": {
+        "brief.txt": "96b7d6a12e0117e9fe1485209fe370683fc2b2dd5ab95f4e988609fe72657980",
+        "knowledge/collective-direction.md": "251a7eb0db53dfef9d0a40ce1032ff00640f48ae487535d74adbbab88942c9d1",
+        "engines/living-world.md": "7e1a8758be11c18e220edf3db18ffdc0eb5ce4cdd672bd1d71e298dbba66bc60",
+        "knowledge/source-methods.md": "7bbd6875f50671b4250fccd47c486307b65d9ed15227b50500d08b6adde78c88",
+        "judgment-engine/protocol.md": "44af24bfaa4501d3d47f98d8beef433462c15ddf7b488b0a8e8b4c705a5b685c",
+        "judgment-engine/rubrics.json": "25e47bb1f30727d1f92142eb98fb9ed001b52bf994a065cc752713dfa8cda11a"
+      }
+    }
+  ],
+  "human_labels_n": 0,
+  "artistic_approval_rate": null,
+  "causal_benefit_established": false,
+  "limits": [
+    "No matching token budget or multiple stochastic seeds; output lengths differ",
+    "Judgment conditions loaded the same authorized rubrics file; initial filter exposure/truncation and recovery documented privately",
+    "Calibration uses sparse negative feedback from a different still study; no positive approved anchor or global taste",
+    "No observed acting, sound, timing or audience effect",
+    "Earlier runs inherited context or read extra installed material and are excluded, with originals preserved privately"
+  ]
+}

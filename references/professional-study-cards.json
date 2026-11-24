@@ -1,0 +1,42 @@
+[
+  {
+    "id": "PRO-STUDY-BR2049",
+    "source": "https://theasc.com/article/deakins-blade-runner-2049/",
+    "image_source": "https://theasc.com/wp-content/uploads/2026/04/Blade-Runner-2049-TRI-10634r.jpg",
+    "rights": "Third-party copyrighted still. Link only; not redistributed.",
+    "observation": "Observed the published image in the browser. A central standing figure, a seated figure displaced right, stairs and a broad empty area separate the people.",
+    "inference": "The arrangement can be studied for access, scale, hierarchy and distance. Narrative intent of the complete scene is not established by this still.",
+    "exercise": "Create an original room with a different purpose and compare access and interpersonal distance before and after moving the camera.",
+    "status": "PUBLISHED_STILL_OBSERVED",
+    "unknown": [
+      "actual focal length",
+      "temporal performance",
+      "sound",
+      "whole scene intent"
+    ]
+  },
+  {
+    "id": "PRO-STUDY-1917",
+    "source": "https://www.arri.com/news-en/the-immersive-camera-movement-of-1917-",
+    "rights": "Link to production interview; no copied still or footage.",
+    "observation": "Production interview text read. The complete interview video was not watched.",
+    "exercise": "Compare an original walking scene with a fixed spatial plan, continuous coverage and an authored cut.",
+    "status": "PRIMARY_PRODUCTION_TEXT_READ",
+    "unknown": [
+      "full video analysis",
+      "generalized audience response"
+    ]
+  },
+  {
+    "id": "PRO-STUDY-RYAN",
+    "source": "https://theasc.com/article/saving-private-ryan-cinematography-kaminski/",
+    "rights": "Link to production interview; no copied still or footage.",
+    "observation": "Production article consulted. Its embedded video returned inaccessible in this review.",
+    "exercise": "Compare stable and reactive coverage of an original fictional task, preserving stimulus and consequence.",
+    "status": "PRIMARY_PRODUCTION_TEXT_READ",
+    "unknown": [
+      "embedded video",
+      "shot-level temporal analysis"
+    ]
+  }
+]

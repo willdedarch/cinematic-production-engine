@@ -1,0 +1,298 @@
+{
+  "version": "3.1.0",
+  "always": [
+    "integrations/google-sheets.md",
+    "orchestration/state.md",
+    "harness/policies.json"
+  ],
+  "gates": {
+    "G0": {
+      "read": [
+        "orchestration/workflow.md",
+        "orchestration/panels.md"
+      ],
+      "panel": "G0",
+      "example": "examples/genre-selection.md"
+    },
+    "G1": {
+      "read": [
+        "modules/story-mining.md",
+        "references/reference-analysis.md",
+        "knowledge/genre-profiles.json"
+      ],
+      "panel": "G1",
+      "example": "examples/genre-selection.md"
+    },
+    "G2": {
+      "read": [
+        "modules/writers-room.md",
+        "modules/dramaturgy.md",
+        "modules/anti-cliche.md",
+        "knowledge/narrative-editing.md",
+        "judgment-engine/protocol.md",
+        "knowledge/source-methods.md"
+      ],
+      "panel": "G2",
+      "example": "examples/genre-selection.md"
+    },
+    "G3": {
+      "read": [
+        "modules/emotional-engine.md",
+        "modules/audience-psychology.md",
+        "modules/suspense-engine.md",
+        "references/retention-pacing.md",
+        "knowledge/narrative-editing.md",
+        "judgment-engine/protocol.md",
+        "knowledge/collective-direction.md"
+      ],
+      "panel": "G3",
+      "example": "examples/genre-selection.md"
+    },
+    "G4": {
+      "read": [
+        "modules/dialogue-engine.md",
+        "modules/script-doctor.md",
+        "references/script-doctor.md",
+        "knowledge/narrative-editing.md",
+        "knowledge/failure-library.json",
+        "examples/contrastive.md",
+        "judgment-engine/protocol.md",
+        "knowledge/source-methods.md"
+      ],
+      "panel": "G4",
+      "example": "examples/genre-selection.md"
+    },
+    "G5": {
+      "read": [
+        "modules/cinematic-direction.md",
+        "departments/cinematography.md",
+        "libraries/optics-composition.md",
+        "libraries/director-genres.md",
+        "knowledge/optics.md",
+        "knowledge/techniques.json",
+        "knowledge/light.md",
+        "knowledge/styles-genres.md",
+        "knowledge/composition.md",
+        "references/visual-library.json",
+        "knowledge/direction.md",
+        "knowledge/director-profiles.json",
+        "judgment-engine/protocol.md",
+        "knowledge/style-studies.md",
+        "knowledge/collective-direction.md"
+      ],
+      "panel": "G5",
+      "example": "examples/genre-selection.md"
+    },
+    "G6": {
+      "read": [
+        "assets/templates.md",
+        "departments/props-assets.md"
+      ],
+      "panel": "G6",
+      "example": "examples/genre-selection.md"
+    },
+    "G7": {
+      "read": [
+        "departments/casting.md",
+        "modules/performance-direction.md",
+        "knowledge/design.md",
+        "knowledge/failure-library.json",
+        "judgment-engine/protocol.md"
+      ],
+      "panel": "G7",
+      "example": "examples/genre-selection.md"
+    },
+    "G8": {
+      "read": [
+        "departments/locations.md",
+        "engines/living-world.md",
+        "knowledge/design.md",
+        "knowledge/failure-library.json",
+        "knowledge/composition.md",
+        "references/visual-library.json",
+        "judgment-engine/protocol.md",
+        "harness/optics-previs.md"
+      ],
+      "panel": "G8",
+      "example": "examples/genre-selection.md"
+    },
+    "G9": {
+      "read": [
+        "departments/props-assets.md",
+        "knowledge/design.md",
+        "knowledge/failure-library.json",
+        "judgment-engine/protocol.md"
+      ],
+      "panel": "G9",
+      "example": "examples/genre-selection.md"
+    },
+    "G10": {
+      "read": [
+        "departments/previs-production.md",
+        "references/staging-editorial.md",
+        "integrations/model-adapters.md",
+        "knowledge/direction.md",
+        "knowledge/director-profiles.json",
+        "knowledge/optics.md",
+        "knowledge/techniques.json",
+        "adapters/README.md",
+        "libraries/model-capabilities.snapshot.json",
+        "judgment-engine/protocol.md",
+        "harness/manual.md",
+        "adapters/cinematic-plans.md",
+        "knowledge/source-methods.md"
+      ],
+      "panel": "G10",
+      "example": "examples/genre-selection.md"
+    },
+    "G11": {
+      "read": [
+        "modules/quality-gates.md",
+        "departments/cinematography.md",
+        "knowledge/narrative-editing.md"
+      ],
+      "panel": "G11",
+      "example": "examples/genre-selection.md"
+    },
+    "G12": {
+      "read": [
+        "departments/previs-production.md",
+        "modules/continuity.md"
+      ],
+      "panel": "G12",
+      "example": "examples/genre-selection.md"
+    },
+    "G13": {
+      "read": [
+        "modules/editorial-sound.md",
+        "knowledge/failure-library.json",
+        "examples/contrastive.md",
+        "judgment-engine/protocol.md",
+        "harness/media-analysis.md",
+        "knowledge/collective-direction.md"
+      ],
+      "panel": "G13",
+      "example": "examples/genre-selection.md"
+    },
+    "G14": {
+      "read": [
+        "modules/quality-gates.md",
+        "modules/continuity.md",
+        "knowledge/failure-library.json",
+        "examples/contrastive.md",
+        "judgment-engine/protocol.md"
+      ],
+      "panel": "G14",
+      "example": "examples/genre-selection.md"
+    },
+    "G15": {
+      "read": [
+        "modules/learning.md",
+        "references/series-continuity.md"
+      ],
+      "panel": "G15",
+      "example": "examples/genre-selection.md"
+    }
+  },
+  "commands": {
+    "LOOK": "G5",
+    "DIRECT": "G5",
+    "CAST": "G7",
+    "LOCATION": "G8",
+    "PROPS": "G9",
+    "PREVIS": "G10",
+    "PROMPTS": "G10",
+    "QC": "G14",
+    "LEARN": "G15",
+    "WRITE": "G4",
+    "DOCTOR": "G4",
+    "DEVELOP": "G3",
+    "IDEATE": "G2",
+    "MINE": "G1"
+  },
+  "conditions": {
+    "war": [
+      "engines/war-film.md",
+      "knowledge/war-film.md",
+      "examples/last-water/production.md"
+    ],
+    "historical": [
+      "references/series-continuity.md"
+    ],
+    "guerra": [
+      "knowledge/war-film.md",
+      "examples/last-water/production.md"
+    ],
+    "project-profile": [
+      "project-profiles/project-template.md",
+      "knowledge/war-film.md",
+      "examples/last-water/production.md"
+    ]
+  },
+  "facets": {
+    "narrative": [
+      "knowledge/narrative-editing.md"
+    ],
+    "war": [
+      "knowledge/war-film.md",
+      "knowledge/genre-profiles.json",
+      "engines/living-world.md",
+      "knowledge/collective-direction.md",
+      "examples/shelter/caso14-roteiro-e-direcao.md"
+    ],
+    "optics": [
+      "knowledge/optics.md",
+      "knowledge/techniques.json"
+    ],
+    "composition": [
+      "knowledge/composition.md",
+      "references/visual-library.json"
+    ],
+    "light": [
+      "knowledge/light.md",
+      "knowledge/styles-genres.md"
+    ],
+    "design": [
+      "knowledge/design.md",
+      "knowledge/failure-library.json"
+    ],
+    "direction": [
+      "knowledge/direction.md",
+      "knowledge/director-profiles.json",
+      "knowledge/style-studies.md",
+      "knowledge/source-methods.md"
+    ],
+    "prompts": [
+      "adapters/README.md",
+      "libraries/model-capabilities.snapshot.json",
+      "adapters/cinematic-plans.md"
+    ],
+    "failure": [
+      "knowledge/failure-library.json",
+      "examples/contrastive.md"
+    ],
+    "examples": [
+      "examples/golden-index.md",
+      "examples/last-water/production.md"
+    ],
+    "laboratory": [
+      "harness/manual.md",
+      "harness/laboratories.md"
+    ],
+    "media": [
+      "harness/media-analysis.md"
+    ],
+    "recovery": [
+      "harness/manual.md"
+    ]
+  },
+  "judgment": {
+    "read": [
+      "judgment-engine/protocol.md",
+      "judgment-engine/rubrics.json"
+    ],
+    "rubric_by": "department",
+    "calibration": "judgment-engine/calibration-examples.json",
+    "implementation": "scripts/judgment.py"
+  }
+}

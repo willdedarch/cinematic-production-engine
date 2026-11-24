@@ -1,0 +1,2211 @@
+{
+  "schema_version": "1.1.0",
+  "purpose": "Rubricas contextuais com julgamento técnico e artístico separados; sem agregação matemática de excelência.",
+  "scale": {
+    "1": "Inadequado",
+    "2": "Medíocre",
+    "3": "Competente",
+    "4": "Excelente",
+    "5": "Excepcional"
+  },
+  "context": {
+    "id": "CAL-MARA-WORKSHOP",
+    "title": "A chave — oficina ao amanhecer",
+    "genre": "drama realista",
+    "format": "16:9; estudo textual de curta",
+    "characters": "Mara, técnica adulta, quer encerrar o turno; Joel, zelador adulto, tenta fechar a oficina.",
+    "space": "Oficina 5×3 m; K1 porta oeste, K2 balcão norte, K3 janela leste. Esses marcos são uma hipótese didática local, não extensão de A última água.",
+    "intention": "Explorar confiança e reciprocidade através da devolução e reparo de uma chave.",
+    "protected": "Identidade, planta e estado aprovado devem ser preservados; cada microexemplo é variante didática isolada, não uma sequência contínua.",
+    "provenance": "Texto original criado para ensinar diferenças observáveis. Nenhuma imagem, vídeo, atuação ou resposta do público foi gerada ou medida."
+  },
+  "calibration_status": "DIDACTIC_NOT_HUMAN_CALIBRATED",
+  "rubrics": [
+    {
+      "id": "RUB-STORY",
+      "name": "Desenvolvimento de histórias",
+      "department": "story",
+      "objective": "Tornar desejo, oposição e escolha com custo uma cadeia singular.",
+      "criteria": [
+        "Desejo reconhecível pelas ações",
+        "Obstáculo provoca escolha em vez de coincidência",
+        "A consequência muda relação ou situação"
+      ],
+      "observable_indicators": [
+        {
+          "id": "RUB-STORY-C1",
+          "criterion": "Desejo reconhecível pelas ações",
+          "record": "Apontar trecho, quadro, beat, timecode ou diferença comparável que sustente este critério; declarar ausente quando não houver acesso."
+        },
+        {
+          "id": "RUB-STORY-C2",
+          "criterion": "Obstáculo provoca escolha em vez de coincidência",
+          "record": "Apontar trecho, quadro, beat, timecode ou diferença comparável que sustente este critério; declarar ausente quando não houver acesso."
+        },
+        {
+          "id": "RUB-STORY-C3",
+          "criterion": "A consequência muda relação ou situação",
+          "record": "Apontar trecho, quadro, beat, timecode ou diferença comparável que sustente este critério; declarar ausente quando não houver acesso."
+        }
+      ],
+      "levels": {
+        "1": "O objetivo desaparece sem consequência.",
+        "2": "Objetivo resolvido sem custo ou particularidade.",
+        "3": "Desejo, oposição e consequência legíveis, solução convencional.",
+        "4": "A escolha revela contradição da pessoa e altera a relação.",
+        "5": "Uma escolha concreta reorganiza tema, relação e leitura de detalhes anteriores."
+      },
+      "critical_failures": [
+        "Contradição causal que torna a escolha impossível ou fato inventado tratado como pesquisa."
+      ],
+      "examples": [
+        "CAL-MARA-STORY-L1",
+        "CAL-MARA-STORY-L2",
+        "CAL-MARA-STORY-L3",
+        "CAL-MARA-STORY-L4",
+        "CAL-MARA-STORY-L5"
+      ],
+      "source_ids": [
+        "SW-STORY",
+        "SW-SCENE"
+      ],
+      "diagnostic_questions": [
+        "Qual acontecimento muda a escolha?",
+        "O custo pertence a esta pessoa ou caberia em qualquer história?"
+      ],
+      "approval": [
+        "Confirmar versão, intenção, gênero, formato e restrições antes de julgar.",
+        "Technical Quality Gate não contém falha impeditiva no escopo efetivamente verificado.",
+        "Artistic Quality Gate possui justificativa própria, contraponto e evidência suficiente para a intenção; nível técnico não define nível artístico.",
+        "Registrar pendências e obter decisão humana pertinente antes de aprovar ou bloquear; nenhum nível designado neste arquivo constitui aprovação."
+      ],
+      "rejection": [
+        "Contradição causal que torna a escolha impossível ou fato inventado tratado como pesquisa.",
+        "Reprovar a afirmação sem evidência ou incompatível com a intenção; quando falta material essencial, usar NOT_EVALUABLE/PENDING em vez de inventar nota.",
+        "Uma entrega coerente porém genérica pode passar tecnicamente e continuar pedindo revisão artística; explicar a diferença com os critérios desta rubrica."
+      ],
+      "limitations": [
+        "O texto permite julgar relações propostas, mas não comprova eficácia emocional ou atenção real do público.",
+        "Níveis são ordinais e contextuais; não somar critérios para calcular excelência, nem tratar preferência estética como lei.",
+        "Níveis 4 e 5 nesta biblioteca são alvos didáticos sustentados por escolhas descritas; a classificação efetiva depende de observação, comparação e julgamento contextual.",
+        "Uma fonte profissional documenta decisões de uma obra; não valida automaticamente a aplicação em outro projeto."
+      ],
+      "correction": "Reescrever a menor ligação entre obstáculo, escolha e consequência; conservar premissa aprovada.",
+      "required_evidence": [
+        "Brief e intenção aprovados",
+        "Texto/versão acessível",
+        "Trechos e causalidade apontados",
+        "Restrições e protegidos do projeto"
+      ],
+      "calibration_status": "DIDACTIC_RUBRIC_NOT_HUMAN_VALIDATED"
+    },
+    {
+      "id": "RUB-SCREENPLAY",
+      "name": "Roteiro",
+      "department": "screenplay",
+      "objective": "Traduzir intenção em acontecimentos encenáveis com informação e tempo claros.",
+      "criteria": [
+        "Ações visíveis ou audíveis distinguem-se de interioridade",
+        "Entradas, saídas e estados podem ser encenados",
+        "Progressão evita informação redundante"
+      ],
+      "observable_indicators": [
+        {
+          "id": "RUB-SCREENPLAY-C1",
+          "criterion": "Ações visíveis ou audíveis distinguem-se de interioridade",
+          "record": "Apontar trecho, quadro, beat, timecode ou diferença comparável que sustente este critério; declarar ausente quando não houver acesso."
+        },
+        {
+          "id": "RUB-SCREENPLAY-C2",
+          "criterion": "Entradas, saídas e estados podem ser encenados",
+          "record": "Apontar trecho, quadro, beat, timecode ou diferença comparável que sustente este critério; declarar ausente quando não houver acesso."
+        },
+        {
+          "id": "RUB-SCREENPLAY-C3",
+          "criterion": "Progressão evita informação redundante",
+          "record": "Apontar trecho, quadro, beat, timecode ou diferença comparável que sustente este critério; declarar ausente quando não houver acesso."
+        }
+      ],
+      "levels": {
+        "1": "Texto impede encenação ou omite o acontecimento central.",
+        "2": "Texto encenável, mas repete a intenção em explicações.",
+        "3": "Ações e estados encenáveis produzem uma cena funcional.",
+        "4": "Ação, informação e elipse organizam uma intenção própria.",
+        "5": "Economia de ações e retornos transforma o significado sem depender de explicação."
+      },
+      "critical_failures": [
+        "Ações mutuamente impossíveis no mesmo instante ou cena essencial apenas explicada como sentimento."
+      ],
+      "examples": [
+        "CAL-MARA-SCREENPLAY-L1",
+        "CAL-MARA-SCREENPLAY-L2",
+        "CAL-MARA-SCREENPLAY-L3",
+        "CAL-MARA-SCREENPLAY-L4",
+        "CAL-MARA-SCREENPLAY-L5"
+      ],
+      "source_ids": [
+        "SW-SCENE",
+        "HF-SCRIPT"
+      ],
+      "diagnostic_questions": [
+        "O que a câmera e o som podem registrar?",
+        "Qual informação precisa ocorrer antes desta reação?"
+      ],
+      "approval": [
+        "Confirmar versão, intenção, gênero, formato e restrições antes de julgar.",
+        "Technical Quality Gate não contém falha impeditiva no escopo efetivamente verificado.",
+        "Artistic Quality Gate possui justificativa própria, contraponto e evidência suficiente para a intenção; nível técnico não define nível artístico.",
+        "Registrar pendências e obter decisão humana pertinente antes de aprovar ou bloquear; nenhum nível designado neste arquivo constitui aprovação."
+      ],
+      "rejection": [
+        "Ações mutuamente impossíveis no mesmo instante ou cena essencial apenas explicada como sentimento.",
+        "Reprovar a afirmação sem evidência ou incompatível com a intenção; quando falta material essencial, usar NOT_EVALUABLE/PENDING em vez de inventar nota.",
+        "Uma entrega coerente porém genérica pode passar tecnicamente e continuar pedindo revisão artística; explicar a diferença com os critérios desta rubrica."
+      ],
+      "limitations": [
+        "O texto permite julgar relações propostas, mas não comprova eficácia emocional ou atenção real do público.",
+        "Níveis são ordinais e contextuais; não somar critérios para calcular excelência, nem tratar preferência estética como lei.",
+        "Níveis 4 e 5 nesta biblioteca são alvos didáticos sustentados por escolhas descritas; a classificação efetiva depende de observação, comparação e julgamento contextual.",
+        "Uma fonte profissional documenta decisões de uma obra; não valida automaticamente a aplicação em outro projeto."
+      ],
+      "correction": "Substituir interioridade indispensável por ação ou som; dividir ações incompatíveis e testar duração.",
+      "required_evidence": [
+        "Brief e intenção aprovados",
+        "Texto/versão acessível",
+        "Trechos e causalidade apontados",
+        "Restrições e protegidos do projeto"
+      ],
+      "calibration_status": "DIDACTIC_RUBRIC_NOT_HUMAN_VALIDATED"
+    },
+    {
+      "id": "RUB-DIALOGUE",
+      "name": "Diálogos",
+      "department": "dialogue",
+      "objective": "Fazer a fala agir na relação, preservando voz e subtexto.",
+      "criteria": [
+        "Cada fala tenta obter ou evitar algo",
+        "Informação nova não repete o gesto",
+        "Voz e resposta pertencem à situação"
+      ],
+      "observable_indicators": [
+        {
+          "id": "RUB-DIALOGUE-C1",
+          "criterion": "Cada fala tenta obter ou evitar algo",
+          "record": "Apontar trecho, quadro, beat, timecode ou diferença comparável que sustente este critério; declarar ausente quando não houver acesso."
+        },
+        {
+          "id": "RUB-DIALOGUE-C2",
+          "criterion": "Informação nova não repete o gesto",
+          "record": "Apontar trecho, quadro, beat, timecode ou diferença comparável que sustente este critério; declarar ausente quando não houver acesso."
+        },
+        {
+          "id": "RUB-DIALOGUE-C3",
+          "criterion": "Voz e resposta pertencem à situação",
+          "record": "Apontar trecho, quadro, beat, timecode ou diferença comparável que sustente este critério; declarar ausente quando não houver acesso."
+        }
+      ],
+      "levels": {
+        "1": "Falas não respondem à situação ou contradizem o que ocorre.",
+        "2": "Exposição correta domina pessoas intercambiáveis.",
+        "3": "Troca funcional informa e move a ação.",
+        "4": "Fala opera como defesa e o gesto desmente a defesa.",
+        "5": "Poucas palavras mudam de função pela ação e pela relação estabelecida."
+      },
+      "critical_failures": [
+        "Fala contradiz informação aprovada ou torna impossível a ação que deveria acompanhar."
+      ],
+      "examples": [
+        "CAL-MARA-DIALOGUE-L1",
+        "CAL-MARA-DIALOGUE-L2",
+        "CAL-MARA-DIALOGUE-L3",
+        "CAL-MARA-DIALOGUE-L4",
+        "CAL-MARA-DIALOGUE-L5"
+      ],
+      "source_ids": [
+        "SW-SCENE",
+        "HF-SCRIPT"
+      ],
+      "diagnostic_questions": [
+        "O que a pessoa tenta conseguir com esta frase?",
+        "O parceiro reage ao que foi dito ou apenas aguarda sua vez?"
+      ],
+      "approval": [
+        "Confirmar versão, intenção, gênero, formato e restrições antes de julgar.",
+        "Technical Quality Gate não contém falha impeditiva no escopo efetivamente verificado.",
+        "Artistic Quality Gate possui justificativa própria, contraponto e evidência suficiente para a intenção; nível técnico não define nível artístico.",
+        "Registrar pendências e obter decisão humana pertinente antes de aprovar ou bloquear; nenhum nível designado neste arquivo constitui aprovação."
+      ],
+      "rejection": [
+        "Fala contradiz informação aprovada ou torna impossível a ação que deveria acompanhar.",
+        "Reprovar a afirmação sem evidência ou incompatível com a intenção; quando falta material essencial, usar NOT_EVALUABLE/PENDING em vez de inventar nota.",
+        "Uma entrega coerente porém genérica pode passar tecnicamente e continuar pedindo revisão artística; explicar a diferença com os critérios desta rubrica."
+      ],
+      "limitations": [
+        "O texto permite julgar relações propostas, mas não comprova eficácia emocional ou atenção real do público.",
+        "Níveis são ordinais e contextuais; não somar critérios para calcular excelência, nem tratar preferência estética como lei.",
+        "Níveis 4 e 5 nesta biblioteca são alvos didáticos sustentados por escolhas descritas; a classificação efetiva depende de observação, comparação e julgamento contextual.",
+        "Uma fonte profissional documenta decisões de uma obra; não valida automaticamente a aplicação em outro projeto."
+      ],
+      "correction": "Retirar exposição repetida e dar à fala uma ação relacional específica; testar silêncio.",
+      "required_evidence": [
+        "Brief e intenção aprovados",
+        "Texto/versão acessível",
+        "Trechos e causalidade apontados",
+        "Restrições e protegidos do projeto"
+      ],
+      "calibration_status": "DIDACTIC_RUBRIC_NOT_HUMAN_VALIDATED"
+    },
+    {
+      "id": "RUB-EMOTION",
+      "name": "Engenharia emocional",
+      "department": "emotion",
+      "objective": "Construir emoção como mudança de expectativa por estímulo, ação e consequência.",
+      "criteria": [
+        "Expectativa inicial identificável",
+        "Estímulo precede reação observável",
+        "Mudança emocional altera decisão ou relação"
+      ],
+      "observable_indicators": [
+        {
+          "id": "RUB-EMOTION-C1",
+          "criterion": "Expectativa inicial identificável",
+          "record": "Apontar trecho, quadro, beat, timecode ou diferença comparável que sustente este critério; declarar ausente quando não houver acesso."
+        },
+        {
+          "id": "RUB-EMOTION-C2",
+          "criterion": "Estímulo precede reação observável",
+          "record": "Apontar trecho, quadro, beat, timecode ou diferença comparável que sustente este critério; declarar ausente quando não houver acesso."
+        },
+        {
+          "id": "RUB-EMOTION-C3",
+          "criterion": "Mudança emocional altera decisão ou relação",
+          "record": "Apontar trecho, quadro, beat, timecode ou diferença comparável que sustente este critério; declarar ausente quando não houver acesso."
+        }
+      ],
+      "levels": {
+        "1": "Emoção declarada sem construção observável.",
+        "2": "Reação genérica substitui uma relação construída.",
+        "3": "Estímulo e reação reconhecíveis sustentam a intenção.",
+        "4": "A reação contraditória revela cuidado e defesa ao mesmo tempo.",
+        "5": "A mudança reúne memória da cena, comportamento e custo sem exigir resposta única do público."
+      },
+      "critical_failures": [
+        "Declarar impacto emocional observado no público sem dados ou atribuir emoção à imagem ausente."
+      ],
+      "examples": [
+        "CAL-MARA-EMOTION-L1",
+        "CAL-MARA-EMOTION-L2",
+        "CAL-MARA-EMOTION-L3",
+        "CAL-MARA-EMOTION-L4",
+        "CAL-MARA-EMOTION-L5"
+      ],
+      "source_ids": [
+        "SW-SCENE",
+        "HF-SOUND"
+      ],
+      "diagnostic_questions": [
+        "Que estímulo causou a mudança?",
+        "A emoção ainda seria legível sem a legenda ou trilha?"
+      ],
+      "approval": [
+        "Confirmar versão, intenção, gênero, formato e restrições antes de julgar.",
+        "Technical Quality Gate não contém falha impeditiva no escopo efetivamente verificado.",
+        "Artistic Quality Gate possui justificativa própria, contraponto e evidência suficiente para a intenção; nível técnico não define nível artístico.",
+        "Registrar pendências e obter decisão humana pertinente antes de aprovar ou bloquear; nenhum nível designado neste arquivo constitui aprovação."
+      ],
+      "rejection": [
+        "Declarar impacto emocional observado no público sem dados ou atribuir emoção à imagem ausente.",
+        "Reprovar a afirmação sem evidência ou incompatível com a intenção; quando falta material essencial, usar NOT_EVALUABLE/PENDING em vez de inventar nota.",
+        "Uma entrega coerente porém genérica pode passar tecnicamente e continuar pedindo revisão artística; explicar a diferença com os critérios desta rubrica."
+      ],
+      "limitations": [
+        "O texto permite julgar relações propostas, mas não comprova eficácia emocional ou atenção real do público.",
+        "Níveis são ordinais e contextuais; não somar critérios para calcular excelência, nem tratar preferência estética como lei.",
+        "Níveis 4 e 5 nesta biblioteca são alvos didáticos sustentados por escolhas descritas; a classificação efetiva depende de observação, comparação e julgamento contextual.",
+        "Uma fonte profissional documenta decisões de uma obra; não valida automaticamente a aplicação em outro projeto."
+      ],
+      "correction": "Localizar a virada emocional em estímulo e comportamento; separar intenção de efeito observado.",
+      "required_evidence": [
+        "Brief e intenção aprovados",
+        "Texto/versão acessível",
+        "Trechos e causalidade apontados",
+        "Restrições e protegidos do projeto"
+      ],
+      "calibration_status": "DIDACTIC_RUBRIC_NOT_HUMAN_VALIDATED"
+    },
+    {
+      "id": "RUB-SUSPENSE",
+      "name": "Suspense",
+      "department": "suspense",
+      "objective": "Sustentar antecipação de uma consequência com informação e alternativas.",
+      "criteria": [
+        "Ameaça ou perda compreensível",
+        "Distribuição de informação deliberada",
+        "Prazo e alternativas interferem nas escolhas"
+      ],
+      "observable_indicators": [
+        {
+          "id": "RUB-SUSPENSE-C1",
+          "criterion": "Ameaça ou perda compreensível",
+          "record": "Apontar trecho, quadro, beat, timecode ou diferença comparável que sustente este critério; declarar ausente quando não houver acesso."
+        },
+        {
+          "id": "RUB-SUSPENSE-C2",
+          "criterion": "Distribuição de informação deliberada",
+          "record": "Apontar trecho, quadro, beat, timecode ou diferença comparável que sustente este critério; declarar ausente quando não houver acesso."
+        },
+        {
+          "id": "RUB-SUSPENSE-C3",
+          "criterion": "Prazo e alternativas interferem nas escolhas",
+          "record": "Apontar trecho, quadro, beat, timecode ou diferença comparável que sustente este critério; declarar ausente quando não houver acesso."
+        }
+      ],
+      "levels": {
+        "1": "Não há consequência antecipável; surpresa substitui preparação.",
+        "2": "Música e adjetivos anunciam tensão que a situação não sustenta.",
+        "3": "Prazo e resultado possível tornam a espera funcional.",
+        "4": "Informação desigual faz gesto banal carregar risco e decisão.",
+        "5": "Antecipação, caráter e espaço convergem sem eliminar ambiguidade significativa."
+      },
+      "critical_failures": [
+        "Prometer tensão comprovada sem observação ou esconder informação indispensável por incoerência."
+      ],
+      "examples": [
+        "CAL-MARA-SUSPENSE-L1",
+        "CAL-MARA-SUSPENSE-L2",
+        "CAL-MARA-SUSPENSE-L3",
+        "CAL-MARA-SUSPENSE-L4",
+        "CAL-MARA-SUSPENSE-L5"
+      ],
+      "source_ids": [
+        "SW-SCENE",
+        "HF-PACING"
+      ],
+      "diagnostic_questions": [
+        "O público sabe o que pode ser perdido?",
+        "Que alternativa ainda parece possível?"
+      ],
+      "approval": [
+        "Confirmar versão, intenção, gênero, formato e restrições antes de julgar.",
+        "Technical Quality Gate não contém falha impeditiva no escopo efetivamente verificado.",
+        "Artistic Quality Gate possui justificativa própria, contraponto e evidência suficiente para a intenção; nível técnico não define nível artístico.",
+        "Registrar pendências e obter decisão humana pertinente antes de aprovar ou bloquear; nenhum nível designado neste arquivo constitui aprovação."
+      ],
+      "rejection": [
+        "Prometer tensão comprovada sem observação ou esconder informação indispensável por incoerência.",
+        "Reprovar a afirmação sem evidência ou incompatível com a intenção; quando falta material essencial, usar NOT_EVALUABLE/PENDING em vez de inventar nota.",
+        "Uma entrega coerente porém genérica pode passar tecnicamente e continuar pedindo revisão artística; explicar a diferença com os critérios desta rubrica."
+      ],
+      "limitations": [
+        "O texto permite julgar relações propostas, mas não comprova eficácia emocional ou atenção real do público.",
+        "Níveis são ordinais e contextuais; não somar critérios para calcular excelência, nem tratar preferência estética como lei.",
+        "Níveis 4 e 5 nesta biblioteca são alvos didáticos sustentados por escolhas descritas; a classificação efetiva depende de observação, comparação e julgamento contextual.",
+        "Uma fonte profissional documenta decisões de uma obra; não valida automaticamente a aplicação em outro projeto."
+      ],
+      "correction": "Repor risco e informação antes do efeito; reduzir estímulos que apenas anunciam suspense.",
+      "required_evidence": [
+        "Brief e intenção aprovados",
+        "Texto/versão acessível",
+        "Trechos e causalidade apontados",
+        "Restrições e protegidos do projeto"
+      ],
+      "calibration_status": "DIDACTIC_RUBRIC_NOT_HUMAN_VALIDATED"
+    },
+    {
+      "id": "RUB-RETENTION",
+      "name": "Retenção potencial e atenção",
+      "department": "retention",
+      "objective": "Avaliar clareza de promessa, renovação de interesse e payoff sem inventar audiência.",
+      "criteria": [
+        "Pergunta de atenção identificável",
+        "Mudanças de informação justificam continuidade",
+        "Promessa recebe resposta proporcional"
+      ],
+      "observable_indicators": [
+        {
+          "id": "RUB-RETENTION-C1",
+          "criterion": "Pergunta de atenção identificável",
+          "record": "Apontar trecho, quadro, beat, timecode ou diferença comparável que sustente este critério; declarar ausente quando não houver acesso."
+        },
+        {
+          "id": "RUB-RETENTION-C2",
+          "criterion": "Mudanças de informação justificam continuidade",
+          "record": "Apontar trecho, quadro, beat, timecode ou diferença comparável que sustente este critério; declarar ausente quando não houver acesso."
+        },
+        {
+          "id": "RUB-RETENTION-C3",
+          "criterion": "Promessa recebe resposta proporcional",
+          "record": "Apontar trecho, quadro, beat, timecode ou diferença comparável que sustente este critério; declarar ausente quando não houver acesso."
+        }
+      ],
+      "levels": {
+        "1": "Promessa abandonada ou alegação de desempenho sem dados.",
+        "2": "Acúmulo de estímulos mantém novidade sem desenvolvimento.",
+        "3": "Pergunta inicial e resolução mantêm uma linha compreensível.",
+        "4": "Informação nova redefine a pergunta e remunera a atenção anterior.",
+        "5": "Detalhes inicialmente discretos ganham função nova e o payoff reconfigura a experiência."
+      },
+      "critical_failures": [
+        "Apresentar taxa, viralização ou comportamento real de público sem observação pertinente."
+      ],
+      "examples": [
+        "CAL-MARA-RETENTION-L1",
+        "CAL-MARA-RETENTION-L2",
+        "CAL-MARA-RETENTION-L3",
+        "CAL-MARA-RETENTION-L4",
+        "CAL-MARA-RETENTION-L5"
+      ],
+      "source_ids": [
+        "HF-PACING",
+        "SW-SCENE"
+      ],
+      "diagnostic_questions": [
+        "Por que continuar neste ponto?",
+        "O payoff resolve a promessa ou só adiciona estímulo?"
+      ],
+      "approval": [
+        "Confirmar versão, intenção, gênero, formato e restrições antes de julgar.",
+        "Technical Quality Gate não contém falha impeditiva no escopo efetivamente verificado.",
+        "Artistic Quality Gate possui justificativa própria, contraponto e evidência suficiente para a intenção; nível técnico não define nível artístico.",
+        "Registrar pendências e obter decisão humana pertinente antes de aprovar ou bloquear; nenhum nível designado neste arquivo constitui aprovação."
+      ],
+      "rejection": [
+        "Apresentar taxa, viralização ou comportamento real de público sem observação pertinente.",
+        "Reprovar a afirmação sem evidência ou incompatível com a intenção; quando falta material essencial, usar NOT_EVALUABLE/PENDING em vez de inventar nota.",
+        "Uma entrega coerente porém genérica pode passar tecnicamente e continuar pedindo revisão artística; explicar a diferença com os critérios desta rubrica."
+      ],
+      "limitations": [
+        "O texto permite julgar relações propostas, mas não comprova eficácia emocional ou atenção real do público.",
+        "Níveis são ordinais e contextuais; não somar critérios para calcular excelência, nem tratar preferência estética como lei.",
+        "Níveis 4 e 5 nesta biblioteca são alvos didáticos sustentados por escolhas descritas; a classificação efetiva depende de observação, comparação e julgamento contextual.",
+        "Retenção, viralização e resposta emocional real não foram medidas; somente potencial editorial pode ser discutido."
+      ],
+      "correction": "Rever promessa e payoff por leitura/observação, sem impor hook fixo ou cortes por segundo.",
+      "required_evidence": [
+        "Brief e intenção aprovados",
+        "Texto/versão acessível",
+        "Trechos e causalidade apontados",
+        "Restrições e protegidos do projeto"
+      ],
+      "calibration_status": "DIDACTIC_RUBRIC_NOT_HUMAN_VALIDATED"
+    },
+    {
+      "id": "RUB-DIRECTION",
+      "name": "Direção cinematográfica",
+      "department": "direction",
+      "objective": "Integrar ponto de vista, encenação, câmera e som à intenção aprovada.",
+      "criteria": [
+        "Ponto de vista define acesso à informação",
+        "Câmera e blocking mudam atenção com motivo",
+        "Forma e consequência humana são coerentes"
+      ],
+      "observable_indicators": [
+        {
+          "id": "RUB-DIRECTION-C1",
+          "criterion": "Ponto de vista define acesso à informação",
+          "record": "Apontar trecho, quadro, beat, timecode ou diferença comparável que sustente este critério; declarar ausente quando não houver acesso."
+        },
+        {
+          "id": "RUB-DIRECTION-C2",
+          "criterion": "Câmera e blocking mudam atenção com motivo",
+          "record": "Apontar trecho, quadro, beat, timecode ou diferença comparável que sustente este critério; declarar ausente quando não houver acesso."
+        },
+        {
+          "id": "RUB-DIRECTION-C3",
+          "criterion": "Forma e consequência humana são coerentes",
+          "record": "Apontar trecho, quadro, beat, timecode ou diferença comparável que sustente este critério; declarar ausente quando não houver acesso."
+        }
+      ],
+      "levels": {
+        "1": "Escolhas formais tornam o acontecimento ou o ponto de vista incoerente.",
+        "2": "Cobertura genérica registra tudo sem uma intenção discernível.",
+        "3": "Cobertura clara organiza ação, espaço e reação.",
+        "4": "A forma faz experimentar a decisão por acesso seletivo à informação.",
+        "5": "Escolhas de forma transformam o motivo dramático e conservam espaço para interpretação."
+      },
+      "critical_failures": [
+        "Criar acontecimento não autorizado ou contrariar identidade e geografia aprovadas sem revisão."
+      ],
+      "examples": [
+        "CAL-MARA-DIRECTION-L1",
+        "CAL-MARA-DIRECTION-L2",
+        "CAL-MARA-DIRECTION-L3",
+        "CAL-MARA-DIRECTION-L4",
+        "CAL-MARA-DIRECTION-L5"
+      ],
+      "source_ids": [
+        "DIRECTORSKILL",
+        "HF-SCRIPT"
+      ],
+      "diagnostic_questions": [
+        "De quem experimentamos a situação?",
+        "O que se perde se retirar este movimento de câmera?"
+      ],
+      "approval": [
+        "Confirmar versão, intenção, gênero, formato e restrições antes de julgar.",
+        "Technical Quality Gate não contém falha impeditiva no escopo efetivamente verificado.",
+        "Artistic Quality Gate possui justificativa própria, contraponto e evidência suficiente para a intenção; nível técnico não define nível artístico.",
+        "Registrar pendências e obter decisão humana pertinente antes de aprovar ou bloquear; nenhum nível designado neste arquivo constitui aprovação."
+      ],
+      "rejection": [
+        "Criar acontecimento não autorizado ou contrariar identidade e geografia aprovadas sem revisão.",
+        "Reprovar a afirmação sem evidência ou incompatível com a intenção; quando falta material essencial, usar NOT_EVALUABLE/PENDING em vez de inventar nota.",
+        "Uma entrega coerente porém genérica pode passar tecnicamente e continuar pedindo revisão artística; explicar a diferença com os critérios desta rubrica."
+      ],
+      "limitations": [
+        "O texto permite julgar relações propostas, mas não comprova eficácia emocional ou atenção real do público.",
+        "Níveis são ordinais e contextuais; não somar critérios para calcular excelência, nem tratar preferência estética como lei.",
+        "Níveis 4 e 5 nesta biblioteca são alvos didáticos sustentados por escolhas descritas; a classificação efetiva depende de observação, comparação e julgamento contextual.",
+        "Uma fonte profissional documenta decisões de uma obra; não valida automaticamente a aplicação em outro projeto."
+      ],
+      "correction": "Definir informação por beat, ajustar uma escolha de encenação ou câmera e preservar o acontecimento autoral.",
+      "required_evidence": [
+        "Brief e intenção aprovados",
+        "Texto/versão acessível",
+        "Trechos e causalidade apontados",
+        "Restrições e protegidos do projeto"
+      ],
+      "calibration_status": "DIDACTIC_RUBRIC_NOT_HUMAN_VALIDATED"
+    },
+    {
+      "id": "RUB-PERFORMANCE",
+      "name": "Direção de atuação",
+      "department": "performance",
+      "objective": "Obter ação humana específica em resposta ao parceiro e ao ambiente.",
+      "criteria": [
+        "Objetivo executável em cada beat",
+        "Estímulo antecede gesto ou pausa",
+        "Corpo, olhar e voz não se anulam sem intenção"
+      ],
+      "observable_indicators": [
+        {
+          "id": "RUB-PERFORMANCE-C1",
+          "criterion": "Objetivo executável em cada beat",
+          "record": "Apontar trecho, quadro, beat, timecode ou diferença comparável que sustente este critério; declarar ausente quando não houver acesso."
+        },
+        {
+          "id": "RUB-PERFORMANCE-C2",
+          "criterion": "Estímulo antecede gesto ou pausa",
+          "record": "Apontar trecho, quadro, beat, timecode ou diferença comparável que sustente este critério; declarar ausente quando não houver acesso."
+        },
+        {
+          "id": "RUB-PERFORMANCE-C3",
+          "criterion": "Corpo, olhar e voz não se anulam sem intenção",
+          "record": "Apontar trecho, quadro, beat, timecode ou diferença comparável que sustente este critério; declarar ausente quando não houver acesso."
+        }
+      ],
+      "levels": {
+        "1": "Reação ocorre sem estímulo ou corpo faz tarefas incompatíveis.",
+        "2": "Pessoa sinaliza emoção por careta e pausa previsíveis.",
+        "3": "Objetivo e resposta corporal são legíveis.",
+        "4": "Uma ação contém impulsos em conflito sem explicá-los.",
+        "5": "Escuta, defesa e transformação surgem em ajustes mínimos que mudam a relação."
+      },
+      "critical_failures": [
+        "Reação temporal impossível ou instrução que exige simultaneamente ações corporais incompatíveis."
+      ],
+      "examples": [
+        "CAL-MARA-PERFORMANCE-L1",
+        "CAL-MARA-PERFORMANCE-L2",
+        "CAL-MARA-PERFORMANCE-L3",
+        "CAL-MARA-PERFORMANCE-L4",
+        "CAL-MARA-PERFORMANCE-L5"
+      ],
+      "source_ids": [
+        "HF-SCRIPT",
+        "SW-SCENE"
+      ],
+      "diagnostic_questions": [
+        "O que a pessoa faz para conseguir algo?",
+        "A pausa nasce da escuta ou é um sinal genérico de emoção?"
+      ],
+      "approval": [
+        "Confirmar versão, intenção, gênero, formato e restrições antes de julgar.",
+        "Technical Quality Gate não contém falha impeditiva no escopo efetivamente verificado.",
+        "Artistic Quality Gate possui justificativa própria, contraponto e evidência suficiente para a intenção; nível técnico não define nível artístico.",
+        "Registrar pendências e obter decisão humana pertinente antes de aprovar ou bloquear; nenhum nível designado neste arquivo constitui aprovação."
+      ],
+      "rejection": [
+        "Reação temporal impossível ou instrução que exige simultaneamente ações corporais incompatíveis.",
+        "Reprovar a afirmação sem evidência ou incompatível com a intenção; quando falta material essencial, usar NOT_EVALUABLE/PENDING em vez de inventar nota.",
+        "Uma entrega coerente porém genérica pode passar tecnicamente e continuar pedindo revisão artística; explicar a diferença com os critérios desta rubrica."
+      ],
+      "limitations": [
+        "A descrição textual permite avaliar proposta e consistência, mas não comprova a execução visual, temporal ou sonora; exigir mídia acessível para julgar esse resultado.",
+        "Níveis são ordinais e contextuais; não somar critérios para calcular excelência, nem tratar preferência estética como lei.",
+        "Níveis 4 e 5 nesta biblioteca são alvos didáticos sustentados por escolhas descritas; a classificação efetiva depende de observação, comparação e julgamento contextual.",
+        "Uma fonte profissional documenta decisões de uma obra; não valida automaticamente a aplicação em outro projeto."
+      ],
+      "correction": "Trocar adjetivo emocional por tarefa e estímulo; ensaiar ação simples com tempo de reação.",
+      "required_evidence": [
+        "Intenção e versão do entregável",
+        "Arquivo ou representação pertinente acessível com origem",
+        "Trechos/quadros/timecodes comparáveis quando a conclusão depende de mídia",
+        "Mapa de protegidos e referência aprovada"
+      ],
+      "calibration_status": "DIDACTIC_RUBRIC_NOT_HUMAN_VALIDATED"
+    },
+    {
+      "id": "RUB-CASTING",
+      "name": "Casting",
+      "department": "casting",
+      "objective": "Escolher presenças distintas capazes de sustentar relação e função dramática.",
+      "criteria": [
+        "Identidade distinguível por vários sinais",
+        "Idade e corpo compatíveis com papel aprovado",
+        "Teste de relação e ação além de beleza isolada"
+      ],
+      "observable_indicators": [
+        {
+          "id": "RUB-CASTING-C1",
+          "criterion": "Identidade distinguível por vários sinais",
+          "record": "Apontar trecho, quadro, beat, timecode ou diferença comparável que sustente este critério; declarar ausente quando não houver acesso."
+        },
+        {
+          "id": "RUB-CASTING-C2",
+          "criterion": "Idade e corpo compatíveis com papel aprovado",
+          "record": "Apontar trecho, quadro, beat, timecode ou diferença comparável que sustente este critério; declarar ausente quando não houver acesso."
+        },
+        {
+          "id": "RUB-CASTING-C3",
+          "criterion": "Teste de relação e ação além de beleza isolada",
+          "record": "Apontar trecho, quadro, beat, timecode ou diferença comparável que sustente este critério; declarar ausente quando não houver acesso."
+        }
+      ],
+      "levels": {
+        "1": "Elenco invalida requisito do papel ou não permite identificar quem age.",
+        "2": "Distinção nominal e aparência polida não sustentam funções.",
+        "3": "Perfis distinguíveis e compatíveis sustentam ação e leitura.",
+        "4": "Presença e contraste ajudam a dramaturgia sem reduzir pessoas a tipos.",
+        "5": "O teste relacional revela camadas que reorganizam a expectativa sobre ambos."
+      },
+      "critical_failures": [
+        "Personagem adulto aprovado torna-se menor ou identidade/necessidade do papel é substituída sem autorização."
+      ],
+      "examples": [
+        "CAL-MARA-CASTING-L1",
+        "CAL-MARA-CASTING-L2",
+        "CAL-MARA-CASTING-L3",
+        "CAL-MARA-CASTING-L4",
+        "CAL-MARA-CASTING-L5"
+      ],
+      "source_ids": [
+        "HF-PICTURES",
+        "EX-LAST-WATER"
+      ],
+      "diagnostic_questions": [
+        "Os candidatos permanecem distintos em silhueta e contraângulo?",
+        "A escolha sustenta a relação, não só o retrato?"
+      ],
+      "approval": [
+        "Confirmar versão, intenção, gênero, formato e restrições antes de julgar.",
+        "Technical Quality Gate não contém falha impeditiva no escopo efetivamente verificado.",
+        "Artistic Quality Gate possui justificativa própria, contraponto e evidência suficiente para a intenção; nível técnico não define nível artístico.",
+        "Registrar pendências e obter decisão humana pertinente antes de aprovar ou bloquear; nenhum nível designado neste arquivo constitui aprovação."
+      ],
+      "rejection": [
+        "Personagem adulto aprovado torna-se menor ou identidade/necessidade do papel é substituída sem autorização.",
+        "Reprovar a afirmação sem evidência ou incompatível com a intenção; quando falta material essencial, usar NOT_EVALUABLE/PENDING em vez de inventar nota.",
+        "Uma entrega coerente porém genérica pode passar tecnicamente e continuar pedindo revisão artística; explicar a diferença com os critérios desta rubrica."
+      ],
+      "limitations": [
+        "A descrição textual permite avaliar proposta e consistência, mas não comprova a execução visual, temporal ou sonora; exigir mídia acessível para julgar esse resultado.",
+        "Níveis são ordinais e contextuais; não somar critérios para calcular excelência, nem tratar preferência estética como lei.",
+        "Níveis 4 e 5 nesta biblioteca são alvos didáticos sustentados por escolhas descritas; a classificação efetiva depende de observação, comparação e julgamento contextual.",
+        "Uma fonte profissional documenta decisões de uma obra; não valida automaticamente a aplicação em outro projeto."
+      ],
+      "correction": "Comparar candidatos no mesmo gesto, luz e enquadramento; preservar traços de identidade escolhidos.",
+      "required_evidence": [
+        "Intenção e versão do entregável",
+        "Arquivo ou representação pertinente acessível com origem",
+        "Trechos/quadros/timecodes comparáveis quando a conclusão depende de mídia",
+        "Mapa de protegidos e referência aprovada"
+      ],
+      "calibration_status": "DIDACTIC_RUBRIC_NOT_HUMAN_VALIDATED"
+    },
+    {
+      "id": "RUB-CHARACTER-SHEETS",
+      "name": "Character sheets",
+      "department": "character-sheets",
+      "objective": "Documentar identidade estável entre vistas, expressões e estados.",
+      "criteria": [
+        "Marcos faciais e proporções conservados",
+        "Vistas têm escala e rotação interpretáveis",
+        "Identidade separada de figurino e estado"
+      ],
+      "observable_indicators": [
+        {
+          "id": "RUB-CHARACTER-SHEETS-C1",
+          "criterion": "Marcos faciais e proporções conservados",
+          "record": "Apontar trecho, quadro, beat, timecode ou diferença comparável que sustente este critério; declarar ausente quando não houver acesso."
+        },
+        {
+          "id": "RUB-CHARACTER-SHEETS-C2",
+          "criterion": "Vistas têm escala e rotação interpretáveis",
+          "record": "Apontar trecho, quadro, beat, timecode ou diferença comparável que sustente este critério; declarar ausente quando não houver acesso."
+        },
+        {
+          "id": "RUB-CHARACTER-SHEETS-C3",
+          "criterion": "Identidade separada de figurino e estado",
+          "record": "Apontar trecho, quadro, beat, timecode ou diferença comparável que sustente este critério; declarar ausente quando não houver acesso."
+        }
+      ],
+      "levels": {
+        "1": "Vistas não representam a mesma identidade.",
+        "2": "Identidade aproximada, mas documentação genérica dificulta conferir.",
+        "3": "Frente, perfil e três-quartos conservam marcos e escala.",
+        "4": "Sheet distingue identidade, comportamento e estados com clareza de uso.",
+        "5": "Documentação econômica antecipa ambiguidades reais sem congelar a expressividade."
+      },
+      "critical_failures": [
+        "Identidade muda entre vistas ou sheet é aprovado sem as imagens exigidas acessíveis."
+      ],
+      "examples": [
+        "CAL-MARA-CHARACTER-SHEETS-L1",
+        "CAL-MARA-CHARACTER-SHEETS-L2",
+        "CAL-MARA-CHARACTER-SHEETS-L3",
+        "CAL-MARA-CHARACTER-SHEETS-L4",
+        "CAL-MARA-CHARACTER-SHEETS-L5"
+      ],
+      "source_ids": [
+        "HF-PICTURES"
+      ],
+      "diagnostic_questions": [
+        "Quais marcos provam que é a mesma pessoa?",
+        "Expressão ou figurino está mascarando uma mudança de identidade?"
+      ],
+      "approval": [
+        "Confirmar versão, intenção, gênero, formato e restrições antes de julgar.",
+        "Technical Quality Gate não contém falha impeditiva no escopo efetivamente verificado.",
+        "Artistic Quality Gate possui justificativa própria, contraponto e evidência suficiente para a intenção; nível técnico não define nível artístico.",
+        "Registrar pendências e obter decisão humana pertinente antes de aprovar ou bloquear; nenhum nível designado neste arquivo constitui aprovação."
+      ],
+      "rejection": [
+        "Identidade muda entre vistas ou sheet é aprovado sem as imagens exigidas acessíveis.",
+        "Reprovar a afirmação sem evidência ou incompatível com a intenção; quando falta material essencial, usar NOT_EVALUABLE/PENDING em vez de inventar nota.",
+        "Uma entrega coerente porém genérica pode passar tecnicamente e continuar pedindo revisão artística; explicar a diferença com os critérios desta rubrica."
+      ],
+      "limitations": [
+        "A descrição textual permite avaliar proposta e consistência, mas não comprova a execução visual, temporal ou sonora; exigir mídia acessível para julgar esse resultado.",
+        "Níveis são ordinais e contextuais; não somar critérios para calcular excelência, nem tratar preferência estética como lei.",
+        "Níveis 4 e 5 nesta biblioteca são alvos didáticos sustentados por escolhas descritas; a classificação efetiva depende de observação, comparação e julgamento contextual.",
+        "Uma fonte profissional documenta decisões de uma obra; não valida automaticamente a aplicação em outro projeto."
+      ],
+      "correction": "Escolher uma referência autorizada como base e corrigir a vista divergente, sem recriar todas.",
+      "required_evidence": [
+        "Intenção e versão do entregável",
+        "Arquivo ou representação pertinente acessível com origem",
+        "Trechos/quadros/timecodes comparáveis quando a conclusão depende de mídia",
+        "Mapa de protegidos e referência aprovada"
+      ],
+      "calibration_status": "DIDACTIC_RUBRIC_NOT_HUMAN_VALIDATED"
+    },
+    {
+      "id": "RUB-PERFORMANCE-SHEETS",
+      "name": "Performance sheets",
+      "department": "performance-sheets",
+      "objective": "Converter intenção e arco em ações observáveis reutilizáveis.",
+      "criteria": [
+        "Estímulo, objetivo e ação ligados",
+        "Sequência inicial/transição/final distingue estados",
+        "Estados não são catálogo de caretas"
+      ],
+      "observable_indicators": [
+        {
+          "id": "RUB-PERFORMANCE-SHEETS-C1",
+          "criterion": "Estímulo, objetivo e ação ligados",
+          "record": "Apontar trecho, quadro, beat, timecode ou diferença comparável que sustente este critério; declarar ausente quando não houver acesso."
+        },
+        {
+          "id": "RUB-PERFORMANCE-SHEETS-C2",
+          "criterion": "Sequência inicial/transição/final distingue estados",
+          "record": "Apontar trecho, quadro, beat, timecode ou diferença comparável que sustente este critério; declarar ausente quando não houver acesso."
+        },
+        {
+          "id": "RUB-PERFORMANCE-SHEETS-C3",
+          "criterion": "Estados não são catálogo de caretas",
+          "record": "Apontar trecho, quadro, beat, timecode ou diferença comparável que sustente este critério; declarar ausente quando não houver acesso."
+        }
+      ],
+      "levels": {
+        "1": "Sequência não possui transição causal e contradiz a ação.",
+        "2": "Catálogo de emoções substitui ações e relação.",
+        "3": "Objetivo, estímulo e reação formam uma sequência utilizável.",
+        "4": "Microações mostram defesa e mudança com continuidade de esforço.",
+        "5": "A sequência permite variações consistentes de timing sem perder subtexto ou agência."
+      },
+      "critical_failures": [
+        "Performance manda mudar evento aprovado ou exige estados contraditórios sem transição."
+      ],
+      "examples": [
+        "CAL-MARA-PERFORMANCE-SHEETS-L1",
+        "CAL-MARA-PERFORMANCE-SHEETS-L2",
+        "CAL-MARA-PERFORMANCE-SHEETS-L3",
+        "CAL-MARA-PERFORMANCE-SHEETS-L4",
+        "CAL-MARA-PERFORMANCE-SHEETS-L5"
+      ],
+      "source_ids": [
+        "HF-SCRIPT"
+      ],
+      "diagnostic_questions": [
+        "Que parceiro ou acontecimento altera o comportamento?",
+        "O estado final conserva marcas do esforço anterior?"
+      ],
+      "approval": [
+        "Confirmar versão, intenção, gênero, formato e restrições antes de julgar.",
+        "Technical Quality Gate não contém falha impeditiva no escopo efetivamente verificado.",
+        "Artistic Quality Gate possui justificativa própria, contraponto e evidência suficiente para a intenção; nível técnico não define nível artístico.",
+        "Registrar pendências e obter decisão humana pertinente antes de aprovar ou bloquear; nenhum nível designado neste arquivo constitui aprovação."
+      ],
+      "rejection": [
+        "Performance manda mudar evento aprovado ou exige estados contraditórios sem transição.",
+        "Reprovar a afirmação sem evidência ou incompatível com a intenção; quando falta material essencial, usar NOT_EVALUABLE/PENDING em vez de inventar nota.",
+        "Uma entrega coerente porém genérica pode passar tecnicamente e continuar pedindo revisão artística; explicar a diferença com os critérios desta rubrica."
+      ],
+      "limitations": [
+        "O texto permite julgar relações propostas, mas não comprova eficácia emocional ou atenção real do público.",
+        "Níveis são ordinais e contextuais; não somar critérios para calcular excelência, nem tratar preferência estética como lei.",
+        "Níveis 4 e 5 nesta biblioteca são alvos didáticos sustentados por escolhas descritas; a classificação efetiva depende de observação, comparação e julgamento contextual.",
+        "Uma fonte profissional documenta decisões de uma obra; não valida automaticamente a aplicação em outro projeto."
+      ],
+      "correction": "Descrever um arco curto com verbo executável e transições; preservar identidade e acontecimentos.",
+      "required_evidence": [
+        "Brief e intenção aprovados",
+        "Texto/versão acessível",
+        "Trechos e causalidade apontados",
+        "Restrições e protegidos do projeto"
+      ],
+      "calibration_status": "DIDACTIC_RUBRIC_NOT_HUMAN_VALIDATED"
+    },
+    {
+      "id": "RUB-WARDROBE",
+      "name": "Figurinos",
+      "department": "wardrobe",
+      "objective": "Expressar função, uso e continuidade sem substituir pessoa por estereótipo.",
+      "criteria": [
+        "Silhueta e material servem à função",
+        "Desgaste tem localização e causa",
+        "Camadas, fechos e estados conservados"
+      ],
+      "observable_indicators": [
+        {
+          "id": "RUB-WARDROBE-C1",
+          "criterion": "Silhueta e material servem à função",
+          "record": "Apontar trecho, quadro, beat, timecode ou diferença comparável que sustente este critério; declarar ausente quando não houver acesso."
+        },
+        {
+          "id": "RUB-WARDROBE-C2",
+          "criterion": "Desgaste tem localização e causa",
+          "record": "Apontar trecho, quadro, beat, timecode ou diferença comparável que sustente este critério; declarar ausente quando não houver acesso."
+        },
+        {
+          "id": "RUB-WARDROBE-C3",
+          "criterion": "Camadas, fechos e estados conservados",
+          "record": "Apontar trecho, quadro, beat, timecode ou diferença comparável que sustente este critério; declarar ausente quando não houver acesso."
+        }
+      ],
+      "levels": {
+        "1": "Peça contradiz a função ou muda sem acontecimento.",
+        "2": "Roupa identifica a profissão só por clichê decorativo.",
+        "3": "Roupa funcional tem caimento e continuidade reconhecíveis.",
+        "4": "Uso e comportamento tornam o figurino parte da ação.",
+        "5": "Pequenas mudanças de estado revelam custo e relação sem símbolos impostos."
+      },
+      "critical_failures": [
+        "Uniforme/insígnia histórica não verificada apresentada como fato ou roupa bloqueada muda silenciosamente."
+      ],
+      "examples": [
+        "CAL-MARA-WARDROBE-L1",
+        "CAL-MARA-WARDROBE-L2",
+        "CAL-MARA-WARDROBE-L3",
+        "CAL-MARA-WARDROBE-L4",
+        "CAL-MARA-WARDROBE-L5"
+      ],
+      "source_ids": [
+        "HF-PICTURES",
+        "EX-LAST-WATER"
+      ],
+      "diagnostic_questions": [
+        "Qual ação deixou esta marca?",
+        "A roupa permite o gesto e conserva seu estado no plano seguinte?"
+      ],
+      "approval": [
+        "Confirmar versão, intenção, gênero, formato e restrições antes de julgar.",
+        "Technical Quality Gate não contém falha impeditiva no escopo efetivamente verificado.",
+        "Artistic Quality Gate possui justificativa própria, contraponto e evidência suficiente para a intenção; nível técnico não define nível artístico.",
+        "Registrar pendências e obter decisão humana pertinente antes de aprovar ou bloquear; nenhum nível designado neste arquivo constitui aprovação."
+      ],
+      "rejection": [
+        "Uniforme/insígnia histórica não verificada apresentada como fato ou roupa bloqueada muda silenciosamente.",
+        "Reprovar a afirmação sem evidência ou incompatível com a intenção; quando falta material essencial, usar NOT_EVALUABLE/PENDING em vez de inventar nota.",
+        "Uma entrega coerente porém genérica pode passar tecnicamente e continuar pedindo revisão artística; explicar a diferença com os critérios desta rubrica."
+      ],
+      "limitations": [
+        "A descrição textual permite avaliar proposta e consistência, mas não comprova a execução visual, temporal ou sonora; exigir mídia acessível para julgar esse resultado.",
+        "Níveis são ordinais e contextuais; não somar critérios para calcular excelência, nem tratar preferência estética como lei.",
+        "Níveis 4 e 5 nesta biblioteca são alvos didáticos sustentados por escolhas descritas; a classificação efetiva depende de observação, comparação e julgamento contextual.",
+        "Uma fonte profissional documenta decisões de uma obra; não valida automaticamente a aplicação em outro projeto."
+      ],
+      "correction": "Corrigir material, caimento ou desgaste da peça responsável; manter identidade e versões aprovadas.",
+      "required_evidence": [
+        "Intenção e versão do entregável",
+        "Arquivo ou representação pertinente acessível com origem",
+        "Trechos/quadros/timecodes comparáveis quando a conclusão depende de mídia",
+        "Mapa de protegidos e referência aprovada"
+      ],
+      "calibration_status": "DIDACTIC_RUBRIC_NOT_HUMAN_VALIDATED"
+    },
+    {
+      "id": "RUB-LOCATIONS",
+      "name": "Locações",
+      "department": "locations",
+      "objective": "Criar ambiente utilizável que sustente ação, escala, história e contraângulos.",
+      "criteria": [
+        "Planta, master e vistas concordam",
+        "Entradas e áreas de uso têm função",
+        "Material e desgaste respondem à atividade"
+      ],
+      "observable_indicators": [
+        {
+          "id": "RUB-LOCATIONS-C1",
+          "criterion": "Planta, master e vistas concordam",
+          "record": "Apontar trecho, quadro, beat, timecode ou diferença comparável que sustente este critério; declarar ausente quando não houver acesso."
+        },
+        {
+          "id": "RUB-LOCATIONS-C2",
+          "criterion": "Entradas e áreas de uso têm função",
+          "record": "Apontar trecho, quadro, beat, timecode ou diferença comparável que sustente este critério; declarar ausente quando não houver acesso."
+        },
+        {
+          "id": "RUB-LOCATIONS-C3",
+          "criterion": "Material e desgaste respondem à atividade",
+          "record": "Apontar trecho, quadro, beat, timecode ou diferença comparável que sustente este critério; declarar ausente quando não houver acesso."
+        }
+      ],
+      "levels": {
+        "1": "Planta e vistas são incompatíveis.",
+        "2": "Ambiente genérico fornece fundo sem função ou marcas de uso.",
+        "3": "Geometria coerente e mobiliário funcional permitem a cena.",
+        "4": "Organização espacial e uso prévio participam da relação.",
+        "5": "História material, percursos e mudanças de uso integram o conflito sem depender de decoração excessiva."
+      },
+      "critical_failures": [
+        "Portas/janelas mudam de parede sem revisão ou arquitetura impede ação exigida."
+      ],
+      "examples": [
+        "CAL-MARA-LOCATIONS-L1",
+        "CAL-MARA-LOCATIONS-L2",
+        "CAL-MARA-LOCATIONS-L3",
+        "CAL-MARA-LOCATIONS-L4",
+        "CAL-MARA-LOCATIONS-L5"
+      ],
+      "source_ids": [
+        "HF-PICTURES",
+        "DIRECTORSKILL"
+      ],
+      "diagnostic_questions": [
+        "O ambiente permite a ação sem ser ampliado?",
+        "Que detalhe revela uso anterior e permanece no contraângulo?"
+      ],
+      "approval": [
+        "Confirmar versão, intenção, gênero, formato e restrições antes de julgar.",
+        "Technical Quality Gate não contém falha impeditiva no escopo efetivamente verificado.",
+        "Artistic Quality Gate possui justificativa própria, contraponto e evidência suficiente para a intenção; nível técnico não define nível artístico.",
+        "Registrar pendências e obter decisão humana pertinente antes de aprovar ou bloquear; nenhum nível designado neste arquivo constitui aprovação."
+      ],
+      "rejection": [
+        "Portas/janelas mudam de parede sem revisão ou arquitetura impede ação exigida.",
+        "Reprovar a afirmação sem evidência ou incompatível com a intenção; quando falta material essencial, usar NOT_EVALUABLE/PENDING em vez de inventar nota.",
+        "Uma entrega coerente porém genérica pode passar tecnicamente e continuar pedindo revisão artística; explicar a diferença com os critérios desta rubrica."
+      ],
+      "limitations": [
+        "O texto permite julgar relações propostas, mas não comprova eficácia emocional ou atenção real do público.",
+        "Níveis são ordinais e contextuais; não somar critérios para calcular excelência, nem tratar preferência estética como lei.",
+        "Níveis 4 e 5 nesta biblioteca são alvos didáticos sustentados por escolhas descritas; a classificação efetiva depende de observação, comparação e julgamento contextual.",
+        "Uma fonte profissional documenta decisões de uma obra; não valida automaticamente a aplicação em outro projeto."
+      ],
+      "correction": "Fixar marcos e dimensões; reparar a vista ou blocking divergente em vez de reconstruir a sala.",
+      "required_evidence": [
+        "Brief e intenção aprovados",
+        "Texto/versão acessível",
+        "Trechos e causalidade apontados",
+        "Restrições e protegidos do projeto"
+      ],
+      "calibration_status": "DIDACTIC_RUBRIC_NOT_HUMAN_VALIDATED"
+    },
+    {
+      "id": "RUB-GEOMETRY",
+      "name": "Geometria espacial",
+      "department": "geometry",
+      "objective": "Preservar um espaço mensurável e legível através de câmeras e movimentos.",
+      "criteria": [
+        "Dimensões e adjacências consistentes",
+        "Câmera e linhas de visão cabem no espaço",
+        "Direções de tela e percursos são rastreáveis"
+      ],
+      "observable_indicators": [
+        {
+          "id": "RUB-GEOMETRY-C1",
+          "criterion": "Dimensões e adjacências consistentes",
+          "record": "Apontar trecho, quadro, beat, timecode ou diferença comparável que sustente este critério; declarar ausente quando não houver acesso."
+        },
+        {
+          "id": "RUB-GEOMETRY-C2",
+          "criterion": "Câmera e linhas de visão cabem no espaço",
+          "record": "Apontar trecho, quadro, beat, timecode ou diferença comparável que sustente este critério; declarar ausente quando não houver acesso."
+        },
+        {
+          "id": "RUB-GEOMETRY-C3",
+          "criterion": "Direções de tela e percursos são rastreáveis",
+          "record": "Apontar trecho, quadro, beat, timecode ou diferença comparável que sustente este critério; declarar ausente quando não houver acesso."
+        }
+      ],
+      "levels": {
+        "1": "Câmera ou pessoa atravessa parede e o espaço muda para acomodar o plano.",
+        "2": "Dimensões declaradas não explicam cobertura ou orientação.",
+        "3": "Planta e câmeras mantêm percursos e direções compreensíveis.",
+        "4": "Geometria limita escolhas e a cobertura usa essa limitação de forma expressiva.",
+        "5": "Uma mudança espacial motivada reorganiza atenção sem falsificar a planta."
+      },
+      "critical_failures": [
+        "Alteração silenciosa de geometria aprovada ou caminho atravessa obstáculo sólido."
+      ],
+      "examples": [
+        "CAL-MARA-GEOMETRY-L1",
+        "CAL-MARA-GEOMETRY-L2",
+        "CAL-MARA-GEOMETRY-L3",
+        "CAL-MARA-GEOMETRY-L4",
+        "CAL-MARA-GEOMETRY-L5"
+      ],
+      "source_ids": [
+        "DIRECTORSKILL",
+        "HF-SCRIPT"
+      ],
+      "diagnostic_questions": [
+        "As linhas de visão existem na planta?",
+        "A inversão de eixo é deliberada e orientada ou um erro?"
+      ],
+      "approval": [
+        "Confirmar versão, intenção, gênero, formato e restrições antes de julgar.",
+        "Technical Quality Gate não contém falha impeditiva no escopo efetivamente verificado.",
+        "Artistic Quality Gate possui justificativa própria, contraponto e evidência suficiente para a intenção; nível técnico não define nível artístico.",
+        "Registrar pendências e obter decisão humana pertinente antes de aprovar ou bloquear; nenhum nível designado neste arquivo constitui aprovação."
+      ],
+      "rejection": [
+        "Alteração silenciosa de geometria aprovada ou caminho atravessa obstáculo sólido.",
+        "Reprovar a afirmação sem evidência ou incompatível com a intenção; quando falta material essencial, usar NOT_EVALUABLE/PENDING em vez de inventar nota.",
+        "Uma entrega coerente porém genérica pode passar tecnicamente e continuar pedindo revisão artística; explicar a diferença com os critérios desta rubrica."
+      ],
+      "limitations": [
+        "O texto permite julgar relações propostas, mas não comprova eficácia emocional ou atenção real do público.",
+        "Níveis são ordinais e contextuais; não somar critérios para calcular excelência, nem tratar preferência estética como lei.",
+        "Níveis 4 e 5 nesta biblioteca são alvos didáticos sustentados por escolhas descritas; a classificação efetiva depende de observação, comparação e julgamento contextual.",
+        "Uma fonte profissional documenta decisões de uma obra; não valida automaticamente a aplicação em outro projeto."
+      ],
+      "correction": "Mover câmera ou simplificar cobertura; mudar geometria somente por revisão explícita com dependências.",
+      "required_evidence": [
+        "Brief e intenção aprovados",
+        "Texto/versão acessível",
+        "Trechos e causalidade apontados",
+        "Restrições e protegidos do projeto"
+      ],
+      "calibration_status": "DIDACTIC_RUBRIC_NOT_HUMAN_VALIDATED"
+    },
+    {
+      "id": "RUB-PROPS",
+      "name": "Props",
+      "department": "props",
+      "objective": "Manter objeto utilizável, materialmente convincente e com estados narrativos rastreáveis.",
+      "criteria": [
+        "Forma, escala e função compatíveis",
+        "Dono, mão e estado mudam por evento",
+        "Contato e apoio têm consequência material"
+      ],
+      "observable_indicators": [
+        {
+          "id": "RUB-PROPS-C1",
+          "criterion": "Forma, escala e função compatíveis",
+          "record": "Apontar trecho, quadro, beat, timecode ou diferença comparável que sustente este critério; declarar ausente quando não houver acesso."
+        },
+        {
+          "id": "RUB-PROPS-C2",
+          "criterion": "Dono, mão e estado mudam por evento",
+          "record": "Apontar trecho, quadro, beat, timecode ou diferença comparável que sustente este critério; declarar ausente quando não houver acesso."
+        },
+        {
+          "id": "RUB-PROPS-C3",
+          "criterion": "Contato e apoio têm consequência material",
+          "record": "Apontar trecho, quadro, beat, timecode ou diferença comparável que sustente este critério; declarar ausente quando não houver acesso."
+        }
+      ],
+      "levels": {
+        "1": "Objeto torna a ação impossível ou muda sem causa.",
+        "2": "Objeto genérico e bonito não sustenta função nem estados.",
+        "3": "Identidade, função e estados permitem executar a ação.",
+        "4": "Marcas de uso e estados orientam atenção e revelam ação.",
+        "5": "Propriedade, função e material integram consequência e relação com economia."
+      },
+      "critical_failures": [
+        "Objeto troca identidade, mão ou estado sem evento; item histórico não verificado é apresentado como autêntico."
+      ],
+      "examples": [
+        "CAL-MARA-PROPS-L1",
+        "CAL-MARA-PROPS-L2",
+        "CAL-MARA-PROPS-L3",
+        "CAL-MARA-PROPS-L4",
+        "CAL-MARA-PROPS-L5"
+      ],
+      "source_ids": [
+        "HF-PICTURES",
+        "HF-SCRIPT"
+      ],
+      "diagnostic_questions": [
+        "A mão consegue executar a operação descrita?",
+        "Quem possui o objeto antes e depois de cada beat?"
+      ],
+      "approval": [
+        "Confirmar versão, intenção, gênero, formato e restrições antes de julgar.",
+        "Technical Quality Gate não contém falha impeditiva no escopo efetivamente verificado.",
+        "Artistic Quality Gate possui justificativa própria, contraponto e evidência suficiente para a intenção; nível técnico não define nível artístico.",
+        "Registrar pendências e obter decisão humana pertinente antes de aprovar ou bloquear; nenhum nível designado neste arquivo constitui aprovação."
+      ],
+      "rejection": [
+        "Objeto troca identidade, mão ou estado sem evento; item histórico não verificado é apresentado como autêntico.",
+        "Reprovar a afirmação sem evidência ou incompatível com a intenção; quando falta material essencial, usar NOT_EVALUABLE/PENDING em vez de inventar nota.",
+        "Uma entrega coerente porém genérica pode passar tecnicamente e continuar pedindo revisão artística; explicar a diferença com os critérios desta rubrica."
+      ],
+      "limitations": [
+        "O texto permite julgar relações propostas, mas não comprova eficácia emocional ou atenção real do público.",
+        "Níveis são ordinais e contextuais; não somar critérios para calcular excelência, nem tratar preferência estética como lei.",
+        "Níveis 4 e 5 nesta biblioteca são alvos didáticos sustentados por escolhas descritas; a classificação efetiva depende de observação, comparação e julgamento contextual.",
+        "Uma fonte profissional documenta decisões de uma obra; não valida automaticamente a aplicação em outro projeto."
+      ],
+      "correction": "Corrigir o estado ou contato responsável; separar objeto mestre de suas versões de continuidade.",
+      "required_evidence": [
+        "Brief e intenção aprovados",
+        "Texto/versão acessível",
+        "Trechos e causalidade apontados",
+        "Restrições e protegidos do projeto"
+      ],
+      "calibration_status": "DIDACTIC_RUBRIC_NOT_HUMAN_VALIDATED"
+    },
+    {
+      "id": "RUB-PHOTOGRAPHY",
+      "name": "Fotografia",
+      "department": "photography",
+      "objective": "Organizar exposição, contraste, cor, posição e movimento para servir à experiência pretendida.",
+      "criteria": [
+        "Hierarquia de exposição serve ao acontecimento",
+        "Relação de luz e espaço mantém coerência",
+        "Escolhas de registro têm função dramática"
+      ],
+      "observable_indicators": [
+        {
+          "id": "RUB-PHOTOGRAPHY-C1",
+          "criterion": "Hierarquia de exposição serve ao acontecimento",
+          "record": "Apontar trecho, quadro, beat, timecode ou diferença comparável que sustente este critério; declarar ausente quando não houver acesso."
+        },
+        {
+          "id": "RUB-PHOTOGRAPHY-C2",
+          "criterion": "Relação de luz e espaço mantém coerência",
+          "record": "Apontar trecho, quadro, beat, timecode ou diferença comparável que sustente este critério; declarar ausente quando não houver acesso."
+        },
+        {
+          "id": "RUB-PHOTOGRAPHY-C3",
+          "criterion": "Escolhas de registro têm função dramática",
+          "record": "Apontar trecho, quadro, beat, timecode ou diferença comparável que sustente este critério; declarar ausente quando não houver acesso."
+        }
+      ],
+      "levels": {
+        "1": "Registro apaga a informação essencial ou contradiz o espaço.",
+        "2": "Exposição correta e efeitos convencionais não estabelecem prioridade.",
+        "3": "Exposição e contraste tornam pessoa e ação legíveis.",
+        "4": "Mudança de luz ou posição se relaciona à decisão e conserva continuidade.",
+        "5": "Registro e encenação fazem o motivo reaparecer com novo significado."
+      },
+      "critical_failures": [
+        "Informação necessária fica ilegível sem intenção ou esquema contradiz fonte/estado aprovado."
+      ],
+      "examples": [
+        "CAL-MARA-PHOTOGRAPHY-L1",
+        "CAL-MARA-PHOTOGRAPHY-L2",
+        "CAL-MARA-PHOTOGRAPHY-L3",
+        "CAL-MARA-PHOTOGRAPHY-L4",
+        "CAL-MARA-PHOTOGRAPHY-L5"
+      ],
+      "source_ids": [
+        "ARRI-1917",
+        "ASC-BR2049"
+      ],
+      "diagnostic_questions": [
+        "O que a exposição permite perceber primeiro?",
+        "Como a escolha muda a experiência, além de parecer cinematográfica?"
+      ],
+      "approval": [
+        "Confirmar versão, intenção, gênero, formato e restrições antes de julgar.",
+        "Technical Quality Gate não contém falha impeditiva no escopo efetivamente verificado.",
+        "Artistic Quality Gate possui justificativa própria, contraponto e evidência suficiente para a intenção; nível técnico não define nível artístico.",
+        "Registrar pendências e obter decisão humana pertinente antes de aprovar ou bloquear; nenhum nível designado neste arquivo constitui aprovação."
+      ],
+      "rejection": [
+        "Informação necessária fica ilegível sem intenção ou esquema contradiz fonte/estado aprovado.",
+        "Reprovar a afirmação sem evidência ou incompatível com a intenção; quando falta material essencial, usar NOT_EVALUABLE/PENDING em vez de inventar nota.",
+        "Uma entrega coerente porém genérica pode passar tecnicamente e continuar pedindo revisão artística; explicar a diferença com os critérios desta rubrica."
+      ],
+      "limitations": [
+        "A descrição textual permite avaliar proposta e consistência, mas não comprova a execução visual, temporal ou sonora; exigir mídia acessível para julgar esse resultado.",
+        "Níveis são ordinais e contextuais; não somar critérios para calcular excelência, nem tratar preferência estética como lei.",
+        "Níveis 4 e 5 nesta biblioteca são alvos didáticos sustentados por escolhas descritas; a classificação efetiva depende de observação, comparação e julgamento contextual.",
+        "Uma fonte profissional documenta decisões de uma obra; não valida automaticamente a aplicação em outro projeto."
+      ],
+      "correction": "Identificar a informação prioritária e ajustar luz, posição ou exposição preservando look e geometria aprovados.",
+      "required_evidence": [
+        "Intenção e versão do entregável",
+        "Arquivo ou representação pertinente acessível com origem",
+        "Trechos/quadros/timecodes comparáveis quando a conclusão depende de mídia",
+        "Mapa de protegidos e referência aprovada"
+      ],
+      "calibration_status": "DIDACTIC_RUBRIC_NOT_HUMAN_VALIDATED"
+    },
+    {
+      "id": "RUB-OPTICS",
+      "name": "Óptica",
+      "department": "optics",
+      "objective": "Escolher cobertura, perspectiva e foco a partir de posição, formato e atenção.",
+      "criteria": [
+        "Sensor, focal, distância e recorte são distinguidos",
+        "Perspectiva é atribuída à posição da câmera",
+        "Foco e família de lente têm função verificável"
+      ],
+      "observable_indicators": [
+        {
+          "id": "RUB-OPTICS-C1",
+          "criterion": "Sensor, focal, distância e recorte são distinguidos",
+          "record": "Apontar trecho, quadro, beat, timecode ou diferença comparável que sustente este critério; declarar ausente quando não houver acesso."
+        },
+        {
+          "id": "RUB-OPTICS-C2",
+          "criterion": "Perspectiva é atribuída à posição da câmera",
+          "record": "Apontar trecho, quadro, beat, timecode ou diferença comparável que sustente este critério; declarar ausente quando não houver acesso."
+        },
+        {
+          "id": "RUB-OPTICS-C3",
+          "criterion": "Foco e família de lente têm função verificável",
+          "record": "Apontar trecho, quadro, beat, timecode ou diferença comparável que sustente este critério; declarar ausente quando não houver acesso."
+        }
+      ],
+      "levels": {
+        "1": "Descrição óptica contradiz geometria ou inventa controle.",
+        "2": "Nome de lente substitui decisão de posição e atenção.",
+        "3": "Campo e atenção são definidos sem atribuições falsas.",
+        "4": "Comparação óptica explicita uma troca expressiva e seu custo.",
+        "5": "Óptica, encenação e mudança de atenção integram o motivo sem virar ornamento."
+      },
+      "critical_failures": [
+        "Cálculo fisicamente incoerente ou parâmetro de lente não suportado é declarado controle nativo comprovado."
+      ],
+      "examples": [
+        "CAL-MARA-OPTICS-L1",
+        "CAL-MARA-OPTICS-L2",
+        "CAL-MARA-OPTICS-L3",
+        "CAL-MARA-OPTICS-L4",
+        "CAL-MARA-OPTICS-L5"
+      ],
+      "source_ids": [
+        "COOKE-ANAM",
+        "PANAVISION-C",
+        "ZEISS-RADIANCE"
+      ],
+      "diagnostic_questions": [
+        "A perspectiva mudou por posição ou só por focal?",
+        "Que informação se perde com o foco escolhido?"
+      ],
+      "approval": [
+        "Confirmar versão, intenção, gênero, formato e restrições antes de julgar.",
+        "Technical Quality Gate não contém falha impeditiva no escopo efetivamente verificado.",
+        "Artistic Quality Gate possui justificativa própria, contraponto e evidência suficiente para a intenção; nível técnico não define nível artístico.",
+        "Registrar pendências e obter decisão humana pertinente antes de aprovar ou bloquear; nenhum nível designado neste arquivo constitui aprovação."
+      ],
+      "rejection": [
+        "Cálculo fisicamente incoerente ou parâmetro de lente não suportado é declarado controle nativo comprovado.",
+        "Reprovar a afirmação sem evidência ou incompatível com a intenção; quando falta material essencial, usar NOT_EVALUABLE/PENDING em vez de inventar nota.",
+        "Uma entrega coerente porém genérica pode passar tecnicamente e continuar pedindo revisão artística; explicar a diferença com os critérios desta rubrica."
+      ],
+      "limitations": [
+        "A descrição textual permite avaliar proposta e consistência, mas não comprova a execução visual, temporal ou sonora; exigir mídia acessível para julgar esse resultado.",
+        "Níveis são ordinais e contextuais; não somar critérios para calcular excelência, nem tratar preferência estética como lei.",
+        "Níveis 4 e 5 nesta biblioteca são alvos didáticos sustentados por escolhas descritas; a classificação efetiva depende de observação, comparação e julgamento contextual.",
+        "Uma fonte profissional documenta decisões de uma obra; não valida automaticamente a aplicação em outro projeto."
+      ],
+      "correction": "Definir formato e posição, calcular campo quando aplicável e comparar uma alternativa; não tratar prompt como medição óptica.",
+      "required_evidence": [
+        "Intenção e versão do entregável",
+        "Arquivo ou representação pertinente acessível com origem",
+        "Trechos/quadros/timecodes comparáveis quando a conclusão depende de mídia",
+        "Mapa de protegidos e referência aprovada"
+      ],
+      "calibration_status": "DIDACTIC_RUBRIC_NOT_HUMAN_VALIDATED"
+    },
+    {
+      "id": "RUB-COMPOSITION",
+      "name": "Composição",
+      "department": "composition",
+      "objective": "Guiar atenção por relações de forma, profundidade, escala e espaço negativo.",
+      "criteria": [
+        "Informação prioritária tem hierarquia",
+        "Camadas e linhas servem a relações",
+        "Recorte final conserva gesto e ponto de vista"
+      ],
+      "observable_indicators": [
+        {
+          "id": "RUB-COMPOSITION-C1",
+          "criterion": "Informação prioritária tem hierarquia",
+          "record": "Apontar trecho, quadro, beat, timecode ou diferença comparável que sustente este critério; declarar ausente quando não houver acesso."
+        },
+        {
+          "id": "RUB-COMPOSITION-C2",
+          "criterion": "Camadas e linhas servem a relações",
+          "record": "Apontar trecho, quadro, beat, timecode ou diferença comparável que sustente este critério; declarar ausente quando não houver acesso."
+        },
+        {
+          "id": "RUB-COMPOSITION-C3",
+          "criterion": "Recorte final conserva gesto e ponto de vista",
+          "record": "Apontar trecho, quadro, beat, timecode ou diferença comparável que sustente este critério; declarar ausente quando não houver acesso."
+        }
+      ],
+      "levels": {
+        "1": "Enquadramento impede compreender o gesto necessário.",
+        "2": "Simetria ou centralização correta permanece genérica e competitiva.",
+        "3": "Hierarquia e camadas tornam a ação compreensível.",
+        "4": "Relações visuais tornam uma tensão relacional perceptível.",
+        "5": "Organização visual transforma uma relação estabelecida preservando ambiguidade e clareza."
+      },
+      "critical_failures": [
+        "Enquadramento elimina ação indispensável ou altera espacialidade aprovada sem revisão."
+      ],
+      "examples": [
+        "CAL-MARA-COMPOSITION-L1",
+        "CAL-MARA-COMPOSITION-L2",
+        "CAL-MARA-COMPOSITION-L3",
+        "CAL-MARA-COMPOSITION-L4",
+        "CAL-MARA-COMPOSITION-L5"
+      ],
+      "source_ids": [
+        "DIRECTORSKILL",
+        "ASC-BR2049"
+      ],
+      "diagnostic_questions": [
+        "Por onde o olhar deve passar e por quê?",
+        "A composição conserva a informação no formato final?"
+      ],
+      "approval": [
+        "Confirmar versão, intenção, gênero, formato e restrições antes de julgar.",
+        "Technical Quality Gate não contém falha impeditiva no escopo efetivamente verificado.",
+        "Artistic Quality Gate possui justificativa própria, contraponto e evidência suficiente para a intenção; nível técnico não define nível artístico.",
+        "Registrar pendências e obter decisão humana pertinente antes de aprovar ou bloquear; nenhum nível designado neste arquivo constitui aprovação."
+      ],
+      "rejection": [
+        "Enquadramento elimina ação indispensável ou altera espacialidade aprovada sem revisão.",
+        "Reprovar a afirmação sem evidência ou incompatível com a intenção; quando falta material essencial, usar NOT_EVALUABLE/PENDING em vez de inventar nota.",
+        "Uma entrega coerente porém genérica pode passar tecnicamente e continuar pedindo revisão artística; explicar a diferença com os critérios desta rubrica."
+      ],
+      "limitations": [
+        "A descrição textual permite avaliar proposta e consistência, mas não comprova a execução visual, temporal ou sonora; exigir mídia acessível para julgar esse resultado.",
+        "Níveis são ordinais e contextuais; não somar critérios para calcular excelência, nem tratar preferência estética como lei.",
+        "Níveis 4 e 5 nesta biblioteca são alvos didáticos sustentados por escolhas descritas; a classificação efetiva depende de observação, comparação e julgamento contextual.",
+        "Uma fonte profissional documenta decisões de uma obra; não valida automaticamente a aplicação em outro projeto."
+      ],
+      "correction": "Remover competição ou ajustar posição/crop da menor unidade; comparar no mesmo tamanho de exibição.",
+      "required_evidence": [
+        "Intenção e versão do entregável",
+        "Arquivo ou representação pertinente acessível com origem",
+        "Trechos/quadros/timecodes comparáveis quando a conclusão depende de mídia",
+        "Mapa de protegidos e referência aprovada"
+      ],
+      "calibration_status": "DIDACTIC_RUBRIC_NOT_HUMAN_VALIDATED"
+    },
+    {
+      "id": "RUB-LIGHTING",
+      "name": "Iluminação",
+      "department": "lighting",
+      "objective": "Modelar fonte, direção, qualidade e contraste de acordo com espaço e intenção.",
+      "criteria": [
+        "Fontes motivadas ou estilização explicitada",
+        "Direção e sombras conservam relações",
+        "Contraste preserva informação necessária"
+      ],
+      "observable_indicators": [
+        {
+          "id": "RUB-LIGHTING-C1",
+          "criterion": "Fontes motivadas ou estilização explicitada",
+          "record": "Apontar trecho, quadro, beat, timecode ou diferença comparável que sustente este critério; declarar ausente quando não houver acesso."
+        },
+        {
+          "id": "RUB-LIGHTING-C2",
+          "criterion": "Direção e sombras conservam relações",
+          "record": "Apontar trecho, quadro, beat, timecode ou diferença comparável que sustente este critério; declarar ausente quando não houver acesso."
+        },
+        {
+          "id": "RUB-LIGHTING-C3",
+          "criterion": "Contraste preserva informação necessária",
+          "record": "Apontar trecho, quadro, beat, timecode ou diferença comparável que sustente este critério; declarar ausente quando não houver acesso."
+        }
+      ],
+      "levels": {
+        "1": "Fonte e sombras contradizem o espaço ou impedem a ação.",
+        "2": "Luz de efeito substitui motivo e hierarquia.",
+        "3": "Fonte e retorno tornam ações legíveis com continuidade.",
+        "4": "Luz participa da passagem de defesa a colaboração.",
+        "5": "Luz, corpo e arquitetura produzem uma revelação que pertence à cena."
+      },
+      "critical_failures": [
+        "Sombras incompatíveis entre planos ou fonte oculta a ação essencial sem alternativa deliberada."
+      ],
+      "examples": [
+        "CAL-MARA-LIGHTING-L1",
+        "CAL-MARA-LIGHTING-L2",
+        "CAL-MARA-LIGHTING-L3",
+        "CAL-MARA-LIGHTING-L4",
+        "CAL-MARA-LIGHTING-L5"
+      ],
+      "source_ids": [
+        "ARRI-1917",
+        "ASC-BR2049"
+      ],
+      "diagnostic_questions": [
+        "De onde vem cada contribuição importante?",
+        "Qual informação a sombra retém e quando é revelada?"
+      ],
+      "approval": [
+        "Confirmar versão, intenção, gênero, formato e restrições antes de julgar.",
+        "Technical Quality Gate não contém falha impeditiva no escopo efetivamente verificado.",
+        "Artistic Quality Gate possui justificativa própria, contraponto e evidência suficiente para a intenção; nível técnico não define nível artístico.",
+        "Registrar pendências e obter decisão humana pertinente antes de aprovar ou bloquear; nenhum nível designado neste arquivo constitui aprovação."
+      ],
+      "rejection": [
+        "Sombras incompatíveis entre planos ou fonte oculta a ação essencial sem alternativa deliberada.",
+        "Reprovar a afirmação sem evidência ou incompatível com a intenção; quando falta material essencial, usar NOT_EVALUABLE/PENDING em vez de inventar nota.",
+        "Uma entrega coerente porém genérica pode passar tecnicamente e continuar pedindo revisão artística; explicar a diferença com os critérios desta rubrica."
+      ],
+      "limitations": [
+        "A descrição textual permite avaliar proposta e consistência, mas não comprova a execução visual, temporal ou sonora; exigir mídia acessível para julgar esse resultado.",
+        "Níveis são ordinais e contextuais; não somar critérios para calcular excelência, nem tratar preferência estética como lei.",
+        "Níveis 4 e 5 nesta biblioteca são alvos didáticos sustentados por escolhas descritas; a classificação efetiva depende de observação, comparação e julgamento contextual.",
+        "Uma fonte profissional documenta decisões de uma obra; não valida automaticamente a aplicação em outro projeto."
+      ],
+      "correction": "Ajustar uma fonte, bloqueio ou retorno e rever o mesmo percurso nos contraângulos.",
+      "required_evidence": [
+        "Intenção e versão do entregável",
+        "Arquivo ou representação pertinente acessível com origem",
+        "Trechos/quadros/timecodes comparáveis quando a conclusão depende de mídia",
+        "Mapa de protegidos e referência aprovada"
+      ],
+      "calibration_status": "DIDACTIC_RUBRIC_NOT_HUMAN_VALIDATED"
+    },
+    {
+      "id": "RUB-COLOR-TEXTURE",
+      "name": "Cor e textura",
+      "department": "color-texture",
+      "objective": "Construir identidade material e hierarquia cromática sem tratamento cosmético genérico.",
+      "criteria": [
+        "Paleta material distinta do grade",
+        "Textura tem escala, causa e localização",
+        "Pele e materiais mantêm relações aprovadas"
+      ],
+      "observable_indicators": [
+        {
+          "id": "RUB-COLOR-TEXTURE-C1",
+          "criterion": "Paleta material distinta do grade",
+          "record": "Apontar trecho, quadro, beat, timecode ou diferença comparável que sustente este critério; declarar ausente quando não houver acesso."
+        },
+        {
+          "id": "RUB-COLOR-TEXTURE-C2",
+          "criterion": "Textura tem escala, causa e localização",
+          "record": "Apontar trecho, quadro, beat, timecode ou diferença comparável que sustente este critério; declarar ausente quando não houver acesso."
+        },
+        {
+          "id": "RUB-COLOR-TEXTURE-C3",
+          "criterion": "Pele e materiais mantêm relações aprovadas",
+          "record": "Apontar trecho, quadro, beat, timecode ou diferença comparável que sustente este critério; declarar ausente quando não houver acesso."
+        }
+      ],
+      "levels": {
+        "1": "Cor ou textura torna material e estado incoerentes.",
+        "2": "Preset e desgaste uniforme simulam estilo sem função.",
+        "3": "Paleta e microvariação distinguem superfícies com clareza.",
+        "4": "Cor e desgaste guiam o olhar conforme a história de uso.",
+        "5": "Material, cor e mudança de estado integram um motivo discreto e reavaliável."
+      },
+      "critical_failures": [
+        "Tratamento apaga informação necessária, muda identidade ou apresenta aparência de película como reprodução física comprovada."
+      ],
+      "examples": [
+        "CAL-MARA-COLOR-TEXTURE-L1",
+        "CAL-MARA-COLOR-TEXTURE-L2",
+        "CAL-MARA-COLOR-TEXTURE-L3",
+        "CAL-MARA-COLOR-TEXTURE-L4",
+        "CAL-MARA-COLOR-TEXTURE-L5"
+      ],
+      "source_ids": [
+        "KODAK-GLOSSARY",
+        "ASC-BR2049"
+      ],
+      "diagnostic_questions": [
+        "A cor pertence a objeto, luz ou pós?",
+        "A textura informa uso ou apenas adiciona ruído?"
+      ],
+      "approval": [
+        "Confirmar versão, intenção, gênero, formato e restrições antes de julgar.",
+        "Technical Quality Gate não contém falha impeditiva no escopo efetivamente verificado.",
+        "Artistic Quality Gate possui justificativa própria, contraponto e evidência suficiente para a intenção; nível técnico não define nível artístico.",
+        "Registrar pendências e obter decisão humana pertinente antes de aprovar ou bloquear; nenhum nível designado neste arquivo constitui aprovação."
+      ],
+      "rejection": [
+        "Tratamento apaga informação necessária, muda identidade ou apresenta aparência de película como reprodução física comprovada.",
+        "Reprovar a afirmação sem evidência ou incompatível com a intenção; quando falta material essencial, usar NOT_EVALUABLE/PENDING em vez de inventar nota.",
+        "Uma entrega coerente porém genérica pode passar tecnicamente e continuar pedindo revisão artística; explicar a diferença com os critérios desta rubrica."
+      ],
+      "limitations": [
+        "A descrição textual permite avaliar proposta e consistência, mas não comprova a execução visual, temporal ou sonora; exigir mídia acessível para julgar esse resultado.",
+        "Níveis são ordinais e contextuais; não somar critérios para calcular excelência, nem tratar preferência estética como lei.",
+        "Níveis 4 e 5 nesta biblioteca são alvos didáticos sustentados por escolhas descritas; a classificação efetiva depende de observação, comparação e julgamento contextual.",
+        "Uma fonte profissional documenta decisões de uma obra; não valida automaticamente a aplicação em outro projeto."
+      ],
+      "correction": "Isolar material ou tratamento responsável e comparar sem alterar identidade, exposição e geometria simultaneamente.",
+      "required_evidence": [
+        "Intenção e versão do entregável",
+        "Arquivo ou representação pertinente acessível com origem",
+        "Trechos/quadros/timecodes comparáveis quando a conclusão depende de mídia",
+        "Mapa de protegidos e referência aprovada"
+      ],
+      "calibration_status": "DIDACTIC_RUBRIC_NOT_HUMAN_VALIDATED"
+    },
+    {
+      "id": "RUB-ATMOSPHERE",
+      "name": "Atmosfera",
+      "department": "atmosphere",
+      "objective": "Fazer ar, clima, som e densidade espacial contribuírem para lugar e estado dramático.",
+      "criteria": [
+        "Origem e distribuição do efeito identificáveis",
+        "Profundidade e visibilidade conservadas",
+        "Atmosfera tem função e continuidade temporal"
+      ],
+      "observable_indicators": [
+        {
+          "id": "RUB-ATMOSPHERE-C1",
+          "criterion": "Origem e distribuição do efeito identificáveis",
+          "record": "Apontar trecho, quadro, beat, timecode ou diferença comparável que sustente este critério; declarar ausente quando não houver acesso."
+        },
+        {
+          "id": "RUB-ATMOSPHERE-C2",
+          "criterion": "Profundidade e visibilidade conservadas",
+          "record": "Apontar trecho, quadro, beat, timecode ou diferença comparável que sustente este critério; declarar ausente quando não houver acesso."
+        },
+        {
+          "id": "RUB-ATMOSPHERE-C3",
+          "criterion": "Atmosfera tem função e continuidade temporal",
+          "record": "Apontar trecho, quadro, beat, timecode ou diferença comparável que sustente este critério; declarar ausente quando não houver acesso."
+        }
+      ],
+      "levels": {
+        "1": "Efeito invalida espaço ou acontecimento.",
+        "2": "Haze, fumaça e partículas criam um clima genérico desconectado.",
+        "3": "Atmosfera localizada conserva causa e legibilidade.",
+        "4": "Mudança ambiental acompanha pressão sem ilustrar emoção literalmente.",
+        "5": "Atmosfera articula tempo, distância e experiência íntima com contenção."
+      },
+      "critical_failures": [
+        "Efeito contradiz causa ou esconde informação essencial; névoa substitui geografia sem intenção."
+      ],
+      "examples": [
+        "CAL-MARA-ATMOSPHERE-L1",
+        "CAL-MARA-ATMOSPHERE-L2",
+        "CAL-MARA-ATMOSPHERE-L3",
+        "CAL-MARA-ATMOSPHERE-L4",
+        "CAL-MARA-ATMOSPHERE-L5"
+      ],
+      "source_ids": [
+        "ASC-BR2049",
+        "ARRI-1917"
+      ],
+      "diagnostic_questions": [
+        "O que produz poeira, vapor ou ruído?",
+        "Que estado permanece depois do estímulo?"
+      ],
+      "approval": [
+        "Confirmar versão, intenção, gênero, formato e restrições antes de julgar.",
+        "Technical Quality Gate não contém falha impeditiva no escopo efetivamente verificado.",
+        "Artistic Quality Gate possui justificativa própria, contraponto e evidência suficiente para a intenção; nível técnico não define nível artístico.",
+        "Registrar pendências e obter decisão humana pertinente antes de aprovar ou bloquear; nenhum nível designado neste arquivo constitui aprovação."
+      ],
+      "rejection": [
+        "Efeito contradiz causa ou esconde informação essencial; névoa substitui geografia sem intenção.",
+        "Reprovar a afirmação sem evidência ou incompatível com a intenção; quando falta material essencial, usar NOT_EVALUABLE/PENDING em vez de inventar nota.",
+        "Uma entrega coerente porém genérica pode passar tecnicamente e continuar pedindo revisão artística; explicar a diferença com os critérios desta rubrica."
+      ],
+      "limitations": [
+        "A descrição textual permite avaliar proposta e consistência, mas não comprova a execução visual, temporal ou sonora; exigir mídia acessível para julgar esse resultado.",
+        "Níveis são ordinais e contextuais; não somar critérios para calcular excelência, nem tratar preferência estética como lei.",
+        "Níveis 4 e 5 nesta biblioteca são alvos didáticos sustentados por escolhas descritas; a classificação efetiva depende de observação, comparação e julgamento contextual.",
+        "Uma fonte profissional documenta decisões de uma obra; não valida automaticamente a aplicação em outro projeto."
+      ],
+      "correction": "Reduzir densidade ou localizar o efeito; manter causa, direção e intervalo em planos adjacentes.",
+      "required_evidence": [
+        "Intenção e versão do entregável",
+        "Arquivo ou representação pertinente acessível com origem",
+        "Trechos/quadros/timecodes comparáveis quando a conclusão depende de mídia",
+        "Mapa de protegidos e referência aprovada"
+      ],
+      "calibration_status": "DIDACTIC_RUBRIC_NOT_HUMAN_VALIDATED"
+    },
+    {
+      "id": "RUB-LIVING-WORLD",
+      "name": "Ambientes vivos",
+      "department": "living-world",
+      "objective": "Dar causa, tarefa e continuidade aos acontecimentos secundários sem disputar a ação.",
+      "criteria": [
+        "Cada movimento secundário possui causa e duração",
+        "Figuração conserva tarefa e trajetória",
+        "Fundo revela vida fora do protagonista sem ruído gratuito"
+      ],
+      "observable_indicators": [
+        {
+          "id": "RUB-LIVING-WORLD-C1",
+          "criterion": "Cada movimento secundário possui causa e duração",
+          "record": "Apontar trecho, quadro, beat, timecode ou diferença comparável que sustente este critério; declarar ausente quando não houver acesso."
+        },
+        {
+          "id": "RUB-LIVING-WORLD-C2",
+          "criterion": "Figuração conserva tarefa e trajetória",
+          "record": "Apontar trecho, quadro, beat, timecode ou diferença comparável que sustente este critério; declarar ausente quando não houver acesso."
+        },
+        {
+          "id": "RUB-LIVING-WORLD-C3",
+          "criterion": "Fundo revela vida fora do protagonista sem ruído gratuito",
+          "record": "Apontar trecho, quadro, beat, timecode ou diferença comparável que sustente este critério; declarar ausente quando não houver acesso."
+        }
+      ],
+      "levels": {
+        "1": "Fundo contradiz espaço ou tempo e impede leitura.",
+        "2": "Movimento aleatório serve apenas para parecer vivo.",
+        "3": "Uma ação secundária motivada dá vida e conserva continuidade.",
+        "4": "A tarefa de fundo revela rotina e cria uma pressão pertinente.",
+        "5": "Vida autônoma do lugar modula o conflito sem apropriar-se dele."
+      },
+      "critical_failures": [
+        "Movimentos causam impossibilidade temporal/espacial ou figurante cobre informação indispensável sem função."
+      ],
+      "examples": [
+        "CAL-MARA-LIVING-WORLD-L1",
+        "CAL-MARA-LIVING-WORLD-L2",
+        "CAL-MARA-LIVING-WORLD-L3",
+        "CAL-MARA-LIVING-WORLD-L4",
+        "CAL-MARA-LIVING-WORLD-L5"
+      ],
+      "source_ids": [
+        "HF-SCRIPT",
+        "HF-PICTURES"
+      ],
+      "diagnostic_questions": [
+        "O fundo existiria se o protagonista não estivesse ali?",
+        "Cada ação secundária muda atenção por uma razão?"
+      ],
+      "approval": [
+        "Confirmar versão, intenção, gênero, formato e restrições antes de julgar.",
+        "Technical Quality Gate não contém falha impeditiva no escopo efetivamente verificado.",
+        "Artistic Quality Gate possui justificativa própria, contraponto e evidência suficiente para a intenção; nível técnico não define nível artístico.",
+        "Registrar pendências e obter decisão humana pertinente antes de aprovar ou bloquear; nenhum nível designado neste arquivo constitui aprovação."
+      ],
+      "rejection": [
+        "Movimentos causam impossibilidade temporal/espacial ou figurante cobre informação indispensável sem função.",
+        "Reprovar a afirmação sem evidência ou incompatível com a intenção; quando falta material essencial, usar NOT_EVALUABLE/PENDING em vez de inventar nota.",
+        "Uma entrega coerente porém genérica pode passar tecnicamente e continuar pedindo revisão artística; explicar a diferença com os critérios desta rubrica."
+      ],
+      "limitations": [
+        "A descrição textual permite avaliar proposta e consistência, mas não comprova a execução visual, temporal ou sonora; exigir mídia acessível para julgar esse resultado.",
+        "Níveis são ordinais e contextuais; não somar critérios para calcular excelência, nem tratar preferência estética como lei.",
+        "Níveis 4 e 5 nesta biblioteca são alvos didáticos sustentados por escolhas descritas; a classificação efetiva depende de observação, comparação e julgamento contextual.",
+        "Uma fonte profissional documenta decisões de uma obra; não valida automaticamente a aplicação em outro projeto."
+      ],
+      "correction": "Remover movimento sem função e especificar tarefa, origem, percurso e estado final do necessário.",
+      "required_evidence": [
+        "Intenção e versão do entregável",
+        "Arquivo ou representação pertinente acessível com origem",
+        "Trechos/quadros/timecodes comparáveis quando a conclusão depende de mídia",
+        "Mapa de protegidos e referência aprovada"
+      ],
+      "calibration_status": "DIDACTIC_RUBRIC_NOT_HUMAN_VALIDATED"
+    },
+    {
+      "id": "RUB-STORYBOARDS",
+      "name": "Storyboards",
+      "department": "storyboards",
+      "objective": "Tornar encenação, informação e passagem entre planos legíveis antes da produção.",
+      "criteria": [
+        "Cada quadro tem função e estado claro",
+        "Posição, câmera e olhar correspondem à planta",
+        "Transições mostram mudanças indispensáveis"
+      ],
+      "observable_indicators": [
+        {
+          "id": "RUB-STORYBOARDS-C1",
+          "criterion": "Cada quadro tem função e estado claro",
+          "record": "Apontar trecho, quadro, beat, timecode ou diferença comparável que sustente este critério; declarar ausente quando não houver acesso."
+        },
+        {
+          "id": "RUB-STORYBOARDS-C2",
+          "criterion": "Posição, câmera e olhar correspondem à planta",
+          "record": "Apontar trecho, quadro, beat, timecode ou diferença comparável que sustente este critério; declarar ausente quando não houver acesso."
+        },
+        {
+          "id": "RUB-STORYBOARDS-C3",
+          "criterion": "Transições mostram mudanças indispensáveis",
+          "record": "Apontar trecho, quadro, beat, timecode ou diferença comparável que sustente este critério; declarar ausente quando não houver acesso."
+        }
+      ],
+      "levels": {
+        "1": "Quadros não permitem reconstruir ação ou espaço.",
+        "2": "Imagens bonitas repetem uma pose sem orientar transições.",
+        "3": "Sequência clara cobre estados e informação principal.",
+        "4": "Alternância de escala e ponto de vista explicita a intenção.",
+        "5": "Sequência permite testar uma escolha expressiva e uma alternativa sem falsificar a ação."
+      },
+      "critical_failures": [
+        "Quadros contradizem a geometria bloqueada ou sua ordem torna impossível a passagem de objeto."
+      ],
+      "examples": [
+        "CAL-MARA-STORYBOARDS-L1",
+        "CAL-MARA-STORYBOARDS-L2",
+        "CAL-MARA-STORYBOARDS-L3",
+        "CAL-MARA-STORYBOARDS-L4",
+        "CAL-MARA-STORYBOARDS-L5"
+      ],
+      "source_ids": [
+        "DIRECTORSKILL",
+        "HF-SCRIPT"
+      ],
+      "diagnostic_questions": [
+        "O que este quadro informa que o anterior não informa?",
+        "A passagem mantém mão, posição e direção?"
+      ],
+      "approval": [
+        "Confirmar versão, intenção, gênero, formato e restrições antes de julgar.",
+        "Technical Quality Gate não contém falha impeditiva no escopo efetivamente verificado.",
+        "Artistic Quality Gate possui justificativa própria, contraponto e evidência suficiente para a intenção; nível técnico não define nível artístico.",
+        "Registrar pendências e obter decisão humana pertinente antes de aprovar ou bloquear; nenhum nível designado neste arquivo constitui aprovação."
+      ],
+      "rejection": [
+        "Quadros contradizem a geometria bloqueada ou sua ordem torna impossível a passagem de objeto.",
+        "Reprovar a afirmação sem evidência ou incompatível com a intenção; quando falta material essencial, usar NOT_EVALUABLE/PENDING em vez de inventar nota.",
+        "Uma entrega coerente porém genérica pode passar tecnicamente e continuar pedindo revisão artística; explicar a diferença com os critérios desta rubrica."
+      ],
+      "limitations": [
+        "A descrição textual permite avaliar proposta e consistência, mas não comprova a execução visual, temporal ou sonora; exigir mídia acessível para julgar esse resultado.",
+        "Níveis são ordinais e contextuais; não somar critérios para calcular excelência, nem tratar preferência estética como lei.",
+        "Níveis 4 e 5 nesta biblioteca são alvos didáticos sustentados por escolhas descritas; a classificação efetiva depende de observação, comparação e julgamento contextual.",
+        "Uma fonte profissional documenta decisões de uma obra; não valida automaticamente a aplicação em outro projeto."
+      ],
+      "correction": "Reparar o quadro ou transição problemática com planta e estados; não redesenhar tudo por acabamento.",
+      "required_evidence": [
+        "Intenção e versão do entregável",
+        "Arquivo ou representação pertinente acessível com origem",
+        "Trechos/quadros/timecodes comparáveis quando a conclusão depende de mídia",
+        "Mapa de protegidos e referência aprovada"
+      ],
+      "calibration_status": "DIDACTIC_RUBRIC_NOT_HUMAN_VALIDATED"
+    },
+    {
+      "id": "RUB-SHOT-DESIGN",
+      "name": "Decupagem",
+      "department": "shot-design",
+      "objective": "Converter cena em cobertura viável, necessária e editável com duração e dependências claras.",
+      "criteria": [
+        "Cada plano tem propósito e informação nova",
+        "Cobertura conserva eixo, estados e geografia",
+        "Tempo é viável e estimativa distinta de medição"
+      ],
+      "observable_indicators": [
+        {
+          "id": "RUB-SHOT-DESIGN-C1",
+          "criterion": "Cada plano tem propósito e informação nova",
+          "record": "Apontar trecho, quadro, beat, timecode ou diferença comparável que sustente este critério; declarar ausente quando não houver acesso."
+        },
+        {
+          "id": "RUB-SHOT-DESIGN-C2",
+          "criterion": "Cobertura conserva eixo, estados e geografia",
+          "record": "Apontar trecho, quadro, beat, timecode ou diferença comparável que sustente este critério; declarar ausente quando não houver acesso."
+        },
+        {
+          "id": "RUB-SHOT-DESIGN-C3",
+          "criterion": "Tempo é viável e estimativa distinta de medição",
+          "record": "Apontar trecho, quadro, beat, timecode ou diferença comparável que sustente este critério; declarar ausente quando não houver acesso."
+        }
+      ],
+      "levels": {
+        "1": "Plano exige ações impossíveis no tempo e espaço definidos.",
+        "2": "Cobertura tecnicamente descrita é redundante e sem prioridade.",
+        "3": "Cobertura e tempos estimados permitem montar uma cena clara.",
+        "4": "Planos revelam consequência e economizam sem ocultar transições necessárias.",
+        "5": "Cobertura oferece decisões editoriais fundamentadas e preserva o motivo dramático."
+      },
+      "critical_failures": [
+        "Duração impossível, estado incompatível ou cobertura exige alterar asset bloqueado sem revisão."
+      ],
+      "examples": [
+        "CAL-MARA-SHOT-DESIGN-L1",
+        "CAL-MARA-SHOT-DESIGN-L2",
+        "CAL-MARA-SHOT-DESIGN-L3",
+        "CAL-MARA-SHOT-DESIGN-L4",
+        "CAL-MARA-SHOT-DESIGN-L5"
+      ],
+      "source_ids": [
+        "DIRECTORSKILL",
+        "HF-SCRIPT",
+        "CINEMA-SHOT"
+      ],
+      "diagnostic_questions": [
+        "Que plano pode ser retirado sem perder informação?",
+        "A ação cabe no tempo ou só foi declarada?"
+      ],
+      "approval": [
+        "Confirmar versão, intenção, gênero, formato e restrições antes de julgar.",
+        "Technical Quality Gate não contém falha impeditiva no escopo efetivamente verificado.",
+        "Artistic Quality Gate possui justificativa própria, contraponto e evidência suficiente para a intenção; nível técnico não define nível artístico.",
+        "Registrar pendências e obter decisão humana pertinente antes de aprovar ou bloquear; nenhum nível designado neste arquivo constitui aprovação."
+      ],
+      "rejection": [
+        "Duração impossível, estado incompatível ou cobertura exige alterar asset bloqueado sem revisão.",
+        "Reprovar a afirmação sem evidência ou incompatível com a intenção; quando falta material essencial, usar NOT_EVALUABLE/PENDING em vez de inventar nota.",
+        "Uma entrega coerente porém genérica pode passar tecnicamente e continuar pedindo revisão artística; explicar a diferença com os critérios desta rubrica."
+      ],
+      "limitations": [
+        "O texto permite julgar relações propostas, mas não comprova eficácia emocional ou atenção real do público.",
+        "Níveis são ordinais e contextuais; não somar critérios para calcular excelência, nem tratar preferência estética como lei.",
+        "Níveis 4 e 5 nesta biblioteca são alvos didáticos sustentados por escolhas descritas; a classificação efetiva depende de observação, comparação e julgamento contextual.",
+        "Uma fonte profissional documenta decisões de uma obra; não valida automaticamente a aplicação em outro projeto."
+      ],
+      "correction": "Simplificar ação ou redistribuir cobertura; registrar impacto em duração e dependências antes de revisar.",
+      "required_evidence": [
+        "Brief e intenção aprovados",
+        "Texto/versão acessível",
+        "Trechos e causalidade apontados",
+        "Restrições e protegidos do projeto"
+      ],
+      "calibration_status": "DIDACTIC_RUBRIC_NOT_HUMAN_VALIDATED"
+    },
+    {
+      "id": "RUB-PROMPTS",
+      "name": "Prompts",
+      "department": "prompts",
+      "objective": "Traduzir intenção e controles suportados em instruções utilizáveis e avaliáveis.",
+      "criteria": [
+        "Uma unidade de ação com prioridades claras",
+        "Parâmetros nativos separados de linguagem estética",
+        "Referências e protegidos têm papéis compatíveis"
+      ],
+      "observable_indicators": [
+        {
+          "id": "RUB-PROMPTS-C1",
+          "criterion": "Uma unidade de ação com prioridades claras",
+          "record": "Apontar trecho, quadro, beat, timecode ou diferença comparável que sustente este critério; declarar ausente quando não houver acesso."
+        },
+        {
+          "id": "RUB-PROMPTS-C2",
+          "criterion": "Parâmetros nativos separados de linguagem estética",
+          "record": "Apontar trecho, quadro, beat, timecode ou diferença comparável que sustente este critério; declarar ausente quando não houver acesso."
+        },
+        {
+          "id": "RUB-PROMPTS-C3",
+          "criterion": "Referências e protegidos têm papéis compatíveis",
+          "record": "Apontar trecho, quadro, beat, timecode ou diferença comparável que sustente este critério; declarar ausente quando não houver acesso."
+        }
+      ],
+      "levels": {
+        "1": "Prompt pede estados contraditórios e inventa capacidade comprovada.",
+        "2": "Lista longa de adjetivos esconde ação e prioridade.",
+        "3": "Instruções e parâmetros suportados permitem uma tentativa controlada.",
+        "4": "Prompt preserva intenção, protege invariantes e permite diagnóstico localizado.",
+        "5": "Pacote usa comparação de uma variável para resolver um problema real sem inflar o texto."
+      },
+      "critical_failures": [
+        "Parâmetro/capacidade inventado, referência sem autorização ou tentativa de executar geração paga proibida."
+      ],
+      "examples": [
+        "CAL-MARA-PROMPTS-L1",
+        "CAL-MARA-PROMPTS-L2",
+        "CAL-MARA-PROMPTS-L3",
+        "CAL-MARA-PROMPTS-L4",
+        "CAL-MARA-PROMPTS-L5"
+      ],
+      "source_ids": [
+        "HF-SCRIPT",
+        "HF-PICTURES",
+        "PITCH-DRAMA-PAGE"
+      ],
+      "diagnostic_questions": [
+        "Qual controle é nativo e qual é pedido textual?",
+        "Se o resultado falhar, qual variável pode ser isolada?"
+      ],
+      "approval": [
+        "Confirmar versão, intenção, gênero, formato e restrições antes de julgar.",
+        "Technical Quality Gate não contém falha impeditiva no escopo efetivamente verificado.",
+        "Artistic Quality Gate possui justificativa própria, contraponto e evidência suficiente para a intenção; nível técnico não define nível artístico.",
+        "Registrar pendências e obter decisão humana pertinente antes de aprovar ou bloquear; nenhum nível designado neste arquivo constitui aprovação."
+      ],
+      "rejection": [
+        "Parâmetro/capacidade inventado, referência sem autorização ou tentativa de executar geração paga proibida.",
+        "Reprovar a afirmação sem evidência ou incompatível com a intenção; quando falta material essencial, usar NOT_EVALUABLE/PENDING em vez de inventar nota.",
+        "Uma entrega coerente porém genérica pode passar tecnicamente e continuar pedindo revisão artística; explicar a diferença com os critérios desta rubrica."
+      ],
+      "limitations": [
+        "O texto permite julgar relações propostas, mas não comprova eficácia emocional ou atenção real do público.",
+        "Níveis são ordinais e contextuais; não somar critérios para calcular excelência, nem tratar preferência estética como lei.",
+        "Níveis 4 e 5 nesta biblioteca são alvos didáticos sustentados por escolhas descritas; a classificação efetiva depende de observação, comparação e julgamento contextual.",
+        "Uma fonte profissional documenta decisões de uma obra; não valida automaticamente a aplicação em outro projeto."
+      ],
+      "correction": "Remover contradição e controle não suportado; recompilar do intent mestre para o modelo verificado.",
+      "required_evidence": [
+        "Brief e intenção aprovados",
+        "Texto/versão acessível",
+        "Trechos e causalidade apontados",
+        "Restrições e protegidos do projeto"
+      ],
+      "calibration_status": "DIDACTIC_RUBRIC_NOT_HUMAN_VALIDATED"
+    },
+    {
+      "id": "RUB-CONTINUITY",
+      "name": "Continuidade",
+      "department": "continuity",
+      "objective": "Preservar identidades e estados relevantes através de narrativa, espaço, tempo, imagem e som.",
+      "criteria": [
+        "Estados antes/depois têm evento causal",
+        "Referências de identidade e geometria são atuais",
+        "Mudança legítima distingue-se de erro"
+      ],
+      "observable_indicators": [
+        {
+          "id": "RUB-CONTINUITY-C1",
+          "criterion": "Estados antes/depois têm evento causal",
+          "record": "Apontar trecho, quadro, beat, timecode ou diferença comparável que sustente este critério; declarar ausente quando não houver acesso."
+        },
+        {
+          "id": "RUB-CONTINUITY-C2",
+          "criterion": "Referências de identidade e geometria são atuais",
+          "record": "Apontar trecho, quadro, beat, timecode ou diferença comparável que sustente este critério; declarar ausente quando não houver acesso."
+        },
+        {
+          "id": "RUB-CONTINUITY-C3",
+          "criterion": "Mudança legítima distingue-se de erro",
+          "record": "Apontar trecho, quadro, beat, timecode ou diferença comparável que sustente este critério; declarar ausente quando não houver acesso."
+        }
+      ],
+      "levels": {
+        "1": "Estados se contradizem sem evento ou versão.",
+        "2": "Orientação geral de consistência não permite conferir estados.",
+        "3": "Mapa de estados explica cada mudança relevante.",
+        "4": "Auditoria distingue erro de mudança narrativa e propõe reparo preciso.",
+        "5": "Continuidade protege motivos e experiência sem confundir diferença deliberada com falha."
+      },
+      "critical_failures": [
+        "Asset bloqueado alterado sem revisão, troca inexplicada de estado ou evidência ausente tratada como conferida."
+      ],
+      "examples": [
+        "CAL-MARA-CONTINUITY-L1",
+        "CAL-MARA-CONTINUITY-L2",
+        "CAL-MARA-CONTINUITY-L3",
+        "CAL-MARA-CONTINUITY-L4",
+        "CAL-MARA-CONTINUITY-L5"
+      ],
+      "source_ids": [
+        "HF-SCRIPT",
+        "DIRECTORSKILL"
+      ],
+      "diagnostic_questions": [
+        "A diferença resulta de acontecimento autorizado?",
+        "Qual versão e referência sustentam a conferência?"
+      ],
+      "approval": [
+        "Confirmar versão, intenção, gênero, formato e restrições antes de julgar.",
+        "Technical Quality Gate não contém falha impeditiva no escopo efetivamente verificado.",
+        "Artistic Quality Gate possui justificativa própria, contraponto e evidência suficiente para a intenção; nível técnico não define nível artístico.",
+        "Registrar pendências e obter decisão humana pertinente antes de aprovar ou bloquear; nenhum nível designado neste arquivo constitui aprovação."
+      ],
+      "rejection": [
+        "Asset bloqueado alterado sem revisão, troca inexplicada de estado ou evidência ausente tratada como conferida.",
+        "Reprovar a afirmação sem evidência ou incompatível com a intenção; quando falta material essencial, usar NOT_EVALUABLE/PENDING em vez de inventar nota.",
+        "Uma entrega coerente porém genérica pode passar tecnicamente e continuar pedindo revisão artística; explicar a diferença com os critérios desta rubrica."
+      ],
+      "limitations": [
+        "A descrição textual permite avaliar proposta e consistência, mas não comprova a execução visual, temporal ou sonora; exigir mídia acessível para julgar esse resultado.",
+        "Níveis são ordinais e contextuais; não somar critérios para calcular excelência, nem tratar preferência estética como lei.",
+        "Níveis 4 e 5 nesta biblioteca são alvos didáticos sustentados por escolhas descritas; a classificação efetiva depende de observação, comparação e julgamento contextual.",
+        "Uma fonte profissional documenta decisões de uma obra; não valida automaticamente a aplicação em outro projeto."
+      ],
+      "correction": "Reparar o menor salto e invalidar dependências afetadas; preservar originais e decisões anteriores.",
+      "required_evidence": [
+        "Intenção e versão do entregável",
+        "Arquivo ou representação pertinente acessível com origem",
+        "Trechos/quadros/timecodes comparáveis quando a conclusão depende de mídia",
+        "Mapa de protegidos e referência aprovada"
+      ],
+      "calibration_status": "DIDACTIC_RUBRIC_NOT_HUMAN_VALIDATED"
+    },
+    {
+      "id": "RUB-EDITING",
+      "name": "Montagem",
+      "department": "editing",
+      "objective": "Organizar seleção, ordem, duração e transição para produzir sentido e experiência.",
+      "criteria": [
+        "Corte ou permanência tem função de informação/reação",
+        "Ritmo acompanha relação e consequência",
+        "Tempo real e material disponível limitam decisões"
+      ],
+      "observable_indicators": [
+        {
+          "id": "RUB-EDITING-C1",
+          "criterion": "Corte ou permanência tem função de informação/reação",
+          "record": "Apontar trecho, quadro, beat, timecode ou diferença comparável que sustente este critério; declarar ausente quando não houver acesso."
+        },
+        {
+          "id": "RUB-EDITING-C2",
+          "criterion": "Ritmo acompanha relação e consequência",
+          "record": "Apontar trecho, quadro, beat, timecode ou diferença comparável que sustente este critério; declarar ausente quando não houver acesso."
+        },
+        {
+          "id": "RUB-EDITING-C3",
+          "criterion": "Tempo real e material disponível limitam decisões",
+          "record": "Apontar trecho, quadro, beat, timecode ou diferença comparável que sustente este critério; declarar ausente quando não houver acesso."
+        }
+      ],
+      "levels": {
+        "1": "Ordem impede causalidade ou declara timecode inexistente.",
+        "2": "Alternância automática e transições decorativas substituem seleção.",
+        "3": "Ordem e duração estimadas esclarecem ação e resposta.",
+        "4": "Ponto de corte muda como lemos uma escolha sem manipular a causalidade.",
+        "5": "Seleção e ausência de corte integram motivo e transformação com economia."
+      },
+      "critical_failures": [
+        "In/out ou resultado de ritmo inventado sem mídia; montagem remove contato necessário e torna ação impossível."
+      ],
+      "examples": [
+        "CAL-MARA-EDITING-L1",
+        "CAL-MARA-EDITING-L2",
+        "CAL-MARA-EDITING-L3",
+        "CAL-MARA-EDITING-L4",
+        "CAL-MARA-EDITING-L5"
+      ],
+      "source_ids": [
+        "SW-SCENE",
+        "HF-PACING",
+        "CINEMA-SHOT"
+      ],
+      "diagnostic_questions": [
+        "O corte acontece por mudança de pensamento ou só por fala?",
+        "O que a permanência acrescenta neste ponto?"
+      ],
+      "approval": [
+        "Confirmar versão, intenção, gênero, formato e restrições antes de julgar.",
+        "Technical Quality Gate não contém falha impeditiva no escopo efetivamente verificado.",
+        "Artistic Quality Gate possui justificativa própria, contraponto e evidência suficiente para a intenção; nível técnico não define nível artístico.",
+        "Registrar pendências e obter decisão humana pertinente antes de aprovar ou bloquear; nenhum nível designado neste arquivo constitui aprovação."
+      ],
+      "rejection": [
+        "In/out ou resultado de ritmo inventado sem mídia; montagem remove contato necessário e torna ação impossível.",
+        "Reprovar a afirmação sem evidência ou incompatível com a intenção; quando falta material essencial, usar NOT_EVALUABLE/PENDING em vez de inventar nota.",
+        "Uma entrega coerente porém genérica pode passar tecnicamente e continuar pedindo revisão artística; explicar a diferença com os critérios desta rubrica."
+      ],
+      "limitations": [
+        "A descrição textual permite avaliar proposta e consistência, mas não comprova a execução visual, temporal ou sonora; exigir mídia acessível para julgar esse resultado.",
+        "Níveis são ordinais e contextuais; não somar critérios para calcular excelência, nem tratar preferência estética como lei.",
+        "Níveis 4 e 5 nesta biblioteca são alvos didáticos sustentados por escolhas descritas; a classificação efetiva depende de observação, comparação e julgamento contextual.",
+        "Uma fonte profissional documenta decisões de uma obra; não valida automaticamente a aplicação em outro projeto."
+      ],
+      "correction": "Rever um ponto de corte ou ordem com material real; preservar estados e declarar tempo apenas estimado quando for roteiro.",
+      "required_evidence": [
+        "Intenção e versão do entregável",
+        "Arquivo ou representação pertinente acessível com origem",
+        "Trechos/quadros/timecodes comparáveis quando a conclusão depende de mídia",
+        "Mapa de protegidos e referência aprovada"
+      ],
+      "calibration_status": "DIDACTIC_RUBRIC_NOT_HUMAN_VALIDATED"
+    },
+    {
+      "id": "RUB-SOUND",
+      "name": "Som",
+      "department": "sound",
+      "objective": "Construir foco, perspectiva, mundo e transição sem substituir dramaturgia por indicação musical.",
+      "criteria": [
+        "Fonte, distância e ponto de escuta identificáveis",
+        "Foco sonoro serve ao beat",
+        "Estados e transições sonoras mantêm continuidade"
+      ],
+      "observable_indicators": [
+        {
+          "id": "RUB-SOUND-C1",
+          "criterion": "Fonte, distância e ponto de escuta identificáveis",
+          "record": "Apontar trecho, quadro, beat, timecode ou diferença comparável que sustente este critério; declarar ausente quando não houver acesso."
+        },
+        {
+          "id": "RUB-SOUND-C2",
+          "criterion": "Foco sonoro serve ao beat",
+          "record": "Apontar trecho, quadro, beat, timecode ou diferença comparável que sustente este critério; declarar ausente quando não houver acesso."
+        },
+        {
+          "id": "RUB-SOUND-C3",
+          "criterion": "Estados e transições sonoras mantêm continuidade",
+          "record": "Apontar trecho, quadro, beat, timecode ou diferença comparável que sustente este critério; declarar ausente quando não houver acesso."
+        }
+      ],
+      "levels": {
+        "1": "Som contradiz ação ou medição é inventada.",
+        "2": "Música e efeitos genéricos dizem ao público o que sentir.",
+        "3": "Fontes e perspectiva tornam ambiente e ação claros.",
+        "4": "Som antecipa informação e dá espaço ao comportamento.",
+        "5": "Perspectiva e transformação de um motivo ligam tempo, relação e silêncio significativo."
+      },
+      "critical_failures": [
+        "Som analisado ou loudness declarado sem arquivo; fonte impossível sem intenção ou áudio contradiz ação."
+      ],
+      "examples": [
+        "CAL-MARA-SOUND-L1",
+        "CAL-MARA-SOUND-L2",
+        "CAL-MARA-SOUND-L3",
+        "CAL-MARA-SOUND-L4",
+        "CAL-MARA-SOUND-L5"
+      ],
+      "source_ids": [
+        "HF-SOUND",
+        "HF-SCRIPT"
+      ],
+      "diagnostic_questions": [
+        "O que ouvimos além do que vemos?",
+        "A trilha revela uma emoção construída ou tenta fabricá-la sozinha?"
+      ],
+      "approval": [
+        "Confirmar versão, intenção, gênero, formato e restrições antes de julgar.",
+        "Technical Quality Gate não contém falha impeditiva no escopo efetivamente verificado.",
+        "Artistic Quality Gate possui justificativa própria, contraponto e evidência suficiente para a intenção; nível técnico não define nível artístico.",
+        "Registrar pendências e obter decisão humana pertinente antes de aprovar ou bloquear; nenhum nível designado neste arquivo constitui aprovação."
+      ],
+      "rejection": [
+        "Som analisado ou loudness declarado sem arquivo; fonte impossível sem intenção ou áudio contradiz ação.",
+        "Reprovar a afirmação sem evidência ou incompatível com a intenção; quando falta material essencial, usar NOT_EVALUABLE/PENDING em vez de inventar nota.",
+        "Uma entrega coerente porém genérica pode passar tecnicamente e continuar pedindo revisão artística; explicar a diferença com os critérios desta rubrica."
+      ],
+      "limitations": [
+        "A descrição textual permite avaliar proposta e consistência, mas não comprova a execução visual, temporal ou sonora; exigir mídia acessível para julgar esse resultado.",
+        "Níveis são ordinais e contextuais; não somar critérios para calcular excelência, nem tratar preferência estética como lei.",
+        "Níveis 4 e 5 nesta biblioteca são alvos didáticos sustentados por escolhas descritas; a classificação efetiva depende de observação, comparação e julgamento contextual.",
+        "Uma fonte profissional documenta decisões de uma obra; não valida automaticamente a aplicação em outro projeto."
+      ],
+      "correction": "Isolar o portador do beat e corrigir perspectiva/transição; só medir nível e inteligibilidade com áudio disponível.",
+      "required_evidence": [
+        "Intenção e versão do entregável",
+        "Arquivo ou representação pertinente acessível com origem",
+        "Trechos/quadros/timecodes comparáveis quando a conclusão depende de mídia",
+        "Mapa de protegidos e referência aprovada"
+      ],
+      "calibration_status": "DIDACTIC_RUBRIC_NOT_HUMAN_VALIDATED"
+    }
+  ]
+}

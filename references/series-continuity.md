@@ -1,0 +1,7 @@
+# Series continuity and historical integrity
+
+Maintain a compact ledger across episodes: episode version/status, final scene and exact unresolved question, timeline, character goals/relationships/knowledge, visible state, locations, objects, commitments and unresolved threads. Keep separate known facts, plausible inference, fictional material and open questions. Do not fabricate a previous ending if missing: search available authorized project sources or ask for the indispensable material. A new thread can be valid if its relationship to unresolved threads is tracked.
+
+For historical fiction, build a source ledger with citation/link, date/page where applicable, reliability, relevant fact and confidence. For disputed stories present the uncertainty. Use documented context as constraints, not an obligation to make a documentary exposition. Fictional protagonists can experience historically plausible events; do not attribute invented actions or words to real people as facts. If a new character, event, location or specific fact is not confirmed, label it fictional/proposed or seek evidence. Do not give operational reconstruction of real attacks or unnecessary weapon/equipment specifics.
+
+At episode handoff record what the audience knows vs each lead knows, emotional condition, unresolved choice, and exactly what changed since the start. Update only approved changes to canon. When an approved canon conflicts with historical evidence, flag it; let the user decide how to handle fictionalization without mislabeling it as fact.

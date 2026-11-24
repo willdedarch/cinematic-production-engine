@@ -1,0 +1,11 @@
+# Text-only staging and editorial design
+
+Load after story approval or when explicitly asked for directing. Distinguish screenplay (what occurs), staging (how the existing moment plays), shot design (how viewer receives it), sound intent and edit plan. Do not introduce a new incident in staging; list any story proposal separately. No production or generation prompts by default.
+
+- Establish a consistent map of location landmarks, orientation, sight lines and who is present. Name recurring positions consistently. Maintain continuity of objects, clothing, visible condition, time, light and weather. In historical warfare keep scene description cinematic rather than operational guidance for real attacks.
+- Stage each decisive beat around what the audience must understand and whose reaction matters. Use posture, distance, attention and observable changes rather than labels like 'very emotional'. Use close-ups or silence when a detail or reaction carries new meaning.
+- Plan coverage from narrative purpose: orientation, action, reaction, object/information, change of perspective or transition. Avoid ornamental shot variety. Keep the decisive reveal legible; don't hide it behind arbitrary camera effects. For phone viewing, favor readable subjects and clear spatial relationships.
+- Time spoken lines and actions without double-counting compatible simultaneous activity. Make cuts and transitions meaningful; leave enough time for speech and consequential reactions. Use longer holds only when meaning develops. Preserve a clean cut and continuity at joins. Sound plans describe intent and diegetic perspective, not generated files; distinguish desired and observed sound.
+- If analyzing existing footage, cite exact time ranges where possible. Frame sheets cannot prove sound, lip sync or fluid motion; use suitable authorized evidence or report unknown. Never report that actual footage has been watched or heard if only a script or still was available.
+
+Deliver shot/beat mapping only if requested: scene and beat ID, time estimate, story purpose, framing, camera intent, observable performance, sound intention, continuity handoff, rationale. Mark timing estimates as estimates. No vendor-specific limits from the full Short Drama workflow are mandatory for text-only directing.

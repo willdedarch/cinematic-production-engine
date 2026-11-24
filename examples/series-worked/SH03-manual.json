@@ -1,0 +1,59 @@
+{
+  "shot": {
+    "table": "Shot List",
+    "id": "SH03",
+    "revision": 1,
+    "sha256": "4bef0db42e65258e4d3878f55da5d9031d0eea3e1358c7fe48512de28cb6dd3f"
+  },
+  "delivery": {
+    "kind": "MANUAL_PRODUCTION_EXPORT_NOT_EXECUTED",
+    "model_id": "seedance_2_5",
+    "output_type": "video",
+    "prompt": "Initial state: {\"cantil\":\"Lia.direita\",\"tampa\":\"roscada_no_cantil\"}\nAction: Lia pergunta “Você bebeu?”. Davi diz “Bebi”. Lia conserva o cantil fechado na direita.\nPerformance: Dar a Lia e ao público tempo de reconhecer a mentira.\nCamera: Close de Davi ao sul do eixo. Sustentar a boca seca e o esforço de responder.\nSound: Pergunta de Lia e negativa disfarçada de Davi. Preservar a pausa.\nProtected: {\"cantil\":\"Lia.direita\",\"tampa\":\"roscada_no_cantil\"}",
+    "native_parameters": {
+      "mode": "omni_reference",
+      "resolution": "720p",
+      "generate_audio": true,
+      "duration": 12
+    },
+    "aspect_ratio": "16:9",
+    "reference_manifest": [
+      {
+        "id": "ART-DEMO-SH03",
+        "revision": 1,
+        "sha256": "1160714233c9731606258ac8114004af30a2d3a7bc57be176d86c50f3b5f2bdd",
+        "uri": "examples/series-worked/frames/P03.png",
+        "role": "image_references",
+        "position": 1,
+        "rights_confirmed": true,
+        "rights": "Autoral, autorizado no ensaio"
+      }
+    ],
+    "protected": "{\"cantil\":\"Lia.direita\",\"tampa\":\"roscada_no_cantil\"}",
+    "warnings": [
+      "Attach each reference in the supported UI role; local labels are not native @bindings",
+      "Natural-language camera/light/acting intent is a request, not a verified native parameter or result.",
+      "Refresh capabilities at production time; catalog snapshot is not a generation benchmark."
+    ],
+    "catalog_checked_at": "2026-11-24T07:55:29.000Z",
+    "generation_tested": false,
+    "credits_consumed": 0,
+    "source_spec_sha256": "9b00ff0b9837e85fea841fd5e3d713c776d875cb96193a7072c84414a229838b"
+  },
+  "attachment_order": [
+    {
+      "id": "ART-DEMO-SH03",
+      "field": "image_references",
+      "position": 1,
+      "file": "examples/series-worked/frames/P03.png",
+      "revision": 1,
+      "sha256": "1160714233c9731606258ac8114004af30a2d3a7bc57be176d86c50f3b5f2bdd"
+    }
+  ],
+  "return_checklist": [
+    "Identificar plano, versão e origem",
+    "Conferir duração e ação no take",
+    "Registrar direitos e revisão técnica/artística"
+  ],
+  "execution": "MANUAL"
+}

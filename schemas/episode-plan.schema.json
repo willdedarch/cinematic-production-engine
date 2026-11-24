@@ -1,0 +1,140 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "episode",
+    "version",
+    "target_seconds",
+    "language",
+    "speech_wps",
+    "sources",
+    "beats",
+    "status"
+  ],
+  "properties": {
+    "episode": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "target_seconds": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "language": {
+      "type": "string",
+      "minLength": 1
+    },
+    "speech_wps": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "status": {
+      "enum": [
+        "draft",
+        "review",
+        "approved",
+        "blocked"
+      ]
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "locator",
+          "kind"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "locator": {
+            "type": "string",
+            "minLength": 1
+          },
+          "kind": {
+            "enum": [
+              "fact",
+              "inference",
+              "fiction",
+              "unknown"
+            ]
+          }
+        }
+      }
+    },
+    "beats": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "start",
+          "end",
+          "action",
+          "change",
+          "cause",
+          "spoken_words",
+          "action_seconds",
+          "pause_seconds",
+          "overlap_seconds",
+          "source_ids"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "start": {
+            "type": "number",
+            "minimum": 0
+          },
+          "end": {
+            "type": "number",
+            "exclusiveMinimum": 0
+          },
+          "action": {
+            "type": "string",
+            "minLength": 1
+          },
+          "change": {
+            "type": "string",
+            "minLength": 1
+          },
+          "cause": {
+            "type": "string",
+            "minLength": 1
+          },
+          "spoken_words": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "action_seconds": {
+            "type": "number",
+            "minimum": 0
+          },
+          "pause_seconds": {
+            "type": "number",
+            "minimum": 0
+          },
+          "overlap_seconds": {
+            "type": "number",
+            "minimum": 0
+          },
+          "source_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

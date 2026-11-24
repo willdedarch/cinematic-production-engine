@@ -1,0 +1,68 @@
+[
+  {
+    "packet_id": "7f4dd0ac-4b0a-44f7-a111-430bed40e501-1",
+    "context": {
+      "intention": "Uma decisão humana sobre receber uma carta antes de uma partida incerta. Preservar a agência de Nora e mostrar uma consequência sem heroísmo declarado.",
+      "genre": "drama de guerra ficcional",
+      "format": "cena curta textual, sem mídia produzida",
+      "protected": [
+        "dois adultos",
+        "guichê na parede norte",
+        "carta permanece o mesmo objeto"
+      ],
+      "limitations": "Não há rótulo humano nem resultado de público. Avaliar somente o texto."
+    },
+    "alternatives": [
+      {
+        "label": "A",
+        "text": "INT. SALA DA ESTAÇÃO — AMANHECER. Ivo, adulto, aproxima-se do guichê norte com uma carta dobrada. Nora, adulta, espera do outro lado. Uma sirene distante interrompe o silêncio. Ivo para, olha para a carta e depois para ela. IVO: Tenho medo de não conseguir voltar. NORA: Todos temos medo, mas precisamos ter esperança. Ele coloca a carta sobre o balcão. Ela segura o envelope com as duas mãos e respira fundo. IVO: Escrevi o que não consegui dizer. Nora guarda a carta no bolso, olha para ele e sorri com tristeza. O apito de partida soa. Ivo se afasta, olha para trás uma última vez e sai. Nora permanece junto ao guichê, emocionada."
+      },
+      {
+        "label": "B",
+        "text": "INT. SALA DA ESTAÇÃO — AMANHECER. Ivo, adulto, aproxima-se do guichê norte com uma carta dobrada. Nora, adulta, fecha a pequena gaveta do balcão. A sirene corta o gesto dele; o polegar rasga a dobra úmida do envelope. Ivo cobre o rasgo com a mão e tenta entregar a carta pelo lado intacto. Nora não a recebe. NORA: Assim? Ele descobre o rasgo. Ela abre a gaveta outra vez, tira uma tira de papel e a encosta no balcão, ao lado da mão dele. Ivo alisa a dobra sobre a tira. O apito de partida soa. Nora puxa a carta para si e a abre antes que ele se vire. Ivo espera a primeira linha."
+      }
+    ],
+    "allowed_choices": [
+      "A",
+      "B",
+      "TIE",
+      "BOTH_FAIL"
+    ],
+    "warnings": [
+      "Inspect text for authorship clues; metadata removal does not guarantee blinding."
+    ]
+  },
+  {
+    "packet_id": "7f4dd0ac-4b0a-44f7-a111-430bed40e501-2",
+    "context": {
+      "intention": "Uma decisão humana sobre receber uma carta antes de uma partida incerta. Preservar a agência de Nora e mostrar uma consequência sem heroísmo declarado.",
+      "genre": "drama de guerra ficcional",
+      "format": "cena curta textual, sem mídia produzida",
+      "protected": [
+        "dois adultos",
+        "guichê na parede norte",
+        "carta permanece o mesmo objeto"
+      ],
+      "limitations": "Não há rótulo humano nem resultado de público. Avaliar somente o texto."
+    },
+    "alternatives": [
+      {
+        "label": "A",
+        "text": "INT. SALA DA ESTAÇÃO — AMANHECER. Ivo, adulto, aproxima-se do guichê norte com uma carta dobrada. Nora, adulta, fecha a pequena gaveta do balcão. A sirene corta o gesto dele; o polegar rasga a dobra úmida do envelope. Ivo cobre o rasgo com a mão e tenta entregar a carta pelo lado intacto. Nora não a recebe. NORA: Assim? Ele descobre o rasgo. Ela abre a gaveta outra vez, tira uma tira de papel e a encosta no balcão, ao lado da mão dele. Ivo alisa a dobra sobre a tira. O apito de partida soa. Nora puxa a carta para si e a abre antes que ele se vire. Ivo espera a primeira linha."
+      },
+      {
+        "label": "B",
+        "text": "INT. SALA DA ESTAÇÃO — AMANHECER. Ivo, adulto, aproxima-se do guichê norte com uma carta dobrada. Nora, adulta, espera do outro lado. Uma sirene distante interrompe o silêncio. Ivo para, olha para a carta e depois para ela. IVO: Tenho medo de não conseguir voltar. NORA: Todos temos medo, mas precisamos ter esperança. Ele coloca a carta sobre o balcão. Ela segura o envelope com as duas mãos e respira fundo. IVO: Escrevi o que não consegui dizer. Nora guarda a carta no bolso, olha para ele e sorri com tristeza. O apito de partida soa. Ivo se afasta, olha para trás uma última vez e sai. Nora permanece junto ao guichê, emocionada."
+      }
+    ],
+    "allowed_choices": [
+      "A",
+      "B",
+      "TIE",
+      "BOTH_FAIL"
+    ],
+    "warnings": [
+      "Inspect text for authorship clues; metadata removal does not guarantee blinding."
+    ]
+  }
+]

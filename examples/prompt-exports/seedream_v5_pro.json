@@ -1,0 +1,18 @@
+{
+  "kind": "MANUAL_PRODUCTION_EXPORT_NOT_EXECUTED",
+  "model_id": "seedream_v5_pro",
+  "output_type": "image",
+  "prompt": "Subject: Davi e Lia, identidades distintas\nSpace: Sala 6×4 m, W1 oeste, E1 leste, N1 norte\nComposition: Cantil no primeiro plano; Davi no médio; Lia ao fundo\nLight: Janela E1 lateral, retorno fraco da parede oeste\nMaterials: Lã usada; metal com desgaste junto à tampa\nProtected: Geometria, identidade, mão e estado da tampa",
+  "native_parameters": {},
+  "aspect_ratio": "16:9",
+  "reference_manifest": [],
+  "protected": "Geometria, identidade, mão e estado da tampa",
+  "warnings": [
+    "Natural-language camera/light/acting intent is a request, not a verified native parameter or result.",
+    "Refresh capabilities at production time; catalog snapshot is not a generation benchmark."
+  ],
+  "catalog_checked_at": "2026-11-24T07:55:29.000Z",
+  "generation_tested": false,
+  "credits_consumed": 0,
+  "source_spec_sha256": "a7ab7bfd359dc9d2d5face0680bd775911fb4bccd807801e44b33bd1490b4ab2"
+}

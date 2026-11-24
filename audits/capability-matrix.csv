@@ -1,0 +1,13 @@
+capability,observed_status,evidence,dependency,limits
+Python core,LOCAL_TESTED,evals/RESULTS.md,Python existing host,New host must validate availability
+FFmpeg and image tools,HISTORICAL_LOCAL_EXECUTION,examples/integrated-case,Existing FFmpeg Pillow NumPy,Original media examples are synthetic and scopes approximate
+Blender,HISTORICAL_RENDER_AND_REOPEN,examples/blender-trajectory/blender-result.json,Existing Blender or connector,Separate host read-only connection observed; no alteration to personal scene
+Google Sheets,HISTORICAL_NATIVE_READ_WRITE_READBACK,audits/native-validation-summary.json,Existing account connector,Original exports private; new host must discover and validate its binding
+Higgsfield read only,CURRENT_CATALOG_READ,libraries/model-capabilities.snapshot.json,Existing connector,Eight models queried without generation or credits
+Prompt compiler,LOCAL_TESTED,evals/test_cinematic_plan.py,Python,Temporal intent consistency does not establish model artistic results
+Native image concept,EXECUTED_FIVE,audits/native-image-lab.json,Native authorized tool,Human rejection remains; no approval or finished film
+Judgment,EXPLORATORY,examples/native-lab/README.md,Accessible media and critiques,Same model family; sparse human labels and no general accuracy claim
+Native hooks,IMPLEMENTED_NOT_NATIVE_VERIFIED,hooks/README.md,Reviewed trusted host definitions,Local payload tests do not establish lifecycle activation or universal interception
+HTML panels,DOM_TESTED_VISUAL_REVIEW_PENDING,evals/RESULTS.md,User browser,Local browser security blocked file inspection; no workaround or visual acceptance
+OpenCV PySceneDetect FasterWhisper,OPTIONAL_ABSENT,Historical host diagnosis,Optional existing packages,No dependency installation or download
+Final production,MANUAL,adapters/README.md,User action,No external paid generations or credit consumption

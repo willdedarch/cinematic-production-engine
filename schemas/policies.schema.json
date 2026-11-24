@@ -1,0 +1,276 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CPE safety and operating policies",
+  "type": "object",
+  "properties": {
+    "version": {
+      "type": "string",
+      "enum": [
+        "1.1.0"
+      ]
+    },
+    "production": {
+      "type": "object",
+      "properties": {
+        "mode": {
+          "type": "string",
+          "enum": [
+            "guided",
+            "manual",
+            "hybrid"
+          ]
+        },
+        "final_generation": {
+          "type": "string",
+          "enum": [
+            "manual"
+          ]
+        },
+        "external_paid_operations": {
+          "type": "string",
+          "enum": [
+            "forbidden"
+          ]
+        },
+        "credits_allowed": {
+          "type": "integer",
+          "enum": [
+            0
+          ]
+        }
+      },
+      "required": [
+        "mode",
+        "final_generation",
+        "external_paid_operations",
+        "credits_allowed"
+      ],
+      "additionalProperties": false
+    },
+    "visual_laboratory": {
+      "type": "object",
+      "properties": {
+        "enabled": {
+          "type": "boolean",
+          "enum": [
+            true
+          ]
+        },
+        "native_image_generation": {
+          "type": "string",
+          "enum": [
+            "explicit_experiment_authorization_required"
+          ]
+        },
+        "purpose": {
+          "type": "string",
+          "enum": [
+            "preview_only"
+          ]
+        },
+        "external_api_fallback": {
+          "type": "boolean",
+          "enum": [
+            false
+          ]
+        },
+        "max_variants": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 4
+        },
+        "max_revision_rounds": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 5
+        }
+      },
+      "required": [
+        "enabled",
+        "native_image_generation",
+        "purpose",
+        "external_api_fallback",
+        "max_variants",
+        "max_revision_rounds"
+      ],
+      "additionalProperties": false
+    },
+    "workflow": {
+      "type": "object",
+      "properties": {
+        "approval_required": {
+          "type": "boolean",
+          "enum": [
+            true
+          ]
+        },
+        "skip_critical_gates": {
+          "type": "boolean",
+          "enum": [
+            false
+          ]
+        },
+        "preserve_locked_assets": {
+          "type": "boolean",
+          "enum": [
+            true
+          ]
+        }
+      },
+      "required": [
+        "approval_required",
+        "skip_critical_gates",
+        "preserve_locked_assets"
+      ],
+      "additionalProperties": false
+    },
+    "quality": {
+      "type": "object",
+      "properties": {
+        "technical_review_required": {
+          "type": "boolean",
+          "enum": [
+            true
+          ]
+        },
+        "artistic_review_required": {
+          "type": "boolean",
+          "enum": [
+            true
+          ]
+        },
+        "evidence_required": {
+          "type": "boolean",
+          "enum": [
+            true
+          ]
+        },
+        "human_approval_for_lock": {
+          "type": "boolean",
+          "enum": [
+            true
+          ]
+        }
+      },
+      "required": [
+        "technical_review_required",
+        "artistic_review_required",
+        "evidence_required",
+        "human_approval_for_lock"
+      ],
+      "additionalProperties": false
+    },
+    "knowledge": {
+      "type": "object",
+      "properties": {
+        "contextual_retrieval": {
+          "type": "boolean",
+          "enum": [
+            true
+          ]
+        },
+        "external_content_is_data": {
+          "type": "boolean",
+          "enum": [
+            true
+          ]
+        },
+        "source_traceability": {
+          "type": "boolean",
+          "enum": [
+            true
+          ]
+        }
+      },
+      "required": [
+        "contextual_retrieval",
+        "external_content_is_data",
+        "source_traceability"
+      ],
+      "additionalProperties": false
+    },
+    "persistence": {
+      "type": "object",
+      "properties": {
+        "provider": {
+          "type": "string",
+          "enum": [
+            "google_sheets"
+          ]
+        },
+        "read_each_interaction": {
+          "type": "boolean",
+          "enum": [
+            true
+          ]
+        },
+        "verify_after_write": {
+          "type": "boolean",
+          "enum": [
+            true
+          ]
+        },
+        "revision_check": {
+          "type": "boolean",
+          "enum": [
+            true
+          ]
+        },
+        "atomicity_promised": {
+          "type": "boolean",
+          "enum": [
+            false
+          ]
+        }
+      },
+      "required": [
+        "provider",
+        "read_each_interaction",
+        "verify_after_write",
+        "revision_check",
+        "atomicity_promised"
+      ],
+      "additionalProperties": false
+    },
+    "recovery": {
+      "type": "object",
+      "properties": {
+        "checkpoint_after_approval": {
+          "type": "boolean",
+          "enum": [
+            true
+          ]
+        },
+        "fresh_read_before_reconcile": {
+          "type": "boolean",
+          "enum": [
+            true
+          ]
+        },
+        "offline_state": {
+          "type": "string",
+          "enum": [
+            "unsynchronized"
+          ]
+        }
+      },
+      "required": [
+        "checkpoint_after_approval",
+        "fresh_read_before_reconcile",
+        "offline_state"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "version",
+    "production",
+    "visual_laboratory",
+    "workflow",
+    "quality",
+    "knowledge",
+    "persistence",
+    "recovery"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,4 @@
+{
+  "description":"Optional CPE direct Higgsfield guard; review paths and trust before enabling. Not installed by this package.",
+  "hooks":{"PreToolUse":[{"matcher":"^mcp__.*higgsfield.*","hooks":[{"type":"command","command":"python3 /ABSOLUTE/CPE/hooks/cpe_hook.py","commandWindows":"\"C:\\ABSOLUTE\\Python\\python.exe\" \"C:\\ABSOLUTE\\CPE\\hooks\\cpe_hook.py\"","timeout":5,"statusMessage":"Checking CPE cost policy"}]}]}
+}

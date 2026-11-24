@@ -1,0 +1,10 @@
+{
+  "episode": 1,
+  "version": "draft-01",
+  "target_seconds": 180,
+  "language": "pt-BR",
+  "speech_wps": 2.8,
+  "sources": [],
+  "beats": [],
+  "status": "draft"
+}

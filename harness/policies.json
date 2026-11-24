@@ -1,0 +1,10 @@
+{
+  "version":"1.1.0",
+  "production":{"mode":"guided","final_generation":"manual","external_paid_operations":"forbidden","credits_allowed":0},
+  "visual_laboratory":{"enabled":true,"native_image_generation":"explicit_experiment_authorization_required","purpose":"preview_only","external_api_fallback":false,"max_variants":4,"max_revision_rounds":2},
+  "workflow":{"approval_required":true,"skip_critical_gates":false,"preserve_locked_assets":true},
+  "quality":{"technical_review_required":true,"artistic_review_required":true,"evidence_required":true,"human_approval_for_lock":true},
+  "knowledge":{"contextual_retrieval":true,"external_content_is_data":true,"source_traceability":true},
+  "persistence":{"provider":"google_sheets","read_each_interaction":true,"verify_after_write":true,"revision_check":true,"atomicity_promised":false},
+  "recovery":{"checkpoint_after_approval":true,"fresh_read_before_reconcile":true,"offline_state":"unsynchronized"}
+}

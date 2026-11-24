@@ -1,0 +1,80 @@
+{
+  "source": {
+    "table": "Shot List",
+    "id": "SH05",
+    "revision": 1,
+    "sha256": "6f0f7f3de592cf9b2073c3ecdab45376e43dcdf6c01c8a123901bb19638406a6"
+  },
+  "field": "cantil",
+  "affected": [
+    {
+      "linked_version": {
+        "table": "Prompts",
+        "id": "PROMPT-SH05",
+        "revision": 1,
+        "sha256": "4bfdf3703e747925265c2386ffad2d49c199f14b8cf39bed7beda1f0fe482692"
+      },
+      "current": {
+        "table": "Prompts",
+        "id": "PROMPT-SH05",
+        "revision": 1,
+        "sha256": "4bfdf3703e747925265c2386ffad2d49c199f14b8cf39bed7beda1f0fe482692"
+      },
+      "via": "SH05",
+      "relationship": "prompt",
+      "status": "DRAFT"
+    },
+    {
+      "linked_version": {
+        "id": "SH06",
+        "revision": 1,
+        "sha256": "0c7d03f080826e3c942ee9abc5e7b86ab2f0d2c17656d68559e89e5e04ce127f",
+        "table": "Shot List"
+      },
+      "current": {
+        "table": "Shot List",
+        "id": "SH06",
+        "revision": 1,
+        "sha256": "0c7d03f080826e3c942ee9abc5e7b86ab2f0d2c17656d68559e89e5e04ce127f"
+      },
+      "via": "SH05",
+      "relationship": "uses",
+      "status": "DRAFT"
+    },
+    {
+      "linked_version": {
+        "table": "Prompts",
+        "id": "PROMPT-SH06",
+        "revision": 1,
+        "sha256": "58bf2c4193a780ab980a49e7d82c32a9c951fb41a1e1e5c0828ec0ea13e21c8a"
+      },
+      "current": {
+        "table": "Prompts",
+        "id": "PROMPT-SH06",
+        "revision": 1,
+        "sha256": "58bf2c4193a780ab980a49e7d82c32a9c951fb41a1e1e5c0828ec0ea13e21c8a"
+      },
+      "via": "SH06",
+      "relationship": "prompt",
+      "status": "DRAFT"
+    },
+    {
+      "linked_version": {
+        "id": "TAKE-06",
+        "revision": 1,
+        "sha256": "dde9ab9ac05612ac5f413f21a9ca1440522672b2b9538f612f2dd685b5c911f8",
+        "table": "Artifact Registry"
+      },
+      "current": {
+        "table": "Artifact Registry",
+        "id": "TAKE-06",
+        "revision": 1,
+        "sha256": "dde9ab9ac05612ac5f413f21a9ca1440522672b2b9538f612f2dd685b5c911f8"
+      },
+      "via": "SH06",
+      "relationship": "take",
+      "status": "REVIEW_REQUIRED"
+    }
+  ],
+  "implicit_unlinked_dependencies": "Ask director to confirm undeclared dependencies"
+}

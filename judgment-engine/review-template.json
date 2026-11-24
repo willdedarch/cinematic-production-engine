@@ -1,0 +1,9 @@
+{
+  "id":"REVIEW-UNBOUND","project_id":"PROJECT-ID","episode_id":"EPISODE-ID","department":"story","reviewer":"REAL-REVIEWER-ID","creator_id":"REAL-CREATOR-ID","mode":"separate_pass",
+  "target":{"id":"MATERIAL-ID","revision":1,"sha256":"REPLACE-WITH-ACTUAL-HASH"},
+  "context":{"intention":"REPLACE","genre":"REPLACE","format":"REPLACE","target_level":4,"protected":[],"approved_references":[]},
+  "technical":{"status":"UNKNOWN","checks":[{"criterion":"Acesso e integridade do material","status":"UNKNOWN","observation":"Material ainda não observado","evidence_ref":""}]},
+  "artistic":{"status":"UNKNOWN","level":null,"rationale":"","observations":[],"strengths":[],"problems":[],"integration":""},
+  "adversarial":{"challenge":"Ainda não executado","successful_choice":"Ainda não observado"},
+  "limitations":["Template não é avaliação executada"]
+}

@@ -1,0 +1,6 @@
+# Quality Gates
+Bloqueantes: violação de escopo ou texto bloqueado; fato histórico apresentado sem evidência; continuidade impossível; IDs/tempos inconsistentes; duração mínima incompatível com limite; conteúdo não autorizado. Não mascarar com nota alta. Quando o usuário só pede diagnóstico, reporte bloqueio sem reescrever.
+
+Rubrica (heurística editorial): personagens/emoção 20, causalidade/escalada 18, hook 12, suspense/surpresa 12, clímax/payoff 12, diálogo/subtexto 10, ritmo/duração 10, continuidade 6. Escala 0–5: 0 ausente/contraditório, 1 fraco, 2 lacunas importantes, 3 funcional, 4 forte com evidência, 5 excepcional dentro do objetivo e sem reparo evidente; N/A quando não avaliável. Justificar com trecho e correção. Não usar total se N/A significativo; total opcional normalizado por pesos aplicáveis, acompanhado de cobertura. Não confundir qualidade, preferência e previsão de audiência. Nunca inventar julgamento independente.
+
+Gates por fase: MINE evidência e lacunas; IDEATE propostas distintas; DEVELOP causalidade e tempo; WRITE cobertura e cânone; DOCTOR achados rastreáveis; DIRECT fidelidade e legibilidade; LEARN hipóteses separadas dos dados. Estado final: aprovado pelo usuário, pronto para revisão, ou bloqueado; não chamar aprovação sem ato do usuário. Validador local verifica estrutura JSON e tempo, não valor artístico.

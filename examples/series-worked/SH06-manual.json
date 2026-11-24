@@ -1,0 +1,59 @@
+{
+  "shot": {
+    "table": "Shot List",
+    "id": "SH06",
+    "revision": 1,
+    "sha256": "0c7d03f080826e3c942ee9abc5e7b86ab2f0d2c17656d68559e89e5e04ce127f"
+  },
+  "delivery": {
+    "kind": "MANUAL_PRODUCTION_EXPORT_NOT_EXECUTED",
+    "model_id": "seedance_2_5",
+    "output_type": "video",
+    "prompt": "Initial state: {\"cantil\":\"Lia.esquerda\",\"tampa\":\"Davi.esquerda\"}\nAction: Lia começa com o cantil na esquerda. Transfere-o à direita em quadro e bebe. A buzina soa. Lia e Davi olham para W1. Davi mantém a tampa vazia na esquerda.\nPerformance: Fechar o gesto da partilha e abrir a pergunta da chegada.\nCamera: Plano médio conjunto fixo. W1 visível à esquerda da dupla.\nSound: Buzina fora de quadro depois do gole.\nProtected: {\"cantil\":\"Lia.direita\",\"tampa\":\"Davi.esquerda\"}",
+    "native_parameters": {
+      "mode": "omni_reference",
+      "resolution": "720p",
+      "generate_audio": true,
+      "duration": 10
+    },
+    "aspect_ratio": "16:9",
+    "reference_manifest": [
+      {
+        "id": "ART-DEMO-SH06",
+        "revision": 1,
+        "sha256": "413acf45e02c92407154ea97236394d0247646e4388ec20ec246978e18fbcd0b",
+        "uri": "examples/series-worked/frames/P06.png",
+        "role": "image_references",
+        "position": 1,
+        "rights_confirmed": true,
+        "rights": "Autoral, autorizado no ensaio"
+      }
+    ],
+    "protected": "{\"cantil\":\"Lia.direita\",\"tampa\":\"Davi.esquerda\"}",
+    "warnings": [
+      "Attach each reference in the supported UI role; local labels are not native @bindings",
+      "Natural-language camera/light/acting intent is a request, not a verified native parameter or result.",
+      "Refresh capabilities at production time; catalog snapshot is not a generation benchmark."
+    ],
+    "catalog_checked_at": "2026-11-24T07:55:29.000Z",
+    "generation_tested": false,
+    "credits_consumed": 0,
+    "source_spec_sha256": "8e8c25ab9acfaeef8caa0da738ae4cd483ff10f6630f7466b025929560140edd"
+  },
+  "attachment_order": [
+    {
+      "id": "ART-DEMO-SH06",
+      "field": "image_references",
+      "position": 1,
+      "file": "examples/series-worked/frames/P06.png",
+      "revision": 1,
+      "sha256": "413acf45e02c92407154ea97236394d0247646e4388ec20ec246978e18fbcd0b"
+    }
+  ],
+  "return_checklist": [
+    "Identificar plano, versão e origem",
+    "Conferir duração e ação no take",
+    "Registrar direitos e revisão técnica/artística"
+  ],
+  "execution": "MANUAL"
+}

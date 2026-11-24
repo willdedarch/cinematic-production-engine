@@ -1,0 +1,44 @@
+{
+  "id": "EXP-OPTICS-01",
+  "department": "optics",
+  "objective": "Escolher campo que preserve gesto e relação espacial",
+  "hypothesis": "A mesma posição com 50 mm reduz informação lateral em relação a 35 mm",
+  "primary_variable": "focal_mm",
+  "secondary_variables": [],
+  "protected": [
+    "sensor 36×20.25 mm",
+    "distância3m",
+    "geometria6×4m"
+  ],
+  "references": [
+    "TECH-WIDE",
+    "TECH-TELE"
+  ],
+  "tool": "optics",
+  "evaluation_criteria": [
+    "Campo calculado mantém sujeito e gesto?",
+    "Menor informação lateral ajuda a intenção?"
+  ],
+  "expected_result": "Campo mais estreito em 50 mm; qualidade artística ainda depende de imagem",
+  "variants": [
+    {
+      "id": "V35",
+      "settings": {
+        "focal_mm": 35,
+        "sensor_width_mm": 36,
+        "sensor_height_mm": 20.25,
+        "distance_m": 3
+      }
+    },
+    {
+      "id": "V50",
+      "settings": {
+        "focal_mm": 50,
+        "sensor_width_mm": 36,
+        "sensor_height_mm": 20.25,
+        "distance_m": 3
+      }
+    }
+  ],
+  "lab": "Lens"
+}

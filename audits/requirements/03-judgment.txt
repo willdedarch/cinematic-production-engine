@@ -1,0 +1,638 @@
+# Cinematic Judgment Engine — Implementação do Motor de Julgamento Cinematográfico
+
+Acrescente à Cinematic Production Engine um módulo avançado denominado **Cinematic Judgment Engine**, responsável por desenvolver a capacidade de julgamento artístico, pensamento crítico, diagnóstico técnico, calibração estética e reconhecimento de excelência cinematográfica.
+
+Preserve integralmente os requisitos, funcionalidades, conhecimentos, integrações, painéis e restrições anteriormente aprovados.
+
+Esta implementação não deve simplesmente ampliar a biblioteca de conhecimentos. Seu objetivo é ensinar o agente a distinguir um resultado cinematográfico excepcional de um resultado competente, medíocre ou inadequado, mesmo quando todos atendem formalmente aos requisitos técnicos.
+
+## 1. Pesquisa metodológica
+
+Antes da implementação, aprofunde a pesquisa sobre metodologias de avaliação, julgamento artístico e melhoria iterativa.
+
+Investigue:
+
+- LLM-as-a-Judge.
+- Pairwise Comparison.
+- Rubric-Based Evaluation.
+- Reference-Based Evaluation.
+- Human Preference Alignment.
+- Blind Evaluation.
+- Adversarial Review.
+- Critique and Revision.
+- Self-Refinement.
+- Calibration Examples.
+- Multi-Agent Evaluation.
+- Avaliação de consistência entre julgadores.
+- Diagnóstico causal de falhas.
+- Métodos profissionais de crítica cinematográfica.
+- Processos de avaliação artística em estúdios cinematográficos.
+- Processos de revisão utilizados por diretores, diretores de fotografia, roteiristas, montadores e designers de produção.
+
+Consulte documentação técnica, artigos científicos, repositórios, materiais profissionais e implementações existentes.
+
+Compare as metodologias, identifique suas limitações e selecione aquelas que efetivamente contribuam para o objetivo.
+
+Não adote uma metodologia apenas por sua popularidade ou por produzir avaliações numericamente detalhadas.
+
+## 2. Separação entre criação e julgamento
+
+Implemente uma arquitetura em que a responsabilidade de criar seja separada da responsabilidade de avaliar.
+
+Considere os seguintes papéis:
+
+- **Creative Agent:** desenvolve a proposta.
+- **Film Critic:** avalia identidade artística e linguagem cinematográfica.
+- **Story Critic:** avalia dramaturgia, conflitos, personagens e emoção.
+- **Cinematography Critic:** avalia fotografia, composição, óptica e iluminação.
+- **Performance Critic:** avalia atuação, comportamento e naturalidade.
+- **Production Design Critic:** avalia locações, objetos, figurinos e ambientes.
+- **Audience Critic:** avalia suspense, envolvimento, clareza, retenção potencial e impacto emocional.
+- **Continuity Auditor:** avalia continuidade narrativa, espacial e visual.
+- **Technical Auditor:** avalia coerência técnica e viabilidade.
+- **Chief Reviewer:** consolida avaliações, identifica divergências e recomenda correções.
+
+Não é necessário executar todos os papéis em todas as etapas. Selecione os avaliadores relevantes para o entregável.
+
+Quando existirem agentes independentes disponíveis, distribua as responsabilidades. Quando houver apenas um agente, execute passes críticos separados, reconhecendo que isso não equivale à independência real entre avaliadores.
+
+Não desenvolva infraestrutura externa para implementar essa arquitetura.
+
+## 3. Escala calibrada de excelência cinematográfica
+
+Crie uma escala qualitativa de cinco níveis:
+
+### Nível 1 — Inadequado
+
+Apresenta falhas fundamentais, incoerências, ausência de propósito cinematográfico ou incompatibilidade com os requisitos.
+
+### Nível 2 — Medíocre
+
+Atende parcialmente ou integralmente aos requisitos técnicos, mas apresenta soluções genéricas, superficiais, previsíveis ou artisticamente fracas.
+
+### Nível 3 — Competente
+
+Possui coerência, domínio técnico, clareza e funcionalidade, mas ainda não apresenta identidade artística suficientemente marcante.
+
+### Nível 4 — Excelente
+
+Demonstra domínio técnico, intenção cinematográfica, originalidade, profundidade, coerência estética e impacto narrativo.
+
+### Nível 5 — Excepcional
+
+Apresenta integração extraordinária entre técnica, estética, narrativa, emoção e identidade artística. As escolhas contribuem significativamente para a experiência pretendida.
+
+Não utilize essas classificações como descrições abstratas.
+
+Para cada departamento, desenvolva critérios observáveis, exemplos concretos, diferenças entre níveis e condições de reprovação.
+
+Uma entrega tecnicamente correta não deve receber automaticamente uma classificação excelente.
+
+## 4. Rubricas especializadas por departamento
+
+Implemente rubricas específicas para:
+
+- Desenvolvimento de histórias.
+- Roteiro.
+- Diálogos.
+- Engenharia emocional.
+- Suspense.
+- Retenção.
+- Direção cinematográfica.
+- Direção de atuação.
+- Casting.
+- Character sheets.
+- Performance sheets.
+- Figurinos.
+- Locações.
+- Geometria espacial.
+- Props.
+- Fotografia.
+- Óptica.
+- Composição.
+- Iluminação.
+- Cor e textura.
+- Atmosfera.
+- Ambientes vivos.
+- Storyboards.
+- Decupagem.
+- Prompts.
+- Continuidade.
+- Montagem.
+- Som.
+
+Cada rubrica deverá possuir:
+
+- Objetivo.
+- Critérios.
+- Indicadores observáveis.
+- Descrições dos cinco níveis de qualidade.
+- Falhas críticas.
+- Exemplos de referência.
+- Perguntas de diagnóstico.
+- Critérios de aprovação.
+- Critérios de reprovação.
+- Limitações.
+- Orientações de correção.
+
+Adapte as rubricas ao gênero, formato, intenção artística e identidade cinematográfica aprovados.
+
+Não transforme preferências estéticas em regras universais.
+
+## 5. Julgamento artístico independente da conformidade técnica
+
+Implemente duas camadas distintas de avaliação.
+
+### Technical Quality Gate
+
+Verifica:
+
+- Requisitos.
+- Precisão.
+- Consistência.
+- Continuidade.
+- Restrições.
+- Compatibilidade.
+- Integridade.
+- Viabilidade.
+
+### Artistic Quality Gate
+
+Verifica:
+
+- Identidade.
+- Intenção.
+- Originalidade.
+- Atmosfera.
+- Profundidade.
+- Força narrativa.
+- Impacto emocional.
+- Hierarquia visual.
+- Coerência estética.
+- Expressividade.
+- Imersão.
+- Qualidade das escolhas cinematográficas.
+
+Uma entrega pode passar no Technical Quality Gate e ser reprovada no Artistic Quality Gate.
+
+Não permita que o cumprimento formal de um checklist substitua a avaliação artística.
+
+## 6. Avaliação comparativa cega
+
+Implemente procedimentos de comparação entre duas ou mais propostas.
+
+Sempre que possível:
+
+1. Remova informações que revelem qual agente ou versão produziu cada alternativa.
+2. Apresente as alternativas com identificadores neutros.
+3. Avalie utilizando a rubrica pertinente.
+4. Justifique a escolha com evidências.
+5. Permita empate ou reprovação de todas as alternativas.
+6. Inverta a ordem das alternativas.
+7. Repita a avaliação.
+8. Registre eventuais divergências.
+9. Consolide o julgamento.
+
+Evite vieses relacionados a:
+
+- Ordem de apresentação.
+- Extensão da resposta.
+- Complexidade desnecessária.
+- Linguagem sofisticada.
+- Familiaridade.
+- Autoria.
+- Preferências anteriormente presumidas.
+- Tendência do agente a defender suas próprias propostas.
+
+Uma proposta mais longa ou tecnicamente elaborada não é necessariamente superior.
+
+## 7. Calibration Library — biblioteca de calibração artística
+
+Utilize a biblioteca de referências, Golden Examples e exemplos contrastivos já solicitados como base para calibrar o julgamento.
+
+Para cada competência relevante, selecione exemplos representativos dos seguintes níveis:
+
+- Inadequado.
+- Medíocre.
+- Competente.
+- Excelente.
+- Excepcional.
+
+Cada exemplo deverá conter:
+
+- Identificador.
+- Fonte.
+- Contexto.
+- Intenção artística.
+- Departamento.
+- Gênero.
+- Classificação.
+- Evidências observáveis.
+- Características positivas.
+- Deficiências.
+- Explicação da classificação.
+- Comparação com outros níveis.
+- Limitações da avaliação.
+- Origem do julgamento.
+
+Diferencie avaliações humanas, avaliações realizadas por agentes, exemplos profissionais documentados e exemplos didáticos.
+
+Não atribua classificações arbitrárias a materiais sem evidências suficientes.
+
+## 8. Diagnóstico causal de problemas
+
+O agente não deve simplesmente identificar que um resultado está ruim.
+
+Deverá investigar por que ele está ruim.
+
+Implemente um processo que diferencie:
+
+- Sintoma observado.
+- Problema artístico ou técnico.
+- Causa provável.
+- Causas alternativas.
+- Evidências disponíveis.
+- Evidências ausentes.
+- Grau de confiança.
+- Correção recomendada.
+- Riscos da correção.
+- Elementos que devem permanecer inalterados.
+- Critérios para verificar se a correção funcionou.
+
+Exemplo: uma locação visualmente plana pode resultar de iluminação uniforme, enquadramento inadequado, ausência de profundidade, geometria insuficiente, materiais artificiais ou excesso de desfoque.
+
+Não atribua automaticamente o problema a uma única causa.
+
+Integre esse processo à Failure Library e ao Prompt Compiler anteriormente solicitados.
+
+## 9. Crítica cinematográfica adversarial
+
+Implemente uma etapa de revisão crítica na qual o avaliador procure ativamente motivos fundamentados para reprovar a entrega.
+
+O avaliador deverá questionar:
+
+- Esta escolha possui uma função narrativa?
+- A solução é original ou apenas convencional?
+- A emoção foi construída ou simplesmente declarada?
+- A cena transmite aquilo que pretende transmitir?
+- O ambiente parece existir independentemente dos protagonistas?
+- A composição possui hierarquia?
+- A fotografia contribui para a história?
+- A atuação parece humana?
+- A ação possui intensidade, clareza e consequências dramáticas?
+- O suspense é orgânico ou artificial?
+- Existem decisões gratuitas?
+- Existem clichês?
+- Existem alternativas cinematograficamente superiores?
+- O resultado preserva a identidade da produção?
+- A entrega parece profissional ou apenas tecnicamente correta?
+
+O crítico deve evitar concordância automática com o agente criador.
+
+Entretanto, não invente defeitos para justificar a existência da revisão. Reconheça também as escolhas bem-sucedidas.
+
+## 10. Julgamento contextualizado por gênero
+
+O padrão de excelência deve considerar o gênero cinematográfico.
+
+Uma escolha adequada para um romance pode ser inadequada para um filme de guerra. Uma composição perfeita e simétrica pode contribuir para determinada narrativa e prejudicar outra.
+
+No gênero de guerra, avalie especialmente:
+
+- Autenticidade emocional.
+- Sensação de perigo.
+- Pressão narrativa.
+- Intensidade dramática.
+- Materialidade.
+- Desgaste.
+- Atmosfera.
+- Profundidade ambiental.
+- Consequências humanas.
+- Vulnerabilidade.
+- Naturalidade das reações.
+- Legibilidade da ação.
+- Continuidade espacial.
+- Coerência histórica.
+- Contraste entre ação, suspense, silêncio e emoção.
+
+Não reprove automaticamente uma narrativa ficcional por apresentar confrontos, mortes, ferimentos ou consequências humanas pertinentes ao gênero.
+
+Também não trate violência gratuita como sinônimo de excelência cinematográfica.
+
+Respeite as políticas de segurança aplicáveis, sem tentar contornar filtros dos modelos.
+
+## 11. Correction Loop — ciclo obrigatório de melhoria
+
+Integre ao workflow o seguinte ciclo:
+
+1. Produção da proposta.
+2. Recuperação das referências de excelência pertinentes.
+3. Avaliação técnica.
+4. Avaliação artística.
+5. Crítica adversarial.
+6. Identificação das deficiências.
+7. Diagnóstico causal.
+8. Proposta de correção.
+9. Revisão direcionada.
+10. Reavaliação.
+11. Comparação entre versões.
+12. Apresentação ao usuário.
+
+A revisão deverá preservar todos os elementos aprovados que não estejam relacionados ao problema identificado.
+
+Não reescreva ou reconstrua integralmente uma entrega quando uma correção localizada for suficiente.
+
+Implemente limites configuráveis para as rodadas de revisão.
+
+Não permita ciclos infinitos de autocrítica.
+
+Se determinada deficiência não puder ser corrigida, registre-a e apresente-a ao usuário.
+
+Não aprove artificialmente uma entrega apenas porque o limite de revisões foi atingido.
+
+## 12. Painéis interativos de julgamento
+
+Implemente painéis especializados integrados ao workflow.
+
+### Cinematic Judgment Board
+
+Apresenta:
+
+- Entregável avaliado.
+- Intenção cinematográfica.
+- Referências utilizadas.
+- Avaliação técnica.
+- Avaliação artística.
+- Classificação qualitativa.
+- Evidências.
+- Pontos fortes.
+- Problemas encontrados.
+- Correções recomendadas.
+- Pendências.
+
+### Blind Comparison Board
+
+Permite:
+
+- Comparar propostas.
+- Visualizar referências.
+- Selecionar a melhor alternativa.
+- Indicar empate.
+- Reprovar todas.
+- Consultar as justificativas dos avaliadores.
+- Registrar a decisão humana.
+
+### Artistic Calibration Board
+
+Permite registrar:
+
+- Alternativa escolhida.
+- Motivos.
+- Características aprovadas.
+- Características reprovadas.
+- Observações.
+- Intensidade da preferência.
+- Contexto.
+- Escopo da preferência.
+
+O escopo poderá ser:
+
+- Entregável atual.
+- Episódio.
+- Projeto.
+- Gênero.
+- Modelo de geração.
+- Preferência global.
+
+### Failure Diagnosis Board
+
+Apresenta:
+
+- Sintomas.
+- Hipóteses de causa.
+- Evidências.
+- Correções possíveis.
+- Impacto esperado.
+- Elementos protegidos.
+- Checklist de reavaliação.
+
+### Revision Comparison Board
+
+Compara:
+
+- Versão anterior.
+- Versão corrigida.
+- Problemas resolvidos.
+- Problemas persistentes.
+- Novos problemas introduzidos.
+- Melhoria técnica.
+- Melhoria artística.
+
+### Quality Benchmark Dashboard
+
+Apresenta:
+
+- Histórico de avaliações.
+- Concordância com o usuário.
+- Falhas recorrentes.
+- Aprovações indevidas.
+- Reprovações indevidas.
+- Consistência dos julgamentos.
+- Evolução das correções.
+- Resultados dos testes.
+
+Os painéis devem possuir funcionalidade real dentro das capacidades do ambiente.
+
+Quando não houver suporte a controles interativos, apresente uma alternativa textual funcional.
+
+## 13. Calibração através das decisões humanas
+
+Integre as aprovações, reprovações e comparações realizadas pelo usuário à base de conhecimento compartilhada.
+
+Quando uma decisão humana divergir da avaliação do agente, registre:
+
+- Julgamento original.
+- Decisão humana.
+- Motivo da divergência.
+- Evidências apresentadas.
+- Preferência identificada.
+- Contexto de aplicação.
+- Necessidade de recalibração.
+
+Não considere automaticamente que o agente ou o usuário está errado.
+
+Uma divergência pode representar uma preferência estética, uma interpretação diferente, uma falha técnica ou uma limitação do avaliador.
+
+Utilize decisões humanas anteriores para recuperar exemplos relevantes em futuras avaliações.
+
+Não transforme automaticamente todas as preferências em regras globais.
+
+Deixe explícito que esse mecanismo não representa retreinamento do modelo, mas calibração contextual por recuperação de exemplos, critérios e decisões registradas.
+
+## 14. Integração com Google Sheets
+
+Integre o Judgment Engine à infraestrutura Google Sheets anteriormente aprovada.
+
+Reutilize as entidades existentes sempre que possível, acrescentando estruturas específicas apenas quando necessárias.
+
+Considere:
+
+- Judgment History.
+- Artistic Preferences.
+- Calibration Examples.
+- Pairwise Comparisons.
+- Quality Evaluations.
+- Failure Diagnostics.
+- Revision Results.
+- Human Feedback.
+- Evaluator Disagreements.
+- Benchmark Results.
+- Regression History.
+
+Cada avaliação deverá ser associada ao projeto, episódio, departamento, entregável e versão correspondentes.
+
+Registre referências consultadas, rubricas utilizadas, evidências, classificação, divergências, decisões humanas e correções.
+
+Preserve histórico e rastreabilidade.
+
+Não permita que avaliações posteriores sobrescrevam silenciosamente decisões anteriores.
+
+Não desenvolva servidores, APIs ou conectores adicionais.
+
+## 15. Testes do próprio sistema de julgamento
+
+Não avalie apenas os entregáveis cinematográficos. Avalie a capacidade do próprio avaliador.
+
+Utilize exemplos previamente classificados, reservando parte deles exclusivamente para testes.
+
+Considere as seguintes métricas:
+
+- Human Agreement.
+- Pairwise Ranking Accuracy.
+- Failure Detection.
+- False Approval Rate.
+- False Rejection Rate.
+- Correction Success.
+- Judgment Consistency.
+- Position Bias.
+- Preference Alignment.
+- Regression Rate.
+- Capacidade de justificar avaliações com evidências.
+- Capacidade de preservar elementos aprovados durante correções.
+
+Não invente metas ou resultados.
+
+Estabeleça inicialmente uma linha de base.
+
+Diferencie exemplos de calibração dos exemplos reservados para avaliação.
+
+Evite utilizar os mesmos casos para ensinar o avaliador e posteriormente comprovar sua competência.
+
+Registre os resultados efetivamente observados.
+
+## 16. Testes comparativos obrigatórios
+
+Sempre que possível, compare:
+
+- Agente sem a Skill.
+- Skill sem Judgment Engine.
+- Skill com Judgment Engine.
+- Skill com Judgment Engine calibrado por exemplos humanos.
+
+Utilize briefings equivalentes e critérios consistentes.
+
+Avalie se o novo módulo realmente melhora:
+
+- Profundidade artística.
+- Qualidade cinematográfica.
+- Precisão técnica.
+- Originalidade.
+- Coerência.
+- Capacidade de detectar problemas.
+- Qualidade das correções.
+- Alinhamento com a intenção do usuário.
+
+Não considere respostas mais extensas, notas mais altas ou relatórios mais sofisticados como evidências suficientes de melhoria.
+
+Não execute gerações pagas para realizar os testes.
+
+## 17. Arquitetura modular
+
+Implemente uma estrutura equivalente a:
+
+judgment-engine/
+- evaluator-orchestrator.md
+- artistic-criticism.md
+- technical-criticism.md
+- audience-criticism.md
+- genre-aware-judgment.md
+- blind-comparison.md
+- adversarial-review.md
+- causal-diagnosis.md
+- preference-calibration.md
+- correction-loop.md
+- evaluation-consistency.md
+- rubrics/
+- calibration-examples/
+- benchmark-cases/
+- review-templates/
+- panels/
+- schemas/
+- tests/
+
+Adapte a estrutura à arquitetura existente.
+
+Evite duplicar módulos já implementados.
+
+O SKILL.md deverá funcionar como orquestrador e carregar apenas os avaliadores, referências, rubricas e exemplos relevantes para a tarefa.
+
+Valide que o Judgment Engine é realmente acionado durante o workflow.
+
+## 18. Restrições absolutas
+
+- Não consumir créditos Higgsfield.
+- Não disparar gerações audiovisuais pagas.
+- Não contratar serviços.
+- Não desenvolver servidores externos.
+- Não criar novos conectores.
+- Não inventar evidências.
+- Não inventar resultados de testes.
+- Não atribuir excelência sem justificativa.
+- Não aprovar automaticamente entregas tecnicamente corretas.
+- Não modificar decisões aprovadas sem autorização.
+- Não transformar avaliações subjetivas em verdades absolutas.
+- Não prometer viralização.
+- Não transformar a metodologia em uma fórmula artística rígida.
+
+## 19. Auditoria e relatório final
+
+Após a implementação, execute uma auditoria específica do Cinematic Judgment Engine.
+
+Entregue:
+
+- Relatório das metodologias pesquisadas.
+- Comparação das metodologias.
+- Justificativa das escolhas.
+- Arquitetura implementada.
+- Rubricas.
+- Exemplos de calibração.
+- Painéis.
+- Integração Google Sheets.
+- Procedimentos de diagnóstico.
+- Procedimentos de revisão.
+- Resultados dos testes.
+- Comparação antes e depois.
+- Falhas identificadas.
+- Correções realizadas.
+- Limitações.
+- Pendências.
+- Matriz de rastreabilidade.
+- Documentação de utilização.
+
+Demonstre com exemplos concretos como o sistema distingue um resultado medíocre de um resultado cinematográfico excelente.
+
+Não conclua o trabalho apenas porque os módulos foram criados ou os testes estruturais passaram.
+
+**O objetivo não é construir um agente que simplesmente conheça cinema. É construir um agente que saiba julgar escolhas cinematográficas, reconhecer mediocridade, identificar excelência, diagnosticar problemas, propor correções e evoluir através de referências profissionais e avaliações humanas.**
+
+O agente deve possuir rigor crítico suficiente para rejeitar seu próprio trabalho quando necessário, sem perder criatividade, autonomia artística ou respeito à direção estabelecida pelo usuário.

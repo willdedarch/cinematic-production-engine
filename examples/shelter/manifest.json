@@ -1,0 +1,164 @@
+{
+  "case": "C14",
+  "revision": "C14-R1",
+  "title": "A parte seca",
+  "mode": "ISOLATED_FICTIONAL_TEXT_REHEARSAL",
+  "status": "LOCAL_DRAFT_FOR_REVIEW",
+  "date": "2026-11-24",
+  "agent": "/root/cinematic_case14",
+  "parent": "/root",
+  "sheet_read": false,
+  "sheet_write": false,
+  "real_production_data_used": false,
+  "paid_tools_used": false,
+  "package_modified": false,
+  "media_generated": false,
+  "human_approval": null,
+  "metrics": {
+    "human_agreement": null,
+    "audience_impact": null
+  },
+  "checks": {
+    "shot_count": 8,
+    "shot_durations_seconds": [
+      10,
+      9,
+      10,
+      11,
+      12,
+      10,
+      10,
+      8
+    ],
+    "estimated_duration_seconds": 80,
+    "screenplay_action_blocks": 15,
+    "screenplay_action_ids_unique": true,
+    "four_fictional_characters": [
+      "Ada",
+      "Nilo",
+      "Celina",
+      "Joel"
+    ],
+    "timing_measured_with_actors": false
+  },
+  "deliverables": [
+    {
+      "file": "caso14-roteiro-e-direcao.md",
+      "sha256": "0bb8ffb4cbba1cbc207059cd1fe877b17934ca7c7c550d220e2dc3056da08088"
+    },
+    {
+      "file": "caso14-analise-e-lacunas.md",
+      "sha256": "697ba65455f3a2e274864ea04fba22b1ba65bf251f501272cfa0b455f339fa8b"
+    }
+  ],
+  "knowledge_sources": [
+    {
+      "path": "SKILL.md",
+      "sha256": "6f7bf004f944b07889c41470dcbb185e25f46d9de9842abcebcd260c6b2bf7b1"
+    },
+    {
+      "path": "orchestration/panels.md",
+      "sha256": "c07af4a911ddd2e9eb802a726705fcadf952bdb2ccc04912fa04f9a6dd030b35"
+    },
+    {
+      "path": "panels/boards.json",
+      "sha256": "e571f1e5b99b97d7ac1e55d0a303f448647b20f767ee043141f3e23a2daec47b"
+    },
+    {
+      "path": "orchestration/gates.json",
+      "sha256": "51b3e244d9e0df812dd4f01a93f2d007821e208bcdbdcb2a389d38c001d678fd"
+    },
+    {
+      "path": "harness/policies.json",
+      "sha256": "719b30d8cf03439817678b7b0ee41bd5b0bba83da3dc45dfaaf1c43f7bb2e3b7"
+    },
+    {
+      "path": "orchestration/knowledge-router.json",
+      "sha256": "15440a9c5bdbf890c42defb028983de6f8e232c98c5053b2dd9fd1724e8fc15b"
+    },
+    {
+      "path": "modules/dramaturgy.md",
+      "sha256": "ebf057953a2a5152a505c84c165c077739aaafdec76eb1fd60e82b00e0cd1b18"
+    },
+    {
+      "path": "references/dramaturgy.md",
+      "sha256": "e65bc547b7fe69c05dc519446f332106a5a8db3e7daa52dcb656991cb71b7be6"
+    },
+    {
+      "path": "modules/emotional-engine.md",
+      "sha256": "4f9197582e5ed87386b29275e88a687b36cc6ace785cd24ef1e0c480ca5ac59d"
+    },
+    {
+      "path": "modules/suspense-engine.md",
+      "sha256": "0d2c63d9601baea9111f4778cd6d96a45661dcefeb8bdd6f20992109438d5917"
+    },
+    {
+      "path": "modules/dialogue-engine.md",
+      "sha256": "e28b0c0ae7894670a50dbbf93dab7ee80d01b7ed94baa896242eecdc48a7b6cd"
+    },
+    {
+      "path": "modules/script-doctor.md",
+      "sha256": "7f8d503aff5cfd48a8386fa35f8e08cbcb82526d06054df2b67e924c72adaac8"
+    },
+    {
+      "path": "modules/performance-direction.md",
+      "sha256": "7c469dc3a474f0a1dfdf785d2519c783ea01cd0f3ef132a6f682b6cda75f7764"
+    },
+    {
+      "path": "modules/editorial-sound.md",
+      "sha256": "0896a0fb5182e4c83e9b8f815e279f6bde382c2893060a624041e57045075fb5"
+    },
+    {
+      "path": "modules/continuity.md",
+      "sha256": "24d85a75a0ddd6e640fd0b452240915a1f42550bea38f11957e1ac1757844c9a"
+    },
+    {
+      "path": "engines/living-world.md",
+      "sha256": "9bbbee2aadaacfd2e17fc1605ddf2f227f448f7ac0f59c95f2e460a88135ea6a"
+    },
+    {
+      "path": "engines/war-film.md",
+      "sha256": "f0b150f47ba24e14f5d51f4b78ce1c29be4536579832fdbda3e9f667707a56c3"
+    },
+    {
+      "path": "knowledge/war-film.md",
+      "sha256": "75509ef24ea83bc5284856ed4a62ad16c5f7d98525d98a4e7f1ea304b011a92f"
+    },
+    {
+      "path": "knowledge/narrative-editing.md",
+      "sha256": "55b4a49573d71559c5bc5ad50775203abafb39c00e5087d5c4a6e80af24c2e1c"
+    },
+    {
+      "path": "knowledge/composition.md",
+      "sha256": "48dd60a0a9586e8f3e3e1cc4d827009a50dd69bc9d2e92cbafb0212415a814e8"
+    },
+    {
+      "path": "knowledge/direction.md",
+      "sha256": "381ac150cf0a7441d34cebd95210a1ba77ff054c03d8676f07828c38b8aae976"
+    },
+    {
+      "path": "references/staging-editorial.md",
+      "sha256": "c4fa3feee5a896cea59716b5c5539a1416e60bbd26bcbf08d127c249bb8dbe93"
+    },
+    {
+      "path": "judgment-engine/protocol.md",
+      "sha256": "37f11a503740af7584ce93bcb788b26a6093acadee40862584a4719163ddc0c2"
+    },
+    {
+      "path": "judgment-engine/rubrics.json",
+      "sha256": "e1a2de02cfb586258c51ae6e8ef4183f8f926a3f085463f2dc85ec263452e02b"
+    },
+    {
+      "path": "harness/manual.md",
+      "sha256": "21e3c8662a0086e7deebbb3a2b83344f30ae2389c6667dda4820a63424a9433c"
+    }
+  ],
+  "limits": [
+    "No historical-specific fact checking",
+    "No audiovisual viewing or listening",
+    "No live staging validation",
+    "Author and reviewer passes share one agent context",
+    "Not human-approved",
+    "No comparative claim of Skill superiority"
+  ]
+}

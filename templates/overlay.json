@@ -1,0 +1,32 @@
+{
+  "guides": [
+    "thirds",
+    "perspective",
+    "safe"
+  ],
+  "vanishing_point": [
+    0.52,
+    0.45
+  ],
+  "crop_ratio": 0.5625,
+  "regions": [
+    {
+      "rect": [
+        0.12,
+        0.28,
+        0.42,
+        0.78
+      ],
+      "label": "foreground / gesto"
+    },
+    {
+      "rect": [
+        0.5,
+        0.2,
+        0.8,
+        0.65
+      ],
+      "label": "background / resposta"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+[
+  {
+    "assertion": {
+      "kind": "character_knowledge",
+      "subject": "DAVI",
+      "key": "chegada",
+      "value": "uma vizinha"
+    },
+    "status": "CONFLICT",
+    "decision": {
+      "table": "Decisions",
+      "id": "D-CANON-3",
+      "revision": 1,
+      "record_sha256": "f3a43dea5824000a9a670566d5aa35f4469c276eff37d7f7478a0c89156c7087",
+      "message": "SYNTHETIC-DEMO-CANON",
+      "reason": "Ele ouve a buzina e não vê quem chega."
+    },
+    "canonical_value": "desconhecida"
+  },
+  {
+    "assertion": {
+      "kind": "character_knowledge",
+      "subject": "LIA",
+      "key": "chegada",
+      "value": "uma vizinha"
+    },
+    "status": "UNKNOWN",
+    "decision": null,
+    "canonical_value": null
+  }
+]

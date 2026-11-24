@@ -1,0 +1,90 @@
+{
+  "checked_at": "2026-11-24T13:22:25.124004+00:00",
+  "release_tested": "1.2.0",
+  "run_id": "RUN-19aed8db374843d38b6f298a0e0da648",
+  "blender_version": "5.4.0 Alpha",
+  "status": "RENDERED_REOPENED_REQUIRES_VISUAL_REVIEW",
+  "owned_objects_on_reopening": 10,
+  "cameras": [
+    {
+      "id": "CAM35",
+      "focal_mm": 35.0,
+      "sensor_width_mm": 36.0,
+      "angle_x": 0.9500215649604797,
+      "trajectory": [
+        {
+          "frame": 1,
+          "position_m": [
+            0.7,
+            0.4,
+            1.4
+          ]
+        },
+        {
+          "frame": 4,
+          "position_m": [
+            1.1,
+            0.7,
+            1.5
+          ]
+        },
+        {
+          "frame": 9,
+          "position_m": [
+            2.0,
+            0.5,
+            1.4
+          ]
+        }
+      ],
+      "interpolation": "LINEAR",
+      "path_midpoints_verified": 2
+    },
+    {
+      "id": "CAM50",
+      "focal_mm": 50.0,
+      "sensor_width_mm": 36.0,
+      "angle_x": 0.6911112070083618
+    }
+  ],
+  "evidence_folder": "examples/blender-trajectory",
+  "artifacts": {
+    "blender-result.json": "2d97276c65025a8693836ea8bc7d4deed34c62083ab2898f8527cf4892463af2",
+    "blender.log": "c4c9f3bceea1066e7a08e2bdbb9400aa86065e3cbcc8c2f011aedadad5bbf943",
+    "CAM35.png": "764ac5c6e1b63edb7984b17f3e49be1ace928af7513beb70d65ba23579345def",
+    "CAM50.png": "d8d25879aaf28ef55d6347ec980740c7c47a6ee58d36abf24748f6c00ad3cb3d",
+    "events.jsonl": "c9713223539fa8e07487389e3141cba39d908204c33450fc6a5452fad604e6d5",
+    "geometry.json": "b1297ad7141534e6f64b9631be631dc0a70982d3567d23f20a3f90128f79541d",
+    "result.json": "282a967c0f1ed1199543e97873cb28e06cd76e3e3794a88401b803efc9785e4b",
+    "technical-previs.blend": "333901106fa32dbacc5514fa02fc485241e209da245be9fff3e421494d6ee0b3"
+  },
+  "previous_static_verification": {
+    "checked_at": "2026-11-24T13:05:44.915803+00:00",
+    "release_tested": "1.1.0",
+    "run_id": "RUN-35c5fc26b9a7463b9fc836ef6196ce87",
+    "blender_version": "5.4.0 Alpha",
+    "status": "RENDERED_REOPENED_REQUIRES_VISUAL_REVIEW",
+    "owned_objects_on_reopening": 10,
+    "cameras": [
+      {
+        "id": "CAM35",
+        "focal_mm": 35.0,
+        "sensor_width_mm": 36.0,
+        "angle_x": 0.9500215649604797
+      },
+      {
+        "id": "CAM50",
+        "focal_mm": 50.0,
+        "sensor_width_mm": 36.0,
+        "angle_x": 0.6911112070083618
+      }
+    ],
+    "artifacts": {
+      "CAM35.png": "ba67f1104201ffd2625a209e93ee769197291ef43ac6c6dd968b1b7574048f59",
+      "CAM50.png": "b9649fa9baeefde1d91ba5e52bd7a9137a9e122767e42d42f6c2d93fed1a7f0d",
+      "technical-previs.blend": "5c7d189e34b2e2208ecd194776b7ea817178d24cefe99e7068049a391a8df615"
+    },
+    "evidence_archive": "Blender-1.1-verificacao.zip",
+    "evidence_archive_sha256": "c7d9e95452e35f091934383585f3921a9b682dbe98c3605df9e51eb6b5a34d64"
+  }
+}

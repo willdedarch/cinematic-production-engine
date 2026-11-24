@@ -1,0 +1,10 @@
+{
+  "google_sheets": {
+    "status": "UNKNOWN",
+    "evidence_ref": "Replace with actual independent native read/write/readback receipt"
+  },
+  "native_image_generation": {
+    "status": "UNKNOWN",
+    "evidence_ref": "Discover actual tool; authorization is separate; never infer from documentation"
+  }
+}

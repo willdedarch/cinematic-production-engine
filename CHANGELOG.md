@@ -1,0 +1,34 @@
+# Changelog
+
+## 1.4.0 — 24/11/2026
+
+- Corrige a distribuição pública, substitui exports por fixtures sintéticas e separa configuração e perfis privados. V3 original preservado localmente com fingerprint público.
+- Amplia fontes, estudos de direção, mundo vivo e guerra ficcional, com caso coletivo de oito planos. Substitui diagramas genéricos e acrescenta cinco imagens nativas com críticas e limites explícitos.
+- Acrescenta plano temporal opcional ao compilador, registro imutável de feedback privado e handlers de lifecycle opcionais, sem modificar confiança do host.
+- Executa comparação exploratória de quatro condições de escrita com revisão cega em ordens inversas. Aceite artístico e superioridade geral não estabelecidos.
+- Preserva protocolo nativo de leitura/escrita/releitura, estado 3.1, 35 tabelas e produção manual sem créditos externos.
+
+
+## 1.3.0 — 24/11/2026
+
+- A série ganha uma mesa com endereço local estável, publicada pelo agente após leitura nativa da planilha e da Fila de direção. Série e episódio podem ser solicitados pelo nome. O diretor recebe o link e a hora da consulta.
+- A entrada reúne retomada, decisão pendente e três percursos por material. A sequência de quadros leva ao cartão do plano, à continuidade entre cortes, às notas por plano e à bíblia no ponto narrativo disponível. A Oficina conserva as etapas e os painéis especializados.
+- A sala A/B oferece exploração local e comparação de versões apresentadas, com repetição de intervalo, marca e alternância de áudio. O voto se vincula ao par original, motivo e alcance. O cartão expõe a preferência confirmada e a decisão de montagem separadamente.
+- A fila permite receber, revisar, aceitar e recusar propostas com autor, origem e motivo. Alternativas locais de deslocamento de áudio preservam a mídia original e podem ser escolhidas para o corte após revisão. O protocolo verifica base, escopo, conteúdo relido e histórico.
+- A publicação local protege o endereço da série e identifica leituras obsoletas. Os rascunhos ficam no dispositivo. A sincronização com a planilha ocorre nas interações com o agente. [Guia da mesa](integrations/mesa-do-episodio.md) · [Revisão da entrega](AUDIT-REPORT.md)
+
+## 1.2.0 — 24/11/2026
+
+Bíblia por episódio e por momento da história, cartões e storyboard por plano, continuidade e reparo por campo, entrega manual com referências conferidas, importação para revisão, comparador de takes com som, intervalo e preferência contextual. Revisão de aprovações, observações por critério, histórico, ferramentas, laboratórios e rascunhos. [Revisão da série e estado 1.2](audits/revision-1.2-series-and-state.md) · [Revisão de ferramentas 1.2](audits/revision-1.2-tools.md)
+
+## 1.1.0 — 24/11/2026
+
+Versão final solicitada pelo usuário, baseada no V3 oficial e na evolução de estadoV3.1. Adiciona conhecimento operacional, exemplos, comparações, 8 adaptadores, 35 entidades normalizadas, 37 painéis de apoio, 28 rubricas/140 calibradores didáticos, críticas independentes, revisão e feedback contextual; harness/políticas/eventos/CLI, ferramentas locais, laboratório, análise de mídia, previs 2D, importação/exportação manual, checkpoint e recuperação. Corrige problemas de aprovação/recibo/bloqueio/departamento/paths/hiperfocal/recuperação e duração de animatic identificados em auditoria. Blender 3D e hooks nativos têm status limitado/experimental explícito. Ver relatório para contagens verificadas e pendências.
+
+## Checkpoints de migração
+
+Stage 1: estado nativo e auditoria inicial, 54 Python/11 DOM; roundtrip nativo termina arquivado revisão 3. Stage 2: biblioteca, 79 Python/16 DOM. Stage 3: julgamento, 128 Python/17 DOM;149 registros confirmados nativamente. Contagens são marcos históricos e não substituem os testes finais. Nenhum checkpoint equivale a aceite visual ou produção audiovisual final.
+
+## V3 original
+
+65 arquivos preservados privadamente no ZIP original, SHA256 `38582e59b870ff1bb6f261a54cdf8d01569661bbc18bf436f6c38c4a75692e8e`. Não foi sobrescrito.

@@ -1,0 +1,59 @@
+{
+  "shot": {
+    "table": "Shot List",
+    "id": "SH01",
+    "revision": 1,
+    "sha256": "a5c1d2d749dd5e44755f2a7b4f61c265674630e98af3b58917b4f03bcd5bf263"
+  },
+  "delivery": {
+    "kind": "MANUAL_PRODUCTION_EXPORT_NOT_EXECUTED",
+    "model_id": "seedance_2_5",
+    "output_type": "video",
+    "prompt": "Initial state: {\"cantil\":\"Davi.direita\",\"tampa\":\"roscada_no_cantil\"}\nAction: Davi põe o capacete junto ao banco com a mão livre. O cantil fechado soa brevemente na direita. Um impacto faz a luminária oscilar.\nPerformance: Situar a dupla e deixar ouvir quão pouca água resta.\nCamera: Médio conjunto desde C1, ao sul do eixo. Identificar o banco N1 e a porta oeste W1.\nSound: Um ruído curto de água antecede o impacto distante.\nProtected: {\"cantil\":\"Davi.direita\",\"tampa\":\"roscada_no_cantil\"}",
+    "native_parameters": {
+      "mode": "omni_reference",
+      "resolution": "720p",
+      "generate_audio": true,
+      "duration": 8
+    },
+    "aspect_ratio": "16:9",
+    "reference_manifest": [
+      {
+        "id": "ART-DEMO-SH01",
+        "revision": 1,
+        "sha256": "839a48811d3a8aa00eede2c52f33c308cb1ac46f8af03344059a52ece0d83231",
+        "uri": "examples/series-worked/frames/P01.png",
+        "role": "image_references",
+        "position": 1,
+        "rights_confirmed": true,
+        "rights": "Autoral, autorizado no ensaio"
+      }
+    ],
+    "protected": "{\"cantil\":\"Davi.direita\",\"tampa\":\"roscada_no_cantil\"}",
+    "warnings": [
+      "Attach each reference in the supported UI role; local labels are not native @bindings",
+      "Natural-language camera/light/acting intent is a request, not a verified native parameter or result.",
+      "Refresh capabilities at production time; catalog snapshot is not a generation benchmark."
+    ],
+    "catalog_checked_at": "2026-11-24T07:55:29.000Z",
+    "generation_tested": false,
+    "credits_consumed": 0,
+    "source_spec_sha256": "53c913a3c03b51257f459b354db87821d136d01c9da419e501f258ddf370cd64"
+  },
+  "attachment_order": [
+    {
+      "id": "ART-DEMO-SH01",
+      "field": "image_references",
+      "position": 1,
+      "file": "examples/series-worked/frames/P01.png",
+      "revision": 1,
+      "sha256": "839a48811d3a8aa00eede2c52f33c308cb1ac46f8af03344059a52ece0d83231"
+    }
+  ],
+  "return_checklist": [
+    "Identificar plano, versão e origem",
+    "Conferir duração e ação no take",
+    "Registrar direitos e revisão técnica/artística"
+  ],
+  "execution": "MANUAL"
+}

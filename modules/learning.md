@@ -1,0 +1,4 @@
+# Learning
+Mantenha registros de decisões, alternativas descartadas, justificativas, falas reprovadas, mecanismos utilizados, feedback do público e hipóteses. Cada entrada: episódio/versão, fonte, decisão, status, justificativa, efeito esperado, verificação disponível e próximo teste. Dados qualitativos são exemplos, não representatividade. Métricas exigem data, plataforma, unidade, denominador/coorte quando aplicável e origem; ausente = desconhecido.
+
+Separe preferência criativa (do usuário) de observação empírica e hipótese. Nunca promova uma hipótese a regra após um vídeo. Se feedback conflitar com identidade, apresente trade-off. Em cada episódio, consulte registros úteis, não toda a biblioteca. Persista apenas com autorização; caso contrário, gere handoff. Use `templates/learning-log.json`.

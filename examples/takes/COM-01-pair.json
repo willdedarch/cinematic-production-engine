@@ -1,0 +1,30 @@
+{
+  "kind": "CPE_TAKE_PAIR_1",
+  "pair_id": "PAIR-0e263be6abc1411da7de9ff02b795db5",
+  "spreadsheet_id": "UNBOUND",
+  "project_id": "TEST-CPE31",
+  "episode_id": "TEST-CPE31-EP1",
+  "is_test": true,
+  "question": "Em qual versão a segunda batida chega com o intervalo certo?",
+  "takes": {
+    "A": {
+      "id": "TEST-TAKE-COM-01-2",
+      "revision": 1,
+      "version": 1,
+      "sha256": "473333a82e35223d6203d2f1977f809c56be499efb3f3fb86f682fe4196eb96b",
+      "mime": "video/mp4",
+      "duration_ms": 6000,
+      "has_audio": true
+    },
+    "B": {
+      "id": "TEST-TAKE-COM-01-1",
+      "revision": 1,
+      "version": 1,
+      "sha256": "6d18ed5adf3d6763ab50673d6982b169c06f39582cc6ab1ba57108293ff93062",
+      "mime": "video/mp4",
+      "duration_ms": 6000,
+      "has_audio": true
+    }
+  },
+  "pair_sha256": "5e6591da595f4adf2361e72063f4406675bd3e3b165250558a15b755181b06d1"
+}

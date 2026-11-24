@@ -1,0 +1,618 @@
+{
+  "before_stage": {
+    "purpose": "Registrar before stage",
+    "trigger": "Chamada explícita do harness para a operação correspondente; não é observador global",
+    "inputs": [
+      "run_id",
+      "scope",
+      "operation",
+      "evidence references"
+    ],
+    "operations": [
+      "Append immutable per-run JSONL event and hash chain"
+    ],
+    "outputs": [
+      "event id",
+      "status",
+      "previous hash",
+      "event hash"
+    ],
+    "validation": [
+      "Known event name",
+      "Allowed evidence status",
+      "Serialized inputs/outputs, not private chain of thought"
+    ],
+    "evidence": "Per-run events.jsonl and referenced artifacts",
+    "on_error": "on_failure; keep previous artifacts; outcome unknown if interrupted",
+    "recovery": "Fresh shared-state read, inspect files, reconcile; never replay remote operations blindly",
+    "coverage": "SCRIPT_EVENT when emitted by CLI; creative agent actions outside CLI must be recorded explicitly"
+  },
+  "after_stage": {
+    "purpose": "Registrar after stage",
+    "trigger": "Chamada explícita do harness para a operação correspondente; não é observador global",
+    "inputs": [
+      "run_id",
+      "scope",
+      "operation",
+      "evidence references"
+    ],
+    "operations": [
+      "Append immutable per-run JSONL event and hash chain"
+    ],
+    "outputs": [
+      "event id",
+      "status",
+      "previous hash",
+      "event hash"
+    ],
+    "validation": [
+      "Known event name",
+      "Allowed evidence status",
+      "Serialized inputs/outputs, not private chain of thought"
+    ],
+    "evidence": "Per-run events.jsonl and referenced artifacts",
+    "on_error": "on_failure; keep previous artifacts; outcome unknown if interrupted",
+    "recovery": "Fresh shared-state read, inspect files, reconcile; never replay remote operations blindly",
+    "coverage": "SCRIPT_EVENT when emitted by CLI; creative agent actions outside CLI must be recorded explicitly"
+  },
+  "before_create": {
+    "purpose": "Registrar before create",
+    "trigger": "Chamada explícita do harness para a operação correspondente; não é observador global",
+    "inputs": [
+      "run_id",
+      "scope",
+      "operation",
+      "evidence references"
+    ],
+    "operations": [
+      "Append immutable per-run JSONL event and hash chain"
+    ],
+    "outputs": [
+      "event id",
+      "status",
+      "previous hash",
+      "event hash"
+    ],
+    "validation": [
+      "Known event name",
+      "Allowed evidence status",
+      "Serialized inputs/outputs, not private chain of thought"
+    ],
+    "evidence": "Per-run events.jsonl and referenced artifacts",
+    "on_error": "on_failure; keep previous artifacts; outcome unknown if interrupted",
+    "recovery": "Fresh shared-state read, inspect files, reconcile; never replay remote operations blindly",
+    "coverage": "SCRIPT_EVENT when emitted by CLI; creative agent actions outside CLI must be recorded explicitly"
+  },
+  "after_create": {
+    "purpose": "Registrar after create",
+    "trigger": "Chamada explícita do harness para a operação correspondente; não é observador global",
+    "inputs": [
+      "run_id",
+      "scope",
+      "operation",
+      "evidence references"
+    ],
+    "operations": [
+      "Append immutable per-run JSONL event and hash chain"
+    ],
+    "outputs": [
+      "event id",
+      "status",
+      "previous hash",
+      "event hash"
+    ],
+    "validation": [
+      "Known event name",
+      "Allowed evidence status",
+      "Serialized inputs/outputs, not private chain of thought"
+    ],
+    "evidence": "Per-run events.jsonl and referenced artifacts",
+    "on_error": "on_failure; keep previous artifacts; outcome unknown if interrupted",
+    "recovery": "Fresh shared-state read, inspect files, reconcile; never replay remote operations blindly",
+    "coverage": "SCRIPT_EVENT when emitted by CLI; creative agent actions outside CLI must be recorded explicitly"
+  },
+  "before_experiment": {
+    "purpose": "Registrar before experiment",
+    "trigger": "Chamada explícita do harness para a operação correspondente; não é observador global",
+    "inputs": [
+      "run_id",
+      "scope",
+      "operation",
+      "evidence references"
+    ],
+    "operations": [
+      "Append immutable per-run JSONL event and hash chain"
+    ],
+    "outputs": [
+      "event id",
+      "status",
+      "previous hash",
+      "event hash"
+    ],
+    "validation": [
+      "Known event name",
+      "Allowed evidence status",
+      "Serialized inputs/outputs, not private chain of thought"
+    ],
+    "evidence": "Per-run events.jsonl and referenced artifacts",
+    "on_error": "on_failure; keep previous artifacts; outcome unknown if interrupted",
+    "recovery": "Fresh shared-state read, inspect files, reconcile; never replay remote operations blindly",
+    "coverage": "SCRIPT_EVENT when emitted by CLI; creative agent actions outside CLI must be recorded explicitly"
+  },
+  "after_experiment": {
+    "purpose": "Registrar after experiment",
+    "trigger": "Chamada explícita do harness para a operação correspondente; não é observador global",
+    "inputs": [
+      "run_id",
+      "scope",
+      "operation",
+      "evidence references"
+    ],
+    "operations": [
+      "Append immutable per-run JSONL event and hash chain"
+    ],
+    "outputs": [
+      "event id",
+      "status",
+      "previous hash",
+      "event hash"
+    ],
+    "validation": [
+      "Known event name",
+      "Allowed evidence status",
+      "Serialized inputs/outputs, not private chain of thought"
+    ],
+    "evidence": "Per-run events.jsonl and referenced artifacts",
+    "on_error": "on_failure; keep previous artifacts; outcome unknown if interrupted",
+    "recovery": "Fresh shared-state read, inspect files, reconcile; never replay remote operations blindly",
+    "coverage": "SCRIPT_EVENT when emitted by CLI; creative agent actions outside CLI must be recorded explicitly"
+  },
+  "before_judgment": {
+    "purpose": "Registrar before judgment",
+    "trigger": "Chamada explícita do harness para a operação correspondente; não é observador global",
+    "inputs": [
+      "run_id",
+      "scope",
+      "operation",
+      "evidence references"
+    ],
+    "operations": [
+      "Append immutable per-run JSONL event and hash chain"
+    ],
+    "outputs": [
+      "event id",
+      "status",
+      "previous hash",
+      "event hash"
+    ],
+    "validation": [
+      "Known event name",
+      "Allowed evidence status",
+      "Serialized inputs/outputs, not private chain of thought"
+    ],
+    "evidence": "Per-run events.jsonl and referenced artifacts",
+    "on_error": "on_failure; keep previous artifacts; outcome unknown if interrupted",
+    "recovery": "Fresh shared-state read, inspect files, reconcile; never replay remote operations blindly",
+    "coverage": "SCRIPT_EVENT when emitted by CLI; creative agent actions outside CLI must be recorded explicitly"
+  },
+  "after_judgment": {
+    "purpose": "Registrar after judgment",
+    "trigger": "Chamada explícita do harness para a operação correspondente; não é observador global",
+    "inputs": [
+      "run_id",
+      "scope",
+      "operation",
+      "evidence references"
+    ],
+    "operations": [
+      "Append immutable per-run JSONL event and hash chain"
+    ],
+    "outputs": [
+      "event id",
+      "status",
+      "previous hash",
+      "event hash"
+    ],
+    "validation": [
+      "Known event name",
+      "Allowed evidence status",
+      "Serialized inputs/outputs, not private chain of thought"
+    ],
+    "evidence": "Per-run events.jsonl and referenced artifacts",
+    "on_error": "on_failure; keep previous artifacts; outcome unknown if interrupted",
+    "recovery": "Fresh shared-state read, inspect files, reconcile; never replay remote operations blindly",
+    "coverage": "SCRIPT_EVENT when emitted by CLI; creative agent actions outside CLI must be recorded explicitly"
+  },
+  "before_revision": {
+    "purpose": "Registrar before revision",
+    "trigger": "Chamada explícita do harness para a operação correspondente; não é observador global",
+    "inputs": [
+      "run_id",
+      "scope",
+      "operation",
+      "evidence references"
+    ],
+    "operations": [
+      "Append immutable per-run JSONL event and hash chain"
+    ],
+    "outputs": [
+      "event id",
+      "status",
+      "previous hash",
+      "event hash"
+    ],
+    "validation": [
+      "Known event name",
+      "Allowed evidence status",
+      "Serialized inputs/outputs, not private chain of thought"
+    ],
+    "evidence": "Per-run events.jsonl and referenced artifacts",
+    "on_error": "on_failure; keep previous artifacts; outcome unknown if interrupted",
+    "recovery": "Fresh shared-state read, inspect files, reconcile; never replay remote operations blindly",
+    "coverage": "SCRIPT_EVENT when emitted by CLI; creative agent actions outside CLI must be recorded explicitly"
+  },
+  "after_revision": {
+    "purpose": "Registrar after revision",
+    "trigger": "Chamada explícita do harness para a operação correspondente; não é observador global",
+    "inputs": [
+      "run_id",
+      "scope",
+      "operation",
+      "evidence references"
+    ],
+    "operations": [
+      "Append immutable per-run JSONL event and hash chain"
+    ],
+    "outputs": [
+      "event id",
+      "status",
+      "previous hash",
+      "event hash"
+    ],
+    "validation": [
+      "Known event name",
+      "Allowed evidence status",
+      "Serialized inputs/outputs, not private chain of thought"
+    ],
+    "evidence": "Per-run events.jsonl and referenced artifacts",
+    "on_error": "on_failure; keep previous artifacts; outcome unknown if interrupted",
+    "recovery": "Fresh shared-state read, inspect files, reconcile; never replay remote operations blindly",
+    "coverage": "SCRIPT_EVENT when emitted by CLI; creative agent actions outside CLI must be recorded explicitly"
+  },
+  "before_approval": {
+    "purpose": "Registrar before approval",
+    "trigger": "Chamada explícita do harness para a operação correspondente; não é observador global",
+    "inputs": [
+      "run_id",
+      "scope",
+      "operation",
+      "evidence references"
+    ],
+    "operations": [
+      "Append immutable per-run JSONL event and hash chain"
+    ],
+    "outputs": [
+      "event id",
+      "status",
+      "previous hash",
+      "event hash"
+    ],
+    "validation": [
+      "Known event name",
+      "Allowed evidence status",
+      "Serialized inputs/outputs, not private chain of thought"
+    ],
+    "evidence": "Per-run events.jsonl and referenced artifacts",
+    "on_error": "on_failure; keep previous artifacts; outcome unknown if interrupted",
+    "recovery": "Fresh shared-state read, inspect files, reconcile; never replay remote operations blindly",
+    "coverage": "SCRIPT_EVENT when emitted by CLI; creative agent actions outside CLI must be recorded explicitly"
+  },
+  "after_approval": {
+    "purpose": "Registrar after approval",
+    "trigger": "Chamada explícita do harness para a operação correspondente; não é observador global",
+    "inputs": [
+      "run_id",
+      "scope",
+      "operation",
+      "evidence references"
+    ],
+    "operations": [
+      "Append immutable per-run JSONL event and hash chain"
+    ],
+    "outputs": [
+      "event id",
+      "status",
+      "previous hash",
+      "event hash"
+    ],
+    "validation": [
+      "Known event name",
+      "Allowed evidence status",
+      "Serialized inputs/outputs, not private chain of thought"
+    ],
+    "evidence": "Per-run events.jsonl and referenced artifacts",
+    "on_error": "on_failure; keep previous artifacts; outcome unknown if interrupted",
+    "recovery": "Fresh shared-state read, inspect files, reconcile; never replay remote operations blindly",
+    "coverage": "SCRIPT_EVENT when emitted by CLI; creative agent actions outside CLI must be recorded explicitly"
+  },
+  "before_transition": {
+    "purpose": "Registrar before transition",
+    "trigger": "Chamada explícita do harness para a operação correspondente; não é observador global",
+    "inputs": [
+      "run_id",
+      "scope",
+      "operation",
+      "evidence references"
+    ],
+    "operations": [
+      "Append immutable per-run JSONL event and hash chain"
+    ],
+    "outputs": [
+      "event id",
+      "status",
+      "previous hash",
+      "event hash"
+    ],
+    "validation": [
+      "Known event name",
+      "Allowed evidence status",
+      "Serialized inputs/outputs, not private chain of thought"
+    ],
+    "evidence": "Per-run events.jsonl and referenced artifacts",
+    "on_error": "on_failure; keep previous artifacts; outcome unknown if interrupted",
+    "recovery": "Fresh shared-state read, inspect files, reconcile; never replay remote operations blindly",
+    "coverage": "SCRIPT_EVENT when emitted by CLI; creative agent actions outside CLI must be recorded explicitly"
+  },
+  "after_transition": {
+    "purpose": "Registrar after transition",
+    "trigger": "Chamada explícita do harness para a operação correspondente; não é observador global",
+    "inputs": [
+      "run_id",
+      "scope",
+      "operation",
+      "evidence references"
+    ],
+    "operations": [
+      "Append immutable per-run JSONL event and hash chain"
+    ],
+    "outputs": [
+      "event id",
+      "status",
+      "previous hash",
+      "event hash"
+    ],
+    "validation": [
+      "Known event name",
+      "Allowed evidence status",
+      "Serialized inputs/outputs, not private chain of thought"
+    ],
+    "evidence": "Per-run events.jsonl and referenced artifacts",
+    "on_error": "on_failure; keep previous artifacts; outcome unknown if interrupted",
+    "recovery": "Fresh shared-state read, inspect files, reconcile; never replay remote operations blindly",
+    "coverage": "SCRIPT_EVENT when emitted by CLI; creative agent actions outside CLI must be recorded explicitly"
+  },
+  "before_export": {
+    "purpose": "Registrar before export",
+    "trigger": "Chamada explícita do harness para a operação correspondente; não é observador global",
+    "inputs": [
+      "run_id",
+      "scope",
+      "operation",
+      "evidence references"
+    ],
+    "operations": [
+      "Append immutable per-run JSONL event and hash chain"
+    ],
+    "outputs": [
+      "event id",
+      "status",
+      "previous hash",
+      "event hash"
+    ],
+    "validation": [
+      "Known event name",
+      "Allowed evidence status",
+      "Serialized inputs/outputs, not private chain of thought"
+    ],
+    "evidence": "Per-run events.jsonl and referenced artifacts",
+    "on_error": "on_failure; keep previous artifacts; outcome unknown if interrupted",
+    "recovery": "Fresh shared-state read, inspect files, reconcile; never replay remote operations blindly",
+    "coverage": "SCRIPT_EVENT when emitted by CLI; creative agent actions outside CLI must be recorded explicitly"
+  },
+  "after_export": {
+    "purpose": "Registrar after export",
+    "trigger": "Chamada explícita do harness para a operação correspondente; não é observador global",
+    "inputs": [
+      "run_id",
+      "scope",
+      "operation",
+      "evidence references"
+    ],
+    "operations": [
+      "Append immutable per-run JSONL event and hash chain"
+    ],
+    "outputs": [
+      "event id",
+      "status",
+      "previous hash",
+      "event hash"
+    ],
+    "validation": [
+      "Known event name",
+      "Allowed evidence status",
+      "Serialized inputs/outputs, not private chain of thought"
+    ],
+    "evidence": "Per-run events.jsonl and referenced artifacts",
+    "on_error": "on_failure; keep previous artifacts; outcome unknown if interrupted",
+    "recovery": "Fresh shared-state read, inspect files, reconcile; never replay remote operations blindly",
+    "coverage": "SCRIPT_EVENT when emitted by CLI; creative agent actions outside CLI must be recorded explicitly"
+  },
+  "before_import": {
+    "purpose": "Registrar before import",
+    "trigger": "Chamada explícita do harness para a operação correspondente; não é observador global",
+    "inputs": [
+      "run_id",
+      "scope",
+      "operation",
+      "evidence references"
+    ],
+    "operations": [
+      "Append immutable per-run JSONL event and hash chain"
+    ],
+    "outputs": [
+      "event id",
+      "status",
+      "previous hash",
+      "event hash"
+    ],
+    "validation": [
+      "Known event name",
+      "Allowed evidence status",
+      "Serialized inputs/outputs, not private chain of thought"
+    ],
+    "evidence": "Per-run events.jsonl and referenced artifacts",
+    "on_error": "on_failure; keep previous artifacts; outcome unknown if interrupted",
+    "recovery": "Fresh shared-state read, inspect files, reconcile; never replay remote operations blindly",
+    "coverage": "SCRIPT_EVENT when emitted by CLI; creative agent actions outside CLI must be recorded explicitly"
+  },
+  "after_import": {
+    "purpose": "Registrar after import",
+    "trigger": "Chamada explícita do harness para a operação correspondente; não é observador global",
+    "inputs": [
+      "run_id",
+      "scope",
+      "operation",
+      "evidence references"
+    ],
+    "operations": [
+      "Append immutable per-run JSONL event and hash chain"
+    ],
+    "outputs": [
+      "event id",
+      "status",
+      "previous hash",
+      "event hash"
+    ],
+    "validation": [
+      "Known event name",
+      "Allowed evidence status",
+      "Serialized inputs/outputs, not private chain of thought"
+    ],
+    "evidence": "Per-run events.jsonl and referenced artifacts",
+    "on_error": "on_failure; keep previous artifacts; outcome unknown if interrupted",
+    "recovery": "Fresh shared-state read, inspect files, reconcile; never replay remote operations blindly",
+    "coverage": "SCRIPT_EVENT when emitted by CLI; creative agent actions outside CLI must be recorded explicitly"
+  },
+  "before_checkpoint": {
+    "purpose": "Registrar before checkpoint",
+    "trigger": "Chamada explícita do harness para a operação correspondente; não é observador global",
+    "inputs": [
+      "run_id",
+      "scope",
+      "operation",
+      "evidence references"
+    ],
+    "operations": [
+      "Append immutable per-run JSONL event and hash chain"
+    ],
+    "outputs": [
+      "event id",
+      "status",
+      "previous hash",
+      "event hash"
+    ],
+    "validation": [
+      "Known event name",
+      "Allowed evidence status",
+      "Serialized inputs/outputs, not private chain of thought"
+    ],
+    "evidence": "Per-run events.jsonl and referenced artifacts",
+    "on_error": "on_failure; keep previous artifacts; outcome unknown if interrupted",
+    "recovery": "Fresh shared-state read, inspect files, reconcile; never replay remote operations blindly",
+    "coverage": "SCRIPT_EVENT when emitted by CLI; creative agent actions outside CLI must be recorded explicitly"
+  },
+  "after_checkpoint": {
+    "purpose": "Registrar after checkpoint",
+    "trigger": "Chamada explícita do harness para a operação correspondente; não é observador global",
+    "inputs": [
+      "run_id",
+      "scope",
+      "operation",
+      "evidence references"
+    ],
+    "operations": [
+      "Append immutable per-run JSONL event and hash chain"
+    ],
+    "outputs": [
+      "event id",
+      "status",
+      "previous hash",
+      "event hash"
+    ],
+    "validation": [
+      "Known event name",
+      "Allowed evidence status",
+      "Serialized inputs/outputs, not private chain of thought"
+    ],
+    "evidence": "Per-run events.jsonl and referenced artifacts",
+    "on_error": "on_failure; keep previous artifacts; outcome unknown if interrupted",
+    "recovery": "Fresh shared-state read, inspect files, reconcile; never replay remote operations blindly",
+    "coverage": "SCRIPT_EVENT when emitted by CLI; creative agent actions outside CLI must be recorded explicitly"
+  },
+  "on_failure": {
+    "purpose": "Registrar on failure",
+    "trigger": "Chamada explícita do harness para a operação correspondente; não é observador global",
+    "inputs": [
+      "run_id",
+      "scope",
+      "operation",
+      "evidence references"
+    ],
+    "operations": [
+      "Append immutable per-run JSONL event and hash chain"
+    ],
+    "outputs": [
+      "event id",
+      "status",
+      "previous hash",
+      "event hash"
+    ],
+    "validation": [
+      "Known event name",
+      "Allowed evidence status",
+      "Serialized inputs/outputs, not private chain of thought"
+    ],
+    "evidence": "Per-run events.jsonl and referenced artifacts",
+    "on_error": "on_failure; keep previous artifacts; outcome unknown if interrupted",
+    "recovery": "Fresh shared-state read, inspect files, reconcile; never replay remote operations blindly",
+    "coverage": "SCRIPT_EVENT when emitted by CLI; creative agent actions outside CLI must be recorded explicitly"
+  },
+  "on_recovery": {
+    "purpose": "Registrar on recovery",
+    "trigger": "Chamada explícita do harness para a operação correspondente; não é observador global",
+    "inputs": [
+      "run_id",
+      "scope",
+      "operation",
+      "evidence references"
+    ],
+    "operations": [
+      "Append immutable per-run JSONL event and hash chain"
+    ],
+    "outputs": [
+      "event id",
+      "status",
+      "previous hash",
+      "event hash"
+    ],
+    "validation": [
+      "Known event name",
+      "Allowed evidence status",
+      "Serialized inputs/outputs, not private chain of thought"
+    ],
+    "evidence": "Per-run events.jsonl and referenced artifacts",
+    "on_error": "on_failure; keep previous artifacts; outcome unknown if interrupted",
+    "recovery": "Fresh shared-state read, inspect files, reconcile; never replay remote operations blindly",
+    "coverage": "SCRIPT_EVENT when emitted by CLI; creative agent actions outside CLI must be recorded explicitly"
+  }
+}

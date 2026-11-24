@@ -1,0 +1,36 @@
+{
+  "skill_version": "1.4.0",
+  "state_contract_version": "3.1.0",
+  "based_on": "Official V3 / CPE 1.3.0 audit",
+  "native_source": "https://docs.google.com/spreadsheets/d/CONFIGURE_YOUR_SPREADSHEET_ID/edit",
+  "account": "production@example.invalid",
+  "sync": "on_each_relevant_user_interaction",
+  "atomic": false,
+  "python_tests": 318,
+  "dom_checks": 73,
+  "native_tables": 35,
+  "native_sheets": 39,
+  "original_sha256": "38582e59b870ff1bb6f261a54cdf8d01569661bbc18bf436f6c38c4a75692e8e",
+  "human_visual_approval": false,
+  "paid_generations": 0,
+  "native_concept_generations": 5,
+  "limitations": [
+    "State read per interaction; optimistic revision without atomicity",
+    "Director rejected shelter studies; no artistic approval inferred",
+    "Native hook trust and lifecycle verification pending",
+    "Panel browser visual and listening acceptance pending",
+    "One-brief exploratory textual benchmark is not general efficacy evidence"
+  ],
+  "audit_report": "AUDIT-REPORT.md",
+  "manual": "MANUAL.md",
+  "requirements_matrix": "audits/requirements-traceability.csv",
+  "previous_release_sha256": "3321a730290dc13d556ee4abc1b52cb69012e1419e8bc54ad8245abe63ec513e",
+  "native_test_receipt": "audits/native-validation-summary.json",
+  "public_distribution": {
+    "raw_account_exports": false,
+    "private_original_v3_included": false,
+    "local_configuration_included": false,
+    "prior_director_preference_in_seed": false
+  },
+  "previous_release_version": "1.3.0"
+}

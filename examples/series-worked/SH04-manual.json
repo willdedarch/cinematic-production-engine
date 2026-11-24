@@ -1,0 +1,59 @@
+{
+  "shot": {
+    "table": "Shot List",
+    "id": "SH04",
+    "revision": 1,
+    "sha256": "98b8c686982512d12fee19330c302c53731473d191993ed016c172c706bed7c2"
+  },
+  "delivery": {
+    "kind": "MANUAL_PRODUCTION_EXPORT_NOT_EXECUTED",
+    "model_id": "seedance_2_5",
+    "output_type": "video",
+    "prompt": "Initial state: {\"cantil\":\"Lia.direita\",\"tampa\":\"roscada_no_cantil\"}\nAction: Com o cantil na direita, Lia desenrosca a tampa com a esquerda e serve nela uma porção. Diz “Então segura” e devolve o cantil aberto à direita de Davi. Conserva a tampa na esquerda.\nPerformance: Lia muda o sentido da oferta ao dividir a água.\nCamera: Detalhe da tampa. Câmera ao sul do eixo.\nSound: Água contra o metal.\nProtected: {\"cantil\":\"Davi.direita\",\"tampa\":\"Lia.esquerda\"}",
+    "native_parameters": {
+      "mode": "omni_reference",
+      "resolution": "720p",
+      "generate_audio": true,
+      "duration": 8
+    },
+    "aspect_ratio": "16:9",
+    "reference_manifest": [
+      {
+        "id": "ART-DEMO-SH04",
+        "revision": 1,
+        "sha256": "5eb197ca76194ceb7cfc318d5d94bcb4575da161c30c03b18de6bc8231e1d80a",
+        "uri": "examples/series-worked/frames/P04.png",
+        "role": "image_references",
+        "position": 1,
+        "rights_confirmed": true,
+        "rights": "Autoral, autorizado no ensaio"
+      }
+    ],
+    "protected": "{\"cantil\":\"Davi.direita\",\"tampa\":\"Lia.esquerda\"}",
+    "warnings": [
+      "Attach each reference in the supported UI role; local labels are not native @bindings",
+      "Natural-language camera/light/acting intent is a request, not a verified native parameter or result.",
+      "Refresh capabilities at production time; catalog snapshot is not a generation benchmark."
+    ],
+    "catalog_checked_at": "2026-11-24T07:55:29.000Z",
+    "generation_tested": false,
+    "credits_consumed": 0,
+    "source_spec_sha256": "c03673eca9f9b9bf54e6d623d033bc04d2afe5b35cd9a2a2e1e366b0660e5182"
+  },
+  "attachment_order": [
+    {
+      "id": "ART-DEMO-SH04",
+      "field": "image_references",
+      "position": 1,
+      "file": "examples/series-worked/frames/P04.png",
+      "revision": 1,
+      "sha256": "5eb197ca76194ceb7cfc318d5d94bcb4575da161c30c03b18de6bc8231e1d80a"
+    }
+  ],
+  "return_checklist": [
+    "Identificar plano, versão e origem",
+    "Conferir duração e ação no take",
+    "Registrar direitos e revisão técnica/artística"
+  ],
+  "execution": "MANUAL"
+}

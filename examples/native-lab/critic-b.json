@@ -1,0 +1,32 @@
+{
+  "reviewer": "B",
+  "inspection": "Visualização direta somente de C-96.png, C-41.png, M-28.png, M-73.png, nessa ordem.",
+  "generation_intent": "UNKNOWN",
+  "pairs": {
+    "C": {
+      "purpose_given": "Fichas multivista da mesma pessoa: legibilidade, identidade e cobertura de vistas.",
+      "verdict": "C-41",
+      "confidence": "alta para cobertura; moderada para identidade estrita",
+      "observations": {
+        "C-96": ["Quatro corpos inteiros em frente, perfil, costas e três quartos; três cabeças ampliadas embaixo.", "As duas cabeças ampliadas laterais apontam ambas para a esquerda da imagem; a terceira muda o ângulo, mas não cobre o perfil oposto.", "Traços faciais, coque, casaco escuro, saia e botas são legíveis e apresentam identidade aparente consistente entre painéis.", "Há leitura de superfície têxtil mais desenhada no casaco; isso não demonstra qualidade técnica nem autenticidade histórica."],
+        "C-41": ["Mantém frente, perfil, costas e três quartos de corpo inteiro.", "A linha inferior oferece frente e perfis voltados para lados opostos, acrescentando informação facial que C-96 não oferece.", "Nariz, olhos, proporções, cabelo com mechas claras e coque permitem reconhecer a mesma identidade aparente.", "Contornos e roupa continuam legíveis sobre fundo neutro; o perfil oposto não é uma vista idêntica repetida."]
+      },
+      "comparison": "C-41 vence principalmente pela cobertura dos dois perfis ampliados, preservando leitura e identidade aparente. Não observo uma vantagem decisiva de legibilidade frontal em nenhum dos dois.",
+      "unknowns": ["Identidade exata contra uma pessoa ou referência externa não fornecida.", "Consistência de geometria tridimensional ou entre quadros em movimento.", "Vistas superiores, inferiores e detalhes fora das áreas mostradas.", "Intenção da alteração, processo de geração e eventual aprovação humana."]
+    },
+    "M": {
+      "purpose_given": "Estudos estáticos de cena dramática coletiva num abrigo molhado: hierarquia, encenação e materialidade.",
+      "verdict": "M-73",
+      "confidence": "alta para legibilidade da figura central; moderada para preferência global",
+      "observations": {
+        "M-28": ["Quatro figuras: mulher sentada com caneca à esquerda, mulher central segurando manta, homem sentado à direita e homem junto à porta ao fundo.", "Janela e porta oferecem grandes áreas claras; quadro ao fundo também fica luminoso.", "Rosto e tronco da figura central estão muito escuros em relação ao fundo. Mãos e trama da manta perdem leitura.", "Piso com reflexos, roupa molhada e balde estabelecem materialidade úmida. As linhas de olhar das figuras laterais convergem para a mulher central."],
+        "M-73": ["Posições e relação de olhares permanecem próximas às de M-28.", "Rosto central, mãos segurando a manta e textura do tecido ficam mais distintos; o quadro escuro atrás separa melhor a cabeça.", "Brilhos no casaco e cabelo, piso reflexivo e pano pesado tornam a umidade e a diferença de materiais legíveis.", "Uma lamparina acesa é visível no alto à direita; constitui uma mudança concreta no estado luminoso da imagem, sem que sua intenção ou adequação narrativa possa ser inferida.", "A mulher central conserva relação visual com a sentada à esquerda; o homem à direita observa e o da porta segura a folha de madeira."]
+      },
+      "comparison": "M-73 apresenta hierarquia dramática mais clara porque a figura central deixa de ser uma massa em sombra contra o quadro claro. Encenação geral é semelhante; sua vantagem está na leitura de expressão, mãos e manta, além da materialidade molhada. A lamparina chama atenção periférica, mas não supera o foco central.",
+      "unknowns": ["O que cada pessoa pretende, diz ou fará depois do instante mostrado.", "Movimento, timing, continuidade entre planos, som e desempenho de atores.", "Se a lamparina acesa corresponde a uma exigência ou a uma violação narrativa: nenhum requisito desse estado foi fornecido para o par M.", "A dinâmica coletiva ao longo de uma cena: um quadro estático mostra relações espaciais, não comprova cooperação temporal.", "Adequação histórica, intenção de geração e aprovação humana."]
+    }
+  },
+  "audiovisual_realizado": "UNKNOWN",
+  "human_evaluation": "UNKNOWN",
+  "limits": "Preferências visuais restritas aos arquivos inspecionados; não são avaliação de vídeo, som ou eficácia artística comprovada. Nenhuma nova mídia foi gerada."
+}

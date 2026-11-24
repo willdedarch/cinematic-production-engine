@@ -1,0 +1,659 @@
+# Cinematic Production Engine V3.1 — Ampliação da base de conhecimento, referências e exemplos
+
+Incorpore os requisitos abaixo à implementação em andamento da Cinematic Production Engine V3.1.
+
+Todos os requisitos, funcionalidades, integrações, painéis, workflows, validações e restrições anteriormente aprovados permanecem válidos.
+
+O objetivo desta ampliação é elevar substancialmente a competência narrativa, artística, cinematográfica e técnica da Skill, evitando que ela seja apenas uma coleção de instruções genéricas, conceitos superficiais e templates.
+
+A Skill deve ensinar ao agente **o que fazer, quando fazer, por que fazer, como fazer, como avaliar o resultado e como corrigir possíveis falhas**.
+
+## 1. Pesquisa aprofundada e ampliação das fontes
+
+Realize uma pesquisa aprofundada em documentação oficial, repositórios, Skills, projetos abertos, materiais educacionais, entrevistas técnicas e workflows de profissionais do cinema e da produção audiovisual com IA.
+
+Priorize:
+
+- Higgsfield e seus criadores parceiros.
+- Higgsfield Originals.
+- Hell Grind e CINEDANCE.
+- Higgsfield Short Drama e Cinema Studio.
+- Open Projects da comunidade Higgsfield.
+- Skills e workflows publicados por produtores cinematográficos.
+- O-Side Media Higgsfield AI Prompt Skill.
+- DirectorSKILL.
+- Screenwriting Skills.
+- Pitch Drama.
+- Demais Skills e soluções anteriormente selecionadas.
+- American Society of Cinematographers — ASC.
+- British Society of Cinematographers — BSC.
+- Panavision.
+- ARRI.
+- Cooke Optics.
+- ZEISS.
+- Kodak Motion Picture.
+- Blender.
+- Entrevistas com diretores, diretores de fotografia, montadores, roteiristas e designers de produção.
+
+Expanda a pesquisa para outras fontes relevantes, sem se limitar à lista acima.
+
+Compare criticamente os materiais encontrados. Não classifique uma fonte apenas por sua popularidade, quantidade de estrelas no GitHub ou divulgação comercial.
+
+Avalie profundidade técnica, confiabilidade, aplicabilidade, originalidade, atualização, compatibilidade, limitações e evidências práticas.
+
+## 2. Biblioteca multidimensional de conhecimento cinematográfico
+
+Implemente uma biblioteca organizada por competências, com carregamento progressivo de referências conforme a etapa do workflow.
+
+### Dramaturgia e narrativa
+
+- Desenvolvimento de histórias.
+- Mineração de acontecimentos com potencial dramático.
+- Estruturas narrativas.
+- Arcos de personagens.
+- Conflito e causalidade.
+- Subtexto.
+- Dilemas morais.
+- Suspense.
+- Ironia dramática.
+- Antecipação e recompensa.
+- Viradas narrativas.
+- Clímax.
+- Cliffhangers.
+- Engenharia emocional.
+- Psicologia do espectador.
+- Retenção e compartilhamento.
+- Originalidade e prevenção de clichês.
+
+### Direção cinematográfica
+
+- Mise-en-scène.
+- Blocking e staging.
+- Direção de atores.
+- Intenção dramática.
+- Microexpressões.
+- Linguagem corporal.
+- Subtexto interpretativo.
+- Movimentos motivados de câmera.
+- Continuidade espacial.
+- Direção de olhar.
+- Eixo de ação.
+- Contracampo.
+- Narrativa visual.
+- Decupagem cinematográfica.
+
+### Fotografia cinematográfica
+
+- Câmeras digitais e de película.
+- Sensores e formatos.
+- Distâncias focais.
+- Lentes anamórficas e esféricas.
+- Lentes vintage e modernas.
+- Fatores de compressão anamórfica.
+- Profundidade de campo.
+- Perspectiva.
+- Campo de visão.
+- Abertura.
+- Focus falloff.
+- Focus breathing.
+- Bokeh.
+- Halation.
+- Lens flare.
+- Distorções ópticas.
+- Motion blur.
+- Shutter angle.
+- Film grain.
+- Film stocks.
+- Latitude de exposição.
+- Highlight roll-off.
+- Color grading.
+- Contraste tonal e cromático.
+- Naturalismo fotográfico.
+
+Não utilize nomes de equipamentos apenas como palavras decorativas em prompts. Explique quais características visuais são relevantes e como aplicá-las.
+
+### Composição cinematográfica
+
+- Regra dos terços.
+- Proporção áurea.
+- Espiral áurea.
+- Simetria e assimetria.
+- Composição triangular.
+- Diagonais.
+- Leading lines.
+- Frame within a frame.
+- Espaço negativo.
+- Foreground occlusion.
+- Perspectiva atmosférica.
+- Hierarquia visual.
+- Profundidade.
+- Deep staging.
+- Headroom e lead room.
+- Distribuição de personagens no quadro.
+- Relação entre escala, distância e significado dramático.
+
+Inclua aplicações específicas para 9:16, 16:9 e demais formatos cinematográficos relevantes.
+
+### Direção de arte e design de produção
+
+- Arquitetura.
+- Geometria persistente.
+- Plantas baixas.
+- Cenografia.
+- Materiais.
+- Texturas.
+- Figurinos.
+- Props.
+- Desgaste.
+- Envelhecimento.
+- História ambiental.
+- Clima.
+- Atmosfera.
+- Profundidade espacial.
+- Interação física.
+- Movimento ambiental.
+- Vida secundária.
+- Continuidade de ambientes.
+
+### Montagem e som
+
+- Ritmo narrativo.
+- Ritmo visual.
+- Montagem de continuidade.
+- Montagem paralela.
+- Corte motivado.
+- Match cut.
+- J-cut e L-cut.
+- Sound bridge.
+- Elipse.
+- Continuidade sonora.
+- Perspectiva sonora.
+- Som diegético e extradiegético.
+- Silêncio dramático.
+- Sound design.
+- Spotting musical.
+- Contraste emocional.
+- Construção sonora de suspense.
+
+## 3. Biblioteca de estilos de direção e gêneros
+
+Aprofunde os estudos sobre diferentes cineastas, diretores de fotografia e escolas cinematográficas.
+
+Não produza apenas pequenas biografias ou descrições genéricas de estilos.
+
+Extraia mecanismos concretos de direção, composição, encenação, fotografia, atuação, montagem, atmosfera e construção narrativa.
+
+Para cada referência, documente:
+
+- Características predominantes.
+- Técnicas utilizadas.
+- Intenção narrativa.
+- Aplicações adequadas.
+- Aplicações inadequadas.
+- Compatibilidade com outras referências.
+- Exemplos identificáveis.
+- Tradução da técnica para instruções práticas.
+- Possível aplicação em prompts.
+- Critérios de validação.
+
+Desenvolva perfis especializados de gênero, incluindo:
+
+- Guerra.
+- Drama histórico.
+- Ação.
+- Thriller.
+- Suspense psicológico.
+- Terror.
+- Sobrevivência.
+- Aventura.
+- Épico.
+- Noir.
+- Realismo documental.
+- Ficção científica.
+- Outros gêneros relevantes.
+
+A Skill deve combinar referências coerentemente, desenvolvendo identidade própria, sem simplesmente reproduzir cenas, personagens ou obras existentes.
+
+## 4. War Film Engine — aprofundamento especializado
+
+Amplie substancialmente o módulo de filmes de guerra.
+
+Evite narrativas excessivamente higienizadas, conflitos superficiais, cenários estáticos, diálogos expositivos e ação sem consequência.
+
+A representação ficcional da guerra deve possuir:
+
+- Intensidade dramática.
+- Sensação de perigo.
+- Medo.
+- Suspense.
+- Vulnerabilidade.
+- Brutalidade narrativa apropriada ao gênero.
+- Consequências físicas e emocionais.
+- Perdas.
+- Exaustão.
+- Desorientação.
+- Dilemas humanos.
+- Ambientes afetados pelos acontecimentos.
+- Materialidade.
+- Pressão temporal.
+- Acontecimentos simultâneos.
+- Reações humanas convincentes.
+- Contraste entre violência, silêncio e humanidade.
+
+Não confunda representação cinematográfica ficcional de conflitos com instruções operacionais de violência real. Não tente contornar políticas de segurança ou filtros dos provedores.
+
+O objetivo é evitar suavizações narrativas desnecessárias e preservar a autenticidade emocional e cinematográfica do gênero.
+
+## 5. Biblioteca visual de técnicas cinematográficas
+
+Implemente uma biblioteca visual acompanhada de análises técnicas.
+
+Não selecione imagens simplesmente porque são bonitas ou possuem aparência cinematográfica.
+
+Cada referência deverá demonstrar uma técnica específica.
+
+Inclua referências sobre:
+
+- Lentes anamórficas.
+- Lentes esféricas.
+- Grande-angular.
+- Teleobjetiva.
+- Profundidade de campo.
+- Composição em profundidade.
+- Iluminação natural.
+- Chiaroscuro.
+- Perspectiva atmosférica.
+- Silhuetas.
+- Contraluz.
+- Texturas.
+- Materialidade.
+- Cenários vivos.
+- Enquadramento vertical.
+- Blocking.
+- Character sheets.
+- Location sheets.
+- Props sheets.
+- Continuidade espacial.
+- Direção de atuação.
+
+Sempre que possível, utilize referências originais verificáveis, imagens autorizadas, diagramas próprios e materiais com procedência identificada.
+
+Registre fonte, autoria, URL, contexto, licença quando conhecida e limitações de utilização.
+
+Não gere imagens pagas para construir essa biblioteca.
+
+## 6. Golden Examples — exemplos de excelência
+
+Crie uma biblioteca de entregáveis exemplares, que sirvam como referência concreta para o comportamento esperado da Skill.
+
+Inclua exemplos completos de:
+
+- Briefings.
+- Propostas narrativas.
+- Loglines.
+- Sinopses.
+- Beat sheets.
+- Mapas emocionais.
+- Roteiros.
+- Diálogos.
+- Script Doctor.
+- Tratamentos cinematográficos.
+- Bíblias visuais.
+- Character profiles.
+- Character sheets.
+- Performance sheets.
+- Wardrobe sheets.
+- Plantas baixas.
+- Location sheets.
+- Master locations.
+- Contraângulos.
+- Props sheets.
+- Storyboards.
+- Shot lists.
+- Decupagens.
+- Prompts de imagem.
+- Prompts de vídeo.
+- Mapas sonoros.
+- Planos de montagem.
+- Checklists.
+- Relatórios de qualidade.
+- Registros de continuidade.
+- Produções completas.
+
+Cada exemplo deverá informar:
+
+- Contexto.
+- Objetivo.
+- Fonte.
+- Técnicas aplicadas.
+- Modelo utilizado, quando conhecido.
+- Resultado esperado.
+- Resultado observado, quando existente.
+- Razão pela qual o exemplo é considerado relevante.
+- Condições de reutilização.
+- Limitações.
+
+Diferencie exemplos comprovados, exemplos profissionais documentados e exemplos didáticos produzidos para ensinar determinada técnica.
+
+Não apresente exemplos teóricos como resultados testados.
+
+## 7. Exemplos contrastivos — positivos e negativos
+
+Implemente exemplos comparativos demonstrando diferenças entre resultados inadequados e resultados desejados.
+
+Para cada competência relevante, procure incluir:
+
+1. Exemplo inadequado.
+2. Diagnóstico do problema.
+3. Exemplo aceitável.
+4. Exemplo de excelência.
+5. Explicação das diferenças.
+6. Procedimento de correção.
+7. Checklist de validação.
+
+Priorize problemas como:
+
+- Aparência CGI.
+- Pele plástica.
+- Personagens excessivamente perfeitos.
+- Personagens visualmente semelhantes.
+- Iluminação artificial.
+- Cenários mortos.
+- Imagens planas.
+- Ausência de profundidade.
+- Arquitetura incoerente.
+- Mudanças indevidas de geometria.
+- Figuração sem propósito.
+- Movimento ambiental aleatório.
+- Atuação artificial.
+- Diálogos expositivos.
+- Ação sem impacto.
+- Suspense artificial.
+- Continuidade quebrada.
+- Prompts excessivamente longos.
+- Prompts contraditórios.
+- Instruções ignoradas pelo modelo.
+- Excesso de efeitos cinematográficos.
+
+A Skill deve aprender a diagnosticar problemas estruturais em vez de simplesmente acrescentar termos como cinematic, ultra-realistic, masterpiece e 8K.
+
+## 8. Prompt Laboratory — laboratório de prompts
+
+Implemente uma biblioteca comparativa de prompts cinematográficos.
+
+Não utilize uma única estrutura universal indiscriminadamente para todos os modelos.
+
+Pesquise documentação oficial e exemplos relevantes para os modelos selecionados.
+
+Inclua adaptadores para:
+
+- Seedance.
+- Seedream.
+- Kling.
+- GPT Image.
+- Nano Banana.
+- FLUX.
+- MiniMax.
+- Wan.
+- Cinema Studio.
+- Outros modelos relevantes.
+
+Para cada modelo, documente:
+
+- Estrutura recomendada.
+- Interpretação de referências.
+- Capacidades comprovadas.
+- Restrições.
+- Controles disponíveis.
+- Limites conhecidos.
+- Estratégias de composição.
+- Estratégias de continuidade.
+- Direção de atuação.
+- Tratamento de câmera.
+- Tratamento de movimentos.
+- Comportamento com múltiplas referências.
+- Uso de imagem inicial e final.
+- Referências de vídeo.
+- Erros recorrentes.
+- Exemplos positivos e negativos.
+
+Diferencie parâmetros nativamente suportados pelo modelo de descrições estéticas feitas por linguagem natural.
+
+Quando houver conector gratuito disponível, consulte as especificações atuais. Caso contrário, utilize documentação verificável.
+
+O Prompt Compiler deve produzir prompts adaptados à intenção cinematográfica e ao modelo selecionado, mantendo o usuário no controle da execução externa.
+
+## 9. Failure Library — diagnóstico e correção
+
+Crie uma biblioteca de falhas organizada por departamento.
+
+Cada registro deverá conter:
+
+- Identificação do problema.
+- Sintomas observáveis.
+- Possíveis causas.
+- Evidências necessárias.
+- Diagnóstico diferencial.
+- Procedimento de correção.
+- Técnicas relacionadas.
+- Referências.
+- Exemplos.
+- Critérios de aprovação.
+- Limitações conhecidas.
+
+Evite apresentar uma causa como certeza quando o problema puder possuir múltiplas origens.
+
+A Skill deve conseguir receber um roteiro, imagem, vídeo, character sheet, location sheet ou prompt produzido manualmente, diagnosticar falhas e orientar sua correção.
+
+## 10. Painéis interativos adicionais
+
+Amplie os painéis da Skill.
+
+Implemente, no mínimo:
+
+- Creative Reference Board.
+- Director Style Board.
+- Genre Configuration.
+- Cinematography Board.
+- Lens Selection.
+- Composition Board.
+- Lighting Board.
+- Color and Texture Board.
+- Emotional Design.
+- Living World Configuration.
+- Casting Comparison.
+- Location Comparison.
+- Props Comparison.
+- Prompt Laboratory.
+- Model Compatibility.
+- Failure Diagnosis.
+- Golden Examples Browser.
+- Reference Approval.
+- Learning Dashboard.
+
+Os painéis devem apresentar alternativas fundamentadas, referências visuais quando pertinentes, recomendações, diferenças entre opções, checklists e mecanismos de aprovação.
+
+Não transforme todos os painéis em formulários excessivamente longos.
+
+Apresente apenas os controles necessários à decisão daquele momento, preservando opções avançadas quando forem relevantes.
+
+Os painéis devem permitir:
+
+- Selecionar.
+- Comparar.
+- Configurar.
+- Revisar.
+- Aprovar.
+- Reprovar.
+- Solicitar correções.
+- Registrar observações.
+- Reutilizar configurações.
+- Retomar decisões anteriores.
+
+Quando o ambiente suportar controles interativos, utilize-os. Caso contrário, forneça uma interface textual equivalente.
+
+Não apresente painéis meramente demonstrativos como se fossem funcionalidades persistentes já implementadas.
+
+## 11. Ampliação do Google Sheets
+
+Preserve as abas e estruturas anteriormente definidas e acrescente entidades para gerenciamento do conhecimento.
+
+Considere:
+
+- Reference Library.
+- Golden Examples.
+- Failed Examples.
+- Prompt Library.
+- Techniques.
+- Creative Preferences.
+- Model Compatibility.
+- Production Lessons.
+- Director Profiles.
+- Genre Profiles.
+- Visual Standards.
+- Evaluation Results.
+
+Avalie relacionamentos e normalize os dados quando necessário, evitando duplicação desnecessária.
+
+O Google Sheets deve registrar referências aprovadas, exemplos rejeitados, preferências criativas, prompts validados, resultados de testes, correções realizadas e aprendizados reutilizáveis.
+
+O Google Drive poderá armazenar documentos e referências autorizadas, utilizando identificadores e links associados aos registros.
+
+Implemente recuperação de estado por interação, controle de versões, histórico e tratamento de conflitos.
+
+Não prometa sincronização instantânea, transações atômicas ou persistência automática quando essas capacidades não estiverem comprovadas.
+
+## 12. Aprendizado contínuo
+
+A Skill deverá aproveitar decisões reais do usuário para melhorar suas recomendações.
+
+Quando o usuário aprovar ou reprovar um resultado, registre:
+
+- O resultado analisado.
+- A decisão.
+- O motivo.
+- A competência relacionada.
+- A correção sugerida.
+- O contexto em que a decisão é aplicável.
+- Se a preferência é específica do projeto ou reutilizável.
+
+Não transforme automaticamente toda preferência pontual em regra global.
+
+Diferencie conhecimento cinematográfico, preferências do usuário, restrições do projeto, características do modelo e aprendizados experimentais.
+
+## 13. Golden Dataset e testes de regressão
+
+Crie um conjunto fixo de cenários para avaliar futuras versões da Skill.
+
+Inclua testes de:
+
+- Originalidade narrativa.
+- Impacto emocional.
+- Suspense.
+- Ritmo.
+- Causalidade.
+- Diálogos.
+- Direção de atuação.
+- Composição.
+- Fotografia.
+- Seleção de lentes.
+- Profundidade ambiental.
+- Construção de locações.
+- Consistência geométrica.
+- Continuidade de personagens.
+- Props.
+- Fidelidade histórica.
+- Compatibilidade de prompts.
+- Aprovações.
+- Bloqueio de assets.
+- Participação do usuário.
+- Recuperação de estado.
+- Execução manual.
+- Integração Google Sheets.
+- Respeito às restrições de custo.
+
+Execute testes comparativos entre as versões disponíveis, sempre que possível.
+
+Não utilize métricas arbitrárias como prova de qualidade artística. Justifique avaliações com evidências observáveis.
+
+Registre quais testes foram realmente executados, quais são apenas especificações e quais dependem de validação humana.
+
+## 14. Arquitetura modular e carregamento progressivo
+
+Evite transformar o SKILL.md em um documento excessivamente extenso.
+
+Utilize-o como orquestrador principal.
+
+Organize as bibliotecas, módulos, exemplos, diagnósticos, integrações, templates, schemas e testes em arquivos especializados.
+
+Implemente mecanismos claros de seleção e carregamento de referências conforme a tarefa.
+
+A Skill deve consultar o conhecimento necessário antes de executar cada etapa, sem carregar indiscriminadamente toda a biblioteca.
+
+Valide se os módulos são realmente acionados pelo workflow e se os exemplos são utilizados nas decisões.
+
+Arquivos existentes, mas nunca consultados, não representam conhecimento efetivamente incorporado.
+
+## 15. Facilidade de utilização
+
+A complexidade interna não pode resultar em dificuldade para o usuário.
+
+O agente deve conduzir a produção de maneira guiada, explicar a etapa atual, recomendar opções, apresentar referências, solicitar decisões quando necessárias e registrar aprovações.
+
+O usuário deve poder trabalhar por etapas, executar atividades manualmente, importar resultados externos, retornar a etapas anteriores e reutilizar assets já aprovados.
+
+Preserve a possibilidade de iniciar com comandos simples, como EP 1, NEXT, STATUS, CAST, LOCATION, LOOK, PROPS, DIRECT, QC e IMPORT.
+
+O sistema deve orientar o usuário sem exigir que ele conheça previamente toda a arquitetura da Skill.
+
+## 16. Restrições absolutas
+
+- Não disparar gerações pagas.
+- Não consumir créditos Higgsfield.
+- Não contratar serviços.
+- Não alugar GPUs.
+- Não desenvolver servidores externos.
+- Não desenvolver conectores personalizados.
+- Não utilizar integrações que dependam de pagamento.
+- Não alterar assets bloqueados sem autorização.
+- Não modificar decisões aprovadas silenciosamente.
+- Não inventar referências, capacidades, resultados ou testes.
+- Respeitar licenças e direitos de utilização dos materiais consultados.
+
+A produção audiovisual será executada manualmente pelo usuário. A Skill deverá preparar os materiais, prompts, referências, checklists e critérios de validação necessários.
+
+## 17. Auditoria final e entregáveis
+
+Incorpore esta ampliação à auditoria anteriormente solicitada.
+
+Entregue:
+
+- Pacote completo e atualizado da Skill.
+- Google Sheets atualizado.
+- Biblioteca de referências.
+- Biblioteca cinematográfica.
+- Golden Examples.
+- Exemplos contrastivos.
+- Prompt Laboratory.
+- Failure Library.
+- Golden Dataset.
+- Painéis e documentação de utilização.
+- Matriz de rastreabilidade metodológica.
+- Matriz de compatibilidade entre fontes, técnicas e modelos.
+- Relatório de melhorias.
+- Relatório de problemas encontrados e correções realizadas.
+- Relatório dos testes efetivamente executados.
+- CHANGELOG.
+- SOURCES.md.
+- Inventário dos arquivos.
+- Manual completo.
+
+O relatório deverá explicar não apenas quais conhecimentos foram adicionados, mas como eles são efetivamente acionados durante o workflow e quais resultados produzem.
+
+Não considere o trabalho concluído simplesmente porque todos os arquivos foram criados.
+
+Valide a integração entre os módulos, corrija inconsistências, elimine redundâncias, execute novamente os testes pertinentes e identifique limitações reais.
+
+**O objetivo final é construir uma Skill que reúna conhecimento cinematográfico profissional, workflows especializados de produção com IA, inteligência narrativa, referências de excelência, capacidade de diagnóstico, controle de continuidade e uma experiência de produção interativa, guiada e fácil de utilizar.**
+
+A metodologia deve servir à qualidade da obra cinematográfica, nunca limitar a criatividade ou obrigar todas as histórias a seguir a mesma fórmula.

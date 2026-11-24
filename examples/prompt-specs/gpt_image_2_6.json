@@ -1,0 +1,14 @@
+{
+  "model_id": "gpt_image_2_6",
+  "intent": {
+    "subject": "Davi e Lia, identidades distintas",
+    "space": "Sala 6×4 m, W1 oeste, E1 leste, N1 norte",
+    "composition": "Cantil no primeiro plano; Davi no médio; Lia ao fundo",
+    "light": "Janela E1 lateral, retorno fraco da parede oeste",
+    "materials": "Lã usada; metal com desgaste junto à tampa",
+    "protected": "Geometria, identidade, mão e estado da tampa",
+    "purpose": "Prévia conceitual para avaliar composição, ainda não executada"
+  },
+  "parameters": {},
+  "aspect_ratio": "16:9"
+}

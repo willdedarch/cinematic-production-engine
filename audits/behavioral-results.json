@@ -1,0 +1,989 @@
+{
+  "status": "EXECUTED_LOCAL_REHEARSAL",
+  "synthetic_user": true,
+  "independent_agent": false,
+  "native_integration": false,
+  "paid_generations": 0,
+  "steps": [
+    {
+      "step": "knowledge_route",
+      "gate": "G0",
+      "files": [
+        {
+          "file": "integrations/google-sheets.md",
+          "sha256": "52b284e0c3daf5e00ff57eefcaceda545497f086956357402560b4b64f3156a6"
+        },
+        {
+          "file": "orchestration/state.md",
+          "sha256": "659473f14d34379ba890a52c4667cc8b5cc8b85db4c240848d98276f7b5719b3"
+        },
+        {
+          "file": "orchestration/workflow.md",
+          "sha256": "454a726e7618650d56928088b4464811aa2ca1fca58744a405205ae35cc82118"
+        },
+        {
+          "file": "orchestration/panels.md",
+          "sha256": "c07af4a911ddd2e9eb802a726705fcadf952bdb2ccc04912fa04f9a6dd030b35"
+        },
+        {
+          "file": "examples/last-water/production.md",
+          "sha256": "61c3b60c4a29d00c9c709439702b5d9fc10443cdbf96c68093dcf01ededbc9b5"
+        },
+        {
+          "file": "engines/war-film.md",
+          "sha256": "f0b150f47ba24e14f5d51f4b78ce1c29be4536579832fdbda3e9f667707a56c3"
+        }
+      ]
+    },
+    {
+      "step": "review G0",
+      "operation": "LOCAL-1",
+      "receipt": {
+        "status": "CONFIRMED",
+        "op_id": "LOCAL-1",
+        "read_at": "2026-11-24T08:28:05.701467+00:00",
+        "revisions": {
+          "TEST-WF-G0": 2,
+          "TEST-CK-G0-1": 2,
+          "TEST-CK-G0-2": 2,
+          "TEST-CK-G0-3": 2,
+          "TEST-CK-G0-4": 2
+        },
+        "atomic": false
+      },
+      "native": false
+    },
+    {
+      "step": "synthetic approval G0",
+      "operation": "LOCAL-2",
+      "receipt": {
+        "status": "CONFIRMED",
+        "op_id": "LOCAL-2",
+        "read_at": "2026-11-24T08:28:05.726858+00:00",
+        "revisions": {
+          "TEST-WF-G0": 3,
+          "BEH-AP-G0-2": 1
+        },
+        "atomic": false
+      },
+      "native": false
+    },
+    {
+      "step": "knowledge_route",
+      "gate": "G1",
+      "files": [
+        {
+          "file": "integrations/google-sheets.md",
+          "sha256": "52b284e0c3daf5e00ff57eefcaceda545497f086956357402560b4b64f3156a6"
+        },
+        {
+          "file": "orchestration/state.md",
+          "sha256": "659473f14d34379ba890a52c4667cc8b5cc8b85db4c240848d98276f7b5719b3"
+        },
+        {
+          "file": "modules/story-mining.md",
+          "sha256": "9b69adde234d6bb62bc30bb0eee6820334b0dd9e85c267ed5a97374912afb11c"
+        },
+        {
+          "file": "references/reference-analysis.md",
+          "sha256": "405b0c6adfe09d58602912e51338a3b0a08e167f14c17583263e45291bebdafb"
+        },
+        {
+          "file": "knowledge/war-film.md",
+          "sha256": "75509ef24ea83bc5284856ed4a62ad16c5f7d98525d98a4e7f1ea304b011a92f"
+        },
+        {
+          "file": "knowledge/genre-profiles.json",
+          "sha256": "b361582eb7af4e1693fad4c32eda1dfbf045cd4e449da49f52e1d0202b926b14"
+        },
+        {
+          "file": "examples/last-water/production.md",
+          "sha256": "61c3b60c4a29d00c9c709439702b5d9fc10443cdbf96c68093dcf01ededbc9b5"
+        },
+        {
+          "file": "engines/war-film.md",
+          "sha256": "f0b150f47ba24e14f5d51f4b78ce1c29be4536579832fdbda3e9f667707a56c3"
+        }
+      ]
+    },
+    {
+      "step": "review G1",
+      "operation": "LOCAL-3",
+      "receipt": {
+        "status": "CONFIRMED",
+        "op_id": "LOCAL-3",
+        "read_at": "2026-11-24T08:28:05.761582+00:00",
+        "revisions": {
+          "TEST-WF-G1": 2,
+          "TEST-CK-G1-1": 2,
+          "TEST-CK-G1-2": 2,
+          "TEST-CK-G1-3": 2
+        },
+        "atomic": false
+      },
+      "native": false
+    },
+    {
+      "step": "synthetic approval G1",
+      "operation": "LOCAL-4",
+      "receipt": {
+        "status": "CONFIRMED",
+        "op_id": "LOCAL-4",
+        "read_at": "2026-11-24T08:28:05.788430+00:00",
+        "revisions": {
+          "TEST-WF-G1": 3,
+          "BEH-AP-G1-4": 1
+        },
+        "atomic": false
+      },
+      "native": false
+    },
+    {
+      "step": "knowledge_route",
+      "gate": "G2",
+      "files": [
+        {
+          "file": "integrations/google-sheets.md",
+          "sha256": "52b284e0c3daf5e00ff57eefcaceda545497f086956357402560b4b64f3156a6"
+        },
+        {
+          "file": "orchestration/state.md",
+          "sha256": "659473f14d34379ba890a52c4667cc8b5cc8b85db4c240848d98276f7b5719b3"
+        },
+        {
+          "file": "modules/writers-room.md",
+          "sha256": "63d3e8b7e341424d122d596a275381dd460ddadb2cc7f18fb8ccd4b82c81bf5e"
+        },
+        {
+          "file": "modules/dramaturgy.md",
+          "sha256": "ebf057953a2a5152a505c84c165c077739aaafdec76eb1fd60e82b00e0cd1b18"
+        },
+        {
+          "file": "modules/anti-cliche.md",
+          "sha256": "9c6caf6d9b0933654507d0498a8904b646e305d80a99e1e5fb437bf131828ef7"
+        },
+        {
+          "file": "knowledge/narrative-editing.md",
+          "sha256": "55b4a49573d71559c5bc5ad50775203abafb39c00e5087d5c4a6e80af24c2e1c"
+        },
+        {
+          "file": "examples/last-water/production.md",
+          "sha256": "61c3b60c4a29d00c9c709439702b5d9fc10443cdbf96c68093dcf01ededbc9b5"
+        },
+        {
+          "file": "judgment-engine/protocol.md",
+          "sha256": "37f11a503740af7584ce93bcb788b26a6093acadee40862584a4719163ddc0c2"
+        },
+        {
+          "file": "engines/war-film.md",
+          "sha256": "f0b150f47ba24e14f5d51f4b78ce1c29be4536579832fdbda3e9f667707a56c3"
+        }
+      ]
+    },
+    {
+      "step": "review G2",
+      "operation": "LOCAL-5",
+      "receipt": {
+        "status": "CONFIRMED",
+        "op_id": "LOCAL-5",
+        "read_at": "2026-11-24T08:28:05.830143+00:00",
+        "revisions": {
+          "TEST-WF-G2": 2,
+          "TEST-CK-G2-1": 2,
+          "TEST-CK-G2-2": 2,
+          "TEST-CK-G2-3": 2
+        },
+        "atomic": false
+      },
+      "native": false
+    },
+    {
+      "step": "synthetic approval G2",
+      "operation": "LOCAL-6",
+      "receipt": {
+        "status": "CONFIRMED",
+        "op_id": "LOCAL-6",
+        "read_at": "2026-11-24T08:28:05.859254+00:00",
+        "revisions": {
+          "TEST-WF-G2": 3,
+          "BEH-AP-G2-6": 1
+        },
+        "atomic": false
+      },
+      "native": false
+    },
+    {
+      "step": "knowledge_route",
+      "gate": "G3",
+      "files": [
+        {
+          "file": "integrations/google-sheets.md",
+          "sha256": "52b284e0c3daf5e00ff57eefcaceda545497f086956357402560b4b64f3156a6"
+        },
+        {
+          "file": "orchestration/state.md",
+          "sha256": "659473f14d34379ba890a52c4667cc8b5cc8b85db4c240848d98276f7b5719b3"
+        },
+        {
+          "file": "modules/emotional-engine.md",
+          "sha256": "4f9197582e5ed87386b29275e88a687b36cc6ace785cd24ef1e0c480ca5ac59d"
+        },
+        {
+          "file": "modules/audience-psychology.md",
+          "sha256": "43dac11a293317c39aa33960f4ea09f144a49a39dc25b21a1038b7fa95964a68"
+        },
+        {
+          "file": "modules/suspense-engine.md",
+          "sha256": "0d2c63d9601baea9111f4778cd6d96a45661dcefeb8bdd6f20992109438d5917"
+        },
+        {
+          "file": "references/retention-pacing.md",
+          "sha256": "52353b28db54e128c2f943d9e61c4d0e7df710bdc53d459a9bd00f31729bf1c3"
+        },
+        {
+          "file": "knowledge/narrative-editing.md",
+          "sha256": "55b4a49573d71559c5bc5ad50775203abafb39c00e5087d5c4a6e80af24c2e1c"
+        },
+        {
+          "file": "examples/last-water/production.md",
+          "sha256": "61c3b60c4a29d00c9c709439702b5d9fc10443cdbf96c68093dcf01ededbc9b5"
+        },
+        {
+          "file": "judgment-engine/protocol.md",
+          "sha256": "37f11a503740af7584ce93bcb788b26a6093acadee40862584a4719163ddc0c2"
+        },
+        {
+          "file": "engines/war-film.md",
+          "sha256": "f0b150f47ba24e14f5d51f4b78ce1c29be4536579832fdbda3e9f667707a56c3"
+        }
+      ]
+    },
+    {
+      "step": "review G3",
+      "operation": "LOCAL-7",
+      "receipt": {
+        "status": "CONFIRMED",
+        "op_id": "LOCAL-7",
+        "read_at": "2026-11-24T08:28:05.903387+00:00",
+        "revisions": {
+          "TEST-WF-G3": 2,
+          "TEST-CK-G3-1": 2,
+          "TEST-CK-G3-2": 2,
+          "TEST-CK-G3-3": 2
+        },
+        "atomic": false
+      },
+      "native": false
+    },
+    {
+      "step": "synthetic approval G3",
+      "operation": "LOCAL-8",
+      "receipt": {
+        "status": "CONFIRMED",
+        "op_id": "LOCAL-8",
+        "read_at": "2026-11-24T08:28:05.936913+00:00",
+        "revisions": {
+          "TEST-WF-G3": 3,
+          "BEH-AP-G3-8": 1
+        },
+        "atomic": false
+      },
+      "native": false
+    },
+    {
+      "step": "knowledge_route",
+      "gate": "G4",
+      "files": [
+        {
+          "file": "integrations/google-sheets.md",
+          "sha256": "52b284e0c3daf5e00ff57eefcaceda545497f086956357402560b4b64f3156a6"
+        },
+        {
+          "file": "orchestration/state.md",
+          "sha256": "659473f14d34379ba890a52c4667cc8b5cc8b85db4c240848d98276f7b5719b3"
+        },
+        {
+          "file": "modules/dialogue-engine.md",
+          "sha256": "e28b0c0ae7894670a50dbbf93dab7ee80d01b7ed94baa896242eecdc48a7b6cd"
+        },
+        {
+          "file": "modules/script-doctor.md",
+          "sha256": "7f8d503aff5cfd48a8386fa35f8e08cbcb82526d06054df2b67e924c72adaac8"
+        },
+        {
+          "file": "references/script-doctor.md",
+          "sha256": "dc0c6965fdbaf69e9041eac4c1a122ab2943f053094aff236ae1b7047f820aa9"
+        },
+        {
+          "file": "knowledge/narrative-editing.md",
+          "sha256": "55b4a49573d71559c5bc5ad50775203abafb39c00e5087d5c4a6e80af24c2e1c"
+        },
+        {
+          "file": "examples/last-water/production.md",
+          "sha256": "61c3b60c4a29d00c9c709439702b5d9fc10443cdbf96c68093dcf01ededbc9b5"
+        },
+        {
+          "file": "knowledge/failure-library.json",
+          "sha256": "85a58afe864bd59d6e5b3b1ffa95b671a9946242ea601fa7e07bf858606ace42"
+        },
+        {
+          "file": "examples/contrastive.md",
+          "sha256": "9c3f2e945dc136f694e1260f149945ae996f45a9beb0e52c6a61a408378e4d80"
+        },
+        {
+          "file": "judgment-engine/protocol.md",
+          "sha256": "37f11a503740af7584ce93bcb788b26a6093acadee40862584a4719163ddc0c2"
+        },
+        {
+          "file": "engines/war-film.md",
+          "sha256": "f0b150f47ba24e14f5d51f4b78ce1c29be4536579832fdbda3e9f667707a56c3"
+        }
+      ]
+    },
+    {
+      "step": "review G4",
+      "operation": "LOCAL-9",
+      "receipt": {
+        "status": "CONFIRMED",
+        "op_id": "LOCAL-9",
+        "read_at": "2026-11-24T08:28:05.984416+00:00",
+        "revisions": {
+          "TEST-WF-G4": 2,
+          "TEST-CK-G4-1": 2,
+          "TEST-CK-G4-2": 2,
+          "TEST-CK-G4-3": 2
+        },
+        "atomic": false
+      },
+      "native": false
+    },
+    {
+      "step": "synthetic approval G4",
+      "operation": "LOCAL-10",
+      "receipt": {
+        "status": "CONFIRMED",
+        "op_id": "LOCAL-10",
+        "read_at": "2026-11-24T08:28:06.022685+00:00",
+        "revisions": {
+          "TEST-WF-G4": 3,
+          "BEH-AP-G4-10": 1
+        },
+        "atomic": false
+      },
+      "native": false
+    },
+    {
+      "step": "knowledge_route",
+      "gate": "G5",
+      "files": [
+        {
+          "file": "integrations/google-sheets.md",
+          "sha256": "52b284e0c3daf5e00ff57eefcaceda545497f086956357402560b4b64f3156a6"
+        },
+        {
+          "file": "orchestration/state.md",
+          "sha256": "659473f14d34379ba890a52c4667cc8b5cc8b85db4c240848d98276f7b5719b3"
+        },
+        {
+          "file": "modules/cinematic-direction.md",
+          "sha256": "506de89a8a544aa5e448318ada9b3f9696ff2f6dbf1999209fbafad6f3c899ff"
+        },
+        {
+          "file": "departments/cinematography.md",
+          "sha256": "d0f3d9db148cf474654a7cea81f62c886505b5e6d299f2b45586febc9408f74c"
+        },
+        {
+          "file": "libraries/optics-composition.md",
+          "sha256": "0f0139b7fe75c1f89620a00d1ed881c970292fbb043b948b3e8dc9b3a0343135"
+        },
+        {
+          "file": "libraries/director-genres.md",
+          "sha256": "34fde303ea285e6877997a3e815a1353c6b766f883cf5201d8b321ee4e5b532b"
+        },
+        {
+          "file": "knowledge/optics.md",
+          "sha256": "a566408e69058d7954d9fede5f6c7357884a682bc4209b2cae41da9836a642a0"
+        },
+        {
+          "file": "knowledge/techniques.json",
+          "sha256": "348e5c0b0dd911d7a2ba0c2f880bc9a8e4332dbd22e960ae009bfed03b32c368"
+        },
+        {
+          "file": "knowledge/light.md",
+          "sha256": "e0a9f915bffba29275adc00193ccc531c1c72bc6fd1cfb3162be2cbed2c5ffaa"
+        },
+        {
+          "file": "knowledge/styles-genres.md",
+          "sha256": "c4a4c1627ea01db012d293bb08062e8b6fc91fa3f2aeaf8512ef69909829ff76"
+        },
+        {
+          "file": "knowledge/composition.md",
+          "sha256": "48dd60a0a9586e8f3e3e1cc4d827009a50dd69bc9d2e92cbafb0212415a814e8"
+        },
+        {
+          "file": "references/visual-library.json",
+          "sha256": "cb37fa6115afe8eea67910c472b09df83c26fb49f93c058afeb25da925709124"
+        },
+        {
+          "file": "knowledge/direction.md",
+          "sha256": "381ac150cf0a7441d34cebd95210a1ba77ff054c03d8676f07828c38b8aae976"
+        },
+        {
+          "file": "knowledge/director-profiles.json",
+          "sha256": "0415135fe689683b26922e4b8082dc41f597af709959643358c5c37c9ac0b04c"
+        },
+        {
+          "file": "judgment-engine/protocol.md",
+          "sha256": "37f11a503740af7584ce93bcb788b26a6093acadee40862584a4719163ddc0c2"
+        },
+        {
+          "file": "examples/last-water/production.md",
+          "sha256": "61c3b60c4a29d00c9c709439702b5d9fc10443cdbf96c68093dcf01ededbc9b5"
+        },
+        {
+          "file": "engines/war-film.md",
+          "sha256": "f0b150f47ba24e14f5d51f4b78ce1c29be4536579832fdbda3e9f667707a56c3"
+        }
+      ]
+    },
+    {
+      "step": "review G5",
+      "operation": "LOCAL-11",
+      "receipt": {
+        "status": "CONFIRMED",
+        "op_id": "LOCAL-11",
+        "read_at": "2026-11-24T08:28:06.080028+00:00",
+        "revisions": {
+          "TEST-WF-G5": 2,
+          "TEST-CK-G5-1": 2,
+          "TEST-CK-G5-2": 2,
+          "TEST-CK-G5-3": 2
+        },
+        "atomic": false
+      },
+      "native": false
+    },
+    {
+      "step": "synthetic approval G5",
+      "operation": "LOCAL-12",
+      "receipt": {
+        "status": "CONFIRMED",
+        "op_id": "LOCAL-12",
+        "read_at": "2026-11-24T08:28:06.121606+00:00",
+        "revisions": {
+          "TEST-WF-G5": 3,
+          "BEH-AP-G5-12": 1
+        },
+        "atomic": false
+      },
+      "native": false
+    },
+    {
+      "step": "knowledge_route",
+      "gate": "G6",
+      "files": [
+        {
+          "file": "integrations/google-sheets.md",
+          "sha256": "52b284e0c3daf5e00ff57eefcaceda545497f086956357402560b4b64f3156a6"
+        },
+        {
+          "file": "orchestration/state.md",
+          "sha256": "659473f14d34379ba890a52c4667cc8b5cc8b85db4c240848d98276f7b5719b3"
+        },
+        {
+          "file": "assets/templates.md",
+          "sha256": "e0fff41b570ad1ba84e8c83500acf7e519bcf783d1f9be60f5f84584645c654a"
+        },
+        {
+          "file": "departments/props-assets.md",
+          "sha256": "572ac3d7665e4e6f76b2310528a583f56478647a612d1babd64b3baf23935264"
+        },
+        {
+          "file": "examples/last-water/production.md",
+          "sha256": "61c3b60c4a29d00c9c709439702b5d9fc10443cdbf96c68093dcf01ededbc9b5"
+        },
+        {
+          "file": "engines/war-film.md",
+          "sha256": "f0b150f47ba24e14f5d51f4b78ce1c29be4536579832fdbda3e9f667707a56c3"
+        }
+      ]
+    },
+    {
+      "step": "review G6",
+      "operation": "LOCAL-13",
+      "receipt": {
+        "status": "CONFIRMED",
+        "op_id": "LOCAL-13",
+        "read_at": "2026-11-24T08:28:06.167987+00:00",
+        "revisions": {
+          "TEST-WF-G6": 2,
+          "TEST-CK-G6-1": 2,
+          "TEST-CK-G6-2": 2,
+          "TEST-CK-G6-3": 2
+        },
+        "atomic": false
+      },
+      "native": false
+    },
+    {
+      "step": "synthetic approval G6",
+      "operation": "LOCAL-14",
+      "receipt": {
+        "status": "CONFIRMED",
+        "op_id": "LOCAL-14",
+        "read_at": "2026-11-24T08:28:06.215207+00:00",
+        "revisions": {
+          "TEST-WF-G6": 3,
+          "BEH-AP-G6-14": 1
+        },
+        "atomic": false
+      },
+      "native": false
+    },
+    {
+      "step": "screenplay reference",
+      "operation": "LOCAL-15",
+      "receipt": {
+        "status": "CONFIRMED",
+        "op_id": "LOCAL-15",
+        "read_at": "2026-11-24T08:28:06.259204+00:00",
+        "revisions": {
+          "TEST-SC-1": 2
+        },
+        "atomic": false
+      },
+      "native": false
+    },
+    {
+      "step": "knowledge_route",
+      "gate": "G7",
+      "files": [
+        {
+          "file": "integrations/google-sheets.md",
+          "sha256": "52b284e0c3daf5e00ff57eefcaceda545497f086956357402560b4b64f3156a6"
+        },
+        {
+          "file": "orchestration/state.md",
+          "sha256": "659473f14d34379ba890a52c4667cc8b5cc8b85db4c240848d98276f7b5719b3"
+        },
+        {
+          "file": "departments/casting.md",
+          "sha256": "35da993b3d8b0a4b4817eb48e31c8fd20b6ac8b1f46850a7c619d64d5ab470ba"
+        },
+        {
+          "file": "modules/performance-direction.md",
+          "sha256": "7c469dc3a474f0a1dfdf785d2519c783ea01cd0f3ef132a6f682b6cda75f7764"
+        },
+        {
+          "file": "knowledge/design.md",
+          "sha256": "7dd1612409c70f22ba46aa7829b99918c169844e30aa5d1e61eddaf047cdd74a"
+        },
+        {
+          "file": "knowledge/failure-library.json",
+          "sha256": "85a58afe864bd59d6e5b3b1ffa95b671a9946242ea601fa7e07bf858606ace42"
+        },
+        {
+          "file": "judgment-engine/protocol.md",
+          "sha256": "37f11a503740af7584ce93bcb788b26a6093acadee40862584a4719163ddc0c2"
+        },
+        {
+          "file": "examples/last-water/production.md",
+          "sha256": "61c3b60c4a29d00c9c709439702b5d9fc10443cdbf96c68093dcf01ededbc9b5"
+        },
+        {
+          "file": "engines/war-film.md",
+          "sha256": "f0b150f47ba24e14f5d51f4b78ce1c29be4536579832fdbda3e9f667707a56c3"
+        }
+      ]
+    },
+    {
+      "step": "review G7",
+      "operation": "LOCAL-16",
+      "receipt": {
+        "status": "CONFIRMED",
+        "op_id": "LOCAL-16",
+        "read_at": "2026-11-24T08:28:06.316313+00:00",
+        "revisions": {
+          "TEST-WF-G7": 2,
+          "TEST-CK-G7-1": 2,
+          "TEST-CK-G7-2": 2,
+          "TEST-CK-G7-3": 2,
+          "TEST-CK-G7-4": 2
+        },
+        "atomic": false
+      },
+      "native": false
+    },
+    {
+      "step": "unseen casting approval rejected",
+      "reason": "Checklist incomplete"
+    },
+    {
+      "step": "knowledge_route",
+      "gate": "G8",
+      "files": [
+        {
+          "file": "integrations/google-sheets.md",
+          "sha256": "52b284e0c3daf5e00ff57eefcaceda545497f086956357402560b4b64f3156a6"
+        },
+        {
+          "file": "orchestration/state.md",
+          "sha256": "659473f14d34379ba890a52c4667cc8b5cc8b85db4c240848d98276f7b5719b3"
+        },
+        {
+          "file": "departments/locations.md",
+          "sha256": "9311056038a90b3673d8af81c8e1dc98131ee9e590eac8bebf1bac1f81188431"
+        },
+        {
+          "file": "engines/living-world.md",
+          "sha256": "9bbbee2aadaacfd2e17fc1605ddf2f227f448f7ac0f59c95f2e460a88135ea6a"
+        },
+        {
+          "file": "knowledge/design.md",
+          "sha256": "7dd1612409c70f22ba46aa7829b99918c169844e30aa5d1e61eddaf047cdd74a"
+        },
+        {
+          "file": "knowledge/failure-library.json",
+          "sha256": "85a58afe864bd59d6e5b3b1ffa95b671a9946242ea601fa7e07bf858606ace42"
+        },
+        {
+          "file": "knowledge/composition.md",
+          "sha256": "48dd60a0a9586e8f3e3e1cc4d827009a50dd69bc9d2e92cbafb0212415a814e8"
+        },
+        {
+          "file": "references/visual-library.json",
+          "sha256": "cb37fa6115afe8eea67910c472b09df83c26fb49f93c058afeb25da925709124"
+        },
+        {
+          "file": "judgment-engine/protocol.md",
+          "sha256": "37f11a503740af7584ce93bcb788b26a6093acadee40862584a4719163ddc0c2"
+        },
+        {
+          "file": "examples/last-water/production.md",
+          "sha256": "61c3b60c4a29d00c9c709439702b5d9fc10443cdbf96c68093dcf01ededbc9b5"
+        },
+        {
+          "file": "engines/war-film.md",
+          "sha256": "f0b150f47ba24e14f5d51f4b78ce1c29be4536579832fdbda3e9f667707a56c3"
+        }
+      ]
+    },
+    {
+      "step": "review G8",
+      "operation": "LOCAL-17",
+      "receipt": {
+        "status": "CONFIRMED",
+        "op_id": "LOCAL-17",
+        "read_at": "2026-11-24T08:28:06.387552+00:00",
+        "revisions": {
+          "TEST-WF-G8": 2,
+          "TEST-CK-G8-1": 2,
+          "TEST-CK-G8-2": 2,
+          "TEST-CK-G8-3": 2,
+          "TEST-CK-G8-4": 2
+        },
+        "atomic": false
+      },
+      "native": false
+    },
+    {
+      "step": "synthetic geometry-scope approval",
+      "operation": "LOCAL-18",
+      "receipt": {
+        "status": "CONFIRMED",
+        "op_id": "LOCAL-18",
+        "read_at": "2026-11-24T08:28:06.436096+00:00",
+        "revisions": {
+          "TEST-WF-G8": 3,
+          "BEH-AP-G8-18": 1
+        },
+        "atomic": false
+      },
+      "native": false
+    },
+    {
+      "step": "import own geometry diagram by reference",
+      "operation": "LOCAL-19",
+      "receipt": {
+        "status": "CONFIRMED",
+        "op_id": "LOCAL-19",
+        "read_at": "2026-11-24T08:28:06.485725+00:00",
+        "revisions": {
+          "TEST-LOC-1": 2
+        },
+        "atomic": false
+      },
+      "native": false
+    },
+    {
+      "step": "synthetic approval of didactic geometry only",
+      "operation": "LOCAL-20",
+      "receipt": {
+        "status": "CONFIRMED",
+        "op_id": "LOCAL-20",
+        "read_at": "2026-11-24T08:28:06.537625+00:00",
+        "revisions": {
+          "TEST-LOC-1": 3
+        },
+        "atomic": false
+      },
+      "native": false
+    },
+    {
+      "step": "lock didactic geometry",
+      "operation": "LOCAL-21",
+      "receipt": {
+        "status": "CONFIRMED",
+        "op_id": "LOCAL-21",
+        "read_at": "2026-11-24T08:28:06.590354+00:00",
+        "revisions": {
+          "TEST-LOC-1": 4
+        },
+        "atomic": false
+      },
+      "native": false
+    },
+    {
+      "step": "locked edit rejected",
+      "reason": "Preserve approved asset; create a linked successor version"
+    },
+    {
+      "step": "reuse locked geometry by stable reference",
+      "operation": "LOCAL-22",
+      "receipt": {
+        "status": "CONFIRMED",
+        "op_id": "LOCAL-22",
+        "read_at": "2026-11-24T08:28:06.650152+00:00",
+        "revisions": {
+          "BEH-REUSE": 1
+        },
+        "atomic": false
+      },
+      "native": false
+    },
+    {
+      "step": "knowledge_route",
+      "gate": "G9",
+      "files": [
+        {
+          "file": "integrations/google-sheets.md",
+          "sha256": "52b284e0c3daf5e00ff57eefcaceda545497f086956357402560b4b64f3156a6"
+        },
+        {
+          "file": "orchestration/state.md",
+          "sha256": "659473f14d34379ba890a52c4667cc8b5cc8b85db4c240848d98276f7b5719b3"
+        },
+        {
+          "file": "departments/props-assets.md",
+          "sha256": "572ac3d7665e4e6f76b2310528a583f56478647a612d1babd64b3baf23935264"
+        },
+        {
+          "file": "knowledge/design.md",
+          "sha256": "7dd1612409c70f22ba46aa7829b99918c169844e30aa5d1e61eddaf047cdd74a"
+        },
+        {
+          "file": "knowledge/failure-library.json",
+          "sha256": "85a58afe864bd59d6e5b3b1ffa95b671a9946242ea601fa7e07bf858606ace42"
+        },
+        {
+          "file": "judgment-engine/protocol.md",
+          "sha256": "37f11a503740af7584ce93bcb788b26a6093acadee40862584a4719163ddc0c2"
+        },
+        {
+          "file": "examples/last-water/production.md",
+          "sha256": "61c3b60c4a29d00c9c709439702b5d9fc10443cdbf96c68093dcf01ededbc9b5"
+        },
+        {
+          "file": "engines/war-film.md",
+          "sha256": "f0b150f47ba24e14f5d51f4b78ce1c29be4536579832fdbda3e9f667707a56c3"
+        }
+      ]
+    },
+    {
+      "step": "review G9",
+      "operation": "LOCAL-23",
+      "receipt": {
+        "status": "CONFIRMED",
+        "op_id": "LOCAL-23",
+        "read_at": "2026-11-24T08:28:06.715817+00:00",
+        "revisions": {
+          "TEST-WF-G9": 2,
+          "TEST-CK-G9-1": 2,
+          "TEST-CK-G9-2": 2,
+          "TEST-CK-G9-3": 2
+        },
+        "atomic": false
+      },
+      "native": false
+    },
+    {
+      "step": "synthetic props text-scope approval",
+      "operation": "LOCAL-24",
+      "receipt": {
+        "status": "CONFIRMED",
+        "op_id": "LOCAL-24",
+        "read_at": "2026-11-24T08:28:06.774034+00:00",
+        "revisions": {
+          "TEST-WF-G9": 3,
+          "BEH-AP-G9-24": 1
+        },
+        "atomic": false
+      },
+      "native": false
+    },
+    {
+      "step": "shot list and prompts prepared as draft",
+      "operation": "LOCAL-25",
+      "receipt": {
+        "status": "CONFIRMED",
+        "op_id": "LOCAL-25",
+        "read_at": "2026-11-24T08:28:06.835379+00:00",
+        "revisions": {
+          "TEST-SH-1": 2
+        },
+        "atomic": false
+      },
+      "native": false
+    },
+    {
+      "step": "knowledge_route",
+      "gate": "G10",
+      "files": [
+        {
+          "file": "integrations/google-sheets.md",
+          "sha256": "52b284e0c3daf5e00ff57eefcaceda545497f086956357402560b4b64f3156a6"
+        },
+        {
+          "file": "orchestration/state.md",
+          "sha256": "659473f14d34379ba890a52c4667cc8b5cc8b85db4c240848d98276f7b5719b3"
+        },
+        {
+          "file": "departments/previs-production.md",
+          "sha256": "49a2402afe12e12a3b18bdb0a0419dd6366489fafa700c7636c15143b6ed767a"
+        },
+        {
+          "file": "references/staging-editorial.md",
+          "sha256": "c4fa3feee5a896cea59716b5c5539a1416e60bbd26bcbf08d127c249bb8dbe93"
+        },
+        {
+          "file": "integrations/model-adapters.md",
+          "sha256": "a337a4b0b199aa9dc86eb6cd3af6eadaffef93f95b5468b93e372b14ff5787d3"
+        },
+        {
+          "file": "knowledge/direction.md",
+          "sha256": "381ac150cf0a7441d34cebd95210a1ba77ff054c03d8676f07828c38b8aae976"
+        },
+        {
+          "file": "knowledge/director-profiles.json",
+          "sha256": "0415135fe689683b26922e4b8082dc41f597af709959643358c5c37c9ac0b04c"
+        },
+        {
+          "file": "knowledge/optics.md",
+          "sha256": "a566408e69058d7954d9fede5f6c7357884a682bc4209b2cae41da9836a642a0"
+        },
+        {
+          "file": "knowledge/techniques.json",
+          "sha256": "348e5c0b0dd911d7a2ba0c2f880bc9a8e4332dbd22e960ae009bfed03b32c368"
+        },
+        {
+          "file": "adapters/README.md",
+          "sha256": "2730e484514edec9175518b3b6b8901f246ff27a01af961544925b8b940548c4"
+        },
+        {
+          "file": "libraries/model-capabilities.snapshot.json",
+          "sha256": "448e7c261afee28c3bf3d8551ec11ff3be44ff3ed2503aeade974ba68106175d"
+        },
+        {
+          "file": "judgment-engine/protocol.md",
+          "sha256": "37f11a503740af7584ce93bcb788b26a6093acadee40862584a4719163ddc0c2"
+        },
+        {
+          "file": "examples/last-water/production.md",
+          "sha256": "61c3b60c4a29d00c9c709439702b5d9fc10443cdbf96c68093dcf01ededbc9b5"
+        },
+        {
+          "file": "engines/war-film.md",
+          "sha256": "f0b150f47ba24e14f5d51f4b78ce1c29be4536579832fdbda3e9f667707a56c3"
+        }
+      ]
+    },
+    {
+      "step": "review G10",
+      "operation": "LOCAL-26",
+      "receipt": {
+        "status": "CONFIRMED",
+        "op_id": "LOCAL-26",
+        "read_at": "2026-11-24T08:28:06.914118+00:00",
+        "revisions": {
+          "TEST-WF-G10": 2,
+          "TEST-CK-G10-1": 2,
+          "TEST-CK-G10-2": 2,
+          "TEST-CK-G10-3": 2,
+          "TEST-CK-G10-4": 2
+        },
+        "atomic": false
+      },
+      "native": false
+    },
+    {
+      "step": "G10 approval rejected with G7 pending",
+      "reason": "Dependency pending"
+    },
+    {
+      "step": "revision with downstream invalidation and preserved locked asset",
+      "operation": "LOCAL-27",
+      "receipt": {
+        "status": "CONFIRMED",
+        "op_id": "LOCAL-27",
+        "read_at": "2026-11-24T08:28:06.990487+00:00",
+        "revisions": {
+          "TEST-WF-G8": 4,
+          "TEST-CK-G8-1": 3,
+          "TEST-CK-G8-2": 3,
+          "TEST-CK-G8-3": 3,
+          "TEST-CK-G8-4": 3,
+          "TEST-WF-G10": 3,
+          "TEST-CK-G10-1": 3,
+          "TEST-CK-G10-2": 3,
+          "TEST-CK-G10-3": 3,
+          "TEST-CK-G10-4": 3,
+          "TEST-WF-G11": 2,
+          "TEST-CK-G11-1": 2,
+          "TEST-CK-G11-2": 2,
+          "TEST-CK-G11-3": 2,
+          "TEST-WF-G12": 2,
+          "TEST-CK-G12-1": 2,
+          "TEST-CK-G12-2": 2,
+          "TEST-CK-G12-3": 2,
+          "TEST-WF-G13": 2,
+          "TEST-CK-G13-1": 2,
+          "TEST-CK-G13-2": 2,
+          "TEST-CK-G13-3": 2,
+          "TEST-WF-G14": 2,
+          "TEST-CK-G14-1": 2,
+          "TEST-CK-G14-2": 2,
+          "TEST-CK-G14-3": 2,
+          "TEST-CK-G14-4": 2,
+          "TEST-WF-G15": 2,
+          "TEST-CK-G15-1": 2,
+          "TEST-CK-G15-2": 2,
+          "TEST-CK-G15-3": 2
+        },
+        "atomic": false
+      },
+      "native": false
+    },
+    {
+      "step": "interruption and resume in new Python process",
+      "result": {
+        "valid": true,
+        "saved": false
+      },
+      "independent_chat_session": false
+    }
+  ],
+  "operations": 27,
+  "visual_acceptance": "PENDING HUMAN",
+  "casting_gate": "REVIEW_REQUIRED",
+  "g10_after_revision": "CHANGES_REQUESTED"
+}

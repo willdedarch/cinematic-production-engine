@@ -1,0 +1,67 @@
+{
+  "reviewer": "a",
+  "scope": "Inspeção visual direta exclusivamente das quatro imagens autorizadas, na ordem M-73, M-28, C-41, C-96. Sem conhecimento da intenção de geração.",
+  "media_available": "Imagens estáticas",
+  "realized_audiovisual": "UNKNOWN",
+  "human_evaluation": "UNKNOWN",
+  "pairs": [
+    {
+      "pair": [
+        "M-73",
+        "M-28"
+      ],
+      "decision": "M-73",
+      "criteria": {
+        "hierarchy": "M-73",
+        "staging": "EMPATE",
+        "materiality": "M-73"
+      },
+      "observations": [
+        "Ambas mostram quatro adultos: uma pessoa central segurando uma manta, duas sentadas olhando para ela e outra à porta; posições e relações de olhar são praticamente as mesmas.",
+        "Em M-73 o rosto e as mãos centrais são legíveis, e a manta torna-se o núcleo de uma relação triangular com os sentados. A figura à porta mantém função secundária reconhecível.",
+        "Em M-28 o rosto, o tronco e parte da manta centrais ficam muito escuros; porta, homem ao fundo e quadro iluminado competem mais fortemente pela atenção.",
+        "A água no piso, o casaco molhado e as fibras das mantas são visíveis nas duas. M-73 permite ler melhor o material que a pessoa central segura.",
+        "M-73 mostra uma lâmpada acesa na prateleira; M-28 a mostra apagada. Sem uma condição fornecida de iluminação, isso é diferença visível, não infração."
+      ],
+      "limits": [
+        "Uma pose não demonstra que os quatro agem coletivamente ao longo do tempo.",
+        "Não é possível confirmar motivo de olhares, tensão dramática, fala, continuidade temporal ou qualidade de som.",
+        "Não há base para confirmar iluminação física em movimento ou intenção narrativa dos criadores."
+      ],
+      "confidence": "alta para legibilidade; moderada para preferência global"
+    },
+    {
+      "pair": [
+        "C-41",
+        "C-96"
+      ],
+      "decision": "C-41",
+      "criteria": {
+        "legibility": "EMPATE",
+        "identity_consistency": "EMPATE",
+        "view_coverage": "C-41"
+      },
+      "observations": [
+        "As duas fichas têm quatro corpos inteiros e três aproximações da cabeça, com frente, perfil, costas e três quartos no conjunto superior.",
+        "Rosto alongado, cabelo escuro grisalho preso, casaco escuro, saia e botas mantêm identidade visual reconhecível entre vistas em ambas; não há vantagem conclusiva de identidade nesta inspeção.",
+        "C-41 acrescenta embaixo perfis voltados para lados opostos; C-96 apresenta duas aproximações voltadas para o mesmo lado, com redundância de cobertura.",
+        "C-41 mostra com nitidez textura da lã, punhos gastos e feições; C-96 também é legível, mas a textura do casaco aparece mais ondulada em várias áreas. Isso não basta para atribuir mudança de pessoa.",
+        "Nenhuma ficha oferece corpo inteiro em perfil do lado oposto ao perfil superior, nem detalhes dedicados de mãos, sola ou topo da cabeça."
+      ],
+      "limits": [
+        "Sem referência externa, a fidelidade à pessoa pretendida é UNKNOWN.",
+        "Sem rotação ou sequência temporal, a estabilidade de identidade em movimento é UNKNOWN.",
+        "Não se comprova adequação a uma produção específica ou aprovação humana."
+      ],
+      "confidence": "alta para cobertura; moderada para equivalência de identidade"
+    }
+  ],
+  "unknowns": [
+    "Vídeo",
+    "Som",
+    "Continuidade temporal realizada",
+    "Eficácia artística realizada",
+    "Avaliação humana externa",
+    "Intenção e condições de geração"
+  ]
+}

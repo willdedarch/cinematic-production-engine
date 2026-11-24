@@ -1,0 +1,30 @@
+{
+  "kind": "CPE_TAKE_PAIR_1",
+  "pair_id": "PAIR-690b0eba74a8434b89b4e219474611d4",
+  "spreadsheet_id": "UNBOUND",
+  "project_id": "TEST-CPE31",
+  "episode_id": "TEST-CPE31-EP1",
+  "is_test": true,
+  "question": "Que sincronismo entre o corte de ambiente e o sinal sonoro orienta melhor o espaço?",
+  "takes": {
+    "A": {
+      "id": "TEST-TAKE-DOC-01-1",
+      "revision": 1,
+      "version": 1,
+      "sha256": "d7a073cce4f9359f6a825f740fbf207d68d1d7636d4340acaba6fd79d060a754",
+      "mime": "video/mp4",
+      "duration_ms": 6000,
+      "has_audio": true
+    },
+    "B": {
+      "id": "TEST-TAKE-DOC-01-2",
+      "revision": 1,
+      "version": 1,
+      "sha256": "96b19feb346a8d6950adcb386172bd288d2017547f20a8eb567e919b06e9f585",
+      "mime": "video/mp4",
+      "duration_ms": 6000,
+      "has_audio": true
+    }
+  },
+  "pair_sha256": "fb919a775171f73d1c2deed2c3cd1e2fb48b0cd5ed70b92550d306dafb2bc88e"
+}

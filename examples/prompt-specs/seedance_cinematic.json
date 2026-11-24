@@ -1,0 +1,63 @@
+{
+  "model_id": "seedance_2_5",
+  "parameters": {
+    "mode": "t2v",
+    "duration": 8
+  },
+  "aspect_ratio": "16:9",
+  "intent": {
+    "initial_state": "Ada segura a manta junto da mesa; Ivo permanece sentado",
+    "action": "Ada oferece e espera uma reação observável",
+    "camera": "Plano fixo oblíquo que conserva a janela oeste",
+    "protected": "Mesma sala e duas pessoas adultas"
+  },
+  "cinematic_plan": {
+    "objective": "Mostrar uma oferta com custo",
+    "space": "Janela oeste, banco leste, passagem ao norte",
+    "cast": {
+      "ADA": "Ada, mulher com casaco molhado",
+      "IVO": "Ivo, homem sentado no banco"
+    },
+    "duration_s": 8,
+    "protected": "A mão e a posição da manta precisam continuar coerentes",
+    "beats": [
+      {
+        "id": "B1",
+        "start_s": 0,
+        "end_s": 4,
+        "subjects": [
+          "ADA"
+        ],
+        "action": "Ada estende uma ponta da manta sem soltar a outra",
+        "performance": "Procura a reação de Ivo antes de completar a oferta",
+        "attention": "Mão e olhar de Ada",
+        "sound": "Gota no balde ao fundo",
+        "entry": {
+          "manta": "na mão de Ada"
+        },
+        "exit": {
+          "manta": "estendida entre os dois"
+        }
+      },
+      {
+        "id": "B2",
+        "start_s": 4,
+        "end_s": 8,
+        "subjects": [
+          "ADA",
+          "IVO"
+        ],
+        "action": "Ivo toca a ponta e Ada solta o tecido",
+        "performance": "Ivo recebe primeiro com cautela e depois sustenta o peso",
+        "attention": "Contato entre mãos e tecido",
+        "camera": "Conservar posição, sem corte automático",
+        "entry": {
+          "manta": "estendida entre os dois"
+        },
+        "exit": {
+          "manta": "sustentada por Ivo"
+        }
+      }
+    ]
+  }
+}

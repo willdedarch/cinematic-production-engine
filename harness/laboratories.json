@@ -1,0 +1,442 @@
+[
+  {
+    "name": "Lens",
+    "tool_family": "optics",
+    "read": [
+      "knowledge/optics.md",
+      "knowledge/optical-character.md"
+    ],
+    "main_variable": "Focal/sensor/squeeze",
+    "procedure": "Mesmo blocking e sensor; variar focal, comparar campo e proteção do gesto",
+    "criteria": [
+      "Campo e relevância narrativa registrados",
+      "Preservar contexto, aprovados, versões e referências"
+    ],
+    "example": "35 versus50 mm a3m em A última água",
+    "limitations": [
+      "Cálculo não reproduz caráter real de vidro",
+      "Não tratar saída generativa como experimento físico rigoroso"
+    ],
+    "checklist": [
+      "Hipótese e variável explícitas",
+      "Quantidade e execução autorizadas quando necessário",
+      "Uma variável principal ou confusão declarada",
+      "Evidência antes/depois e limites",
+      "Decisão humana e lição com escopo"
+    ],
+    "execution_mode": "LOCAL_TOOL",
+    "required_input": "lens and sensor settings"
+  },
+  {
+    "name": "Camera",
+    "tool_family": "previs_2d",
+    "read": [
+      "knowledge/direction.md",
+      "harness/optics-previs.md"
+    ],
+    "main_variable": "Posição/altura ou trajetória",
+    "procedure": "Fixar planta e ação; mover somente câmera; traçar linhas de visão e oclusões",
+    "criteria": [
+      "Geometria e lado do eixo conservados",
+      "Preservar contexto, aprovados, versões e referências"
+    ],
+    "example": "Baixar câmera para incluir cantil e Lia sem mover N1",
+    "limitations": [
+      "Planta não simula toda oclusão3D; Blender depende de startup real",
+      "Não tratar saída generativa como experimento físico rigoroso"
+    ],
+    "checklist": [
+      "Hipótese e variável explícitas",
+      "Quantidade e execução autorizadas quando necessário",
+      "Uma variável principal ou confusão declarada",
+      "Evidência antes/depois e limites",
+      "Decisão humana e lição com escopo"
+    ],
+    "execution_mode": "LOCAL_TOOL",
+    "required_input": "approved scene geometry with cameras and room dimensions"
+  },
+  {
+    "name": "Composition",
+    "tool_family": "overlay",
+    "read": [
+      "knowledge/composition.md"
+    ],
+    "main_variable": "Hierarquia ou recorte",
+    "procedure": "Anotar primeiro/médio/fundo; comparar recortes sobre cópia autorizada",
+    "criteria": [
+      "Gesto/rosto necessários legíveis no destino final",
+      "Preservar contexto, aprovados, versões e referências"
+    ],
+    "example": "9:16 preserva mão no terço inferior e resposta acima",
+    "limitations": [
+      "Guias não são nota de qualidade",
+      "Não tratar saída generativa como experimento físico rigoroso"
+    ],
+    "checklist": [
+      "Hipótese e variável explícitas",
+      "Quantidade e execução autorizadas quando necessário",
+      "Uma variável principal ou confusão declarada",
+      "Evidência antes/depois e limites",
+      "Decisão humana e lição com escopo"
+    ],
+    "execution_mode": "LOCAL_TOOL",
+    "required_input": "authorized local image and overlay settings"
+  },
+  {
+    "name": "Lighting",
+    "tool_family": "overlay",
+    "read": [
+      "knowledge/light.md"
+    ],
+    "main_variable": "Direção ou contraste",
+    "procedure": "Desenhar fonte motivada e áreas protegidas; usar referência ou conceito autorizado se cálculo não bastar",
+    "criteria": [
+      "Direção coerente em contraângulos e gesto legível",
+      "Preservar contexto, aprovados, versões e referências"
+    ],
+    "example": "Janela E1 versus retorno oeste mais forte",
+    "limitations": [
+      "Overlay de seta não é renderização de luz física",
+      "Não tratar saída generativa como experimento físico rigoroso"
+    ],
+    "checklist": [
+      "Hipótese e variável explícitas",
+      "Quantidade e execução autorizadas quando necessário",
+      "Uma variável principal ou confusão declarada",
+      "Evidência antes/depois e limites",
+      "Decisão humana e lição com escopo"
+    ],
+    "execution_mode": "LOCAL_TOOL",
+    "required_input": "authorized local image and overlay settings"
+  },
+  {
+    "name": "Color",
+    "tool_family": "image_analysis",
+    "read": [
+      "knowledge/narrative-editing.md",
+      "knowledge/design.md"
+    ],
+    "main_variable": "Paleta ou contraste de cor",
+    "procedure": "Comparar referência/arquivo, manter exposição e intenção; separar objeto/luz/grade",
+    "criteria": [
+      "Pele, material e hierarquia analisados no mesmo destino",
+      "Preservar contexto, aprovados, versões e referências"
+    ],
+    "example": "Madeira/lã baixas com pele separada, sem filtro genérico",
+    "limitations": [
+      "Scopes aproximados dependem de tags/transformação",
+      "Não tratar saída generativa como experimento físico rigoroso"
+    ],
+    "checklist": [
+      "Hipótese e variável explícitas",
+      "Quantidade e execução autorizadas quando necessário",
+      "Uma variável principal ou confusão declarada",
+      "Evidência antes/depois e limites",
+      "Decisão humana e lição com escopo"
+    ],
+    "execution_mode": "LOCAL_TOOL",
+    "required_input": "local image per variant or shared --source"
+  },
+  {
+    "name": "Texture",
+    "tool_family": "image_analysis",
+    "read": [
+      "knowledge/design.md"
+    ],
+    "main_variable": "Escala/distribuição de textura",
+    "procedure": "Inspecionar recorte de material no mesmo tamanho, diferenciar ruído e uso",
+    "criteria": [
+      "Textura localizada e escala coerente",
+      "Preservar contexto, aprovados, versões e referências"
+    ],
+    "example": "Trama de lã no médio; metal riscado perto da tampa",
+    "limitations": [
+      "Nitidez numérica não prova materialidade",
+      "Não tratar saída generativa como experimento físico rigoroso"
+    ],
+    "checklist": [
+      "Hipótese e variável explícitas",
+      "Quantidade e execução autorizadas quando necessário",
+      "Uma variável principal ou confusão declarada",
+      "Evidência antes/depois e limites",
+      "Decisão humana e lição com escopo"
+    ],
+    "execution_mode": "LOCAL_TOOL",
+    "required_input": "local image per variant or shared --source"
+  },
+  {
+    "name": "Material",
+    "tool_family": "image_analysis",
+    "read": [
+      "knowledge/design.md"
+    ],
+    "main_variable": "Resposta de um material",
+    "procedure": "Comparar brilho, rigidez e contato com referência autorizada",
+    "criteria": [
+      "Peso/apoiamento/reflexo coerentes com ação",
+      "Preservar contexto, aprovados, versões e referências"
+    ],
+    "example": "Cantil metal e tira de couro respondem de modos diferentes",
+    "limitations": [
+      "Imagem estática não prova peso ou funcionamento",
+      "Não tratar saída generativa como experimento físico rigoroso"
+    ],
+    "checklist": [
+      "Hipótese e variável explícitas",
+      "Quantidade e execução autorizadas quando necessário",
+      "Uma variável principal ou confusão declarada",
+      "Evidência antes/depois e limites",
+      "Decisão humana e lição com escopo"
+    ],
+    "execution_mode": "LOCAL_TOOL",
+    "required_input": "local image per variant or shared --source"
+  },
+  {
+    "name": "Casting",
+    "tool_family": "context",
+    "read": [
+      "knowledge/design.md",
+      "departments/casting.md"
+    ],
+    "main_variable": "Identidade de candidato",
+    "procedure": "Fixar papel/idade/traços; comparar candidaturas em contexto, sem promover gosto local a regra",
+    "criteria": [
+      "Identidade distinta, pertinência e referências autorizadas",
+      "Preservar contexto, aprovados, versões e referências"
+    ],
+    "example": "Davi e Lia não compartilham a mesma mandíbula/silhueta",
+    "limitations": [
+      "Sem imagem real: avaliação visual UNKNOWN",
+      "Não tratar saída generativa como experimento físico rigoroso"
+    ],
+    "checklist": [
+      "Hipótese e variável explícitas",
+      "Quantidade e execução autorizadas quando necessário",
+      "Uma variável principal ou confusão declarada",
+      "Evidência antes/depois e limites",
+      "Decisão humana e lição com escopo"
+    ],
+    "execution_mode": "GUIDED",
+    "required_input": "material ID, current version and questions for the director"
+  },
+  {
+    "name": "Wardrobe",
+    "tool_family": "context",
+    "read": [
+      "knowledge/design.md"
+    ],
+    "main_variable": "Material, camada ou estado",
+    "procedure": "Separar roupa mestre e estado de continuidade; checar época com fonte",
+    "criteria": [
+      "Uso, silhueta e estados consistentes",
+      "Preservar contexto, aprovados, versões e referências"
+    ],
+    "example": "Lã com desgaste de punho, sem sujeira uniforme",
+    "limitations": [
+      "Pesquisa histórica ausente permanece pendente",
+      "Não tratar saída generativa como experimento físico rigoroso"
+    ],
+    "checklist": [
+      "Hipótese e variável explícitas",
+      "Quantidade e execução autorizadas quando necessário",
+      "Uma variável principal ou confusão declarada",
+      "Evidência antes/depois e limites",
+      "Decisão humana e lição com escopo"
+    ],
+    "execution_mode": "GUIDED",
+    "required_input": "material ID, current version and questions for the director"
+  },
+  {
+    "name": "Performance",
+    "tool_family": "context",
+    "read": [
+      "knowledge/direction.md"
+    ],
+    "main_variable": "Ação ou timing",
+    "procedure": "Dar objetivo/estímulo/ação; comparar leitura ou vídeo autorizado; não fabricar atuação a partir de adjetivo",
+    "criteria": [
+      "Reação decorre do estímulo e muda a relação",
+      "Preservar contexto, aprovados, versões e referências"
+    ],
+    "example": "Interromper tampa após recusa, depois reformular oferta",
+    "limitations": [
+      "Frame/sheet não comprova tempo de atuação",
+      "Não tratar saída generativa como experimento físico rigoroso"
+    ],
+    "checklist": [
+      "Hipótese e variável explícitas",
+      "Quantidade e execução autorizadas quando necessário",
+      "Uma variável principal ou confusão declarada",
+      "Evidência antes/depois e limites",
+      "Decisão humana e lição com escopo"
+    ],
+    "execution_mode": "GUIDED",
+    "required_input": "material ID, current version and questions for the director"
+  },
+  {
+    "name": "Location",
+    "tool_family": "previs_2d",
+    "read": [
+      "knowledge/design.md",
+      "harness/optics-previs.md"
+    ],
+    "main_variable": "Geografia ou câmera",
+    "procedure": "Fixar dimensões/âncoras; comparar master e contraângulos sem ampliar arquitetura aprovada",
+    "criteria": [
+      "Adjacências e linhas de visão preservadas",
+      "Preservar contexto, aprovados, versões e referências"
+    ],
+    "example": "Sala6×4, W1/E1/N1 constantes",
+    "limitations": [
+      "Planta simplificada não valida fotorealismo",
+      "Não tratar saída generativa como experimento físico rigoroso"
+    ],
+    "checklist": [
+      "Hipótese e variável explícitas",
+      "Quantidade e execução autorizadas quando necessário",
+      "Uma variável principal ou confusão declarada",
+      "Evidência antes/depois e limites",
+      "Decisão humana e lição com escopo"
+    ],
+    "execution_mode": "LOCAL_TOOL",
+    "required_input": "approved scene geometry with cameras and room dimensions"
+  },
+  {
+    "name": "Atmosphere",
+    "tool_family": "image_analysis",
+    "read": [
+      "knowledge/light.md"
+    ],
+    "main_variable": "Densidade/localização do ar",
+    "procedure": "Relacionar partículas à fonte e ao vento; observar contraste por camada",
+    "criteria": [
+      "Profundidade sem ocultar ação/identidade",
+      "Preservar contexto, aprovados, versões e referências"
+    ],
+    "example": "Poeira junto de E1 e faixa limpa na mão",
+    "limitations": [
+      "Sem vídeo não validar persistência temporal",
+      "Não tratar saída generativa como experimento físico rigoroso"
+    ],
+    "checklist": [
+      "Hipótese e variável explícitas",
+      "Quantidade e execução autorizadas quando necessário",
+      "Uma variável principal ou confusão declarada",
+      "Evidência antes/depois e limites",
+      "Decisão humana e lição com escopo"
+    ],
+    "execution_mode": "LOCAL_TOOL",
+    "required_input": "local image per variant or shared --source"
+  },
+  {
+    "name": "Living World",
+    "tool_family": "context",
+    "read": [
+      "knowledge/design.md"
+    ],
+    "main_variable": "Ação secundária",
+    "procedure": "Atribuir tarefa, causa, percurso e duração ao fundo; comparar interferência com gesto principal",
+    "criteria": [
+      "Movimento com propósito, sem aleatoriedade",
+      "Preservar contexto, aprovados, versões e referências"
+    ],
+    "example": "Figurante cruza W1 reagindo a som distante",
+    "limitations": [
+      "Mais movimento não significa mundo melhor",
+      "Não tratar saída generativa como experimento físico rigoroso"
+    ],
+    "checklist": [
+      "Hipótese e variável explícitas",
+      "Quantidade e execução autorizadas quando necessário",
+      "Uma variável principal ou confusão declarada",
+      "Evidência antes/depois e limites",
+      "Decisão humana e lição com escopo"
+    ],
+    "execution_mode": "GUIDED",
+    "required_input": "material ID, current version and questions for the director"
+  },
+  {
+    "name": "Storyboard",
+    "tool_family": "previs_2d",
+    "read": [
+      "knowledge/direction.md",
+      "examples/last-water/production.md"
+    ],
+    "main_variable": "Cobertura/ordem",
+    "procedure": "Dividir beats em planos; representar estado inicial/final, eixo e duração estimada; comparar função dos cortes",
+    "criteria": [
+      "Cada plano fornece informação/reação necessária",
+      "Preservar contexto, aprovados, versões e referências"
+    ],
+    "example": "P01ancora sala;P03recusa;P05partilha",
+    "limitations": [
+      "Desenhos não demonstram eficácia de performance ou mídia final",
+      "Não tratar saída generativa como experimento físico rigoroso"
+    ],
+    "checklist": [
+      "Hipótese e variável explícitas",
+      "Quantidade e execução autorizadas quando necessário",
+      "Uma variável principal ou confusão declarada",
+      "Evidência antes/depois e limites",
+      "Decisão humana e lição com escopo"
+    ],
+    "execution_mode": "LOCAL_TOOL",
+    "required_input": "approved scene geometry with cameras and room dimensions"
+  },
+  {
+    "name": "Continuity",
+    "tool_family": "context",
+    "read": [
+      "knowledge/direction.md",
+      "modules/continuity.md"
+    ],
+    "main_variable": "Estado ou transição",
+    "procedure": "Confrontar ledger, planos e arquivos; observar mão, tampa, identidade, posição e som",
+    "criteria": [
+      "Mudança tem causa ou revisão explícita",
+      "Preservar contexto, aprovados, versões e referências"
+    ],
+    "example": "Direita/fechada→abre→oferece→Lia/esquerda",
+    "limitations": [
+      "Se arquivo inacessível não marcar critério observado",
+      "Não tratar saída generativa como experimento físico rigoroso"
+    ],
+    "checklist": [
+      "Hipótese e variável explícitas",
+      "Quantidade e execução autorizadas quando necessário",
+      "Uma variável principal ou confusão declarada",
+      "Evidência antes/depois e limites",
+      "Decisão humana e lição com escopo"
+    ],
+    "execution_mode": "GUIDED",
+    "required_input": "material ID, current version and questions for the director"
+  },
+  {
+    "name": "Hook",
+    "tool_family": "context",
+    "read": [
+      "knowledge/narrative-editing.md",
+      "modules/suspense-engine.md"
+    ],
+    "main_variable": "Informação da abertura",
+    "procedure": "Variar uma escolha de informação/ação; comparar expectativa e consequência sem apelar a slogans",
+    "criteria": [
+      "Abertura cria questão pertinente e mantém promessa da história",
+      "Preservar contexto, aprovados, versões e referências"
+    ],
+    "example": "Mostrar escassez antes da oferta versus só revelar depois",
+    "limitations": [
+      "Potencial de atenção não é retenção medida nem viralização",
+      "Não tratar saída generativa como experimento físico rigoroso"
+    ],
+    "checklist": [
+      "Hipótese e variável explícitas",
+      "Quantidade e execução autorizadas quando necessário",
+      "Uma variável principal ou confusão declarada",
+      "Evidência antes/depois e limites",
+      "Decisão humana e lição com escopo"
+    ],
+    "execution_mode": "GUIDED",
+    "required_input": "material ID, current version and questions for the director"
+  }
+]

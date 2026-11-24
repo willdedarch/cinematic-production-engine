@@ -1,0 +1,135 @@
+{
+  "reviewer": "/root/blind_critic_two",
+  "reviewer_type": "AI_SUBAGENT_DIRECT_IMAGE_INSPECTION",
+  "scope": "Revisão independente da legibilidade de um estudo esquemático local; não é avaliação de filme final, de performance ou de produto Martini/Mix.",
+  "observed_files": [
+    {
+      "path": "work/v3.1/examples/integrated-case/storyboard-contact.png",
+      "sha256": "6369050e4ac91894ac7b9ea74a3081d6316a8a91d77a3c6a37a8e3a20a8454a4",
+      "inspection": "view_image; observação direta dos seis painéis P01–P06 e de suas legendas",
+      "visible_dimensions_px": [1200, 540]
+    },
+    {
+      "path": "work/integrated-case-e072ea74/state/runs/RUN-cb9cd8db449141a1b8c35a3e240bd0a1/previs/floorplan.png",
+      "sha256": "866a81a8a94a7b8f0cbb672db9af506337b8dc7a4029a5252cd0f8c48fb1d6a2",
+      "inspection": "view_image; observação direta da planta2D indicada pelo resultado da execução previs",
+      "visible_dimensions_px": [1100, 820]
+    },
+    {
+      "path": "work/previs-revision/runs/RUN-c0e21617cfda4b6a98a65130c3246451/previs/floorplan.png",
+      "sha256": "6f2bd8b29180943a9342c2485da3ef19c11dca6d0031dd11b2f4205db908ea6f",
+      "inspection": "view_image; reteste direto da planta2D sucessora após correção dos rótulos de câmera",
+      "visible_dimensions_px": [1100, 820]
+    }
+  ],
+  "context_files": [
+    {
+      "path": "work/v3.1/templates/previs-room.json",
+      "sha256": "81c38242925a1f95622491d2cbec076052cbf177d31d10c8cf656fa95f192475",
+      "use": "Intenção geométrica declarada: sala 6×4×3 m, origem SW, W1 oeste, E1 leste, N1 norte, atores, cantil e duas câmeras na mesma posição. Não usado como prova de aparência."
+    },
+    {
+      "path": "work/v3.1/harness/optics-previs.md",
+      "sha256": "a8ee2d2ef323de35ecab59500fc637505512a07c173c1b12c66aa02cb9619605",
+      "use": "Limites declarados da lente idealizada, planta2D e ausência de validação de luz/DOF/performance. Não usado como prova de execução audiovisual."
+    },
+    {
+      "path": "work/v3.1/examples/integrated-case/case-report.json",
+      "sha256": "832df735362879949e0e3eeb612f4b1f06f126b46aaf4855a5f58303bd28e179",
+      "use": "Localização do recibo da execução command=previs."
+    },
+    {
+      "path": "work/integrated-case-e072ea74/state/runs/RUN-cb9cd8db449141a1b8c35a3e240bd0a1/result.json",
+      "sha256": "27a0fe0612ad80e819b9a743896be9445f80605347e4fd5e81d4b6d98abde0bd",
+      "use": "Localização de floorplan.png e identificação das duas câmeras declaradas; os valores numéricos de óptica não foram tratados como comprovação de imagem ou recalculados nesta revisão."
+    }
+  ],
+  "technical_findings": [
+    {
+      "id": "SCHEMATIC-01",
+      "status": "OBSERVED_CONSISTENT",
+      "severity": "NONE",
+      "subject": "W1/E1/N1",
+      "evidence": "Na planta, W1 está no centro da borda esquerda, E1 no centro da borda direita e N1 no centro da borda superior. No storyboard, os seis painéis mantêm W1 oeste à esquerda, E1 leste à direita e N1 norte acima. A posição geral dos personagens mantém Davi a oeste de Lia.",
+      "finding": "Os três marcos e a orientação geral são legíveis e não apresentam troca de lado observável entre os seis diagramas. A vista esquemática do storyboard não é uma projeção de câmera identificada nem uma planta métrica.",
+      "action": "Nenhuma correção desses rótulos é exigida por esta observação."
+    },
+    {
+      "id": "SCHEMATIC-02",
+      "status": "ISSUE_OBSERVED",
+      "severity": "LOW",
+      "subject": "Identificação das câmeras na planta",
+      "evidence": "Na região inferior esquerda da planta, as duas câmeras têm a mesma origem. Os textos de identificação e focal estão sobrepostos nessa posição; as linhas de campo e de direção usam a mesma cor salmão e parte do traçado coincide.",
+      "finding": "A existência de campos mais estreito e mais aberto é visível, mas a associação imediata de cada conjunto de linhas a CAM35 ou CAM50 fica prejudicada. É um problema de leitura do diagrama, não um defeito fotográfico ou uma prova de cálculo óptico errado.",
+      "action": "Separar os dois rótulos com chamadas e distinguir os conjuntos de linhas por padrão ou cor, com legenda. Preservar a origem coincidente das câmeras."
+    },
+    {
+      "id": "SCHEMATIC-03",
+      "status": "OBSERVED_SYMBOLIC_TRANSFER",
+      "severity": "NONE",
+      "subject": "Estados e posse do cantil",
+      "evidence": "P01–P04 mostram um pequeno retângulo dourado junto à figura à esquerda; P03 acrescenta uma linha de braço levantado à figura à direita. P05 desloca o retângulo para perto de Lia, com uma linha longa ligando-o a Davi. Em P06 ele aparece ao lado de Lia, ligado por uma linha curta ao seu corpo, com a anotação 'owner: LIA'. Não há dois cantis simultâneos visíveis em nenhum painel.",
+      "finding": "A sequência comunica simbolicamente retenção, recusa, aproximação/oferta e posse final de Lia. Os estados antes/depois da transferência são legíveis para um diagrama. O instante de contato compartilhado e a soltura efetiva não estão representados como ação contínua; sua execução física continua não verificada.",
+      "action": "Tratar essa passagem como transferência simbólica. Só é necessário detalhar contato e soltura se uma etapa posterior pretender validar a mecânica da entrega."
+    },
+    {
+      "id": "SCHEMATIC-04",
+      "status": "TEXT_SUPPORTED_NOT_VISUALLY_RESOLVED",
+      "severity": "LIMITATION",
+      "subject": "Tampa, olhar, mão anatômica e atuação",
+      "evidence": "A legenda de P02 diz 'Mão direita abre a tampa; ouve-se respiração', mas P01 e P02 têm essencialmente o mesmo símbolo de cantil e braço. P04 menciona o olhar, porém os rostos são círculos sem olhos ou direção facial. P06 nomeia a mão esquerda, mas a figura não estabelece orientação corporal suficiente para demonstrar lateralidade anatômica.",
+      "finding": "Esses gestos e o som estão informados pelas legendas; o desenho não comprova abertura da tampa, respiração, troca de olhar ou mão anatômica exata. Isso é um limite real de representação, não motivo para cobrar fotorrealismo do esquema.",
+      "action": "Manter esses itens como estados/gestos planejados e não validados visualmente. Se precisarem ser conferidos ainda no diagrama, acrescentar uma marca simples de tampa aberta e indicadores de olhar e lateralidade."
+    },
+    {
+      "id": "SCHEMATIC-05",
+      "status": "NOT_VERIFIED",
+      "severity": "LIMITATION",
+      "subject": "Óptica e enquadramento final",
+      "evidence": "A planta mostra posições e linhas de visão em vista superior. O storyboard usa a mesma representação diagramática dos atores e do espaço, sem imagens renderizadas pelas câmeras CAM35/CAM50.",
+      "finding": "É possível observar organização espacial geral e campos desenhados; não é possível confirmar perspectiva de tomada, recorte vertical, oclusão tridimensional, DOF, luz física, caráter de lente ou equivalência visual com uma lente real. Os diagramas não demonstram performance nem eficácia emocional.",
+      "action": "Não promover esta leitura a validação óptica ou artística do filme. Não houve execução de Blender, geração de mídia ou navegação em produto nesta revisão."
+    }
+  ],
+  "technical_status": "SCHEMATIC_READABLE_AFTER_LABEL_REVISION",
+  "retests": [
+    {
+      "reviewer": "/root/blind_critic_two",
+      "finding_id": "SCHEMATIC-02",
+      "prior_version": {
+        "path": "work/integrated-case-e072ea74/state/runs/RUN-cb9cd8db449141a1b8c35a3e240bd0a1/previs/floorplan.png",
+        "sha256": "866a81a8a94a7b8f0cbb672db9af506337b8dc7a4029a5252cd0f8c48fb1d6a2"
+      },
+      "successor_version": {
+        "path": "work/previs-revision/runs/RUN-c0e21617cfda4b6a98a65130c3246451/previs/floorplan.png",
+        "sha256": "6f2bd8b29180943a9342c2485da3ef19c11dca6d0031dd11b2f4205db908ea6f"
+      },
+      "method": "Inspeção direta da imagem sucessora por view_image, comparada à planta anterior já observada. Hash da versão anterior conferido novamente e mantido.",
+      "status": "LABEL_OVERLAP_RESOLVED_IN_OBSERVED_SUCCESSOR",
+      "evidence": [
+        "A imagem sucessora mostra no alto 'CAM35 / 35 mm' em laranja e 'CAM50 / 50 mm' em azul, separados e legíveis.",
+        "Junto à origem coincidente, CAM35 e CAM50 aparecem em duas linhas separadas; os limites dos campos usam respectivamente laranja e azul, permitindo associá-los à legenda.",
+        "A linha central coincidente é visível em azul e não demonstra duas direções diferentes. A origem compartilhada continua compreensível e a identificação dos dois campos deixou de depender de rótulos sobrepostos.",
+        "W1, E1 e N1, os pontos DAVI/LIA/CANTIL e o retângulo da sala permanecem nas mesmas posições aparentes. Não foi realizada comparação métrica ou auditoria do código de geometria."
+      ],
+      "limits_retained": [
+        "Resolvido somente o problema de legibilidade SCHEMATIC-02 na versão sucessora observada. O achado original foi preservado como histórico da versão anterior.",
+        "A mudança visual não valida óptica física, enquadramento tridimensional, performance, contato da transferência, som ou efeito emocional.",
+        "O storyboard não foi alterado nem reavaliado como filme; suas limitações de gesto e representação permanecem.",
+        "artistic_status continua UNKNOWN e approval continua false; isto não é aceite visual humano."
+      ]
+    }
+  ],
+  "artistic_status": "UNKNOWN",
+  "artistic_reason": "As legendas propõem uma recusa e uma passagem da oferta para partilha, e os símbolos tornam a mudança de posse compreensível. A força dramática dessa escolha, o custo percebido, a atuação, o silêncio e o ritmo não são demonstrados por esses seis diagramas estáticos. As durações estão identificadas como planejadas; não foram vivenciadas como sequência nesta revisão.",
+  "limitations": [
+    "Foram vistas diretamente o storyboard-contact e duas versões da planta2D. Não foram reproduzidos vídeos, áudio ou animação, nem inspecionados outros frames individualmente.",
+    "Os captions usados para intenção estão incorporados ao próprio storyboard-contact.png. As ações que só aparecem em texto foram distinguidas das marcas efetivamente visíveis.",
+    "O resultado previs foi usado para localizar a planta existente; nenhum render foi solicitado ou produzido. A planta observada veio do caminho original work/integrated-case-e072ea74, e o storyboard da cópia sob work/v3.1/examples/integrated-case.",
+    "Hashes SHA-256 identificam os arquivos lidos nesta revisão; não autenticam autoria, execução externa, aprovação humana ou imutabilidade posterior.",
+    "Não houve validação ao vivo de Martini, Mix ou Studio. O escopo autorizado foi somente a inspeção de artefatos esquemáticos locais.",
+    "Esta revisão não recalculou os campos ópticos, não certificou medidas de cenário e não aplicou um padrão fotográfico aos diagramas.",
+    "O revisor é um agente de IA identificado como /root/blind_critic_two. O registro não é aceite visual humano e não substitui manifestação do usuário."
+  ],
+  "approval": false
+}

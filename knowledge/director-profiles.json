@@ -1,0 +1,141 @@
+[
+  {
+    "id": "STYLE-deakins-mendes",
+    "title": "Mendes / Deakins — 1917",
+    "intention": "Ponto de vista acompanhando travessia",
+    "principle": "Movimento e luz devem manter espaço coerente durante a trajetória",
+    "application": "Projetar caminho, mudanças de luz e revelações; testar se o gesto ganha com continuidade",
+    "limit": "Não exige plano-sequência em outras obras",
+    "sources": [
+      "ARRI-1917",
+      "ASC-1917"
+    ],
+    "status": "ANALYTIC_DRAFT",
+    "study": "knowledge/style-studies.md",
+    "review_dimensions": [
+      "source",
+      "blocking",
+      "light",
+      "optics",
+      "materials",
+      "information",
+      "observed_result"
+    ],
+    "approval": "Requires director review on the actual material"
+  },
+  {
+    "id": "STYLE-spielberg-kaminski",
+    "title": "Spielberg / Kamiński — O Resgate do Soldado Ryan",
+    "intention": "Percepção corporal da situação",
+    "principle": "Escolhas de exposição temporal e câmera servem ao estado do personagem",
+    "application": "Relacionar agitação à informação e consequência; comparar legibilidade do impacto",
+    "limit": "45°/90° são escolhas documentadas desse filme, não preset de guerra",
+    "sources": [
+      "ASC-RYAN"
+    ],
+    "status": "ANALYTIC_DRAFT",
+    "study": "knowledge/style-studies.md",
+    "review_dimensions": [
+      "source",
+      "blocking",
+      "light",
+      "optics",
+      "materials",
+      "information",
+      "observed_result"
+    ],
+    "approval": "Requires director review on the actual material"
+  },
+  {
+    "id": "STYLE-villeneuve-deakins",
+    "title": "Villeneuve / Deakins / Gassner — Blade Runner 2049",
+    "intention": "Arquitetura e luz organizam a solidão",
+    "principle": "Massa, escala e fonte participam da dramaturgia",
+    "application": "Desenhar volumes e fontes antes do tratamento de cor",
+    "limit": "Não reproduzir cenários nem reduzir a identidade a laranja/azul",
+    "sources": [
+      "ASC-BR2049"
+    ],
+    "status": "ANALYTIC_DRAFT",
+    "study": "knowledge/style-studies.md",
+    "review_dimensions": [
+      "source",
+      "blocking",
+      "light",
+      "optics",
+      "materials",
+      "information",
+      "observed_result"
+    ],
+    "approval": "Requires director review on the actual material"
+  },
+  {
+    "id": "STYLE-nolan-hoytema",
+    "title": "Nolan / van Hoytema — Dunkirk",
+    "intention": "Escala e experiência física",
+    "principle": "Grande formato é decisão documentada; técnica particular depende do trecho analisado",
+    "application": "Planejar escala humana e ambiente com referências próprias",
+    "limit": "Fonte consultada é página de evento, entrevista integral não assistida; não atribuir outras técnicas como fato",
+    "sources": [
+      "ASC-DUNKIRK"
+    ],
+    "status": "ANALYTIC_DRAFT",
+    "study": "knowledge/style-studies.md",
+    "review_dimensions": [
+      "source",
+      "blocking",
+      "light",
+      "optics",
+      "materials",
+      "information",
+      "observed_result"
+    ],
+    "approval": "Requires director review on the actual material"
+  },
+  {
+    "id": "STYLE-anderson-yeoman",
+    "title": "Anderson / Yeoman — referência de óptica",
+    "intention": "Geometria e organização gráfica",
+    "principle": "Usar enquadramento deliberado como hipótese de leitura",
+    "application": "Comparar eixo frontal e assimetria motivada sem copiar cenário",
+    "limit": "Fonte Cooke fornece exemplo esférico e crédito; não é estudo integral do estilo",
+    "sources": [
+      "COOKE-ANAM"
+    ],
+    "status": "ANALYTIC_DRAFT",
+    "study": "knowledge/style-studies.md",
+    "review_dimensions": [
+      "source",
+      "blocking",
+      "light",
+      "optics",
+      "materials",
+      "information",
+      "observed_result"
+    ],
+    "approval": "Requires director review on the actual material"
+  },
+  {
+    "id": "STYLE-original-last-water",
+    "title": "Identidade própria — A última água",
+    "intention": "Dignidade no gesto de partilhar",
+    "principle": "Espaço contido, materiais gastos, luz E1 e som próximo",
+    "application": "Combinar clareza espacial e pausa; proteger W1/E1/N1 e mão do cantil",
+    "limit": "Perfil didático autoral; sem validação de mídia ou aprovação estética real",
+    "sources": [
+      "EX-LAST-WATER"
+    ],
+    "status": "ANALYTIC_DRAFT",
+    "study": "knowledge/style-studies.md",
+    "review_dimensions": [
+      "source",
+      "blocking",
+      "light",
+      "optics",
+      "materials",
+      "information",
+      "observed_result"
+    ],
+    "approval": "Requires director review on the actual material"
+  }
+]

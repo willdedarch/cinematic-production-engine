@@ -1,0 +1,96 @@
+[
+  {
+    "case_id": "COM-01",
+    "genre": "comédia",
+    "aliases": [
+      "comedy",
+      "comedia",
+      "sitcom",
+      "humor"
+    ],
+    "intention": "A plateia percebe quem ouviu a mentira antes de quem a contou.",
+    "beats": [
+      "Uma funcionária descreve o chefe como alguém que nunca aparece.",
+      "No reflexo do vidro, o público vê o chefe segurar a porta para ela.",
+      "Ela continua falando. Ele agradece a avaliação sem sair do tom cordial."
+    ],
+    "departments": [
+      "editing",
+      "dialogue",
+      "performance",
+      "direction"
+    ],
+    "contrast": "A corta imediatamente para o chefe e entrega a piada. B mantém o reflexo e espera a funcionária se virar. Comparar em qual versão a descoberta pertence ao espectador.",
+    "title": "A porta de vidro"
+  },
+  {
+    "case_id": "DOC-01",
+    "genre": "documentário",
+    "aliases": [
+      "documentary",
+      "documentario",
+      "observacional"
+    ],
+    "intention": "Deixar que a pessoa entrevistada decida o que significa o silêncio.",
+    "beats": [
+      "O restaurador abre uma caixa e mostra a dobradiça gasta.",
+      "Ao falar de quem a trouxe, ele para. O som do fecho continua.",
+      "Ele decide o que mostrar a seguir."
+    ],
+    "departments": [
+      "sound",
+      "editing",
+      "direction",
+      "locations"
+    ],
+    "contrast": "A cobre a pausa com música elegíaca. B preserva som direto e duração. Ouvir se a montagem atribui uma emoção que a pessoa não expressou.",
+    "title": "O fecho"
+  },
+  {
+    "case_id": "SUS-01",
+    "genre": "suspense",
+    "aliases": [
+      "thriller",
+      "misterio",
+      "mistério",
+      "suspense"
+    ],
+    "intention": "A audiência ouve um ruído cujo significado a personagem ainda desconhece.",
+    "beats": [
+      "Uma revisora guarda uma página num armário.",
+      "Um segundo clique soa depois que a mão já soltou a chave.",
+      "Ela mantém o rosto imóvel e conta mentalmente antes de voltar."
+    ],
+    "departments": [
+      "sound",
+      "performance",
+      "suspense",
+      "composition"
+    ],
+    "contrast": "A insere imediatamente um detalhe da fechadura. B atrasa a explicação. Verificar se há orientação espacial suficiente para o ruído criar pergunta, sem confundir.",
+    "title": "O segundo clique"
+  },
+  {
+    "case_id": "WAR-01",
+    "genre": "guerra",
+    "aliases": [
+      "war",
+      "feb",
+      "guerra"
+    ],
+    "intention": "Partilhar um recurso muda quem aceita cuidado.",
+    "beats": [
+      "Davi oferece o cantil.",
+      "Lia percebe o custo da oferta.",
+      "Os dois partilham; a buzina desloca o olhar para W1."
+    ],
+    "departments": [
+      "continuity",
+      "props",
+      "geometry",
+      "performance"
+    ],
+    "contrast": "Mostrar a água apenas como escassez ou como negociação observável através da tampa; conservar a transferência de mão na passagem para SH06.",
+    "title": "A última água"
+  }
+]

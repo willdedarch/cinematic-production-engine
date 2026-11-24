@@ -1,0 +1,55 @@
+{
+  "reviewer": "B",
+  "scope": "Ensaio textual; avaliação independente somente do brief e dos quatro textos fornecidos, na ordem W38, R94, F62, B17. Sem inferência de condições de produção.",
+  "audiovisual_realizado": "UNKNOWN",
+  "human_acceptance": "UNKNOWN",
+  "criteria": ["causalidade", "ação coletiva", "subtexto", "continuidade", "potencial audiovisual textual"],
+  "assessments": {
+    "W38": {
+      "overall": "Atende ao núcleo do brief; ação legível e continuidade material majoritariamente estável.",
+      "causalidade": "O ajudante ergue a tigela e a cozinheira retém a borda; derrame provoca salvamento da louça e retomada do transporte. O prato que bloqueia a bandeja obriga Bento a colaborar.",
+      "acao_coletiva": "Todos agem; Joel organiza, Lia contém líquido e protege a pilha, Bento muda de disputa para transporte. O percurso da bandeja desde a faixa leste até sul precisa ser claramente encenado.",
+      "subtexto": "A bolsa procurada sem olhar e a resposta 'Mandaram ele esperar' deixam a mensageira reticente; 'Deixa a porta aberta' torna a espera uma escolha física.",
+      "continuidade": "Quatro pratos seguem vazios; pano saturado, avental molhado, caldo e marca da mão permanecem. No roteiro Ana baixa a tigela e depois a recolhe; o plano 5 fixa corretamente sua posse.",
+      "potencial_audiovisual": "Bom uso de direção de luz e pequenos sons, com efeito persistente. A retomada coletiva é clara, embora menos transformadora que a mudança de rota de F62 ou a renúncia alimentar de R94.",
+      "limitations": ["A ordem que reteve Rui permanece genérica; isso preserva informação parcial, mas fornece pouco elemento concreto sobre o atraso.", "A quantidade 'menos da metade' depende da realização do derrame, ainda não observada."]
+    },
+    "R94": {
+      "overall": "Atende ao núcleo do brief; decisão moral particularmente clara por ações e objetos.",
+      "causalidade": "O apagão desloca a secagem para oeste e obriga Gil a ceder espaço. Disputa pela tigela provoca derrame; redução de comida precede decisão de servir três, deixando a cozinheira sem porção.",
+      "acao_coletiva": "Damião preserva a tigela, Rosa salva e parte o pão, Gil recua e limpa pratos. O trabalho permanece funcional durante a conversa.",
+      "subtexto": "O pão trazido substitui uma explicação; Rosa evita responder 'Do rio?' partindo-o. O quarto prato vazio diante de Berta expressa renúncia sem explicação verbal.",
+      "continuidade": "Pratos, dois panos e tampa são diferenciados; umidade persiste. A aproximação dos pratos de oeste à tigela na borda leste e o alcance de Damião a partir de oeste precisam de marcação espacial precisa.",
+      "potencial_audiovisual": "Boa progressão de objetos: pão preservado, três pratos servidos, quarto vazio, gotas do avental. O gesto que faz a borda da tigela subir sobre o prato é menos imediatamente verificável que uma disputa manual com obstáculo visível.",
+      "limitations": ["A mecânica prato/tigela tampada no derrame exige ensaio para continuar legível.", "Os 78 segundos são estimativa; passagem de pão, três serviços e deslocamentos finais ainda não foram cronometrados."]
+    },
+    "F62": {
+      "overall": "Atende ao núcleo do brief; melhor integração textual entre apagão, conflito e reorganização da tarefa.",
+      "causalidade": "O apagão desloca recipientes para a luz; a informação sobre a carroça desvia Ana durante a disputa; a dobra do pano prende a tigela; o caldo ocupa o corredor sul e força a rota norte.",
+      "acao_coletiva": "Tomás dá ritmo à passagem, interrompe-a ao acidente e reorganiza o percurso; Lia recebe e protege o saco; Bento limpa e bloqueia fisicamente a passagem; Ana mantém a reserva. Cada pessoa altera o trabalho das outras.",
+      "subtexto": "Lia para ao ouvir 'dele', responde por outro caminho e diz 'Não vinha nela'; a tigela vazia empurrada por Bento mantém sua demanda depois da capitulação física.",
+      "continuidade": "Pano, piso sul, saco seco, colher vazia, reserva coberta e nova rota são transportados aos estados finais. A colher é pousada explicitamente no plano 6 antes de Bento limpar. A mudança de câmera sul/sudeste pede atenção de montagem, mas as referências espaciais estão indicadas.",
+      "potencial_audiovisual": "O plano do acidente exige causa e efeito na mesma tomada; o geral final mostra a consequência como nova geometria coletiva. Som de recipientes retomado em outro lugar pode tornar a mudança perceptível.",
+      "limitations": ["'Ninguém sabe, por essa resposta, onde João está' é comentário explicativo, não ação filmável, e seria dispensável.", "O começo enuncia o fim da eletricidade antes de reapresentar a interrupção nas ações; convém executar como um único apagão, não dois eventos.", "Não foi observada a viabilidade dos alcances e da concentração de gestos no tempo estimado."]
+    },
+    "B17": {
+      "overall": "Tem forte proposta dramática coletiva, mas a continuidade final da comida exige reparo.",
+      "causalidade": "A mesa manca cria dependência de apoio; casaco puxa pano, caldo molha saco, saco cede, Joel solta mesa, Bento precisa sustentá-la. A cadeia é expressiva, porém concentra vários acontecimentos em pouco tempo e o trajeto do pano entre tigela ao sul e Lia no noroeste não está resolvido com precisão.",
+      "acao_coletiva": "O trabalho exige trocas concretas de função: Joel sustenta, Bento assume, Lia substitui; o casaco torna-se transporte de pão. É o mecanismo coletivo mais dependente de cooperação recíproca dos quatro textos.",
+      "subtexto": "A colher entregue tarde materializa informação retida. 'E você deixou eu guardar' produz consequência relacional sem explicar por completo o atraso.",
+      "continuidade": "Saco avariado, chão molhado e mesa apoiada persistem. Falha central: Rosa divide em duas tigelas, dá uma a Lia e fica com a outra; Lia dá somente a colher a Bento e assume o apoio; Bento então come sem receber tigela ou ter acesso descrito a uma delas. A ficha do plano 1 também mantém quatro tigelas ao sul após a ação de empilhá-las, que o plano 2 encena.",
+      "potencial_audiovisual": "A troca de lugares e a colher têm força de imagem; a geografia do pano e o destino da porção precisam ser resolvidos antes de afirmar que a cadeia é filmável como escrita.",
+      "limitations": ["A continuidade de quem recebe e consome o caldo não fecha.", "A luz muito fraca de lua terá de permitir perceber nós, base do saco e puxão sem perder a proposta de escuridão.", "A velocidade real da cadeia de acidentes e recuperações é desconhecida."]
+    }
+  },
+  "pairs": [
+    {"a":"W38","b":"R94","verdict":"R94","reason":"R94 dá ao conflito uma decisão mais precisa: Berta retira o quarto prato e fica sem porção. W38 tem boa marca molhada e porta aberta, mas a retomada deixa a escolha alimentar essencialmente no estado inicial.","tradeoff":"W38 torna mais simples o gesto de oposição que inclina a tigela; R94 depende mais do contato com o prato."},
+    {"a":"W38","b":"F62","verdict":"F62","reason":"Em F62 o piso molhado ocupa a passagem sul e desloca o trabalho ao norte; em W38 o derrame é preservado, mas a reorganização da bandeja depende sobretudo de outro obstáculo, o prato. A consequência do conflito governa mais diretamente a encenação de F62.","tradeoff":"W38 tem diálogo mais compacto; F62 inclui um comentário explicativo dispensável."},
+    {"a":"W38","b":"B17","verdict":"W38","reason":"W38 mantém claros o destino da tigela e os quatro pratos vazios. B17 ganha em cooperação e acusação subtextual, mas termina com Bento comendo após receber só uma colher, enquanto as duas tigelas estão com Rosa e Lia.","tradeoff":"Preferência pela continuidade praticável; o mecanismo de substituição no apoio da mesa de B17 é mais inventivo."},
+    {"a":"R94","b":"F62","verdict":"F62","reason":"F62 encadeia luz, circulação, acidente e nova rota com maior integração e estados explícitos de saco, colher, pano e piso. R94 é superior no gesto moral do prato vazio, mas sua tigela inclinada pelo prato e o alcance de Damião ficam menos precisos.","tradeoff":"Vantagem pequena; R94 oferece final emocional mais decisivo, F62 melhor consequência coletiva espacial."},
+    {"a":"R94","b":"B17","verdict":"R94","reason":"A distribuição em três e o quarto prato vazio fecham o arco material de R94. A troca de apoios de B17 é boa, mas a porção de Bento carece de passagem descrita e o pano tem trajeto espacial insuficiente.","tradeoff":"B17 dramatiza mais intensamente a reciprocidade do trabalho; R94 é mais verificável como continuidade escrita."},
+    {"a":"F62","b":"B17","verdict":"F62","reason":"F62 transforma o derrame em corredor bloqueado e nova rota sem perder posse dos objetos. B17 também liga acidente e cooperação, mas não fecha quem fornece a comida a Bento e exige uma ligação pano/casaco menos estabelecida.","tradeoff":"A colher e a troca de lugares de B17 têm potencial expressivo forte, ainda dependente de reparo."}
+  ],
+  "ranking_textual": ["F62", "R94", "W38", "B17"],
+  "limits": ["Preferências relativas sobre texto, não medição de eficácia artística.", "Duração estimada não equivale a duração observada.", "História, figurino, objetos e costumes não foram verificados.", "Não há vídeo, som realizado nem avaliação humana disponível.", "Não foi inferida condição, intenção, ferramenta ou autoria de geração."]
+}

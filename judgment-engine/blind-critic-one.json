@@ -1,0 +1,52 @@
+[
+  {
+    "reviewer": "/root/blind_critic_one",
+    "packet_id": "7f4dd0ac-4b0a-44f7-a111-430bed40e501-1",
+    "choice": "B",
+    "rationale": "B atende melhor à intenção: Nora condiciona o recebimento, oferece um recurso e decide abrir a carta ainda diante de Ivo; a consequência aparece quando ele espera, em vez de simplesmente sair. A mantém a partida incerta clara, mas resolve a entrega sem oposição específica nem decisão de Nora que altere o encontro. Pela RUB-STORY, atribuo 2 a A e 3 a B. B é competente nesta comparação, sem evidência suficiente para os níveis 4 ou 5: sua oposição nasce de um acidente material, e a contradição pessoal e o custo de abrir a carta permanecem pouco desenvolvidos. A preferência decorre da cadeia de ações e decisões, não da extensão, quantidade de detalhes ou ausência de fala explicativa por si só.",
+    "evidence": [
+      "RUB-STORY-C1 / A: aproximar-se com a carta, colocá-la no balcão e dizer 'Escrevi o que não consegui dizer' tornam o desejo de entregar uma mensagem reconhecível; o receio de não voltar dá contexto à urgência.",
+      "RUB-STORY-C2 / A: a sirene interrompe o silêncio, mas não impede nem muda a entrega. Nora segura e guarda a carta; sua fala sobre esperança não impõe condição nem produz escolha com custo particular.",
+      "RUB-STORY-C3 / A: Ivo sai e Nora permanece; há mudança física de posse, mas a indicação 'emocionada' não demonstra por ação uma transformação específica da relação.",
+      "RUB-STORY-C1 e C2 / B: Ivo cobre o rasgo e oferece o lado intacto; 'Nora não a recebe' e 'Assim?' interrompem sua tentativa. A recusa e a tira colocada ao lado da mão dele fazem o obstáculo provocar resposta entre as pessoas.",
+      "RUB-STORY-C3 / B: ao apito, Nora puxa e abre a carta antes de Ivo se virar; 'Ivo espera a primeira linha' mostra uma consequência imediata de sua iniciativa sobre o comportamento dele, embora a partida e o conteúdo da leitura continuem em aberto.",
+      "Protegidos e intenção / ambas: os dois personagens são apresentados como adultos, o guichê é designado norte e não há substituição narrada da carta. Nenhuma alternativa declara heroísmo. Não identifiquei contradição causal impeditiva; a tira de papel de B tem função material pouco explicitada, o que limita a precisão da ação sem provar impossibilidade."
+    ],
+    "levels": {
+      "A": 2,
+      "B": 3
+    },
+    "limitations": [
+      "Julgamento restrito ao texto e ao contexto fornecidos; não comprova atuação, eficácia emocional ou recepção do público.",
+      "A rubrica é didática, sem calibração humana validada; os níveis são ordinais e contextuais, não uma pontuação agregada nem aprovação artística do usuário.",
+      "A passagem do guichê norte à exigência de parede norte é compatível, mas a implantação espacial não foi demonstrada em imagem ou planta.",
+      "Não há atribuição explícita de autoria nos textos; a remoção dos metadados não garante cegamento completo por estilo.",
+      "Os pacotes apresentam os mesmos textos em ordem invertida. A segunda passagem ocorre no mesmo contexto, com memória da primeira, e não constitui teste isolado de viés de posição."
+    ]
+  },
+  {
+    "reviewer": "/root/blind_critic_one",
+    "packet_id": "7f4dd0ac-4b0a-44f7-a111-430bed40e501-2",
+    "choice": "A",
+    "rationale": "A oferece a cadeia de escolha e consequência mais legível: a recusa inicial de Nora interrompe a entrega, sua oferta de papel exige uma resposta de Ivo e sua decisão de abrir a carta muda a saída prevista para uma espera compartilhada. B comunica a despedida e seu risco, mas Nora recebe e guarda a mensagem sem oposição própria desenvolvida. Pela RUB-STORY, A permanece no nível 3 e B no nível 2. A é a melhor alternativa relativa; o rasgo é um incidente externo e o custo pessoal da decisão de Nora permanece insinuado, insuficiente para presumir excelência ou excepcionalidade. Esta segunda decisão reaplica os critérios aos rótulos invertidos e não é uma nova observação independente.",
+    "evidence": [
+      "RUB-STORY-C1 / A: Ivo tenta entregar pelo lado intacto e esconde o rasgo; o desejo de completar a entrega entra em tensão concreta com sua tentativa de ocultar um defeito.",
+      "RUB-STORY-C2 / A: 'Nora não a recebe' seguido de 'Assim?' força Ivo a descobrir o rasgo. Ao oferecer a tira, Nora participa da solução em vez de apenas aguardar a partida.",
+      "RUB-STORY-C3 / A: Nora abre a carta antes de ele se virar e Ivo espera a primeira linha. A iniciativa dela produz um comportamento observável dele e transforma a entrega em encontro ainda presente, sem assegurar retorno nem desfecho futuro.",
+      "RUB-STORY-C1 / B: a carta entregue e a fala sobre o que Ivo não conseguiu dizer tornam seu propósito legível, com incerteza da volta explicitada no diálogo.",
+      "RUB-STORY-C2 e C3 / B: Nora guarda a carta, sorri e permanece após a saída. O recebimento segue sem condição nem resistência específica; a tristeza indicada não basta para demonstrar escolha custosa ou uma alteração particular na relação.",
+      "Protegidos e intenção / ambas: os personagens são adultos e a ação conserva o mesmo objeto narrado junto ao guichê norte. Não há heroísmo declarado nem falha causal que justifique BOTH_FAIL. Em A, o texto não esclarece se a tira serve para apoiar ou reparar o envelope; não pressuponho adesivo ou uma operação ausente."
+    ],
+    "levels": {
+      "A": 3,
+      "B": 2
+    },
+    "limitations": [
+      "Somente texto acessível; o conteúdo da carta, o motivo preciso da recusa de Nora e o destino da partida não foram fornecidos e não são completados pelo julgamento.",
+      "Níveis derivados da rubrica story no contexto deste breve drama de guerra; não equivalem a medição de impacto no público, calibração humana ou aprovação visual.",
+      "A designação guichê norte é compatível com a restrição fornecida, mas a posição na parede não foi verificada por mídia espacial.",
+      "Não foi identificada assinatura de autoria explícita; pistas estilísticas continuam sendo um limite potencial do cegamento.",
+      "Esta passagem reconhece os mesmos textos invertidos e conserva memória da primeira. A escolha consistente por conteúdo é descritiva; não prova ausência ou presença de viés isolado de posição."
+    ]
+  }
+]

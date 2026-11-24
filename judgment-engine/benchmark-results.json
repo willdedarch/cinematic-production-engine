@@ -1,0 +1,29 @@
+{
+  "outcome": "MAT-84",
+  "per_reviewer": {
+    "/root/blind_critic_one": "MAT-84",
+    "/root/blind_critic_two": "MAT-84"
+  },
+  "disagreements": [],
+  "human_decision_required": true,
+  "approved": false,
+  "position_bias_rate": null,
+  "position_bias_limit": "Same-context repeats are descriptive, not isolated fresh-context position-bias measurement.",
+  "rubric_sha256": "355ca494a129c4af294b61cd21160c607e18cf3717544349d004cd3833ffd26a",
+  "human_baseline": {
+    "real_human_n": 0,
+    "human_agreement": null,
+    "false_approval_rate": null,
+    "false_rejection_rate": null,
+    "denominators": {
+      "human_reject": 0,
+      "human_approve": 0
+    },
+    "not_measured": [
+      "audience retention",
+      "viral performance",
+      "population-level artistic quality",
+      "fresh-context position bias"
+    ]
+  }
+}

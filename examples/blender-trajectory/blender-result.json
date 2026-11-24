@@ -1,0 +1,58 @@
+{
+  "status": "RENDERED_REOPENED_REQUIRES_VISUAL_REVIEW",
+  "kind": "TECHNICAL_PREVIS",
+  "blender_version": "5.4.0 Alpha",
+  "owned_objects": 10,
+  "blend": "technical-previs.blend",
+  "renders": [
+    "CAM35.png",
+    "CAM50.png"
+  ],
+  "cameras": [
+    {
+      "id": "CAM35",
+      "focal_mm": 35.0,
+      "sensor_width_mm": 36.0,
+      "angle_x": 0.9500215649604797,
+      "trajectory": [
+        {
+          "frame": 1,
+          "position_m": [
+            0.7,
+            0.4,
+            1.4
+          ]
+        },
+        {
+          "frame": 4,
+          "position_m": [
+            1.1,
+            0.7,
+            1.5
+          ]
+        },
+        {
+          "frame": 9,
+          "position_m": [
+            2.0,
+            0.5,
+            1.4
+          ]
+        }
+      ],
+      "interpolation": "LINEAR",
+      "path_midpoints_verified": 2
+    },
+    {
+      "id": "CAM50",
+      "focal_mm": 50.0,
+      "sensor_width_mm": 36.0,
+      "angle_x": 0.6911112070083618
+    }
+  ],
+  "limits": [
+    "Workbench cutaway graybox; no physical lens character, DOF or lighting validation.",
+    "No final assets or facial identity generated."
+  ],
+  "evidence_class": "Relocated historical fixture; no new execution claimed"
+}

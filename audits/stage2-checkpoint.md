@@ -1,0 +1,7 @@
+# Checkpoint da ampliação de conhecimento
+
+Implementado: 21 técnicas operacionais com exemplos e limites; 10 cartões de narrativa/som/montagem; módulo de guerra; 21 diagramas próprios; 21 diagnósticos com contraste inadequado/aceitável/alvo de excelência; 12 gêneros; 6 perfis de linguagem com escopo de fontes; exemplo textual completo; 8 adaptadores e exportações manuais; 19 painéis de apoio com mensagens e autorização; 11 entidades normalizadas novas, preservando as 15 anteriores.
+
+Verificações: recuperação de arquivos reais por fase; parâmetros oficiais consultados sem geração; compilação local dos oito exemplos; testes unitários e DOM double. Releitura nativa confirmou os 102 registros de biblioteca e projeto separado LIB-CPE31. Registros didáticos permanecem DRAFT e não representam aprovação do usuário. Migração de estrutura usa manifesto local anterior e releitura independente; não é demonstração de compare-and-swap nem transação atômica. O teste de escrita de estado com journal PREPARED/CONFIRMED continua preservado na evidência stage1.
+
+Limites: diagramas são esquemáticos; nenhum benchmark de geração por modelo; Cinema Studio UI experimental; documentos inacessíveis e consultas parciais estão identificados; arte e usabilidade visual precisam de manifestação humana. Protocolo file:// bloqueado na sessão, sem contorno. Próxima etapa autorizada: Judgment Engine, sem iniciar tarefas posteriores antes deste checkpoint.

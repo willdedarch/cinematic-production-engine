@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "skill_version": "1.4.0",
+  "files": 382,
+  "parsed": {
+    "json": 101,
+    "python": 73
+  },
+  "synthetic_journal_cases": 3,
+  "native_account_exports_included": false,
+  "visual_references_hashed": 25,
+  "requirement_sections_checked": 105,
+  "gate_routes": 16,
+  "privacy": "PASS",
+  "artistic_approval": false,
+  "remote_read_performed": false
+}

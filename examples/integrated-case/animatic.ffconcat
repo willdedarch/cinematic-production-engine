@@ -1,0 +1,14 @@
+ffconcat version 1.0
+file 'storyboard/P01.png'
+duration 8
+file 'storyboard/P02.png'
+duration 10
+file 'storyboard/P03.png'
+duration 12
+file 'storyboard/P04.png'
+duration 8
+file 'storyboard/P05.png'
+duration 12
+file 'storyboard/P06.png'
+duration 10
+file 'storyboard/P06.png'

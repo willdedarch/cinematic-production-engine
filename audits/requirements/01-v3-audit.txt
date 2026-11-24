@@ -1,0 +1,190 @@
+Utilize o pacote Cinematic Production Engine V3 anexado como código-base oficial. Não reconstrua a Skill do zero nem descarte funcionalidades, conhecimentos, referências ou metodologias existentes.
+
+Implemente a V3.1 com a integração Google Sheets e todas as melhorias anteriormente solicitadas.
+
+**Antes de concluir, execute obrigatoriamente uma auditoria técnica, metodológica e funcional completa.**
+
+### 1. Auditoria das fontes de conhecimento
+
+Valide novamente as fontes originais utilizadas na construção da Skill:
+
+- Higgsfield Short Drama.
+- Higgsfield Script & Staging.
+- Higgsfield Directing & Clips.
+- Higgsfield Pictures.
+- Higgsfield Pacing.
+- Higgsfield Editing e Auto-edit.
+- Higgsfield Sound, Music e QC.
+- Higgsfield Shorts Studio.
+- Higgsfield Reference Analysis.
+- Higgsfield Originals — Hell Grind e CINEDANCE.
+- O-Side Media Higgsfield AI Prompt Skill.
+- Higgsfield Skills oficiais.
+- DirectorSKILL.
+- Screenwriting Skills.
+- Pitch Drama.
+- Director Skills.
+- Cinematic Skills.
+- AI Film Skills.
+- Cinema Skills.
+- Demais fontes registradas no SOURCES.md e nos módulos da V3.
+
+Não se limite a verificar se os nomes dessas fontes estão presentes nos arquivos. Consulte os materiais originais disponíveis e confirme se seus conhecimentos, técnicas, procedimentos e metodologias foram efetivamente incorporados.
+
+Identifique referências superficiais, conhecimentos ausentes, interpretações equivocadas, incompatibilidades, informações desatualizadas, redundâncias e contradições.
+
+### 2. Matriz de rastreabilidade metodológica
+
+Crie uma matriz contendo:
+
+- Fonte original.
+- Técnica ou conhecimento identificado.
+- Módulo da Skill responsável.
+- Arquivo e seção onde foi incorporado.
+- Etapa do workflow em que é aplicado.
+- Forma de aplicação.
+- Evidência de incorporação.
+- Compatibilidade com as demais metodologias.
+- Limitações.
+- Correções necessárias.
+- Status da validação.
+
+Uma referência bibliográfica não é evidência suficiente de que uma metodologia foi incorporada.
+
+### 3. Auditoria cinematográfica
+
+Valide a profundidade técnica dos módulos relacionados a:
+
+- Dramaturgia e desenvolvimento de histórias.
+- Engenharia emocional.
+- Psicologia do espectador.
+- Suspense, retenção e viralidade.
+- Filmes de guerra e demais gêneros.
+- Estilos e linguagens de direção.
+- Direção de atuação e microexpressões.
+- Mise-en-scène.
+- Blocking e staging.
+- Fotografia cinematográfica.
+- Lentes anamórficas, esféricas e vintage.
+- Distâncias focais e profundidade de campo.
+- Composição, regra dos terços e proporção áurea.
+- Iluminação, textura e materialidade.
+- Cenários vivos e profundidade ambiental.
+- Geometria persistente de locações.
+- Continuidade espacial.
+- Casting e character sheets.
+- Figurinos e props.
+- Storyboards e previs.
+- Compilação de prompts por modelo.
+- Montagem, ritmo e direção sonora.
+
+Não aceite módulos genéricos que apenas enumerem conceitos cinematográficos. Eles devem ensinar ao agente quando, por que e como aplicar cada técnica, incluindo critérios de seleção, exemplos, procedimentos, limitações e validações.
+
+Preserve a intensidade dramática apropriada ao gênero de guerra, evitando suavizações narrativas desnecessárias, sem tentar contornar políticas de segurança dos modelos.
+
+### 4. Auditoria do workflow
+
+Valide se o agente:
+
+- Segue as etapas na ordem correta.
+- Apresenta painéis nos momentos de decisão.
+- Recomenda opções fundamentadas.
+- Permite participação ativa do usuário.
+- Apresenta checklists e critérios de aprovação.
+- Respeita decisões anteriores.
+- Reutiliza assets aprovados.
+- Permite execução manual e híbrida.
+- Aceita a importação de materiais externos.
+- Não modifica elementos bloqueados sem autorização.
+- Recupera corretamente o estado de uma produção.
+- Não avança indevidamente quando existem dependências pendentes.
+- Não dispara operações pagas ou que consumam créditos.
+
+### 5. Auditoria dos painéis e Google Sheets
+
+Valide funcionalmente:
+
+- Persistência das decisões.
+- Leitura e escrita pelo conector oficial.
+- Recuperação do estado em outra sessão.
+- Registro de aprovações.
+- Histórico de alterações.
+- Controle de revisões.
+- Tratamento de conflitos entre agentes.
+- Sincronização a cada interação.
+- Checklists.
+- Dashboard de produção.
+- Painéis específicos de cada departamento.
+- Tratamento de falhas do conector.
+- Compatibilidade com ambientes que não suportam painéis interativos.
+
+Não apresente uma demonstração visual como se fosse uma integração funcional comprovada.
+
+### 6. Testes comportamentais
+
+Além dos testes unitários e estruturais, execute testes reais de utilização da Skill.
+
+Simule uma produção cinematográfica desde a concepção até a preparação dos assets, incluindo:
+
+- Desenvolvimento de um episódio.
+- Escolha e aprovação de uma proposta.
+- Desenvolvimento do roteiro.
+- Definição do tratamento cinematográfico.
+- Casting.
+- Location design.
+- Props.
+- Decupagem.
+- Preparação de prompts.
+- Importação manual de referências.
+- Solicitação de revisão.
+- Bloqueio e reaproveitamento de assets.
+- Interrupção e retomada do workflow.
+
+Não execute gerações pagas.
+
+Identifique se o comportamento real do agente corresponde às instruções previstas na Skill.
+
+### 7. Correções
+
+Não entregue apenas um diagnóstico.
+
+Corrija os problemas encontrados, preserve as funcionalidades existentes e execute novamente os testes pertinentes após cada correção relevante.
+
+### 8. Relatório final obrigatório
+
+Entregue um relatório detalhado contendo:
+
+- Resumo executivo.
+- Comparação entre V3 e V3.1.
+- Melhorias implementadas.
+- Problemas encontrados.
+- Correções realizadas.
+- Matriz de rastreabilidade das fontes.
+- Conhecimentos efetivamente incorporados.
+- Conhecimentos ainda não incorporados.
+- Incompatibilidades metodológicas.
+- Resultados dos testes unitários.
+- Resultados dos testes comportamentais.
+- Resultados dos testes de integração.
+- Limitações reais.
+- Pendências.
+- Recomendações para futuras versões.
+- Inventário completo dos arquivos.
+- Instruções de instalação e utilização.
+
+Diferencie claramente o que foi implementado, o que foi efetivamente testado, o que foi apenas documentado e o que permanece pendente.
+
+### 9. Entregáveis finais
+
+- Pacote ZIP completo da Cinematic Production Engine V3.1.
+- Google Sheets configurado.
+- Relatório de auditoria, melhorias e correções.
+- Matriz de rastreabilidade metodológica.
+- Relatório de testes.
+- CHANGELOG atualizado.
+- SOURCES.md atualizado.
+- Manual completo de utilização.
+
+**Restrições absolutas:** não consumir créditos Higgsfield, não contratar serviços, não desenvolver servidores ou conectores externos e não disparar gerações audiovisuais. Utilize integrações existentes e autorizadas.
+
+Priorize profundidade, qualidade, compatibilidade metodológica e facilidade de utilização. Não considere o trabalho concluído apenas porque os arquivos existem ou porque os testes estruturais passaram.

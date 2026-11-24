@@ -1,0 +1,605 @@
+{
+  "cards": [
+    {
+      "shot": {
+        "table": "Shot List",
+        "id": "SH01",
+        "revision": 1,
+        "sha256": "a5c1d2d749dd5e44755f2a7b4f61c265674630e98af3b58917b4f03bcd5bf263"
+      },
+      "beat": "Estação",
+      "order": 1,
+      "duration_s": 8,
+      "intention": "Situar a dupla e deixar ouvir quão pouca água resta.",
+      "action": "Davi põe o capacete junto ao banco com a mão livre. O cantil fechado soa brevemente na direita. Um impacto faz a luminária oscilar.",
+      "camera": "Médio conjunto desde C1, ao sul do eixo. Identificar o banco N1 e a porta oeste W1.",
+      "sound": "Um ruído curto de água antecede o impacto distante.",
+      "states": {
+        "in": {
+          "cantil": "Davi.direita",
+          "tampa": "roscada_no_cantil"
+        },
+        "out": {
+          "cantil": "Davi.direita",
+          "tampa": "roscada_no_cantil"
+        }
+      },
+      "links": [
+        {
+          "from": {
+            "table": "Shot List",
+            "id": "SH01",
+            "revision": 1,
+            "sha256": "a5c1d2d749dd5e44755f2a7b4f61c265674630e98af3b58917b4f03bcd5bf263"
+          },
+          "to": {
+            "table": "Prompts",
+            "id": "PROMPT-SH01",
+            "revision": 1,
+            "sha256": "0f781e37026571a76e9a1942589cbb5fc4882c6999be0118e97002c46739655d"
+          },
+          "relation": "prompt",
+          "field": "",
+          "decision": null,
+          "role": "",
+          "stale": false
+        },
+        {
+          "from": {
+            "id": "ART-DEMO-SH01",
+            "revision": 1,
+            "sha256": "266f799865b42cc7e05ba42808fe960df6835f41ba663fc4f8e5b091093cc80c",
+            "table": "Artifact Registry"
+          },
+          "to": {
+            "id": "SH01",
+            "revision": 1,
+            "sha256": "a5c1d2d749dd5e44755f2a7b4f61c265674630e98af3b58917b4f03bcd5bf263",
+            "table": "Shot List"
+          },
+          "relation": "reference",
+          "field": "",
+          "decision": {
+            "table": "Decisions",
+            "id": "LINK-SH01",
+            "revision": 1,
+            "record_sha256": "d51f9b2a5bab82437e7f26f3fd593cc9382dfe0f9e088addd9dc5b69066e39d5",
+            "message": "SYNTHETIC-DEMO-SH01",
+            "reason": "Decisão sintética de encadeamento para o estudo."
+          },
+          "role": "image_references",
+          "stale": false
+        }
+      ],
+      "selected_take": null,
+      "last_decision": {
+        "table": "Decisions",
+        "id": "LINK-SH01",
+        "revision": 1,
+        "record_sha256": "d51f9b2a5bab82437e7f26f3fd593cc9382dfe0f9e088addd9dc5b69066e39d5",
+        "message": "SYNTHETIC-DEMO-SH01",
+        "reason": "Decisão sintética de encadeamento para o estudo."
+      },
+      "continuity_review": []
+    },
+    {
+      "shot": {
+        "table": "Shot List",
+        "id": "SH02",
+        "revision": 1,
+        "sha256": "d3c7d21625f2b7c5d75784d8d10778d084abcf01c68fdabddaf4ac44ccfeeddc"
+      },
+      "beat": "Estação",
+      "order": 2,
+      "duration_s": 10,
+      "intention": "Tornar visível quanto a oferta custa a Davi.",
+      "action": "Lia pergunta se ainda tem água. Davi diz “Pra você” e passa o cantil fechado da sua direita para a direita de Lia. Ela observa a boca seca dele.",
+      "camera": "Médio de Lia com Davi no primeiro plano, ao sul do eixo.",
+      "sound": "Pergunta e resposta curtas sobre o ruído da sala.",
+      "states": {
+        "in": {
+          "cantil": "Davi.direita",
+          "tampa": "roscada_no_cantil"
+        },
+        "out": {
+          "cantil": "Lia.direita",
+          "tampa": "roscada_no_cantil"
+        }
+      },
+      "links": [
+        {
+          "from": {
+            "table": "Shot List",
+            "id": "SH02",
+            "revision": 1,
+            "sha256": "d3c7d21625f2b7c5d75784d8d10778d084abcf01c68fdabddaf4ac44ccfeeddc"
+          },
+          "to": {
+            "table": "Prompts",
+            "id": "PROMPT-SH02",
+            "revision": 1,
+            "sha256": "b0075c7b2de26181a1c2f1cfb04bcf7bdde46c2a53d6a35cb58558a5a53a2d70"
+          },
+          "relation": "prompt",
+          "field": "",
+          "decision": null,
+          "role": "",
+          "stale": false
+        },
+        {
+          "from": {
+            "id": "ART-DEMO-SH02",
+            "revision": 1,
+            "sha256": "a46a4085d1735c9a2e5931918d5165c128509d53f4a3ba205572d20a10107d94",
+            "table": "Artifact Registry"
+          },
+          "to": {
+            "id": "SH02",
+            "revision": 1,
+            "sha256": "d3c7d21625f2b7c5d75784d8d10778d084abcf01c68fdabddaf4ac44ccfeeddc",
+            "table": "Shot List"
+          },
+          "relation": "reference",
+          "field": "",
+          "decision": {
+            "table": "Decisions",
+            "id": "LINK-SH02",
+            "revision": 1,
+            "record_sha256": "49606d1a184e573472802fe976e9636c996dd62235e6ad20ff2cd59da632e00e",
+            "message": "SYNTHETIC-DEMO-SH02",
+            "reason": "Decisão sintética de encadeamento para o estudo."
+          },
+          "role": "image_references",
+          "stale": false
+        }
+      ],
+      "selected_take": null,
+      "last_decision": {
+        "table": "Decisions",
+        "id": "LINK-SH02",
+        "revision": 1,
+        "record_sha256": "49606d1a184e573472802fe976e9636c996dd62235e6ad20ff2cd59da632e00e",
+        "message": "SYNTHETIC-DEMO-SH02",
+        "reason": "Decisão sintética de encadeamento para o estudo."
+      },
+      "continuity_review": []
+    },
+    {
+      "shot": {
+        "table": "Shot List",
+        "id": "SH03",
+        "revision": 1,
+        "sha256": "4bef0db42e65258e4d3878f55da5d9031d0eea3e1358c7fe48512de28cb6dd3f"
+      },
+      "beat": "Estação",
+      "order": 3,
+      "duration_s": 12,
+      "intention": "Dar a Lia e ao público tempo de reconhecer a mentira.",
+      "action": "Lia pergunta “Você bebeu?”. Davi diz “Bebi”. Lia conserva o cantil fechado na direita.",
+      "camera": "Close de Davi ao sul do eixo. Sustentar a boca seca e o esforço de responder.",
+      "sound": "Pergunta de Lia e negativa disfarçada de Davi. Preservar a pausa.",
+      "states": {
+        "in": {
+          "cantil": "Lia.direita",
+          "tampa": "roscada_no_cantil"
+        },
+        "out": {
+          "cantil": "Lia.direita",
+          "tampa": "roscada_no_cantil"
+        }
+      },
+      "links": [
+        {
+          "from": {
+            "table": "Shot List",
+            "id": "SH03",
+            "revision": 1,
+            "sha256": "4bef0db42e65258e4d3878f55da5d9031d0eea3e1358c7fe48512de28cb6dd3f"
+          },
+          "to": {
+            "table": "Prompts",
+            "id": "PROMPT-SH03",
+            "revision": 1,
+            "sha256": "7499d9d2a32720e7f82c0f99d3a02b0c063f7cd6a0150eb9205380575e3516cf"
+          },
+          "relation": "prompt",
+          "field": "",
+          "decision": null,
+          "role": "",
+          "stale": false
+        },
+        {
+          "from": {
+            "id": "ART-DEMO-SH03",
+            "revision": 1,
+            "sha256": "6f1a2f403e2d3d37de63e94ee741cddd5ea6b4060f4e157cc2d8cc23ac15f44d",
+            "table": "Artifact Registry"
+          },
+          "to": {
+            "id": "SH03",
+            "revision": 1,
+            "sha256": "4bef0db42e65258e4d3878f55da5d9031d0eea3e1358c7fe48512de28cb6dd3f",
+            "table": "Shot List"
+          },
+          "relation": "reference",
+          "field": "",
+          "decision": {
+            "table": "Decisions",
+            "id": "LINK-SH03",
+            "revision": 1,
+            "record_sha256": "7dd3d2198a08db853de4822d19c4f2767c48d742882eaa2a165aef1173233419",
+            "message": "SYNTHETIC-DEMO-SH03",
+            "reason": "Decisão sintética de encadeamento para o estudo."
+          },
+          "role": "image_references",
+          "stale": false
+        }
+      ],
+      "selected_take": null,
+      "last_decision": {
+        "table": "Decisions",
+        "id": "LINK-SH03",
+        "revision": 1,
+        "record_sha256": "7dd3d2198a08db853de4822d19c4f2767c48d742882eaa2a165aef1173233419",
+        "message": "SYNTHETIC-DEMO-SH03",
+        "reason": "Decisão sintética de encadeamento para o estudo."
+      },
+      "continuity_review": []
+    },
+    {
+      "shot": {
+        "table": "Shot List",
+        "id": "SH04",
+        "revision": 1,
+        "sha256": "98b8c686982512d12fee19330c302c53731473d191993ed016c172c706bed7c2"
+      },
+      "beat": "Estação",
+      "order": 4,
+      "duration_s": 8,
+      "intention": "Lia muda o sentido da oferta ao dividir a água.",
+      "action": "Com o cantil na direita, Lia desenrosca a tampa com a esquerda e serve nela uma porção. Diz “Então segura” e devolve o cantil aberto à direita de Davi. Conserva a tampa na esquerda.",
+      "camera": "Detalhe da tampa. Câmera ao sul do eixo.",
+      "sound": "Água contra o metal.",
+      "states": {
+        "in": {
+          "cantil": "Lia.direita",
+          "tampa": "roscada_no_cantil"
+        },
+        "out": {
+          "cantil": "Davi.direita",
+          "tampa": "Lia.esquerda"
+        }
+      },
+      "links": [
+        {
+          "from": {
+            "table": "Shot List",
+            "id": "SH04",
+            "revision": 1,
+            "sha256": "98b8c686982512d12fee19330c302c53731473d191993ed016c172c706bed7c2"
+          },
+          "to": {
+            "table": "Prompts",
+            "id": "PROMPT-SH04",
+            "revision": 1,
+            "sha256": "dcc92133ca4e684c90490e9cf3484eb36a6134371deebb31c168b25aba5de695"
+          },
+          "relation": "prompt",
+          "field": "",
+          "decision": null,
+          "role": "",
+          "stale": false
+        },
+        {
+          "from": {
+            "id": "ART-DEMO-SH04",
+            "revision": 1,
+            "sha256": "29c465f3ce5d65df364a684d07f9a2e99b41c582aa114c3509ca6ccfa995450f",
+            "table": "Artifact Registry"
+          },
+          "to": {
+            "id": "SH04",
+            "revision": 1,
+            "sha256": "98b8c686982512d12fee19330c302c53731473d191993ed016c172c706bed7c2",
+            "table": "Shot List"
+          },
+          "relation": "reference",
+          "field": "",
+          "decision": {
+            "table": "Decisions",
+            "id": "LINK-SH04",
+            "revision": 1,
+            "record_sha256": "cea8340bd889839f3c9e35f8a46856de38d0ba0178755a8f371e6a32d2333c8c",
+            "message": "SYNTHETIC-DEMO-SH04",
+            "reason": "Decisão sintética de encadeamento para o estudo."
+          },
+          "role": "image_references",
+          "stale": false
+        }
+      ],
+      "selected_take": null,
+      "last_decision": {
+        "table": "Decisions",
+        "id": "LINK-SH04",
+        "revision": 1,
+        "record_sha256": "cea8340bd889839f3c9e35f8a46856de38d0ba0178755a8f371e6a32d2333c8c",
+        "message": "SYNTHETIC-DEMO-SH04",
+        "reason": "Decisão sintética de encadeamento para o estudo."
+      },
+      "continuity_review": []
+    },
+    {
+      "shot": {
+        "table": "Shot List",
+        "id": "SH05",
+        "revision": 1,
+        "sha256": "6f0f7f3de592cf9b2073c3ecdab45376e43dcdf6c01c8a123901bb19638406a6"
+      },
+      "beat": "Estação",
+      "order": 5,
+      "duration_s": 12,
+      "intention": "Davi aceita o cuidado. Ver o gesto de beber.",
+      "action": "Davi recebe a tampa na esquerda e bebe. Ao fim, com a direita, entrega o cantil aberto à mão esquerda já livre de Lia. A tampa vazia fica na esquerda de Davi.",
+      "camera": "Médio dos dois ao sul do eixo. E1 fornece a luz lateral.",
+      "sound": "Respiração e tecido.",
+      "states": {
+        "in": {
+          "cantil": "Davi.direita",
+          "tampa": "Lia.esquerda"
+        },
+        "out": {
+          "cantil": "Lia.esquerda",
+          "tampa": "Davi.esquerda"
+        }
+      },
+      "links": [
+        {
+          "from": {
+            "table": "Shot List",
+            "id": "SH05",
+            "revision": 1,
+            "sha256": "6f0f7f3de592cf9b2073c3ecdab45376e43dcdf6c01c8a123901bb19638406a6"
+          },
+          "to": {
+            "table": "Prompts",
+            "id": "PROMPT-SH05",
+            "revision": 1,
+            "sha256": "4bfdf3703e747925265c2386ffad2d49c199f14b8cf39bed7beda1f0fe482692"
+          },
+          "relation": "prompt",
+          "field": "",
+          "decision": null,
+          "role": "",
+          "stale": false
+        },
+        {
+          "from": {
+            "id": "ART-DEMO-SH05",
+            "revision": 1,
+            "sha256": "3b26c88fed66f931fa906d99d2ae5f3e487f0d4788b82ad2754ee2290b24499c",
+            "table": "Artifact Registry"
+          },
+          "to": {
+            "id": "SH05",
+            "revision": 1,
+            "sha256": "6f0f7f3de592cf9b2073c3ecdab45376e43dcdf6c01c8a123901bb19638406a6",
+            "table": "Shot List"
+          },
+          "relation": "reference",
+          "field": "",
+          "decision": {
+            "table": "Decisions",
+            "id": "LINK-SH05",
+            "revision": 1,
+            "record_sha256": "f2cfd414535bf89662ad7d0ca853c3aaab55dd07ecd24f1a21aebd5d7c08deb6",
+            "message": "SYNTHETIC-DEMO-SH05",
+            "reason": "Decisão sintética de encadeamento para o estudo."
+          },
+          "role": "image_references",
+          "stale": false
+        },
+        {
+          "from": {
+            "id": "SH05",
+            "revision": 1,
+            "sha256": "6f0f7f3de592cf9b2073c3ecdab45376e43dcdf6c01c8a123901bb19638406a6",
+            "table": "Shot List"
+          },
+          "to": {
+            "id": "SH06",
+            "revision": 1,
+            "sha256": "0c7d03f080826e3c942ee9abc5e7b86ab2f0d2c17656d68559e89e5e04ce127f",
+            "table": "Shot List"
+          },
+          "relation": "uses",
+          "field": "cantil",
+          "decision": {
+            "table": "Decisions",
+            "id": "LINK-HAND",
+            "revision": 1,
+            "record_sha256": "729088efff4c74b83224575018c8562d08ef6bcf737e670c306c6285c5431cd4",
+            "message": "SYNTHETIC-DEMO-HAND",
+            "reason": "Decisão sintética de encadeamento para o estudo."
+          },
+          "role": "",
+          "stale": false
+        }
+      ],
+      "selected_take": null,
+      "last_decision": {
+        "table": "Decisions",
+        "id": "LINK-HAND",
+        "revision": 1,
+        "record_sha256": "729088efff4c74b83224575018c8562d08ef6bcf737e670c306c6285c5431cd4",
+        "message": "SYNTHETIC-DEMO-HAND",
+        "reason": "Decisão sintética de encadeamento para o estudo."
+      },
+      "continuity_review": []
+    },
+    {
+      "shot": {
+        "table": "Shot List",
+        "id": "SH06",
+        "revision": 1,
+        "sha256": "0c7d03f080826e3c942ee9abc5e7b86ab2f0d2c17656d68559e89e5e04ce127f"
+      },
+      "beat": "Estação",
+      "order": 6,
+      "duration_s": 10,
+      "intention": "Fechar o gesto da partilha e abrir a pergunta da chegada.",
+      "action": "Lia começa com o cantil na esquerda. Transfere-o à direita em quadro e bebe. A buzina soa. Lia e Davi olham para W1. Davi mantém a tampa vazia na esquerda.",
+      "camera": "Plano médio conjunto fixo. W1 visível à esquerda da dupla.",
+      "sound": "Buzina fora de quadro depois do gole.",
+      "states": {
+        "in": {
+          "cantil": "Lia.esquerda",
+          "tampa": "Davi.esquerda"
+        },
+        "out": {
+          "cantil": "Lia.direita",
+          "tampa": "Davi.esquerda"
+        }
+      },
+      "links": [
+        {
+          "from": {
+            "table": "Shot List",
+            "id": "SH06",
+            "revision": 1,
+            "sha256": "0c7d03f080826e3c942ee9abc5e7b86ab2f0d2c17656d68559e89e5e04ce127f"
+          },
+          "to": {
+            "table": "Prompts",
+            "id": "PROMPT-SH06",
+            "revision": 1,
+            "sha256": "58bf2c4193a780ab980a49e7d82c32a9c951fb41a1e1e5c0828ec0ea13e21c8a"
+          },
+          "relation": "prompt",
+          "field": "",
+          "decision": null,
+          "role": "",
+          "stale": false
+        },
+        {
+          "from": {
+            "id": "ART-DEMO-SH06",
+            "revision": 1,
+            "sha256": "8181300f66b2a4adafb790f722aa49c38c1aa2e34e6cbe3dae241ded1be835d8",
+            "table": "Artifact Registry"
+          },
+          "to": {
+            "id": "SH06",
+            "revision": 1,
+            "sha256": "0c7d03f080826e3c942ee9abc5e7b86ab2f0d2c17656d68559e89e5e04ce127f",
+            "table": "Shot List"
+          },
+          "relation": "reference",
+          "field": "",
+          "decision": {
+            "table": "Decisions",
+            "id": "LINK-SH06",
+            "revision": 1,
+            "record_sha256": "959cfd663be05d7285d26c51161c7e0d108c962d1e9d6a7dd84fded7b4be032b",
+            "message": "SYNTHETIC-DEMO-SH06",
+            "reason": "Decisão sintética de encadeamento para o estudo."
+          },
+          "role": "image_references",
+          "stale": false
+        },
+        {
+          "from": {
+            "id": "SH05",
+            "revision": 1,
+            "sha256": "6f0f7f3de592cf9b2073c3ecdab45376e43dcdf6c01c8a123901bb19638406a6",
+            "table": "Shot List"
+          },
+          "to": {
+            "id": "SH06",
+            "revision": 1,
+            "sha256": "0c7d03f080826e3c942ee9abc5e7b86ab2f0d2c17656d68559e89e5e04ce127f",
+            "table": "Shot List"
+          },
+          "relation": "uses",
+          "field": "cantil",
+          "decision": {
+            "table": "Decisions",
+            "id": "LINK-HAND",
+            "revision": 1,
+            "record_sha256": "729088efff4c74b83224575018c8562d08ef6bcf737e670c306c6285c5431cd4",
+            "message": "SYNTHETIC-DEMO-HAND",
+            "reason": "Decisão sintética de encadeamento para o estudo."
+          },
+          "role": "",
+          "stale": false
+        },
+        {
+          "from": {
+            "id": "SH06",
+            "revision": 1,
+            "sha256": "0c7d03f080826e3c942ee9abc5e7b86ab2f0d2c17656d68559e89e5e04ce127f",
+            "table": "Shot List"
+          },
+          "to": {
+            "id": "TAKE-06",
+            "revision": 1,
+            "sha256": "dde9ab9ac05612ac5f413f21a9ca1440522672b2b9538f612f2dd685b5c911f8",
+            "table": "Artifact Registry"
+          },
+          "relation": "take",
+          "field": "",
+          "decision": {
+            "table": "Decisions",
+            "id": "LINK-RETURN",
+            "revision": 1,
+            "record_sha256": "a711755716c2c55067c0c341439cfbc277cc2bffff22d193e9a4655de5ff1598",
+            "message": "SYNTHETIC-DEMO-RETURN",
+            "reason": "Exercitar importação de referência para nova inspeção"
+          },
+          "role": "",
+          "stale": false
+        },
+        {
+          "from": {
+            "id": "SH06",
+            "revision": 1,
+            "sha256": "0c7d03f080826e3c942ee9abc5e7b86ab2f0d2c17656d68559e89e5e04ce127f",
+            "table": "Shot List"
+          },
+          "to": {
+            "id": "TAKE-06",
+            "revision": 1,
+            "sha256": "dde9ab9ac05612ac5f413f21a9ca1440522672b2b9538f612f2dd685b5c911f8",
+            "table": "Artifact Registry"
+          },
+          "relation": "selected_take",
+          "field": "",
+          "decision": {
+            "table": "Decisions",
+            "id": "LINK-SELECTED",
+            "revision": 1,
+            "record_sha256": "fd3547844507ee1c1e38c37c9b317e528f5acd2ee5fa4ad27984fb2e1869a532",
+            "message": "SYNTHETIC-DEMO-SELECTED",
+            "reason": "Decisão sintética de encadeamento para o estudo."
+          },
+          "role": "",
+          "stale": false
+        }
+      ],
+      "selected_take": {
+        "id": "TAKE-06",
+        "revision": 1,
+        "sha256": "dde9ab9ac05612ac5f413f21a9ca1440522672b2b9538f612f2dd685b5c911f8",
+        "table": "Artifact Registry"
+      },
+      "last_decision": {
+        "table": "Decisions",
+        "id": "LINK-SELECTED",
+        "revision": 1,
+        "record_sha256": "fd3547844507ee1c1e38c37c9b317e528f5acd2ee5fa4ad27984fb2e1869a532",
+        "message": "SYNTHETIC-DEMO-SELECTED",
+        "reason": "Decisão sintética de encadeamento para o estudo."
+      },
+      "continuity_review": []
+    }
+  ]
+}

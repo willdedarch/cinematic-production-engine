@@ -1,0 +1,8 @@
+> V3: Somente análise de material já disponível sem custo. Não iniciar Video Analysis, Virality Predictor, uploads, jobs ou qualquer operação com créditos ou custo desconhecido. As menções herdadas a operações externas são históricas e não autorizam execução.
+
+# Viral Intelligence
+Não há fórmula de viralização. Use amostra de referências pertinentes: gênero, duração, plataforma, público, formato e época comparáveis; incluir referências menos bem-sucedidas quando houver dados para reduzir viés de seleção. Para cada referência, registrar origem, data, duração, métrica pública com denominador quando disponível, e limites. Não usar visualizações como prova de causalidade.
+
+Analise vídeo fornecido, transcrição ou análise autorizada: primeira mudança, promessa, ritmo, viradas, informação, vínculo, payoff e encerramento. Meça somente o que é acessível; diferencie timestamps observados de estimados. Higgsfield Video Analysis aceita upload identificado ou URL YouTube; ver `integrations/higgsfield.md` antes de iniciar. Não copiar conteúdo distintivo. Extrair cartões de mecanismos: nome, como funciona, contexto, evidência, risco, hipótese de aplicação e forma de teste.
+
+Para episódio: explicite possível ponto de abandono e motivo narrativo (não taxa), proposta de melhoria e hipótese mensurável. Após publicação, comparar métricas na mesma plataforma/coorte/intervalo; documentar retenção inicial, duração média, conclusão, repetição, compartilhamentos e passagem ao próximo episódio se disponíveis. Uma mudança por teste quando possível; não atribuir causalidade sem desenho adequado. Não usar métricas inventadas.
