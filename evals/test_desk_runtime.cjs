@@ -49,7 +49,7 @@ function check(fn){fn();count++;}
 let app=open(state);
 check(()=>{assert.match(text(app.host),/A chegada/);assert.match(text(app.host),/Escolher pausa/);assert.equal(find(app.host,x=>x.textContent==='Continuar episódio').href,'#plano=SH06');});
 check(()=>{assert.ok(find(app.host,n=>n.textContent==='Revisar SH06 · Resposta'));app.go('#plano=SH06');assert.match(text(app.host),/Saída de SH05 · Oferta/);assert.match(text(app.host),/Entrada de SH06 · Resposta/);assert.match(text(app.host),/Som antes do olhar/);});
-check(()=>{const a=find(app.host,n=>n.textContent==='Comparar takes');assert.equal(a.href,'takes.html?pair=TEST-PAIR&shot=SH06');});
+check(()=>{const a=find(app.host,n=>n.textContent==='Comparar takes');assert.equal(a.href,'takes.html');});
 check(()=>{assert.match(text(app.host),/desconhecida/);assert.match(text(app.host),/Público/);assert.doesNotMatch(text(app.host),/a vizinha apareceu|hipótese futura/);});
 check(()=>{const pick=find(app.host,x=>x.name==='select');pick.value='5';pick.onchange();assert.match(text(app.host),/a vizinha apareceu/);assert.match(text(app.host),/Antes · desconhecida/);assert.doesNotMatch(text(app.host),/hipótese futura/);});
 check(()=>{const field=label=>find(app.host,n=>n.attrs['aria-label']===label);field('Personagem').value='Davi';field('Assunto').value='chegada';field('Informação pressuposta').value='outra pessoa';find(app.host,n=>n.textContent==='Conferir informação').onclick();assert.match(text(app.host),/Diverge do fato registrado/);assert.match(text(app.host),/Decisão D-EP2/);});
@@ -57,7 +57,13 @@ check(()=>{const t=find(app.host,n=>n.name==='textarea');t.value='Preservar a pa
 check(()=>{app=open(state);assert.match(text(app.host),/Último plano trabalhado/);app.go('#plano=SH06');assert.equal(find(app.host,n=>n.name==='textarea').value,'Preservar a pausa');assert.equal(find(app.host,n=>n.name==='select').value,'5');});
 check(()=>{const changed=structuredClone(state);changed.shots[1].revision++;const scoped=open(changed,'#plano=SH06');assert.match(text(scoped.host),/versão do material mudou/);assert.equal(find(scoped.host,n=>n.name==='textarea').value,'Preservar a pausa');});
 check(()=>{const changed=structuredClone(state);changed.episode.id='EP3';const scoped=open(changed,'#plano=SH06');assert.equal(find(scoped.host,n=>n.name==='textarea').value,'');});
-check(()=>{app.go('#roteiro');assert.match(text(app.host),/DAVI entra pela porta/);app.go('#takes');assert.equal(find(app.host,n=>n.textContent==='Abrir este par').href,'takes.html?pair=TEST-PAIR&shot=SH06');});
+check(()=>{app.go('#roteiro');assert.match(text(app.host),/DAVI entra pela porta/);app.go('#takes');assert.equal(find(app.host,n=>n.textContent==='Abrir este par').href,'takes.html');});
+check(()=>{
+  const multiple=structuredClone(state);
+  multiple.pairs.push({shot_id:'SH05',manifest:{pair_id:'SECOND-PAIR'}});
+  const a=open(multiple,'#plano=SH06');
+  assert.equal(find(a.host,n=>n.textContent==='Comparar takes').href,'takes.html?pair=TEST-PAIR&shot=SH06');
+});
 check(()=>{const absent=open(null);for(const route of ['#roteiro','#takes','#planos','#fila','#oficina','#plano=SH06','#inicio'])absent.go(route);assert.match(text(absent.host),/abre meu episódio/);});
 check(()=>{const lost={get(){throw Error('indisponível');},set(){throw Error('indisponível');}};const limited=open(state,'#plano=SH06',lost);const t=find(limited.host,n=>n.name==='textarea');t.value='Nota ainda visível';t.oninput();assert.match(text(limited.host),/Não foi possível salvar/);limited.go('#fila');limited.go('#plano=SH06');assert.equal(find(limited.host,n=>n.name==='textarea').value,'Nota ainda visível');});
 check(()=>{const corrupted=structuredClone(state);corrupted.shots[0].thumbnail='javascript:alert(1)';corrupted.queue_url='javascript:alert(1)';const a=open(corrupted,'#planos');assert.ok(elements(a.host,n=>n.name==='img').every(n=>!String(n.src).startsWith('javascript:')));a.go('#fila');assert.equal(find(a.host,n=>n.textContent==='Abrir fila no Sheets').href,a.ids.sheetLink.href);});

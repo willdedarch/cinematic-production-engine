@@ -1,0 +1,26 @@
+{
+  "date": "2026-11-24",
+  "host": "Codex CLI 0.169.0",
+  "platform": "Windows PowerShell",
+  "scope": "isolated directory with native trust review",
+  "events": {
+    "SessionStart": "host displayed hook completion",
+    "UserPromptSubmit": "host displayed hook completion",
+    "PreToolUse": "native receipt for Bash under a test matcher",
+    "PostToolUse": "native receipts after subagent creation and wait",
+    "PreCompact": "native receipt before manual compaction",
+    "PostCompact": "native receipt after completed manual compaction",
+    "SubagentStart": "native receipt using a test observer; child returned its expected response",
+    "SubagentStop": "native receipt after child completed",
+    "Stop": "native receipt after the main turn completed",
+    "SessionEnd": "native receipt after normal exit",
+    "Interrupt": "native receipt after interrupting a local wait"
+  },
+  "native_events_observed": 11,
+  "native_higgsfield_matcher_exercised": false,
+  "production_higgsfield_rule_tested_separately": true,
+  "production_tool_calls": 0,
+  "production_writes": 0,
+  "external_generation_calls": 0,
+  "global_enablement": false
+}

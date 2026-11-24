@@ -1,4 +1,4 @@
-# Cinematic Production Engine 1.6.0
+# Cinematic Production Engine 1.6.1
 
 Skill para roteiro, direção e produção audiovisual. Apresenta painéis na conversa e oferece uma mesa HTML complementar, bíblia por momento narrativo, planos, takes com som e marca de tempo e Google Sheets como estado compartilhado.
 
@@ -23,6 +23,8 @@ Plano cinematográfico com ações simultâneas, contexto de cena e conferência
 O repertório acompanha o gênero e a intenção do episódio. Para guerra de ação, o perfil escolhido pelo diretor pode vincular 65% de ação física visível e 35% de história a um mapa de acontecimentos versionado. O plano, a exportação e o julgamento conferem esse vínculo. A entrega inclui o prompt pronto em texto. A checagem de retorno confere propriedades mensuráveis, inclusive presença ou ausência de áudio quando solicitada. [Estudo A última frequência](examples/action-study/README.md) · [Auditoria](audits/review-1.6.0.md)
 
 ## Verificação e limites
+
+A 1.6.1 corrige a abertura do comparador a partir da mesa e a geração dos comandos de hooks no Windows. O ensaio conferiu a comparação audiovisual na mesa local e os 11 eventos no Codex CLI em uma pasta dedicada. [Evidências e escopo da 1.6.1](audits/review-1.6.1.md)
 
 Execute `python -B -m unittest discover -s evals -p "test_*.py"`. Execute os três testes `.cjs` em evals com Node e `python -B scripts/validate_package.py` para o inventário da release. Alguns ensaios requerem FFmpeg e Pillow já disponíveis. Os testes de interface simulam DOM e relógio de mídia. Homologação visual e escuta no dispositivo dependem do diretor.
 

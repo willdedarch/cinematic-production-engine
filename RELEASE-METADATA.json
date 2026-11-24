@@ -1,13 +1,13 @@
 {
-  "skill_version": "1.6.0",
+  "skill_version": "1.6.1",
   "state_contract_version": "3.1.0",
-  "based_on": "CPE 1.5.0 6ef7402",
+  "based_on": "CPE 1.6.0 6dcb87f",
   "native_source": "https://docs.google.com/spreadsheets/d/CONFIGURE_YOUR_SPREADSHEET_ID/edit",
   "account": "production@example.invalid",
   "sync": "on_each_relevant_user_interaction",
   "atomic": false,
-  "python_tests": 343,
-  "dom_checks": 74,
+  "python_tests": 345,
+  "dom_checks": 78,
   "native_tables": 35,
   "native_sheets": 39,
   "original_sha256": "38582e59b870ff1bb6f261a54cdf8d01569661bbc18bf436f6c38c4a75692e8e",
@@ -16,23 +16,25 @@
   "native_concept_generations": 0,
   "limitations": [
     "Optimistic per-interaction synchronization",
-    "Native hook dispatch requires scoped local activation",
-    "Managed browser refused local file navigation",
+    "Native hook dispatch verified in one scoped Windows CLI environment",
+    "Native PreToolUse used a local Bash matcher; production Higgsfield rule tested separately",
+    "Managed browser refused file access; director verified the corrected local fixture",
     "Study is preproduction with technical media",
     "Artistic approval belongs to the director"
   ],
-  "audit_report": "audits/review-1.6.0.md",
+  "audit_report": "audits/review-1.6.1.md",
   "manual": "MANUAL.md",
   "requirements_matrix": "audits/execution-1.6.0.csv",
-  "previous_release_sha256": "03bc6be4e2ee8354af43695d6ce5fc706d26b053122f98cce22733015890e462",
+  "previous_release_sha256": "24aff1109614aea2835a8294dd7f9ada9af45d17feefd5d63227931316405b70",
   "native_test_receipt": "audits/native-connector-1.6.0.json",
+  "native_hooks_receipt": "audits/native-hooks-1.6.1.json",
   "public_distribution": {
     "raw_account_exports": false,
     "private_original_v3_included": false,
     "local_configuration_included": false,
     "prior_director_preference_in_seed": false
   },
-  "previous_release_version": "1.5.0",
+  "previous_release_version": "1.6.0",
   "distribution_status": "VERIFIED_BUILD",
   "structural_mode": "INCREMENTAL_MAINTENANCE_AFTER_RELEASE"
 }

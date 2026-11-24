@@ -2,7 +2,7 @@
 
 ## Instalação e versão
 
-Extraia o ZIP em uma pasta nova e mantenha a estrutura, inclusive `SKILL.md`, `scripts`, `panels` e `integrations`. A Skill está na versão 1.6.0 e o contrato de estado é 3.1.0. Valide a pasta extraída conforme o [README](README.md). Para atualizar uma instalação, guarde a versão anterior e mantenha o workspace de produção separado. Preserve o vínculo privado e o arquivo de configuração do host quando aplicar o pacote ao mesmo ambiente. Abra uma nova conversa com a conta configurada já conectada e peça para começar em uma pasta ou retomar um episódio. O agente valida o vínculo pela leitura atual. O arquivo V3 original permanece privado e seu fingerprint está em `legacy`.
+Extraia o ZIP em uma pasta nova e mantenha a estrutura, inclusive `SKILL.md`, `scripts`, `panels` e `integrations`. A Skill está na versão 1.6.1 e o contrato de estado é 3.1.0. Valide a pasta extraída conforme o [README](README.md). Para atualizar uma instalação, guarde a versão anterior e mantenha o workspace de produção separado. Preserve o vínculo privado e o arquivo de configuração do host quando aplicar o pacote ao mesmo ambiente. Abra uma nova conversa com a conta configurada já conectada e peça para começar em uma pasta ou retomar um episódio. O agente valida o vínculo pela leitura atual. O arquivo V3 original permanece privado e seu fingerprint está em `legacy`.
 
 ## Produzir o episódio seguinte
 

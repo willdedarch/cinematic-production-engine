@@ -77,6 +77,7 @@
   function defaultShot(){return selectedShot(memory.shot) || selectedShot(pending()[0]?.shot_id) || selectedShot(openPair()?.shot_id) || shots[0];}
   function shotHref(id){return '#plano='+encodeURIComponent(id);}
   function pairHref(shot,pair) {
+    if(pair && rows('pairs').length===1) return 'takes.html';
     const p=new URLSearchParams();
     if(pair?.manifest?.pair_id) p.set('pair',pair.manifest.pair_id);
     if(shot) p.set('shot',shot.id);

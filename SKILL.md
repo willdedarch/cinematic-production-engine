@@ -2,11 +2,11 @@
 name: cinematic-production-engine
 description: Conduz histórias, séries e produção cinematográfica guiada: bíblia viva de série, comparação audiovisual de takes com timecode, roteiro, direção, casting, locações, props, fotografia, previs, experimentos, crítica, prompts por modelo, importação e QC. Usa Google Sheets compartilhado por interação e ferramentas locais disponíveis. Produção definitiva manual; conceito nativo somente com autorização específica.
 metadata:
-  version: '1.6.0'
+  version: '1.6.1'
   language: pt-BR
   base: 'CPE V3; evolução de estado V3.1'
 ---
-# Cinematic Production Engine 1.6.0
+# Cinematic Production Engine 1.6.1
 
 Ler [métodos auditados](knowledge/source-methods.md) ao desenvolver encenação, dramaturgia ou referências. As fontes têm escopo de leitura e licença em sources/current-source-audit.json. Aplicar os mecanismos à cena e manter hipóteses da fonte como hipóteses.
 

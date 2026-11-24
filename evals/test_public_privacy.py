@@ -1,4 +1,4 @@
-import copy,hashlib,json,sys,tempfile,unittest,zipfile,subprocess
+import copy,hashlib,json,shlex,shutil,sys,tempfile,unittest,zipfile,subprocess
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 sys.path[:0]=[str(ROOT/'scripts'),str(ROOT/'hooks')]
@@ -42,19 +42,42 @@ class PublicPrivacyTests(unittest.TestCase):
             (root/'integrations/local-binding.json').write_text('{}',encoding='utf8')
             with self.assertRaises(ValueError):load_binding(root)
     def test_hook_migration_preserves_existing_group_without_losing_the_new_matcher(self):
-        from configure_hooks import definitions
+        from configure_hooks import definitions, hook_arguments
         wanted=definitions()['hooks']['PreToolUse'][0]
         with tempfile.TemporaryDirectory() as folder:
             target=Path(folder)/'hooks.json'
             different=copy.deepcopy(wanted)
             different['matcher']='^unrelated-only$'
             different['hooks'][0]['timeout']=99
-            original={'hooks':{'PreToolUse':[different]}}
+            legacy=copy.deepcopy(wanted)
+            legacy['hooks'][0]['command']=subprocess.list2cmdline(hook_arguments(sys.executable, None))
+            original={'hooks':{'PreToolUse':[different,legacy]}}
             target.write_text(json.dumps(original),encoding='utf8')
             subprocess.run([sys.executable,'-B',str(ROOT/'scripts/configure_hooks.py'),'--output',str(target)],check=True,capture_output=True)
             merged=json.loads(target.read_text(encoding='utf8'))
             self.assertEqual(merged['hooks']['PreToolUse'],[different,wanted])
             self.assertEqual(json.loads(target.with_name('hooks.json.before-cpe').read_text(encoding='utf8')),original)
+    def test_hook_command_quotes_literal_arguments_for_the_host_shell(self):
+        from configure_hooks import hook_command
+        arguments=['python path', "director's ‘take’ ‚A‛ $sheet & pass", 'plain']
+        self.assertEqual(hook_command(arguments, windows=True), "& 'python path' 'director''s ‘‘take’’ ‚‚A‛‛ $sheet & pass' 'plain'")
+        self.assertEqual(shlex.split(hook_command(arguments, windows=False)), arguments)
+    @unittest.skipUnless(sys.platform == 'win32', 'PowerShell command used by the Windows host')
+    def test_powershell_hook_command_writes_receipt_from_stdin(self):
+        from configure_hooks import definitions
+        shell=shutil.which('pwsh') or shutil.which('powershell')
+        if not shell:
+            self.skipTest('PowerShell executable unavailable')
+        with tempfile.TemporaryDirectory() as folder:
+            receipts=Path(folder)/"director's ‘take’ ‚A‛ $ & receipts"
+            command=definitions(receipts=receipts)['hooks']['SessionEnd'][0]['hooks'][0]['command']
+            result=subprocess.run([shell,'-NoProfile','-NonInteractive','-Command',command],
+                input=json.dumps({'hook_event_name':'SessionEnd','session_id':'fixture'}),
+                text=True,capture_output=True,check=True)
+            self.assertEqual(json.loads(result.stdout),{})
+            files=list(receipts.glob('*.json'))
+            self.assertEqual(len(files),1)
+            self.assertEqual(json.loads(files[0].read_text(encoding='utf8'))['event'],'SessionEnd')
     def test_feedback_is_private_immutable_and_never_production_approval(self):
         with tempfile.TemporaryDirectory() as folder:
             path=Path(folder)/'frame.txt';path.write_text('frame version one',encoding='utf8')

@@ -15,7 +15,9 @@ function canonical(value) {
  return value;
 }
 async function sha(bytes) {
- const result=await crypto.subtle.digest('SHA-256',bytes);
+ const verifier=globalThis.crypto?.subtle;
+ if(!verifier)throw Error('O navegador não disponibiliza a verificação de integridade dos takes.');
+ const result=await verifier.digest('SHA-256',bytes);
  return [...new Uint8Array(result)].map(n=>n.toString(16).padStart(2,'0')).join('');
 }
 function stop() {
@@ -210,9 +212,9 @@ async function projectedBlob(url,take){
  throw Error('O par precisa de mídia local verificada.');
 }
 async function openDeskPair(item){
- if(!await loadManifest(item.manifest))return;
- const token=generation;
+ const token=generation+1;
  try{
+  if(!await loadManifest(item.manifest))return;
   const m=item.manifest,desk=window.CPE_DESK_DATA;
   if(m.episode_id!==desk.episode?.id||m.project_id!==desk.series?.id||m.shot?.id!==item.shot_id)throw Error('Par de outro episódio ou plano.');
   el('return').href='studio.html#plano='+encodeURIComponent(item.shot_id);

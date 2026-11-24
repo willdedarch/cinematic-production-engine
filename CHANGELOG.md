@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.6.1 · 24/11/2026
+
+- A mesa abre diretamente o comparador quando há um único par. Quando há mais de um, preserva o plano e o par escolhidos.
+- O comparador mostra erros de verificação de integridade. A Oficina usa o nome atual da mesa no título e no rodapé.
+- O gerador de hooks usa sintaxe do PowerShell no Windows e preserva grupos anteriores de outras ferramentas. A definição gerada pela versão anterior é substituída quando seus parâmetros coincidem com os da nova configuração.
+
 ## 1.6.0 — 24/11/2026
 
 - Recupera referências, métodos e rubricas de acordo com gênero composto e intenção. Restabelece `ANALYZE` e a entrada de conhecimento sobre personagens e atenção.

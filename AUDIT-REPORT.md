@@ -1,5 +1,9 @@
 # Auditorias da Cinematic Production Engine
 
+## Revisão 1.6.1
+
+A [verificação 1.6.1](audits/review-1.6.1.md) registra a correção da mesa, as confirmações no navegador e a execução dos 11 eventos nativos em ambiente isolado.
+
 ## Revisão 1.6.0
 
 A [auditoria 1.6.0](audits/review-1.6.0.md) reúne a investigação do viés de exemplos, a correção da transição do roteiro ao take, as verificações nativas e a matriz de aceite.
