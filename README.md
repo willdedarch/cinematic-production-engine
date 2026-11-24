@@ -1,4 +1,4 @@
-# Cinematic Production Engine 1.5.0
+# Cinematic Production Engine 1.6.0
 
 Skill para roteiro, direção e produção audiovisual. Apresenta painéis na conversa e oferece uma mesa HTML complementar, bíblia por momento narrativo, planos, takes com som e marca de tempo e Google Sheets como estado compartilhado.
 
@@ -17,6 +17,10 @@ Os estudos de imagem tiveram revisão humana negativa. Preferência relativa de 
 ## Candidata 1.5.0
 
 Plano cinematográfico com ações simultâneas, contexto de cena e conferência de estados entre planos. O pacote manual preserva referências versionadas e permite comparar o take devolvido antes de importá-lo para revisão. Votos A/B levam a versão exata do par apresentado. O contrato do Google Sheets continua em 3.1.0. Veja o [piloto A linha azul](examples/pilot15/README.md), [o contrato do plano](adapters/cinematic-plans.md) e [a auditoria corretiva](audits/review-1.5.0.md).
+
+## Revisão 1.6.0
+
+O repertório acompanha o gênero e a intenção do episódio. Para guerra de ação, o perfil escolhido pelo diretor pode vincular 65% de ação física visível e 35% de história a um mapa de acontecimentos versionado. O plano, a exportação e o julgamento conferem esse vínculo. A entrega inclui o prompt pronto em texto. A checagem de retorno confere propriedades mensuráveis, inclusive presença ou ausência de áudio quando solicitada. [Estudo A última frequência](examples/action-study/README.md) · [Auditoria](audits/review-1.6.0.md)
 
 ## Verificação e limites
 

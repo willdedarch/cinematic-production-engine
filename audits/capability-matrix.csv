@@ -1,13 +1,13 @@
 capability,observed_status,evidence,dependency,limits
-Python core,LOCAL_TESTED,audits/python-tests-1.5.0.txt,Python existing host,New host must validate availability
-FFmpeg and image tools,LOCAL_PILOT_MEASURED,audits/pilot-evidence-1.5.0.json,Existing FFmpeg Pillow NumPy,Original media examples are synthetic and scopes approximate
-Blender,ISOLATED_RENDER_AND_REOPEN,audits/review-1.5.0.md,Existing Blender 5.4.0 Alpha,Static test layout rendered in an isolated process
-Google Sheets,NATIVE_BOUNDED_READ_AND_HISTORICAL_WRITE,audits/connector-readback-1.5.json,Existing account connector,No candidate writes; originals private; discover and validate each binding
+Python core,LOCAL_TESTED,audits/python-tests-1.6.0.txt,Python existing host,New host must validate availability
+FFmpeg and image tools,LOCAL_CONTROL_AND_STUDY,audits/study-evidence-1.6.0.json,Existing FFmpeg Pillow NumPy,Synthetic files and schematic study only
+Blender,ISOLATED_RENDER_AND_REOPEN,audits/review-1.6.0.md,Existing Blender 5.4.0 Alpha,Static layout rendered in isolated process
+Google Sheets,NATIVE_ISOLATED_WRITE_READBACK,audits/native-connector-1.6.0.json,Existing account connector,Synthetic isolated workbook moved to Trash; production untouched
 Higgsfield read only,CURRENT_CATALOG_READ,audits/connector-readback-1.5.json,Existing connector,Eight model profiles queried without generation or credits
 Prompt compiler,LOCAL_TESTED,evals/test_cinematic_plan.py,Python,Temporal intent consistency does not establish model artistic results
 Native image concept,HISTORICAL_EXECUTED_FIVE,audits/native-image-lab.json,Native authorized tool,Human rejection remains; no candidate image generation
 Judgment,EXPLORATORY,benchmarks/review-1.5.md,Accessible media and critiques,Same-context exploratory results and no human benchmark labels
 Native hooks,IMPLEMENTED_NOT_NATIVE_VERIFIED,hooks/README.md,Reviewed trusted host definitions,Local payload tests do not establish lifecycle activation or universal interception
-HTML panels,DOM_TESTED_VISUAL_REVIEW_PENDING,audits/panel-tests-1.5.0.json,User browser,Local browser security blocked file inspection; visual acceptance pending
+HTML panels,DOM_TESTED_VISUAL_REVIEW_PENDING,audits/panel-browser-1.6.0.md,User browser,Local browser security blocked file inspection; visual acceptance pending
 OpenCV PySceneDetect FasterWhisper,OPTIONAL_ABSENT,Historical host diagnosis,Optional existing packages,No dependency installation or download
 Final production,MANUAL,adapters/README.md,User action,No external paid generations or credit consumption

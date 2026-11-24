@@ -1,4 +1,10 @@
-# Revisão e implementação da CPE 1.4
+# Auditorias da Cinematic Production Engine
+
+## Revisão 1.6.0
+
+A [auditoria 1.6.0](audits/review-1.6.0.md) reúne a investigação do viés de exemplos, a correção da transição do roteiro ao take, as verificações nativas e a matriz de aceite.
+
+## Registro histórico da CPE 1.4
 
 24 de novembro de 2026. Evolução da Skill 1.3.0 auditada, com contrato de estado 3.1.0 preservado. A arquitetura de produção, a bíblia viva, os takes e as 35 tabelas continuam disponíveis. Os painéis de apoio são apresentados na conversa; o HTML é complementar. Esta entrega corrige software e amplia métodos e evidências. O aceite artístico é uma decisão separada.
 

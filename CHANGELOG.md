@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.6.0 — 24/11/2026
+
+- Recupera referências, métodos e rubricas de acordo com gênero composto e intenção. Restabelece `ANALYZE` e a entrada de conhecimento sobre personagens e atenção.
+- Registra a decisão 65/35 por episódio, carrega acontecimentos aprovados no plano e no prompt e exige revisão explícita de omissões, substituições ou falta de evidência.
+- Entrega o prompt de produção como texto e verifica duração, vídeo, áudio, streams, formato, negociação de requisitos e integridade dos retornos locais.
+- Inclui estudo independente de guerra de ação, duas exportações de modelo, regressões e matriz de aceite. Preserva o estado 3.1.0 e a execução externa manual.
+
 ## 1.5.0 — candidata corretiva de 24/11/2026
 
 - Normaliza seletores em português e inglês, gêneros secundários, tipo de entrega e complexidade. Recupera o exemplo pertinente e registra a rota.

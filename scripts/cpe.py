@@ -4,10 +4,24 @@ import argparse,json,sys,traceback
 from pathlib import Path
 from harness_runtime import *
 from optics import optics,dof,exposure
+from shared_state import index
 def read(path):
  require(path is not None,'Input file required');return json.loads(Path(path).read_text(encoding='utf-8'))
 def execute(a,run):
  c=a.command.lower();spec=read(a.input) if a.input else {};s=read(a.snapshot) if a.snapshot else None
+ if c in {'intent-audit','intent-plan','intent-review'}:
+  from creative_intent import audit, current, plan, review
+  if c=='intent-audit':return audit(spec['profile'],spec['events'])
+  require(s is not None,'Latest shared-state read copy required');validate(s)
+  row=index(s)['Episodes'].get(spec['episode_id'])
+  require(row and row['project_id']==spec['project_id'],'Episode does not belong to the selected project')
+  require(not row['is_test'] or a.include_test or spec.get('include_test') is True,'Explicit test scope required')
+  if c=='intent-plan':return plan(s,spec)
+  active=current(s,spec['project_id'],spec['episode_id']);require(active is not None,'No recorded creative intent')
+  if spec.get('shot_id'):
+   active['events']=[event for event in active['events'] if event['shot_id']==spec['shot_id']]
+   require(active['events'],'Shot has no matching events in the current creative intent')
+  return review(active,spec['observations'])
  if c=='study-feedback':
   from study_feedback import record_feedback
   return record_feedback(spec,run.workspace)
@@ -40,9 +54,9 @@ def execute(a,run):
  if c=='doctor':return doctor(spec,a.blender)
  if c in {'optics','dof','exposure'}:
   cost_guard(c);return optics(spec) if c=='optics' else dof(spec) if c=='dof' else exposure(spec['fps'],spec['shutter_angle_deg'])
- if c=='task':
+ if c in {'task','analyze'}:
   require(s is not None,'Agent must provide latest native read copy')
-  return context(s,a.project,a.episode,a.gate or a.task.upper(),a.facet,a.model,a.include_test,
+  return context(s,a.project,a.episode,a.gate or ('ANALYZE' if c=='analyze' else a.task.upper()),a.facet,a.model,a.include_test,
                  spec.get('intention',''),spec.get('target_ids',[]),
                  department=spec.get('department',''),purpose=spec.get('purpose',''),problem=spec.get('problem',''),
                  secondary_genres=spec.get('secondary_genres',[]),scene_complexity=spec.get('scene_complexity',''),
@@ -108,7 +122,22 @@ def execute(a,run):
   return run_laboratory(experiment(spec),run.dir,a.source)
  if c=='judge':
   cost_guard('judgment_validation' if a.review else 'judgment_packet')
-  if a.review:return validate_review(read(a.review))
+  from creative_intent import apply_to_review, target_intent
+  if a.review:
+   authored=read(a.review);result=validate_review(authored)
+   if s:
+    validate(s)
+    matches=[(name,row) for name in PRODUCTION_ASSETS for row in s['tables'].get(name,[]) if row['id']==authored['target']['id']]
+    require(len(matches)==1,'Review target must exist in the state copy')
+    table,row=matches[0]
+    require(all(row[k]==authored[k] for k in ('project_id','episode_id')) and
+            row['revision']==authored['target']['revision'],'Review scope or revision changed')
+    from approval_guard import content_matches
+    require(not row['is_test'] or a.include_test,'Explicit test scope required')
+    require(authored['target'].get('record_sha256')==fingerprint(row) and
+            content_matches(table,row,authored['target']),'Reviewed material or record changed')
+    result=apply_to_review(result,target_intent(s,table,row),authored)
+   return result
   packet=review_packet(spec)
   if s:
    from judgment import take_preferences
@@ -123,6 +152,11 @@ def execute(a,run):
    require(not a.episode or not row['episode_id'] or a.episode==row['episode_id'],'Review target belongs to another episode')
    if episode:require(any(e['id']==episode and e['project_id']==row['project_id'] for e in s['tables']['Episodes']),'Unknown review episode')
    packet['target']['record_sha256']=fingerprint(row);packet['target']['is_test']=row['is_test'];packet['source_read_at']=s['read_at']
+   active_intent=target_intent(s,table,row)
+   if active_intent:
+    pins=dict(packet['target'])
+    packet=review_packet({**spec,'context':{**spec['context'],'creative_profile':active_intent['profile']['kind']}})
+    packet.update(target=pins,source_read_at=s['read_at'],creative_intent=active_intent)
    packet['take_preferences']=[] if spec.get('holdout') else take_preferences(s,row['project_id'],episode,[row['id']],a.include_test)
   return packet
  if c=='revise':
@@ -145,6 +179,11 @@ def main(argv=None):
   approving=cmd=='prepare' and any(c.get('values',{}).get('status') in {'APPROVED','LOCKED'} for c in read(a.input).get('changes',[]))
   if approving:run.event('before_approval','REQUESTED',scope_note='Local validation of received-authorization claim; connector persistence still pending')
   result=execute(a,run);path=run.save('result.json',result)
+  extra_artifacts={}
+  if cmd=='shot-handoff':
+   export=run.dir/'prompt-definitivo.txt'
+   export.write_text(result['delivery']['prompt']+'\n',encoding='utf8')
+   extra_artifacts['prompt_file']=str(export)
   failed_render=cmd=='blender' and result.get('status')!='RENDERED_REOPENED_REQUIRES_VISUAL_REVIEW'
   if failed_render:status='FAILED'
   elif result.get('kind')=='WRITE_PLAN_NOT_SAVED':status='PLANNED'
@@ -155,7 +194,7 @@ def main(argv=None):
   if creating:run.event('after_create',status,output_ref=path,receipt_written=True,scope_note='Status describes the requested artifact. A receipt is available for every outcome.')
   if failed_render:run.event('on_failure','FAILED',output_ref=path,operation='blender',reason=result['status'])
   if approving:run.event('after_approval','VALIDATED',output_ref=path,persisted_by_cli=False)
-  print(json.dumps({'run_id':run.id,'result':path,'events':str(run.dir/'events.jsonl'),'summary':{k:v for k,v in result.items() if k in {'kind','status','recommendation','approved','state_valid','remote_read_performed_by_cli','artistic_decision'}}},ensure_ascii=False,indent=2));return 2 if failed_render else 0
+  print(json.dumps({'run_id':run.id,'result':path,'events':str(run.dir/'events.jsonl'),**extra_artifacts,'summary':{k:v for k,v in result.items() if k in {'kind','status','recommendation','approved','state_valid','remote_read_performed_by_cli','artistic_decision'}}},ensure_ascii=False,indent=2));return 2 if failed_render else 0
  except Exception as e:
   run.event('on_failure','FAILED',error_type=type(e).__name__,message=str(e));print(json.dumps({'run_id':run.id,'error':str(e),'events':str(run.dir/'events.jsonl'),'saved_to_google':False},ensure_ascii=False),file=sys.stderr);return 1
 if __name__=='__main__':raise SystemExit(main())

@@ -1,0 +1,92 @@
+{
+  "timeline": {
+    "kind": "AUTHORED_TIMELINE_AUDIT",
+    "duration_s": 100,
+    "action_s": 65,
+    "story_s": 35,
+    "action_percent": 65.0,
+    "story_percent": 35.0,
+    "hierarchy": [
+      "visible_physical_action",
+      "story_characters_dialogue",
+      "everyday_context"
+    ],
+    "ratio_matches": true,
+    "artistic_approval": false
+  },
+  "focal": [
+    "FREQ-E08A",
+    "FREQ-E08B",
+    "FREQ-E08C"
+  ],
+  "models": [
+    "seedance_2_5",
+    "minimax_h3"
+  ],
+  "retrieved": {
+    "conditions": [
+      "ação",
+      "guerra",
+      "suspense"
+    ],
+    "facets": [
+      "direction",
+      "performance",
+      "prompts",
+      "continuity",
+      "composition"
+    ],
+    "examples": [
+      "examples/action-study/README.md",
+      "examples/action-study/focal-shot.json"
+    ],
+    "selectors": {
+      "department": "direction",
+      "purpose": "handoff",
+      "problem": "continuity",
+      "scene_complexity": "complex"
+    },
+    "genres": [
+      "ação",
+      "guerra",
+      "suspense"
+    ],
+    "primary_genre": "ação",
+    "secondary_genres": [
+      "guerra",
+      "suspense"
+    ],
+    "example_ids": [
+      "ACTION-01",
+      "WAR-ACTION-16",
+      "SUS-01"
+    ],
+    "intent_mode": "action_led_war",
+    "war_study_relevant": false
+  },
+  "technical_control": "TECHNICAL_CONTROL_IMPORTED_IN_LOCAL_COPY",
+  "recovery": "MATCHES_CURRENT_READ_COPY",
+  "artistic_approval": false,
+  "external_generation": false,
+  "remote_writes": 0,
+  "commands": [
+    "intent-audit",
+    "init",
+    "briefing-view",
+    "intent-plan",
+    "prepare",
+    "task",
+    "storyboard",
+    "shot-card",
+    "handoff-seedance",
+    "handoff-minimax",
+    "reject-missing-event",
+    "previs",
+    "shot-compare",
+    "shot-import",
+    "review-art-pending",
+    "review-art-reject-offscreen",
+    "checkpoint",
+    "recover"
+  ]
+}

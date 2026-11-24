@@ -128,6 +128,8 @@ def check_direct_binding(snapshot, intent, assets, direct, checked, approving_ga
 
 
 def bind_reviews(snapshot, intent, reviews):
+    from creative_intent import TOPIC, apply_to_review, target_intent
+
     workflow = {r["id"]: r for r in snapshot["tables"]["Workflow"]}
     assets = {r["id"]:(t,r) for t in PRODUCTION_TABLES for r in snapshot["tables"][t]}
     gate_changes, direct = {}, set()
@@ -144,6 +146,10 @@ def bind_reviews(snapshot, intent, reviews):
                 gate_changes[key] = change
     if not gate_changes and not direct:
         return intent
+    prior_decisions = {row['id']:row for row in snapshot['tables']['Decisions']}
+    require(not any(c['table']=='Decisions' and
+                    {**prior_decisions.get(c['id'],{}),**c['values']}.get('topic')==TOPIC for c in intent['changes']),
+            'Record the new creative intent before reviewing or approving related material')
     require(all(c["table"] not in PRODUCTION_TABLES or set(c["values"]) <=
                 {"status","technical_review_id","artistic_review_id","approval_id"}
                 for c in intent["changes"]), "Save content changes before reviewing and approving")
@@ -165,13 +171,14 @@ def bind_reviews(snapshot, intent, reviews):
     for review in reviews:
         require(isinstance(review, dict), "Review must be an object")
         result = validate_review(review)
-        require(result["recommendation"] == "READY_FOR_HUMAN_DECISION", "Review does not support approval")
         target = review["target"]
         key = target["id"]
         require(key in required_targets and key not in checked and key in assets,
                 "Review is missing, duplicated or belongs to another delivery")
         table, row = assets[key]
         require(all(row[k] == review[k] for k in ("project_id","episode_id")), "Review scope mismatch")
+        result = apply_to_review(result,target_intent(snapshot,table,row),review)
+        require(result["recommendation"] == "READY_FOR_HUMAN_DECISION", "Review does not support approval")
         require(review["department"] in DEPARTMENTS.get(table,{row.get("department")}), "Review department mismatch")
         require(row["revision"] == target["revision"] and target.get("record_sha256") == fingerprint(row),
                 "Reviewed row revision or contents changed")

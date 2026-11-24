@@ -1,6 +1,12 @@
 # Guerra ficcional, risco e consequência
 
-Ler ao escrever ou dirigir uma situação ficcional de guerra. Fixar o que a pessoa tenta preservar e qual mudança torna isso difícil. Intensidade pode vir da ação corporal, da espera, do conflito entre pessoas ou da perda de uma tarefa cotidiana. Não impor percentuais de ação, mortes ou explosões. Distinguir fato histórico documentado, hipótese e invenção.
+Identifique a promessa do briefing ao escrever ou dirigir guerra ficcional. Combate, drama histórico, suspense de sobrevivência e retrato íntimo pedem coberturas diferentes. Distinguir fato histórico documentado, hipótese e invenção. Preserve a hierarquia escolhida pelo diretor ao passar da proposta ao roteiro, à decupagem e à avaliação.
+
+## Quando a ação de guerra é a promessa
+
+Com o perfil de guerra de ação selecionado, priorize confronto, movimento sob risco e consequências físicas perceptíveis. História, personagens e falas ganham espaço próprio e mudam o sentido do conflito. Trabalho cotidiano entra quando sustenta a cena. Para o perfil que adota 65% de ação e 35% de história, estime o tempo dominante de cada intervalo, confira as somas e preserve essa proporção nas revisões. Um olhar, uma espera ou uma fala sobre um combate pertencem à história ou ao suspense até que haja ação física em cena. Em um beat simultâneo, o tempo pertence ao componente dominante e entra uma única vez no cálculo.
+
+Para cada acontecimento central, nomeie o fato visível, a câmera que o testemunha, o estado de entrada, a mudança no corpo ou no espaço e o que permanece depois. Se o briefing pede confronto, impacto, morte ou destruição em cena, dê enquadramento e duração para reconhecer o acontecimento. Uma elipse pode servir a um ponto de vista escolhido. Uma troca que retire um acontecimento aprovado exige decisão do diretor. Trabalhe com dramaturgia e representação audiovisual ficcional. Procedimentos de uso de armas, ataque ou explosivos e métodos para reproduzir violência real ficam fora do planejamento.
 
 ## Geografia percebida
 
@@ -12,7 +18,7 @@ Se o personagem desconhece a origem de um ruído, conservar essa incerteza. Um p
 
 Definir um estado basal e o sinal que o rompe. Distribuir percepção, tentativa de resposta e consequência conforme a cena. Uma pausa pode carregar a escuta de algo que ainda não vemos. Acelerar todos os cortes elimina o contraste necessário para uma alteração ganhar peso. Estimar tempos no papel e reconferir no ensaio.
 
-Numa travessia ficcional de um abrigo inundado, uma pessoa tenta salvar uma caixa seca, outra mantém a passagem desimpedida e uma terceira precisa de apoio. Um mesmo espaço força objetivos a disputar tempo e apoio. A tensão cresce quando uma ajuda provoca novo custo. Esse exemplo trabalha experiência humana e causalidade, sem instruções táticas.
+Num observatório ficcional em confronto, um plano aberto situa a galeria. O impacto derruba o passadiço em quadro e tira o apoio de quem chega ao console. Uma personagem que vinha em oposição muda a relação ao puxar a outra antes da queda do piso. Dois obstáculos ficam visíveis nos planos seguintes. O impacto, a urgência da ação e a mudança da relação têm funções próprias. Consulte [A última frequência](../examples/action-study/README.md) para ação dominante e [A parte seca](../examples/shelter/caso14-roteiro-e-direcao.md) quando o objetivo do briefing for sobrevivência cotidiana.
 
 ## Corpo e grupo
 
@@ -24,14 +30,14 @@ Fixar no estado de continuidade apoio, mão ocupada, objeto, umidade, sujeira e 
 
 A fonte física de luz fica no lugar quando a câmera muda. Definir o que ainda permite ler o gesto e qual região pode permanecer ambígua. Poeira ou chuva têm causa, alcance e efeito no trabalho. Evitar brilho uniforme de figurino ou sujeira distribuída como estampa.
 
-Usar som fora de quadro para situar tarefa, distância percebida e interrupção. A perspectiva sonora deve acompanhar o ponto de escuta escolhido, sem confundir representação subjetiva com diagnóstico clínico. Um estrondo inventado não prova dano, nem cada corte precisa de novo impacto. Quando a água para de pingar, mostrar ou permitir descobrir o que mudou.
+Sincronize os acontecimentos centrais àquilo que o quadro permite ver: primeiro contato, material que cede e deslocamento dos corpos. Som fora de quadro pode preparar o perigo, localizar uma ameaça percebida ou sustentar a continuidade entre cortes. A perspectiva sonora acompanha o ponto de escuta escolhido. Um ruído isolado pede evidência visual quando o contrato da cena exige mostrar o acontecimento.
 
 ## Depois do acontecimento
 
-Conservar o custo nos planos seguintes. Quem oferece a manta segue molhado; a caixa deixada no chão absorve água; a passagem ganha obstáculo; a relação muda por uma ajuda recusada ou aceita. Não usar crueldade ou sofrimento como decoração. Mostrar risco e consequência humana sem gore gratuito ou instrução de violência real. Não suavizar automaticamente conflitos ficcionais permitidos nem contornar limites do ambiente.
+Conserve o custo nos planos seguintes. Quem sofreu uma lesão mantém o apoio alterado. O passadiço derrubado permanece ausente. A fachada aberta muda a claridade e a escuta no interior. Amarre ferimento, morte e destruição ao que aconteceu e ao que passa a ser possível. Calibre o nível de detalhe visual ao público e à intenção; preserve a brutalidade ficcional solicitada com encenação e consequência legíveis.
 
 ## Pesquisa e revisão
 
 Para um evento real, conferir cronologia, lugar, testemunho, uniformes e objetos em fontes pertinentes antes de afirmar autenticidade. O estudo escrito de 1945 deste pacote está identificado como ficção não verificada. Filmes de referência orientam perguntas formais; não certificam fatos nem fornecem receitas universais.
 
-Revisar causa, reação, custo, posição de câmera, legibilidade do gesto, percepção parcial e continuidade. Se só houver texto, registrar atuação, escuta, ritmo realizado e eficácia emocional como desconhecidos. O caso [A parte seca](../examples/shelter/caso14-roteiro-e-direcao.md) aplica quatro objetivos em oito planos; não representa sequência de combate ou teste de grande escala. As relações entre decisões de fotografia e materialidade consultadas estão em [estudos de estilo](../knowledge/style-studies.md). Ler também [direção coletiva](../knowledge/collective-direction.md) e [mundo vivo](living-world.md).
+Revisar acontecimento, causa, reação, custo, ponto de vista e continuidade. Confira a cobertura dos acontecimentos aprovados e a distribuição de tempo antes de julgar o acabamento. Em estudo escrito, registre atuação realizada, escuta, ritmo e eficácia emocional como desconhecidos. Use [estudos de estilo](../knowledge/style-studies.md), [direção coletiva](../knowledge/collective-direction.md) e [mundo vivo](living-world.md) conforme a decisão que está em revisão.

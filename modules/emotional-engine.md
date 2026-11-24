@@ -3,6 +3,8 @@ Emoção é consequência de investimento e mudança, não adjetivo em ação. P
 
 Mapeie tensão, vínculo, curiosidade, esperança, medo e alívio de forma ordinal (0–5, opcional), com evidência por beat. Não somar para criar índice de viralidade. Observe diferenças: alta tensão pode coexistir com baixa empatia; descanso pode elevar vínculo.
 
+Em ação dominante, faça o vínculo mudar dentro do acontecimento pelas escolhas e seus efeitos. Uma ajuda física inesperada pode mudar uma aliança antes de haver diálogo. A lesão pode alterar o apoio e obrigar uma pessoa a decidir mais cedo. Reserve tempo posterior para aquilo que exige elaboração e use o contrato de duração para preservar o conflito principal.
+
 ## Construção
 - Empatia: gesto ou escolha específica, relação com valor, vulnerabilidade sem explicação redundante.
 - Medo: incerteza com consequência inteligível; não dependência de sustos.

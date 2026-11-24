@@ -1,0 +1,25 @@
+{
+  "status": "CONFIRMED",
+  "date": "2026-11-24",
+  "scope": "SYNTHETIC_WORKBOOK_SEPARATE_FROM_PRODUCTION",
+  "tables": 35,
+  "native_writes": [
+    "Revision History PREPARED",
+    "Projects synthetic row",
+    "Revision History CONFIRMED"
+  ],
+  "independent_readbacks": [
+    "initial",
+    "prepared",
+    "data",
+    "confirmed",
+    "resume"
+  ],
+  "guard_result": "PASSED",
+  "checkpoint": "LOCAL_COPY_OF_CONFIRMED_READ",
+  "recovery": "MATCHES_CURRENT_READ_COPY",
+  "qa_workbook_trash_acknowledged": true,
+  "production_writes": 0,
+  "atomic": false,
+  "private_id_included": false
+}

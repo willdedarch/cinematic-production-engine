@@ -3,8 +3,10 @@
     "case_id": "COM-01",
     "genre": "comédia",
     "aliases": [
+      "comédia",
+      "comédias",
       "comedy",
-      "comedia",
+      "comedies",
       "sitcom",
       "humor"
     ],
@@ -21,15 +23,32 @@
       "direction"
     ],
     "contrast": "A corta imediatamente para o chefe e entrega a piada. B mantém o reflexo e espera a funcionária se virar. Comparar em qual versão a descoberta pertence ao espectador.",
-    "title": "A porta de vidro"
+    "title": "A porta de vidro",
+    "taxonomy": {
+      "subgenre": "Comédia",
+      "intensity": "variável",
+      "pace": "Timing e reação",
+      "conflict": "Equívoco com descoberta pública",
+      "scale": "Íntima",
+      "action_predominance": false,
+      "drama_predominance": false,
+      "purpose": "Exercício didático de direção",
+      "technique": "Diferença de informação no tempo de corte",
+      "classification": "genre_specialist",
+      "status": "DIDACTIC_UNAPPROVED"
+    }
   },
   {
     "case_id": "DOC-01",
     "genre": "documentário",
     "aliases": [
+      "documentário",
+      "documentários",
+      "documental",
       "documentary",
-      "documentario",
-      "observacional"
+      "documentaries",
+      "observacional",
+      "observational documentary"
     ],
     "intention": "Deixar que a pessoa entrevistada decida o que significa o silêncio.",
     "beats": [
@@ -44,16 +63,29 @@
       "locations"
     ],
     "contrast": "A cobre a pausa com música elegíaca. B preserva som direto e duração. Ouvir se a montagem atribui uma emoção que a pessoa não expressou.",
-    "title": "O fecho"
+    "title": "O fecho",
+    "taxonomy": {
+      "subgenre": "Documentário",
+      "intensity": "variável",
+      "pace": "Duração do som e silêncio",
+      "conflict": "Depoimento e autoria da interpretação",
+      "scale": "Íntima",
+      "action_predominance": false,
+      "drama_predominance": false,
+      "purpose": "Exercício didático de direção",
+      "technique": "Agência da pessoa entrevistada",
+      "classification": "genre_specialist",
+      "status": "DIDACTIC_UNAPPROVED"
+    }
   },
   {
     "case_id": "SUS-01",
     "genre": "suspense",
     "aliases": [
-      "thriller",
-      "misterio",
-      "mistério",
-      "suspense"
+      "suspense",
+      "suspenses",
+      "suspense film",
+      "tensão narrativa"
     ],
     "intention": "A audiência ouve um ruído cujo significado a personagem ainda desconhece.",
     "beats": [
@@ -68,7 +100,20 @@
       "composition"
     ],
     "contrast": "A insere imediatamente um detalhe da fechadura. B atrasa a explicação. Verificar se há orientação espacial suficiente para o ruído criar pergunta, sem confundir.",
-    "title": "O segundo clique"
+    "title": "O segundo clique",
+    "taxonomy": {
+      "subgenre": "Suspense",
+      "intensity": "variável",
+      "pace": "Antecipação e demora motivada",
+      "conflict": "Ameaça interpretada com informação desigual",
+      "scale": "Íntima",
+      "action_predominance": false,
+      "drama_predominance": false,
+      "purpose": "Exercício didático de direção",
+      "technique": "Escuta com orientação espacial",
+      "classification": "genre_specialist",
+      "status": "DIDACTIC_UNAPPROVED"
+    }
   },
   {
     "case_id": "WAR-01",
@@ -91,6 +136,750 @@
       "performance"
     ],
     "contrast": "Mostrar a água apenas como escassez ou como negociação observável através da tampa; conservar a transferência de mão na passagem para SH06.",
-    "title": "A última água"
+    "title": "A última água",
+    "taxonomy": {
+      "subgenre": "Sobrevivência cotidiana em guerra",
+      "intensity": "baixa",
+      "pace": "Contemplativo",
+      "conflict": "Partilha de recurso",
+      "scale": "Íntima",
+      "action_predominance": false,
+      "drama_predominance": true,
+      "purpose": "Exercício de continuidade material",
+      "technique": "Estado do objeto no corte",
+      "classification": "survival",
+      "status": "DIDACTIC_UNAPPROVED"
+    }
+  },
+  {
+    "case_id": "HISTORICAL-01",
+    "genre": "historical",
+    "aliases": [
+      "histórico",
+      "histórica",
+      "históricos",
+      "históricas",
+      "historical",
+      "period drama",
+      "história de época",
+      "de época"
+    ],
+    "intention": "Hierarquia institucional e decisão pessoal",
+    "title": "A segunda assinatura",
+    "beats": [
+      "O livro de entrada exige duas assinaturas",
+      "A datilógrafa descobre que o segundo funcionário já saiu",
+      "Ela registra sua própria responsabilidade na linha em branco"
+    ],
+    "departments": [
+      "story",
+      "locations",
+      "wardrobe"
+    ],
+    "contrast": "Comparar leitura visual do procedimento com uma explicação em voz alta. Verificar em fontes da época se a prática é plausível.",
+    "taxonomy": {
+      "subgenre": "Histórico",
+      "intensity": "variável",
+      "pace": "Contido com prazo",
+      "conflict": "Hierarquia institucional e decisão pessoal",
+      "scale": "Individual e institucional",
+      "action_predominance": false,
+      "drama_predominance": false,
+      "purpose": "Exercício didático de direção",
+      "technique": "Materialidade com fonte",
+      "classification": "genre_specialist",
+      "status": "DIDACTIC_UNAPPROVED"
+    }
+  },
+  {
+    "case_id": "DRAMA-01",
+    "genre": "drama",
+    "aliases": [
+      "drama",
+      "dramas",
+      "dramático",
+      "dramática",
+      "dramatic",
+      "emotional drama",
+      "drama emocional"
+    ],
+    "intention": "Conflito relacional",
+    "title": "A chave da casa",
+    "beats": [
+      "Uma filha entrega uma chave enquanto evita dizer que vai embora",
+      "O pai tenta devolvê-la",
+      "Ela fecha a mão dele em torno da chave e se afasta"
+    ],
+    "departments": [
+      "story",
+      "emotion",
+      "performance"
+    ],
+    "contrast": "Comparar uma despedida declarada com a transferência observável. O gesto precisa alterar a responsabilidade de alguém.",
+    "taxonomy": {
+      "subgenre": "Drama",
+      "intensity": "variável",
+      "pace": "Mudança gradual com gesto decisivo",
+      "conflict": "Conflito relacional",
+      "scale": "Íntima",
+      "action_predominance": false,
+      "drama_predominance": true,
+      "purpose": "Exercício didático de direção",
+      "technique": "Transferência de responsabilidade por gesto",
+      "classification": "genre_specialist",
+      "status": "DIDACTIC_UNAPPROVED"
+    }
+  },
+  {
+    "case_id": "ACTION-01",
+    "genre": "ação",
+    "aliases": [
+      "ação",
+      "ações",
+      "action",
+      "action film",
+      "action movie",
+      "filme de ação",
+      "filmes de ação"
+    ],
+    "intention": "Oposição física e perda progressiva de espaço",
+    "title": "Último vão",
+    "beats": [
+      "Uma plataforma móvel fecha o único vão visível",
+      "Uma figura salta e perde a caixa que levava",
+      "A caixa bloqueia a passagem de quem vinha atrás e força outra decisão"
+    ],
+    "departments": [
+      "direction",
+      "shot-design",
+      "editing"
+    ],
+    "contrast": "Comparar um geral que estabelece o vão com uma montagem que mostra só pés. Verificar se o público identifica o trajeto e a consequência.",
+    "taxonomy": {
+      "subgenre": "Ação",
+      "intensity": "alta",
+      "pace": "Aceleração por mudanças verificáveis",
+      "conflict": "Oposição física e perda progressiva de espaço",
+      "scale": "Grupo e ambiente",
+      "action_predominance": true,
+      "drama_predominance": false,
+      "purpose": "Exercício didático de direção",
+      "technique": "Geografia antes da ruptura",
+      "classification": "genre_specialist",
+      "status": "DIDACTIC_UNAPPROVED"
+    }
+  },
+  {
+    "case_id": "THRILLER-01",
+    "genre": "thriller",
+    "aliases": [
+      "thriller",
+      "thrillers",
+      "thriller film",
+      "thriller narrativo"
+    ],
+    "intention": "Prazo e reação a informação contraditória",
+    "title": "O visor apagado",
+    "beats": [
+      "Um painel prevê o fechamento iminente",
+      "Uma voz pede que a personagem espere por confirmação",
+      "O painel se apaga e ela precisa escolher com a informação contraditória"
+    ],
+    "departments": [
+      "suspense",
+      "story",
+      "editing"
+    ],
+    "contrast": "Trocar exposição sobre o risco por evidência do prazo. No final, deve ser visível qual chance expirou.",
+    "taxonomy": {
+      "subgenre": "Thriller",
+      "intensity": "alta",
+      "pace": "Pressão crescente",
+      "conflict": "Prazo e reação a informação contraditória",
+      "scale": "Rede de personagens",
+      "action_predominance": false,
+      "drama_predominance": false,
+      "purpose": "Exercício didático de direção",
+      "technique": "Prazo que restringe escolhas",
+      "classification": "genre_specialist",
+      "status": "DIDACTIC_UNAPPROVED"
+    }
+  },
+  {
+    "case_id": "HORROR-01",
+    "genre": "terror",
+    "aliases": [
+      "terror",
+      "horrores",
+      "horror",
+      "horror film",
+      "terror sobrenatural",
+      "supernatural horror"
+    ],
+    "intention": "Ameaça sensorial e violação do espaço conhecido",
+    "title": "O quarto a mais",
+    "beats": [
+      "O corredor termina numa janela",
+      "Ao voltar, o personagem encontra uma porta além dela",
+      "A claridade da janela aparece por baixo da porta fechada"
+    ],
+    "departments": [
+      "suspense",
+      "atmosphere",
+      "sound"
+    ],
+    "contrast": "Comparar a mudança sustentada no quadro com susto sonoro antecipado. Medir o que a audiência percebe antes da quebra.",
+    "taxonomy": {
+      "subgenre": "Terror",
+      "intensity": "alta",
+      "pace": "Irregular com ruptura",
+      "conflict": "Ameaça sensorial e violação do espaço conhecido",
+      "scale": "Íntima e espacial",
+      "action_predominance": false,
+      "drama_predominance": false,
+      "purpose": "Exercício didático de direção",
+      "technique": "Repetição espacial que deixa de combinar",
+      "classification": "genre_specialist",
+      "status": "DIDACTIC_UNAPPROVED"
+    }
+  },
+  {
+    "case_id": "PSYCHOLOGICAL-HORROR-01",
+    "genre": "terror psicológico",
+    "aliases": [
+      "terror psicológico",
+      "horrores psicológicos",
+      "horror psicológico",
+      "psychological horror",
+      "psychological horror film"
+    ],
+    "intention": "Percepção incerta e ameaça à confiança",
+    "title": "A gravação atrasada",
+    "beats": [
+      "Um gravador devolve o ambiente com atraso regular",
+      "A personagem ouve uma frase que ainda não falou",
+      "Ela muda sua resposta e a gravação conserva a frase anterior"
+    ],
+    "departments": [
+      "suspense",
+      "atmosphere",
+      "composition"
+    ],
+    "contrast": "Comparar uma explicação imediata com duas interpretações sustentáveis. Preservar o fato verificável antes de testar ambiguidade.",
+    "taxonomy": {
+      "subgenre": "Terror psicológico",
+      "intensity": "alta",
+      "pace": "Repetição com pequenas divergências",
+      "conflict": "Percepção incerta e ameaça à confiança",
+      "scale": "Íntima",
+      "action_predominance": false,
+      "drama_predominance": false,
+      "purpose": "Exercício didático de direção",
+      "technique": "Som fora de fase com causa ambígua",
+      "classification": "genre_specialist",
+      "status": "DIDACTIC_UNAPPROVED"
+    }
+  },
+  {
+    "case_id": "SCIFI-01",
+    "genre": "ficção científica",
+    "aliases": [
+      "ficção científica",
+      "ficções científicas",
+      "science fiction",
+      "sci fi",
+      "scifi",
+      "speculative science fiction"
+    ],
+    "intention": "Regra especulativa e custo material",
+    "title": "O minuto emprestado",
+    "beats": [
+      "Uma estufa ilumina a sala durante um minuto sem rede",
+      "A operação apaga uma incubadora distante",
+      "A operadora fecha as persianas e renuncia ao próximo minuto"
+    ],
+    "departments": [
+      "living-world",
+      "props",
+      "story"
+    ],
+    "contrast": "Comparar um texto de interface com a ligação visual entre fontes e perdas. A mesma regra deve responder pela segunda decisão.",
+    "taxonomy": {
+      "subgenre": "Ficção científica",
+      "intensity": "variável",
+      "pace": "Demonstração, uso e consequência",
+      "conflict": "Regra especulativa e custo material",
+      "scale": "Local e sistêmica",
+      "action_predominance": false,
+      "drama_predominance": false,
+      "purpose": "Exercício didático de direção",
+      "technique": "Regra do mundo demonstrada com custo",
+      "classification": "genre_specialist",
+      "status": "DIDACTIC_UNAPPROVED"
+    }
+  },
+  {
+    "case_id": "EPIC-01",
+    "genre": "épico",
+    "aliases": [
+      "épico",
+      "épica",
+      "épicos",
+      "épicas",
+      "epic",
+      "epic film",
+      "epic films",
+      "epopeia"
+    ],
+    "intention": "Decisão particular e consequência coletiva",
+    "title": "As luzes do vale",
+    "beats": [
+      "Uma pessoa apaga a única lanterna junto do portão",
+      "As outras luzes respondem em alturas diferentes do vale",
+      "Um geral revela que o caminho foi abandonado por toda a comitiva"
+    ],
+    "departments": [
+      "composition",
+      "living-world",
+      "direction"
+    ],
+    "contrast": "Comparar massa genérica com sinais encadeados. A plateia deve conseguir ligar a alteração coletiva a uma decisão local.",
+    "taxonomy": {
+      "subgenre": "Épico",
+      "intensity": "variável",
+      "pace": "Escala ascendente",
+      "conflict": "Decisão particular e consequência coletiva",
+      "scale": "Coletiva",
+      "action_predominance": false,
+      "drama_predominance": false,
+      "purpose": "Exercício didático de direção",
+      "technique": "Migração de escala no corte",
+      "classification": "genre_specialist",
+      "status": "DIDACTIC_UNAPPROVED"
+    }
+  },
+  {
+    "case_id": "NOIR-01",
+    "genre": "noir",
+    "aliases": [
+      "noir",
+      "film noir",
+      "filme noir",
+      "filmes noir",
+      "neo noir",
+      "neonoir"
+    ],
+    "intention": "Informação parcial e cumplicidade",
+    "title": "O vidro devolve",
+    "beats": [
+      "Um corretor nega ter visto a chave",
+      "O reflexo o mostra devolvendo-a",
+      "O interlocutor encobre o reflexo e passa a decidir o alcance da mentira"
+    ],
+    "departments": [
+      "lighting",
+      "dialogue",
+      "direction"
+    ],
+    "contrast": "Comparar sombra ornamental com obstrução que muda quem detém a prova. A ambiguidade precisa alterar a relação.",
+    "taxonomy": {
+      "subgenre": "Noir",
+      "intensity": "variável",
+      "pace": "Controle seguido por inversão",
+      "conflict": "Informação parcial e cumplicidade",
+      "scale": "Íntima e urbana",
+      "action_predominance": false,
+      "drama_predominance": false,
+      "purpose": "Exercício didático de direção",
+      "technique": "Reflexo como evidência contraditória",
+      "classification": "genre_specialist",
+      "status": "DIDACTIC_UNAPPROVED"
+    }
+  },
+  {
+    "case_id": "REALISM-01",
+    "genre": "realismo",
+    "aliases": [
+      "realismo",
+      "realista",
+      "realistas",
+      "realism",
+      "realist",
+      "realistic drama"
+    ],
+    "intention": "Trabalho concreto e conflito relacional",
+    "title": "A prateleira torta",
+    "beats": [
+      "Duas pessoas medem a mesma prateleira com referências diferentes",
+      "Uma troca a régua de mão ao notar a divergência",
+      "As duas conseguem fixar a tábua, mas deixam a régua no chão ao sair"
+    ],
+    "departments": [
+      "performance",
+      "dialogue",
+      "props"
+    ],
+    "contrast": "Comparar emoção anunciada com ajuste material. A tarefa precisa ter começo e transformação próprios.",
+    "taxonomy": {
+      "subgenre": "Realismo",
+      "intensity": "variável",
+      "pace": "Duração segue a tarefa",
+      "conflict": "Trabalho concreto e conflito relacional",
+      "scale": "Íntima",
+      "action_predominance": false,
+      "drama_predominance": true,
+      "purpose": "Exercício didático de direção",
+      "technique": "Subtexto na tarefa observável",
+      "classification": "genre_specialist",
+      "status": "DIDACTIC_UNAPPROVED"
+    }
+  },
+  {
+    "case_id": "NATURALISM-01",
+    "genre": "naturalismo",
+    "aliases": [
+      "naturalismo",
+      "naturalista",
+      "naturalistas",
+      "naturalism",
+      "naturalistic"
+    ],
+    "intention": "Comportamento cotidiano sob mudança ambiental",
+    "title": "O dia na janela",
+    "beats": [
+      "Uma ajudante termina uma troca de turno sob luz de janela",
+      "A chuva muda a escuta e interrompe o relato",
+      "A colega repete só a parte que conseguiu ouvir"
+    ],
+    "departments": [
+      "performance",
+      "lighting",
+      "sound"
+    ],
+    "contrast": "Comparar cobertura polida com comportamento legível na pausa. Conferir a continuidade da luz, do gesto e do som.",
+    "taxonomy": {
+      "subgenre": "Naturalismo",
+      "intensity": "variável",
+      "pace": "Tempo sustentado pela ação",
+      "conflict": "Comportamento cotidiano sob mudança ambiental",
+      "scale": "Íntima",
+      "action_predominance": false,
+      "drama_predominance": true,
+      "purpose": "Exercício didático de direção",
+      "technique": "Ação parcialmente revelada por luz e som direto",
+      "classification": "genre_specialist",
+      "status": "DIDACTIC_UNAPPROVED"
+    }
+  },
+  {
+    "case_id": "WAR-00",
+    "genre": "guerra",
+    "aliases": [
+      "guerra",
+      "guerras",
+      "war",
+      "war film",
+      "war films",
+      "war movie",
+      "military fiction",
+      "feb"
+    ],
+    "intention": "Conflito coletivo altera o mundo e as decisões",
+    "title": "O lado da praça",
+    "beats": [
+      "A praça tem dois lados ainda visíveis",
+      "Um impacto ficcional inutiliza a travessia e derruba um painel em quadro",
+      "A personagem volta ao ponto de partida e descobre que perdeu o grupo de vista"
+    ],
+    "departments": [
+      "direction",
+      "story",
+      "editing"
+    ],
+    "contrast": "Comparar manter a travessia aberta com mostrar sua perda. Verificar se o destino seguinte decorre da mudança física.",
+    "taxonomy": {
+      "subgenre": "Guerra",
+      "intensity": "variável",
+      "pace": "Varia conforme briefing",
+      "conflict": "Conflito coletivo altera o mundo e as decisões",
+      "scale": "Coletiva",
+      "action_predominance": false,
+      "drama_predominance": false,
+      "purpose": "Exercício didático de direção",
+      "technique": "Causa e custo legíveis no espaço",
+      "classification": "genre_specialist",
+      "status": "DIDACTIC_UNAPPROVED"
+    }
+  },
+  {
+    "case_id": "ROMANCE-01",
+    "genre": "romance",
+    "aliases": [
+      "romance",
+      "romances",
+      "romantic film",
+      "romance film",
+      "romantic drama",
+      "romântico",
+      "romântica"
+    ],
+    "intention": "Proximidade desejada e escolha de reciprocidade",
+    "title": "A segunda cadeira",
+    "beats": [
+      "Uma pessoa puxa uma cadeira e guarda a outra",
+      "A segunda chega e gira sua cadeira para o mesmo lado",
+      "A primeira finalmente divide o espaço em vez de voltar à posição inicial"
+    ],
+    "departments": [
+      "emotion",
+      "performance",
+      "dialogue"
+    ],
+    "contrast": "Comparar explicitação verbal e distância medida. Testar se as duas pessoas fazem escolhas próprias.",
+    "taxonomy": {
+      "subgenre": "Romance",
+      "intensity": "variável",
+      "pace": "Aproximação e recuo",
+      "conflict": "Proximidade desejada e escolha de reciprocidade",
+      "scale": "Íntima",
+      "action_predominance": false,
+      "drama_predominance": true,
+      "purpose": "Exercício didático de direção",
+      "technique": "Distância física como mudança de relação",
+      "classification": "genre_specialist",
+      "status": "DIDACTIC_UNAPPROVED"
+    }
+  },
+  {
+    "case_id": "FANTASY-01",
+    "genre": "fantasia",
+    "aliases": [
+      "fantasia",
+      "fantasias",
+      "fantasy",
+      "fantasy film",
+      "filme fantástico",
+      "fantasia épica"
+    ],
+    "intention": "Regra extraordinária e dívida",
+    "title": "A ponte que lembra",
+    "beats": [
+      "Uma ponte mostra a cor de quem acabou de cruzar",
+      "A mesma cor invade uma roupa ao voltar",
+      "A viajante deixa a roupa na entrada e passa sem ser reconhecida"
+    ],
+    "departments": [
+      "living-world",
+      "props"
+    ],
+    "contrast": "Comparar explicação da regra com repetição visual de seus efeitos. A exceção precisa surgir da imagem já estabelecida.",
+    "taxonomy": {
+      "subgenre": "Fantasia",
+      "intensity": "variável",
+      "pace": "Descoberta e retorno",
+      "conflict": "Regra extraordinária e dívida",
+      "scale": "Local",
+      "action_predominance": false,
+      "drama_predominance": false,
+      "purpose": "Exercício didático de direção",
+      "technique": "Motivo material que torna a regra filmável",
+      "classification": "genre_specialist",
+      "status": "DIDACTIC_UNAPPROVED"
+    }
+  },
+  {
+    "case_id": "ADVENTURE-01",
+    "genre": "aventura",
+    "aliases": [
+      "aventura",
+      "aventuras",
+      "adventure",
+      "adventures",
+      "adventure film",
+      "filme de aventura"
+    ],
+    "intention": "Descoberta, incerteza de percurso e escolha",
+    "title": "O trilho vertical",
+    "beats": [
+      "Uma equipe encontra no mapa um trilho que termina no paredão",
+      "No local, o trilho continua verticalmente fora do primeiro quadro",
+      "A personagem larga a rota do mapa e decide atravessar junto dos demais"
+    ],
+    "departments": [
+      "locations",
+      "geometry",
+      "direction"
+    ],
+    "contrast": "Comparar revelar a subida em plano geral ou apenas no contracampo. Conferir a consistência da direção de olhar.",
+    "taxonomy": {
+      "subgenre": "Aventura",
+      "intensity": "variável",
+      "pace": "Alternância de exploração e ruptura",
+      "conflict": "Descoberta, incerteza de percurso e escolha",
+      "scale": "Grupo e paisagem",
+      "action_predominance": false,
+      "drama_predominance": false,
+      "purpose": "Exercício didático de direção",
+      "technique": "Mudança de escala orienta o percurso",
+      "classification": "genre_specialist",
+      "status": "DIDACTIC_UNAPPROVED"
+    }
+  },
+  {
+    "case_id": "CRIME-01",
+    "genre": "crime",
+    "aliases": [
+      "crime",
+      "crimes",
+      "de crime",
+      "policial",
+      "crime drama",
+      "crime film",
+      "procedural crime"
+    ],
+    "intention": "Vestígio, responsabilidade e versões conflitantes",
+    "title": "O envelope deslocado",
+    "beats": [
+      "Duas pessoas descrevem o mesmo envelope",
+      "A fotografia do local mostra-o por baixo de um livro",
+      "Uma delas altera a versão ao ver a fotografia e muda o curso da conversa"
+    ],
+    "departments": [
+      "story",
+      "continuity",
+      "dialogue"
+    ],
+    "contrast": "Comparar pistas inventadas no desfecho com uma diferença observável desde o começo. Separar leitura dramática e fato.",
+    "taxonomy": {
+      "subgenre": "Crime",
+      "intensity": "variável",
+      "pace": "Investigação por novas consequências",
+      "conflict": "Vestígio, responsabilidade e versões conflitantes",
+      "scale": "Local e institucional",
+      "action_predominance": false,
+      "drama_predominance": false,
+      "purpose": "Exercício didático de direção",
+      "technique": "Relevância narrativa de uma diferença material",
+      "classification": "genre_specialist",
+      "status": "DIDACTIC_UNAPPROVED"
+    }
+  },
+  {
+    "case_id": "MYSTERY-01",
+    "genre": "mistério",
+    "aliases": [
+      "mistério",
+      "mistérios",
+      "mystery",
+      "mysteries",
+      "mystery film",
+      "enigma"
+    ],
+    "intention": "Pergunta causal sem resposta imediata",
+    "title": "A hora no verso",
+    "beats": [
+      "Um bilhete traz uma hora visível",
+      "Uma personagem encontra a mesma hora riscada no verso de outro papel",
+      "O corte volta à primeira imagem e mostra que as orientações dos papéis eram diferentes"
+    ],
+    "departments": [
+      "story",
+      "suspense",
+      "continuity"
+    ],
+    "contrast": "Comparar a pista disponível no primeiro plano com uma explicação tardia. Conferir se a solução ganha sentido sem fabricar memória.",
+    "taxonomy": {
+      "subgenre": "Mistério",
+      "intensity": "variável",
+      "pace": "Releitura em camadas",
+      "conflict": "Pergunta causal sem resposta imediata",
+      "scale": "Íntima",
+      "action_predominance": false,
+      "drama_predominance": false,
+      "purpose": "Exercício didático de direção",
+      "technique": "Pista visual reutilizada com novo sentido",
+      "classification": "genre_specialist",
+      "status": "DIDACTIC_UNAPPROVED"
+    }
+  },
+  {
+    "case_id": "SURVIVAL-01",
+    "genre": "sobrevivência",
+    "aliases": [
+      "sobrevivência",
+      "sobrevivências",
+      "survival",
+      "survival film",
+      "survival drama"
+    ],
+    "intention": "Necessidade material e distribuição de custo",
+    "title": "O casaco na passagem",
+    "beats": [
+      "Um casaco mantém a fresta fechada",
+      "Uma pessoa o retira para aquecer outra",
+      "A sala volta a perder calor e o grupo precisa agir sobre a fresta"
+    ],
+    "departments": [
+      "living-world",
+      "props",
+      "continuity"
+    ],
+    "contrast": "Comparar citar o frio com mostrar o recurso mudar de função. Recuperar este estudo quando sobrevivência fizer parte da intenção.",
+    "taxonomy": {
+      "subgenre": "Sobrevivência",
+      "intensity": "variável",
+      "pace": "Pressão por esgotamento",
+      "conflict": "Necessidade material e distribuição de custo",
+      "scale": "Íntima e espacial",
+      "action_predominance": false,
+      "drama_predominance": false,
+      "purpose": "Exercício didático de direção",
+      "technique": "Estado do recurso acompanha decisões",
+      "classification": "genre_specialist",
+      "status": "DIDACTIC_UNAPPROVED"
+    }
+  },
+  {
+    "case_id": "WAR-ACTION-16",
+    "genre": "guerra",
+    "aliases": [
+      "guerra de ação",
+      "action-led war"
+    ],
+    "title": "A última frequência",
+    "intention": "Manter a ação física observável e o custo coerente enquanto o mundo muda em quadro.",
+    "beats": [
+      "Identificar o objetivo físico e a geografia de partida.",
+      "Acompanhar os impactos visíveis e a mudança de acesso.",
+      "Conferir como a consequência força a próxima decisão."
+    ],
+    "departments": [
+      "direction",
+      "performance",
+      "shot-design",
+      "storyboards",
+      "editing",
+      "sound",
+      "continuity",
+      "prompts",
+      "story",
+      "living-world",
+      "optics"
+    ],
+    "contrast": "Comparar os acontecimentos do estudo com uma edição que os desloca para explicação. A hipótese é verificar se o espectador consegue apontar cada mudança.",
+    "reference": "examples/action-study/README.md",
+    "taxonomy": {
+      "subgenre": "Ficção de guerra orientada por ação",
+      "intensity": "alta",
+      "pace": "Escalada e respiros curtos",
+      "conflict": "Destruição ficcional e objetivo ameaçado",
+      "scale": "Coletiva e individual",
+      "action_predominance": true,
+      "drama_predominance": false,
+      "purpose": "Estudo técnico com eventos visíveis",
+      "technique": "Ação e consequência no mesmo espaço",
+      "classification": "action_first",
+      "status": "DIDACTIC_UNAPPROVED"
+    }
   }
 ]

@@ -162,8 +162,10 @@ def validate(snapshot):
     require(any(a['workflow_id']==w['id'] and all(a[k]==w[k] for k in ['project_id','episode_id','gate_id']) and a['gate_revision']==w['revision'] and a['decision']==action and a['status']=='RECORDED' for a in snapshot['tables']['Approvals']),'No approval for current gate revision')
  from series_bible import validate_canon_ledger
  from shot_workflow import validate_shot_links
+ from creative_intent import validate_ledger
  validate_canon_ledger(snapshot)
  validate_shot_links(snapshot)
+ validate_ledger(snapshot)
  from desk_queue import ledger
  ledger(snapshot)
  return True
@@ -225,7 +227,7 @@ def prepare(snapshot,intent,review=None):
     allowed_assets={'DRAFT':{'DRAFT','REVIEW_REQUIRED','ARCHIVED'},'REVIEW_REQUIRED':{'REVIEW_REQUIRED','DRAFT','CHANGES_REQUESTED','APPROVED'},'APPROVED':{'LOCKED'},'LOCKED':set(),'CHANGES_REQUESTED':{'DRAFT','REVIEW_REQUIRED','ARCHIVED'},'ARCHIVED':set()}
     require(after in allowed_assets[before],'Invalid asset transition')
    if table=='Approvals' and old['status']=='RECORDED':raise StateError('Approval history is immutable')
-   if table=='Decisions' and old['status']=='RECORDED' and old['topic'] in {'CPE_CANON_V1','CPE_SHOT_LINK_V1','CPE_DESK_PROPOSAL_V1','CPE_DESK_RESULT_V1'}:
+   if table=='Decisions' and old['status']=='RECORDED' and old['topic'] in {'CPE_CANON_V1','CPE_SHOT_LINK_V1','CPE_DESK_PROPOSAL_V1','CPE_DESK_RESULT_V1','CPE_CREATIVE_INTENT_V1'}:
     raise StateError('Recorded series and shot facts are immutable: create a successor decision')
    if table=='Workflow':
     before,after=old['status'],patch.get('status',old['status'])
@@ -272,6 +274,9 @@ def prepare(snapshot,intent,review=None):
   if entry['table']=='Decisions' and entry['after']['topic']=='CPE_SHOT_LINK_V1' and entry['after']['status']=='RECORDED':
    from shot_workflow import new_link
    new_link(projected,entry['after'],intent['user_message_ref'])
+  if entry['table']=='Decisions' and entry['after']['topic']=='CPE_CREATIVE_INTENT_V1' and entry['after']['status']=='RECORDED':
+   from creative_intent import check_new
+   check_new(snapshot,projected,entry['after'],intent['user_message_ref'])
   if entry['table']=='Checklists' and entry['before']:
    key=entry['before']['workflow_id']
    original=next(w for w in snapshot['tables']['Workflow'] if w['id']==key)

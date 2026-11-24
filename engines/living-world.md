@@ -1,6 +1,6 @@
 # Espaço que participa da ação
 
-Ler ao dirigir cenas coletivas, ação, suspense ou cenas em que clima e trabalho mudam as escolhas. Fixar primeiro desejo e ponto de vista. A quantidade de elementos no quadro deve servir a essa situação. Uma sala quase imóvel pode concentrar mais tensão que uma rua cheia.
+Ler ao dirigir cenas coletivas, ação, suspense ou cenas em que o ambiente muda as escolhas. Fixar desejo, ponto de vista e escala de transformação pedida pelo briefing. Em ação dominante, fazer o público perceber como um acontecimento altera corpos, acesso, apoio e luz. Em uma cena contida, mudanças menores podem carregar a mesma função causal.
 
 ## Estado do lugar
 
@@ -10,13 +10,13 @@ Separar fatos permanentes, mudanças acumuladas e fenômenos transitórios. Uma 
 
 | Camada | Fato de entrada | Interação possível | Fato que passa ao próximo plano |
 | --- | --- | --- | --- |
-| Arquitetura | Porta estreita, dobradiça empenada | Corpo e caixa disputam passagem | A porta fica aberta no mesmo ângulo |
-| Superfície | Piso molhado só perto da entrada | Bota leva água para dentro | Pegadas e área úmida aumentam |
-| Material | Manta seca com dobra dura | Tecido cede ao peso e toca o chão | Borda ganha umidade localizada |
-| Luz | Janela difusa à esquerda da planta | Corpo oculta parte da fonte | A região sombreada muda com o corpo |
+| Arquitetura | Passadiço une as duas galerias | Parte do passadiço desce à vista de quem cruza | As galerias deixam de estar ligadas |
+| Superfície | Piso nivelado junto ao console | A inclinação arrasta corpos e objetos | O apoio muda e o próximo movimento parte dessa posição |
+| Material | Tecido e vidro ocupam o mesmo quadro | O vidro quebra, o pano dobra e prende | Cacos e dobra permanecem com funções distintas |
+| Luz | Fachada sombreia o salão | A abertura deixa a luz da praça entrar | A faixa fria continua no contracampo |
 | Clima | Chuva atravessa fresta | Rajada alcança o banco | Roupa e cabelo seguem molhados |
 | Trabalho | Alguém recolhe água | A tarefa interrompe uma fala | Recipiente muda de nível e de dono |
-| Som | Água cai em metal | Mão cobre o recipiente | Timbre muda por causa mostrada |
+| Som | Galeria fechada abafa a praça | A fachada aberta expõe a escuta | A ambiência externa entra no salão |
 
 ## Encenação coletiva
 
@@ -38,11 +38,11 @@ No suspense, estabelecer o sinal basal para uma ausência ou mudança ser perceb
 
 ## Custo que permanece
 
-Depois do acontecimento, conferir o novo estado em corpo, objeto, lugar e relação. Quem limpou água perde tempo de vigiar a porta. Quem cedeu a manta conserva a roupa molhada. Um objeto partido pode receber reparo provisório, desde que a ação e a nova limitação sejam mostradas. Evitar reset de dano em contraplano.
+Depois do acontecimento, conferir o novo estado em corpo, objeto, lugar e relação. Uma personagem que termina no chão precisa aparecer dali na continuação. Uma ruptura pode revelar o fundo e alterar o som difuso. Um objeto partido pode receber reparo, desde que a ação e a nova limitação sejam mostradas. Em drama cotidiano, o tempo gasto numa tarefa ou a roupa molhada também podem carregar custo. Evitar reset de dano em contraplano.
 
 ## Aplicação e revisão
 
-Usar [A parte seca](../examples/shelter/caso14-roteiro-e-direcao.md) para percorrer oito planos com quatro objetivos e custo persistente. Os tempos são estimados. A planta e a escrita podem ser auditadas, enquanto a legibilidade corporal e a duração dependem do ensaio.
+Em ação dominante, usar [A última frequência](../examples/action-study/README.md) para rastrear ruptura, consequências corporais e mudanças de circulação. Para conflito cotidiano em espaço restrito, usar [A parte seca](../examples/shelter/caso14-roteiro-e-direcao.md). Os tempos são estimados. Legibilidade corporal e duração realizadas pedem material audiovisual.
 
 Rever o material com quatro perguntas concretas. Qual mudança do ambiente obrigou alguém a agir? Quem percebeu primeiro? O que o quadro permite ao público perceber? Qual consequência continua no próximo plano? Se faltar resposta observável, revisar o beat pertinente. A causalidade pretendida deve ser conferida na imagem e no som efetivamente disponíveis.
 

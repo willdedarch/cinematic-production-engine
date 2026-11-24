@@ -2,7 +2,7 @@
 from collections import defaultdict, deque
 from datetime import datetime, timezone
 from pathlib import Path
-import hashlib, json, math, re, shutil
+import hashlib, json, re, shutil, subprocess
 
 from shared_state import ASSETS, SCHEMA, canonical, fingerprint, index, prepare, require, validate, timestamp
 from series_bible import source_link
@@ -195,14 +195,19 @@ def impact(snapshot,shot_id,field,*,current_links_only=False):
     return {"source":ref("Shot List",origin),"field":field,"affected":affected,"implicit_unlinked_dependencies":"Ask director to confirm undeclared dependencies"}
 
 def handoff(snapshot,spec):
+    from creative_intent import check_shot_binding, prompt_lines, shot_intent
+    from prompt_compiler import protect_intent
     from takes import local_media_path
+    from return_media import contract as media_contract
 
     sheet=card(snapshot,spec["shot_id"])
     require(not any(w["status"]=="REVIEW_REQUIRED" for w in sheet["continuity_review"]),"Resolve or justify the continuity change first")
     ix=index(snapshot);shot=resolve(ix,sheet["shot"])
+    binding = shot_intent(snapshot,shot)
+    shot_action = ' '.join(event['action'] for event in binding['events']) if binding else sheet['action']
     require(spec["model_id"] in CAT["models"],"Model not in the verified catalog")
     require(CAT["models"][spec["model_id"]]["output_type"]=="video","Shot handoff expects a video adapter")
-    fields={"initial_state":canonical(sheet["states"].get("in",sheet["states"])),"action":sheet["action"],"camera":sheet["camera"],
+    fields={"initial_state":canonical(sheet["states"].get("in",sheet["states"])),"action":shot_action,"camera":sheet["camera"],
             "sound":sheet["sound"],"protected":canonical(sheet["states"].get("out",{})),"performance":sheet["intention"]}
     references=[]
     latest={}
@@ -259,6 +264,9 @@ def handoff(snapshot,spec):
         plan = {**plan, "duration_s": plan.get("duration_s", shot["duration_s"])}
         prompt_spec["cinematic_plan"] = plan
     compiled = compile_prompt(prompt_spec)
+    if binding:
+        check_shot_binding(binding,shot,plan)
+        compiled = protect_intent(compiled,binding)
     if plan is not None:
         first_entry = plan["beats"][0].get("entry", {})
         final_exit = plan["beats"][-1].get("exit", {})
@@ -282,17 +290,18 @@ def handoff(snapshot,spec):
         "kind":"MANUAL_SHOT_HANDOFF", "spreadsheet_id":snapshot["spreadsheet_id"],
         "shot":sheet["shot"], "delivery":compiled,
         **({"cinematic_plan":plan} if plan is not None else {}),
+        **({"creative_intent":binding} if binding else {}),
         "attachment_order":[{"id":r["id"],"field":r["role"],"position":r["position"],"file":r["uri"],"revision":r["revision"],"sha256":r["sha256"]} for r in references],
         "production_brief":{
             "project_id":shot["project_id"], "episode_id":shot["episode_id"], "is_test":shot["is_test"],
             "scene":sheet["beat"], "order":sheet["order"], "source_status":shot["status"], "entities":entities,
-            "objective":sheet["intention"], "action":sheet["action"], "camera_and_blocking":sheet["camera"],
+            "objective":sheet["intention"], "action":shot_action, "camera_and_blocking":sheet["camera"],
             "sound_and_edit":sheet["sound"], "entry_and_exit":sheet["states"],
             "continuity_review":sheet["continuity_review"], "authored_directions":directions,
-            "model_neutral_prompt":"\n".join(value for value in (sheet["intention"],sheet["action"],sheet["camera"],sheet["sound"],directions) if value),
+            "model_neutral_prompt":"\n".join(value for value in (sheet["intention"],shot_action,sheet["camera"],sheet["sound"],directions,prompt_lines(binding)) if value),
             "protected":{"outgoing_state":sheet["states"].get("out",{}), "authored":plan.get("protected", "") if plan else ""},
             "planning_status":"BEATS_AUTHORED" if plan else "SHOT_CARD_ONLY",
-            "expected_media":{"duration_s":sheet["duration_s"], "aspect_ratio":episode["aspect_ratio"]},
+            "expected_media":media_contract(sheet["duration_s"],episode["aspect_ratio"],compiled["native_parameters"],spec.get("return_requirements",{})),
             "check_technical":["Conferir duração, proporção e faixas", "Verificar a ordem e a origem das referências"],
             "repair_if_needed":["Se um gesto ficou ilegível, isolar esse beat e testar ponto de vista ou duração",
                                  "Se um estado protegido mudou, corrigir o retorno ou abrir sucessor autorizado"],
@@ -304,13 +313,14 @@ def handoff(snapshot,spec):
         "execution_instructions":["Conferir o nome, modo e campos na interface do modelo escolhido",
                                   "Anexar referências na ordem registrada e executar manualmente após autorização",
                                   "Devolver a mídia com origem e direitos e manter este pacote para comparação"],
-        "request":{k:spec[k] for k in ("shot_id","model_id","parameters","reference_order","cinematic_plan") if k in spec},
+        "request":{k:spec[k] for k in ("shot_id","model_id","parameters","reference_order","cinematic_plan","return_requirements") if k in spec},
     }
     return {**packet, "handoff_sha256":fingerprint(packet)}
 
 
 def compare_handoff(snapshot, packet, path, rights_confirmed):
     from media_tools import local_file, probe
+    from return_media import decode,evaluate,measurements
     from takes import local_media_path
 
     require(rights_confirmed is True,"Confirm rights for local take inspection")
@@ -319,9 +329,17 @@ def compare_handoff(snapshot, packet, path, rights_confirmed):
     require(digest==fingerprint({k:v for k,v in packet.items() if k!="handoff_sha256"}),"Handoff content changed")
     require(packet["spreadsheet_id"]==snapshot["spreadsheet_id"],"Handoff belongs to a different spreadsheet")
     current = handoff(snapshot,{**packet["request"], "shot":packet["shot"]})
+    expected = current["production_brief"]["expected_media"]
+    prior_media = packet["production_brief"]["expected_media"]
+    if set(prior_media)=={"duration_s","aspect_ratio"} and "return_requirements" not in packet["request"]:
+        # v1.5 packets had only these fields. Compare against their exact shape,
+        # retaining the full current contract for technical evaluation.
+        current["production_brief"]["expected_media"] = {
+            "duration_s":expected["duration_s"], "aspect_ratio":current["delivery"]["aspect_ratio"],
+        }
+        current["handoff_sha256"] = fingerprint({k:v for k,v in current.items() if k!="handoff_sha256"})
     require(current==packet,"References, shot context or adapter changed since export")
     source = local_file(local_media_path(path))
-    expected = packet["production_brief"]["expected_media"]
     result = {
         "kind":"LOCAL_SHOT_RETURN_REVIEW", "handoff_sha256":digest, "shot":packet["shot"],
         "media_sha256":digest_file(source), "expected":expected,
@@ -329,35 +347,36 @@ def compare_handoff(snapshot, packet, path, rights_confirmed):
         "review_after_return":packet["production_brief"]["review_after_return"],
         "review_beats":[{k:b[k] for k in ("id","start_s","end_s","action")} for b in packet.get("cinematic_plan",{}).get("beats",[])],
     }
-    if not shutil.which("ffprobe"):
-        return {**result,"technical_review":"UNAVAILABLE", "reason":"FFprobe não encontrado. Conferir a mídia manualmente."}
-    metadata = probe(source)
-    require(metadata["source_sha256"]==result["media_sha256"],"Take changed during inspection")
-    streams = metadata.get("streams",[])
-    video = next((s for s in streams if s.get("codec_type")=="video" and not s.get("disposition",{}).get("attached_pic")),{})
-    raw_duration = video.get("duration",metadata.get("format",{}).get("duration"))
-    duration = float(raw_duration) if raw_duration and raw_duration!="N/A" else None
-    if duration is not None and (not math.isfinite(duration) or duration<=0):
-        duration = None
-    width,height=video.get("width"),video.get("height")
-    # Display aspect ratio accounts for non-square pixels. Rotation metadata is separate.
-    ratio=video.get("display_aspect_ratio")
-    rotation=next((s["rotation"] for s in video.get("side_data_list",[]) if "rotation" in s),0)
-    if ratio and re.fullmatch(r"[1-9][0-9]*:[1-9][0-9]*",ratio) and abs(rotation)%180==90:
-        ratio=":".join(reversed(ratio.split(":")))
-    matched_ratio=None
-    if ratio and re.fullmatch(r"[1-9][0-9]*:[1-9][0-9]*",ratio) and expected["aspect_ratio"]:
-        observed_x,observed_y=map(int,ratio.split(":"))
-        expected_x,expected_y=map(int,expected["aspect_ratio"].split(":"))
-        matched_ratio=observed_x*expected_y==observed_y*expected_x
-    rate=video.get("avg_frame_rate_numeric") or video.get("r_frame_rate_numeric") or 0
-    matches={"video":bool(video), "duration":abs(duration-expected["duration_s"])<=max(0.05,1/rate if rate else 0) if duration is not None else None,
-             "aspect_ratio":matched_ratio}
-    status="MISMATCH" if False in matches.values() else "INCOMPLETE" if None in matches.values() else "SPEC_CHECKED"
-    return {**result,"technical_review":status,"checks":matches,
-            "observed":{"duration_s":duration,"display_aspect_ratio":ratio,"pixel_width":width,"pixel_height":height,
-                        "audio_stream":any(s.get("codec_type")=="audio" for s in streams)},
-            "measurement_scope":"Duração, proporção e presença de stream. Sincronia, ação e qualidade exigem revisão."}
+    metadata = {}
+    unavailable = not shutil.which("ffprobe")
+    integrity = ('UNKNOWN','FFprobe não disponível. A mídia precisa de revisão manual.')
+    if not unavailable:
+        try:
+            metadata = probe(source)
+        except RuntimeError as exc:
+            tool_error = str(exc).casefold()
+            unavailable_errors = ('permission denied','operation not permitted','resource temporarily unavailable','input/output error')
+            if tool_error.startswith('local tool failed:') and not any(e in tool_error for e in unavailable_errors):
+                integrity = ('FAIL','FFprobe não conseguiu ler um contêiner válido.')
+            else:
+                integrity = ('UNKNOWN','Não foi possível iniciar a inspeção com FFprobe.')
+        except (OSError,ValueError,subprocess.TimeoutExpired):
+            integrity = ('UNKNOWN','Metadados indisponíveis ou incompletos no ambiente local.')
+    observed,indexes,container_duration = measurements(metadata)
+    if metadata:
+        require(metadata["source_sha256"]==result["media_sha256"],"Take changed during inspection")
+        durations = [d for d in (observed['duration_s'],container_duration) if d is not None]
+        integrity = decode(source,indexes,max(durations,default=None))
+    require(digest_file(source)==result['media_sha256'],"Take changed during inspection")
+    details = evaluate(expected,observed,integrity)
+    required = {check['status'] for check in details.values() if check['required']}
+    status = 'UNAVAILABLE' if unavailable else 'MISMATCH' if 'FAIL' in required else \
+        'INCOMPLETE' if required-{'PASS'} else 'SPEC_CHECKED'
+    legacy = {'media_type':'video','duration_s':'duration','aspect_ratio':'aspect_ratio'}
+    binary = {'PASS':True,'FAIL':False}
+    matches = {legacy.get(k,k):binary.get(v['status']) for k,v in details.items() if v['required'] or k in legacy}
+    return {**result,"technical_review":status,"checks":matches,"check_details":details,"observed":observed,
+            "measurement_scope":"Metadados e decodificação local. Sincronia, conteúdo, ação e qualidade artística pedem revisão."}
 
 def repair_changes(snapshot, spec):
     """Constrain a repair to the reviewed impact, versions, fields and episode."""
@@ -440,7 +459,8 @@ def dispatch(cmd,snapshot,spec,outdir):
             require(spec["handoff"].get("shot")==spec["shot"],"Handoff belongs to another shot")
             comparison=compare_handoff(snapshot,spec["handoff"],spec["path"],spec["rights_confirmed"])
             require(comparison["media_sha256"]==asset["sha256"],"Imported bytes differ from inspected take")
-            require(comparison["technical_review"]!="MISMATCH","Returned take differs from the handoff specification")
+            failures = [k for k,v in comparison['check_details'].items() if v['required'] and v['status']=='FAIL']
+            require(not failures,"Returned take differs from the handoff specification: "+', '.join(failures))
         entry={"table":"Artifact Registry","id":asset["id"],"expected_revision":None,"values":{
             "project_id":shot["project_id"],"episode_id":shot["episode_id"],"is_test":shot["is_test"],"gate_id":"G12","kind":asset["kind"],
             "department":"editing","version":1,"uri":asset["uri"],"sha256":asset["sha256"],"origin":spec["origin"],"rights":spec["rights"],"status":"REVIEW_REQUIRED"}}

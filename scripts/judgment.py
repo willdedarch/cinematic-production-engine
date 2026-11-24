@@ -29,14 +29,18 @@ def review_packet(spec):
  try:text=raw.decode('utf-8')
  except UnicodeDecodeError:text=None
  examples=json.loads((ROOT/'judgment-engine/calibration-examples.json').read_text(encoding='utf-8'))['examples']
+ from knowledge_select import canonical_genres, classify_intention, matching_genre_cases
  genre = str(spec['context'].get('genre','')).strip().casefold()
- cases = json.loads((ROOT/'knowledge/genre-cases.json').read_text(encoding='utf-8'))
- relevant_cases = [c for c in cases if genre and genre in
-                   {str(g).strip().casefold() for g in [c['genre'], *c.get('aliases',[])]}
-                   and dep in c['departments']]
+ genre_keys = canonical_genres([genre])
+ mode = classify_intention(genre_keys,spec['context'].get('intention',''),spec['context'].get('creative_profile',''))
+ action_first = mode=='action_led_war'
+ relevant_cases = [case for case in matching_genre_cases(genre,action_first=action_first)
+                   if dep in case['departments']]
  genre_labels = [e for e in examples if e['department']==dep and
                  (e.get('genre','').casefold()==genre or
                   (genre in {'drama','realist drama'} and e.get('genre')=='drama realista'))]
+ if action_first:
+  genre_labels=[]
  return {'kind':'REVIEW_PACKET_NOT_JUDGED','target':{'id':target['id'],'revision':target['revision'],'uri':str(path),'sha256':hashlib.sha256(raw).hexdigest()},'department':dep,'context':spec['context'],'roles':roles(dep),'rubric':r,'rubric_sha256':digest(r),'calibration':[] if spec.get('holdout') else genre_labels, 'genre_cases':[] if spec.get('holdout') else relevant_cases, 'calibration_origin':'Exemplos didáticos da biblioteca, filtrados por gênero e departamento. A avaliação depende da mídia e da decisão do diretor.','material_text':text,'media_status':'TEXT_ACCESSIBLE' if text is not None else 'REQUIRES_AUTHORIZED_MULTIMODAL_INSPECTION','observed_quality':None}
 def validate_review(r):
  for k in ['id','project_id','episode_id','department','reviewer','creator_id','mode','target','context','technical','artistic','adversarial','limitations']:

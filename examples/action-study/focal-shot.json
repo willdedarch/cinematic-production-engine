@@ -1,0 +1,59 @@
+{
+  "shot_id": "SA08",
+  "model_id": "seedance_2_5",
+  "parameters": {"mode": "t2v", "duration": 12, "resolution": "720p", "generate_audio": true},
+  "cinematic_plan": {
+    "objective": "Mostrar a ruptura em quadro e a mudança de aliança pela ação de Daro. Ao fim, Abel permanece no piso e Iara alcança o microfone sob uma condição física nova.",
+    "space": "Salão de um observatório ficcional. Console junto à parede norte clara no plano médio; passadiço acima e abertura da fachada a leste. Iara está junto ao console, Abel atrás da mesa de som, Daro à direita da borda onde o piso começa a ceder.",
+    "cast": {
+      "IARA": "Iara, locutora adulta, sobretudo ferrugem e fita branca na mão esquerda",
+      "ABEL": "Abel, técnico adulto, jaqueta verde desbotada, avental curto de couro",
+      "DARO": "Daro, soldado adulto, uniforme cinza ardósia e sangue já visível na manga direita"
+    },
+    "duration_s": 12,
+    "perspective": "O quadro acompanha a perda de apoio de Iara e conserva profundidade suficiente para localizar Abel e Daro.",
+    "lighting": "Faixa azulada da fachada a leste. Clarão breve no primeiro beat. Depois, poeira contra a parede norte clara.",
+    "optics": "Referência de 28 mm esféricos em sensor de 36 mm. Profundidade de campo mantém parede, mesa e borda legíveis.",
+    "composition": "Iara e a borda em primeiro plano, mesa e Abel no centro, abertura leste e passadiço no fundo. Daro entra da direita no último beat.",
+    "environment": "O passadiço cede inteiro e permanece ausente. Poeira passa da abertura ao console. A abertura permanece do mesmo lado em toda a tomada.",
+    "protected": "Uma tomada contínua. Preservar os três acontecimentos marcados. Mostrar contato, deslocamento e novo estado dos corpos dentro do quadro. Manter a fita na esquerda de Iara, o ferimento na manga direita de Daro e a posição de Abel ao final.",
+    "beats": [
+      {
+        "id": "SA08-B1", "start_s": 0, "end_s": 4,
+        "event_ids": ["FREQ-E08A"],
+        "subjects": ["IARA", "ABEL", "DARO"],
+        "action": "Clarão na abertura, o passadiço despenca inteiro, a mesa de som bascula e Iara cai contra o console.",
+        "performance": "O tronco de Iara perde altura antes de a mão livre reencontrar a borda. Abel interrompe o movimento no fundo.",
+        "attention": "Perceber o passadiço sair de posição e a perda de apoio de Iara no mesmo quadro.",
+        "camera": "Plano médio aberto fixo pela lateral sul. Mantém passadiço, mesa, corpo e piso.",
+        "sound": "Clarão acompanhado de impacto grave curto, seguido de vibração do metal e da mesa.",
+        "entry": {"passadico": "suspenso sobre o salão", "abel": "em pé atrás da mesa", "iara": "erguida junto ao console com a fita na mão esquerda", "daro": "direita do quadro, manga direita com sangue visível", "piso": "inclinado sem abrir sob Iara"},
+        "exit": {"passadico": "despencado e ausente no alto", "abel": "em pé atrás da mesa", "iara": "contra o console inclinado com a fita na mão esquerda", "daro": "direita do quadro, manga direita com sangue visível", "piso": "inclinado sem abrir sob Iara"}
+      },
+      {
+        "id": "SA08-B2", "start_s": 4, "end_s": 8,
+        "event_ids": ["FREQ-E08B"],
+        "subjects": ["ABEL", "IARA"],
+        "action": "O suporte de ferro atravessa a poeira, atinge Abel e o derruba diante da parede clara.",
+        "performance": "Abel perde altura abruptamente; no piso, o ombro procura apoio e a perna permanece presa. Iara desloca o olhar enquanto tenta sustentar o próprio peso.",
+        "attention": "Ler o contato e o novo estado de Abel contra a parede clara. A poeira mantém separação entre os volumes.",
+        "camera": "Mesmo eixo e quadro, sem ocultar Abel quando ele cai.",
+        "sound": "Raspagem aguda do ferro, contato breve e reverberação em decaimento.",
+        "entry": {"passadico": "despencado e ausente no alto", "abel": "em pé atrás da mesa", "iara": "contra o console inclinado com a fita na mão esquerda", "piso": "inclinado sem abrir sob Iara"},
+        "exit": {"passadico": "despencado e ausente no alto", "abel": "no piso com a perna retida sob o suporte", "iara": "contra o console inclinado com a fita na mão esquerda", "piso": "inclinado sem abrir sob Iara"}
+      },
+      {
+        "id": "SA08-B3", "start_s": 8, "end_s": 12,
+        "event_ids": ["FREQ-E08C"],
+        "subjects": ["DARO", "IARA", "ABEL"],
+        "action": "Daro alcança a borda e arrasta Iara pelo casaco. O piso que ela ocupava desce na abertura.",
+        "performance": "Daro move o corpo com esforço assimétrico. Iara arrasta os pés antes de recuperar apoio e estender a mão livre ao microfone.",
+        "attention": "Mostrar o tecido sob carga, a passagem dos pés e a ausência de piso depois da queda.",
+        "camera": "Mesmo quadro até os três novos estados se tornarem legíveis.",
+        "sound": "Tecido sob peso, calçado arrastado e queda do piso. A distorção do microfone chega depois da queda.",
+        "entry": {"passadico": "despencado e ausente no alto", "abel": "no piso com a perna retida sob o suporte", "iara": "contra o console inclinado com a fita na mão esquerda", "daro": "direita do quadro, manga direita com sangue visível", "piso": "inclinado sem abrir sob Iara"},
+        "exit": {"passadico": "despencado e ausente no alto", "abel": "no piso com a perna retida sob o suporte", "iara": "ao lado de Daro junto ao console, microfone ao alcance e fita na mão esquerda", "daro": "ao lado de Iara junto ao console, manga direita com sangue visível", "piso": "aberto no ponto que Iara ocupava"}
+      }
+    ]
+  }
+}

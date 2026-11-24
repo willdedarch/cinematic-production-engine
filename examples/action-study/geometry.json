@@ -1,0 +1,26 @@
+{
+  "id": "GEO-FREQ-OBSERVATORIO",
+  "shot_id": "SA08",
+  "status": "DIDACTIC_NOT_HUMAN_APPROVED",
+  "origin": "SW",
+  "room_m": [12.8, 9.2, 5.4],
+  "allow_external_camera": false,
+  "anchors": [
+    {"id": "PAREDE_NORTE", "position_m": [6.1, 9.2, 1.7], "note": "Superfície clara que separa o contorno de Abel."},
+    {"id": "FACHADA_LESTE", "position_m": [12.8, 7.6, 2.3], "note": "Abertura prévia em SA08. Luz da praça."},
+    {"id": "PASSADICO", "position_m": [8.6, 8.0, 3.5], "note": "Posição inicial, deixa o alto e permanece ausente."},
+    {"id": "BORDA_DE_PISO", "position_m": [8.8, 4.8, 0.05], "note": "Marca da zona de perda de apoio percebida pelo quadro."}
+  ],
+  "actors": [
+    {"id": "IARA", "position_m": [7.9, 4.75, 0], "note": "Entrada junto ao console; fita na esquerda."},
+    {"id": "ABEL", "position_m": [6.6, 7.85, 0], "note": "Entrada diante da parede clara; sai deitado."},
+    {"id": "DARO", "position_m": [10.1, 5.35, 0], "note": "Direita da composição; manga direita já ferida."}
+  ],
+  "props": [
+    {"id": "CONSOLE", "position_m": [7.4, 5.5, 0.9], "note": "Microfone e indicador; inclina no primeiro beat."},
+    {"id": "MESA_DE_SOM", "position_m": [6.55, 6.9, 0.93], "note": "Fica entre Iara e Abel no plano médio."}
+  ],
+  "cameras": [
+    {"id": "CAM_SA08", "position_m": [7.3, 1.1, 1.45], "target_m": [8.1, 6.4, 1.15], "focal_mm": 28, "sensor_width_mm": 36, "sensor_height_mm": 20.25, "note": "Referência de campo para a tomada contínua. A implantação é de pré-produção e exige conferência de enquadramento."}
+  ]
+}

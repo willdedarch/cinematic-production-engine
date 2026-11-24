@@ -19,6 +19,15 @@ def need(ok,msg):
  if not ok:raise CompileError(msg)
 
 
+def protect_intent(compiled, binding):
+ from creative_intent import prompt_lines
+ from shared_state import fingerprint
+
+ lines = prompt_lines(binding)
+ return {**compiled,'prompt':compiled['prompt']+'\n\n'+lines,
+         'creative_intent_sha256':fingerprint(binding),'intent_decision':binding['decision']}
+
+
 def manual_strategy(model_id, parameters):
  if model_id=='seedance_2_5':
   return {

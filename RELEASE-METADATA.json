@@ -1,12 +1,12 @@
 {
-  "skill_version": "1.5.0",
+  "skill_version": "1.6.0",
   "state_contract_version": "3.1.0",
-  "based_on": "CPE 1.4.1 9b55e5a",
+  "based_on": "CPE 1.5.0 6ef7402",
   "native_source": "https://docs.google.com/spreadsheets/d/CONFIGURE_YOUR_SPREADSHEET_ID/edit",
   "account": "production@example.invalid",
   "sync": "on_each_relevant_user_interaction",
   "atomic": false,
-  "python_tests": 325,
+  "python_tests": 343,
   "dom_checks": 74,
   "native_tables": 35,
   "native_sheets": 39,
@@ -15,23 +15,24 @@
   "paid_generations": 0,
   "native_concept_generations": 0,
   "limitations": [
-    "Scoped read per interaction and optimistic revisions",
-    "Native reads verified in bounded ranges; new remote writes not performed",
-    "Host trust and native hook dispatch pending",
-    "Browser visual and listening acceptance pending",
-    "Local schematic and exploratory textual reviews do not constitute artistic acceptance"
+    "Optimistic per-interaction synchronization",
+    "Native hook dispatch requires scoped local activation",
+    "Managed browser refused local file navigation",
+    "Study is preproduction with technical media",
+    "Artistic approval belongs to the director"
   ],
-  "audit_report": "audits/review-1.5.0.md",
+  "audit_report": "audits/review-1.6.0.md",
   "manual": "MANUAL.md",
-  "requirements_matrix": "audits/requirements-traceability.csv",
-  "previous_release_sha256": "d44def47872695a218d46e331292779b6279de541ec4c720e0df2d963ea6ea38",
-  "native_test_receipt": "audits/connector-readback-1.5.json",
+  "requirements_matrix": "audits/execution-1.6.0.csv",
+  "previous_release_sha256": "03bc6be4e2ee8354af43695d6ce5fc706d26b053122f98cce22733015890e462",
+  "native_test_receipt": "audits/native-connector-1.6.0.json",
   "public_distribution": {
     "raw_account_exports": false,
     "private_original_v3_included": false,
     "local_configuration_included": false,
     "prior_director_preference_in_seed": false
   },
-  "previous_release_version": "1.4.1",
-  "distribution_status": "LOCAL_CANDIDATE"
+  "previous_release_version": "1.5.0",
+  "distribution_status": "VERIFIED_BUILD",
+  "structural_mode": "INCREMENTAL_MAINTENANCE_AFTER_RELEASE"
 }

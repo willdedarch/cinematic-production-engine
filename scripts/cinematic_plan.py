@@ -55,7 +55,7 @@ def compile_plan(plan, model, parameters, references):
     for beat in beats:
         require(isinstance(beat, dict) and set(beat) <= {
             *BEAT_DIRECTIONS, 'id', 'start_s', 'end_s', 'subjects', 'simultaneous',
-            'entry', 'exit', 'references', 'continuity_exception'},
+            'entry', 'exit', 'references', 'continuity_exception', 'event_ids'},
             'Unknown beat field')
         identifier = beat.get('id')
         require(isinstance(identifier, str) and identifier.strip() and identifier not in seen,
@@ -74,6 +74,9 @@ def compile_plan(plan, model, parameters, references):
                 'A beat references an unknown or repeated subject')
         require(isinstance(beat.get('action'), str) and beat['action'].strip(),
                 'Describe an observable action')
+        event_ids = beat.get('event_ids', [])
+        require(isinstance(event_ids,list) and all(isinstance(value,str) and value.strip() for value in event_ids)
+                and len(event_ids)==len(set(event_ids)), 'Invalid beat event identities')
         attached = beat.get('references', [])
         require(isinstance(attached, list) and all(isinstance(r, str) and r in known_refs for r in attached),
                 'A beat references material outside the attachment manifest')
@@ -90,6 +93,8 @@ def compile_plan(plan, model, parameters, references):
         state.update(entry)
         state.update(exit_state)
         lines.append(f'{start:g}–{end:g} s · {identifier} · ' + ', '.join(cast[s] for s in subjects))
+        if event_ids:
+            lines.append('Acontecimentos — ' + ', '.join(event_ids))
         for field, label in BEAT_DIRECTIONS.items():
             value = beat.get(field, '')
             require(isinstance(value, str), 'Beat directions must be text')

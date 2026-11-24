@@ -2,7 +2,7 @@
 
 ## Instalação e versão
 
-Extraia o ZIP em uma pasta nova e mantenha a estrutura, inclusive `SKILL.md`, `scripts`, `panels` e `integrations`. A candidata é a 1.5.0 e o contrato de estado é 3.1.0. Valide a pasta extraída conforme o [README](README.md). Para atualizar uma instalação, guarde a versão anterior e mantenha o workspace de produção separado. Preserve o vínculo privado e o arquivo de configuração do host quando aplicar o pacote ao mesmo ambiente. Abra uma nova conversa com a conta configurada já conectada e peça para retomar um episódio. O agente valida o vínculo pela leitura atual. O arquivo V3 original permanece privado e seu fingerprint está em `legacy`.
+Extraia o ZIP em uma pasta nova e mantenha a estrutura, inclusive `SKILL.md`, `scripts`, `panels` e `integrations`. A Skill está na versão 1.6.0 e o contrato de estado é 3.1.0. Valide a pasta extraída conforme o [README](README.md). Para atualizar uma instalação, guarde a versão anterior e mantenha o workspace de produção separado. Preserve o vínculo privado e o arquivo de configuração do host quando aplicar o pacote ao mesmo ambiente. Abra uma nova conversa com a conta configurada já conectada e peça para começar em uma pasta ou retomar um episódio. O agente valida o vínculo pela leitura atual. O arquivo V3 original permanece privado e seu fingerprint está em `legacy`.
 
 ## Produzir o episódio seguinte
 
@@ -86,3 +86,9 @@ Use o modelo público `integrations/google-sheets.binding.json` para preparar `i
 Peça **“Prepare o plano SH05 para execução manual”**. O agente consulta a versão da cena, as referências, o estado herdado e o objetivo. Se o plano tiver ações que dependem de tempo, mostre a duração e o que acontece em paralelo. O [pacote manual](adapters/cinematic-plans.md) reúne o plano, o texto adaptado, os anexos, sua ordem e as verificações de retorno.
 
 Quando você devolver o take, informe o arquivo, a origem, os direitos e a entrega correspondente. A primeira conferência mede duração e proporção e mostra os trechos a revisar. A decisão sobre atuação, imagem, som e montagem é feita na conversa sobre a versão entregue. O [piloto A linha azul](examples/pilot15/README.md) permite percorrer esse caminho com material local de ensaio.
+
+## Escolher o perfil de guerra de ação
+
+Diga a intenção do episódio no briefing e escolha entre propostas com conflitos e configurações de cena diferentes. No perfil 65/35, a distribuição é medida na linha do tempo. Em 100 segundos, 65 pertencem à ação física em quadro e 35 a história, personagens e diálogo. Quando aprovar a direção, o agente vincula cada acontecimento à sua janela e ao plano. Uma mudança de direção pede revisão da decisão aprovada. O [estudo independente](examples/action-study/README.md) permite acompanhar a aplicação.
+
+Na entrega manual, o agente mostra o prompt pronto para copiar, com o modelo, o modo, as referências e os requisitos separados. No retorno, a [checagem técnica](adapters/media-qc.md) mede também o áudio e os streams exigidos. O [contrato criativo](adapters/creative-intent.md) acompanha a revisão dos acontecimentos e suas consequências. A revisão técnica e a decisão artística têm resultados próprios.

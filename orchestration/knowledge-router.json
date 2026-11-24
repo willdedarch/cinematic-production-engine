@@ -30,10 +30,11 @@
         "modules/anti-cliche.md",
         "knowledge/narrative-editing.md",
         "judgment-engine/protocol.md",
-        "knowledge/source-methods.md"
+        "knowledge/source-methods.md",
+        "modules/character-engine.md"
       ],
       "panel": "G2",
-      "example": "examples/last-water/production.md"
+      "example": "examples/genre-selection.md"
     },
     "G3": {
       "read": [
@@ -55,9 +56,9 @@
         "references/script-doctor.md",
         "knowledge/narrative-editing.md",
         "knowledge/failure-library.json",
-        "examples/contrastive.md",
         "judgment-engine/protocol.md",
-        "knowledge/source-methods.md"
+        "knowledge/source-methods.md",
+        "modules/character-engine.md"
       ],
       "panel": "G4",
       "example": "examples/contrastive.md"
@@ -86,7 +87,8 @@
     "G6": {
       "read": [
         "assets/templates.md",
-        "departments/props-assets.md"
+        "departments/props-assets.md",
+        "modules/character-engine.md"
       ],
       "panel": "G6",
       "example": "examples/series-worked/storyboard.json"
@@ -97,7 +99,8 @@
         "modules/performance-direction.md",
         "knowledge/design.md",
         "knowledge/failure-library.json",
-        "judgment-engine/protocol.md"
+        "judgment-engine/protocol.md",
+        "modules/character-engine.md"
       ],
       "panel": "G7",
       "example": "examples/native-lab/README.md"
@@ -114,7 +117,7 @@
         "harness/optics-previs.md"
       ],
       "panel": "G8",
-      "example": "examples/last-water/geo.svg"
+      "example": "examples/genre-selection.md"
     },
     "G9": {
       "read": [
@@ -124,7 +127,7 @@
         "judgment-engine/protocol.md"
       ],
       "panel": "G9",
-      "example": "examples/series-worked/impact-cantil.json"
+      "example": "examples/genre-selection.md"
     },
     "G10": {
       "read": [
@@ -143,7 +146,7 @@
         "knowledge/source-methods.md"
       ],
       "panel": "G10",
-      "example": "examples/series-worked/SH06-manual.json"
+      "example": "examples/genre-selection.md"
     },
     "G11": {
       "read": [
@@ -166,7 +169,6 @@
       "read": [
         "modules/editorial-sound.md",
         "knowledge/failure-library.json",
-        "examples/contrastive.md",
         "judgment-engine/protocol.md",
         "harness/media-analysis.md",
         "knowledge/collective-direction.md"
@@ -179,7 +181,6 @@
         "modules/quality-gates.md",
         "modules/continuity.md",
         "knowledge/failure-library.json",
-        "examples/contrastive.md",
         "judgment-engine/protocol.md"
       ],
       "panel": "G14",
@@ -208,7 +209,9 @@
     "DOCTOR": "G4",
     "DEVELOP": "G3",
     "IDEATE": "G2",
-    "MINE": "G1"
+    "MINE": "G1",
+    "ANALYZE": "G1",
+    "ANALISAR": "G1"
   },
   "conditions": {
     "historical": [
@@ -240,8 +243,7 @@
       "engines/war-film.md",
       "knowledge/war-film.md",
       "engines/living-world.md",
-      "knowledge/collective-direction.md",
-      "examples/war-action-pilot/README.md"
+      "knowledge/collective-direction.md"
     ],
     "optics": [
       "knowledge/optics.md",
@@ -275,8 +277,7 @@
       "examples/contrastive.md"
     ],
     "examples": [
-      "examples/golden-index.md",
-      "examples/last-water/production.md"
+      "examples/golden-index.md"
     ],
     "laboratory": [
       "harness/manual.md",
@@ -299,6 +300,14 @@
     "sound": [
       "modules/editorial-sound.md",
       "harness/media-analysis.md"
+    ],
+    "attention": [
+      "modules/viral-intelligence.md",
+      "engines/virality-lab.md",
+      "references/retention-pacing.md"
+    ],
+    "character": [
+      "modules/character-engine.md"
     ]
   },
   "judgment": {
@@ -331,6 +340,13 @@
     },
     "suspense": {
       "G13": "examples/takes/SUS-01-pair.json"
+    },
+    "sobrevivência": {
+      "G2": "examples/last-water/production.md",
+      "G8": "examples/last-water/geo.svg"
+    },
+    "drama": {
+      "G2": "examples/shelter/caso14-roteiro-e-direcao.md"
     }
   },
   "selectors": {
@@ -351,7 +367,8 @@
         "design"
       ],
       "casting": [
-        "performance"
+        "performance",
+        "character"
       ],
       "editing": [
         "continuity",
@@ -362,6 +379,13 @@
       ],
       "continuity": [
         "continuity"
+      ],
+      "story": [
+        "narrative",
+        "character"
+      ],
+      "retention": [
+        "attention"
       ]
     },
     "purpose": {
@@ -383,6 +407,10 @@
       ],
       "revise": [
         "failure"
+      ],
+      "analysis": [
+        "attention",
+        "media"
       ]
     },
     "problem": {
@@ -412,5 +440,15 @@
     "minimax_h3": "examples/prompt-specs/minimax_h3.json",
     "wan2_7": "examples/prompt-specs/wan2_7.json",
     "kling3_0_turbo": "examples/prompt-specs/kling3_0_turbo.json"
+  },
+  "command_facets": {
+    "ANALYZE": [
+      "attention",
+      "media"
+    ],
+    "ANALISAR": [
+      "attention",
+      "media"
+    ]
   }
 }

@@ -1,122 +1,631 @@
 [
   {
-    "id": "GENRE-war",
-    "name": "Guerra",
-    "question": "Sobreviver preservando humanidade",
-    "tools": "Pressão, custo e percepção limitada",
-    "pacing": "Ameaça e silêncio alternam; ambiente conserva danos",
-    "limit": "Não romantizar nem higienizar consequências",
+    "id": "GENRE-historical",
+    "name": "Histórico",
+    "question": "Hierarquia institucional e decisão pessoal",
+    "tools": "Materialidade com fonte",
+    "pacing": "Contido com prazo",
+    "limit": "Não promover hipótese a fato",
     "source": "Síntese didática original, não fórmula universal",
-    "status": "DRAFT_PROFILE"
+    "status": "DRAFT_PROFILE",
+    "genre": "historical",
+    "aliases": [
+      "histórico",
+      "histórica",
+      "históricos",
+      "históricas",
+      "historical",
+      "period drama",
+      "história de época",
+      "de época"
+    ],
+    "specialization": [
+      "references/reference-analysis.md",
+      "knowledge/design.md"
+    ],
+    "rubrics": [
+      "story",
+      "locations",
+      "wardrobe"
+    ],
+    "case_id": "HISTORICAL-01"
   },
   {
     "id": "GENRE-drama",
     "name": "Drama",
-    "question": "Escolha íntima sob relação",
-    "tools": "Gesto, subtexto e consequência",
-    "pacing": "Duração segue transformação da relação",
+    "question": "Conflito relacional",
+    "tools": "Transferência de responsabilidade por gesto",
+    "pacing": "Mudança gradual com gesto decisivo",
     "limit": "Não obrigar grande revelação em todo beat",
     "source": "Síntese didática original, não fórmula universal",
-    "status": "DRAFT_PROFILE"
-  },
-  {
-    "id": "GENRE-suspense",
-    "name": "Suspense",
-    "question": "Ameaça e informação desigual",
-    "tools": "Antecipação, prazo e rotas",
-    "pacing": "Reter informação com orientação suficiente",
-    "limit": "Não substituir risco por trilha",
-    "source": "Síntese didática original, não fórmula universal",
-    "status": "DRAFT_PROFILE"
+    "status": "DRAFT_PROFILE",
+    "genre": "drama",
+    "aliases": [
+      "drama",
+      "dramas",
+      "dramático",
+      "dramática",
+      "dramatic",
+      "emotional drama",
+      "drama emocional"
+    ],
+    "specialization": [
+      "modules/dramaturgy.md",
+      "modules/emotional-engine.md",
+      "modules/character-engine.md"
+    ],
+    "rubrics": [
+      "story",
+      "emotion",
+      "performance"
+    ],
+    "case_id": "DRAMA-01"
   },
   {
     "id": "GENRE-action",
     "name": "Ação",
-    "question": "Objetivo físico sob oposição",
-    "tools": "Geografia, esforço e custo",
-    "pacing": "Antes/depois de cada impacto precisam ser legíveis",
+    "question": "Oposição física e perda progressiva de espaço",
+    "tools": "Geografia antes da ruptura",
+    "pacing": "Aceleração por mudanças verificáveis",
     "limit": "Não repetir espetáculo sem mudança",
     "source": "Síntese didática original, não fórmula universal",
-    "status": "DRAFT_PROFILE"
+    "status": "DRAFT_PROFILE",
+    "genre": "ação",
+    "aliases": [
+      "ação",
+      "ações",
+      "action",
+      "action film",
+      "action movie",
+      "filme de ação",
+      "filmes de ação"
+    ],
+    "specialization": [
+      "modules/cinematic-direction.md",
+      "modules/editorial-sound.md",
+      "knowledge/collective-direction.md"
+    ],
+    "rubrics": [
+      "direction",
+      "shot-design",
+      "editing"
+    ],
+    "case_id": "ACTION-01"
   },
   {
-    "id": "GENRE-historical",
-    "name": "Histórico",
-    "question": "Pessoa dentro de instituições de época",
-    "tools": "Pesquisa, vocabulário e materialidade",
-    "pacing": "Registrar fatos e licença ficcional separadamente",
-    "limit": "Não promover hipótese a fato",
+    "id": "GENRE-suspense",
+    "name": "Suspense",
+    "question": "Ameaça interpretada com informação desigual",
+    "tools": "Escuta com orientação espacial",
+    "pacing": "Antecipação e demora motivada",
+    "limit": "Não substituir risco por trilha",
     "source": "Síntese didática original, não fórmula universal",
-    "status": "DRAFT_PROFILE"
+    "status": "DRAFT_PROFILE",
+    "genre": "suspense",
+    "aliases": [
+      "suspense",
+      "suspenses",
+      "suspense film",
+      "tensão narrativa"
+    ],
+    "specialization": [
+      "modules/suspense-engine.md",
+      "knowledge/narrative-editing.md"
+    ],
+    "rubrics": [
+      "suspense",
+      "composition",
+      "sound"
+    ],
+    "case_id": "SUS-01"
   },
   {
-    "id": "GENRE-epic",
-    "name": "Épico",
-    "question": "Destino individual e escala coletiva",
-    "tools": "Perspectiva, mudança de escala e recorrência",
-    "pacing": "Mostrar consequências próximas além da massa",
-    "limit": "Não confundir escala com excesso de figurantes",
-    "source": "Síntese didática original, não fórmula universal",
-    "status": "DRAFT_PROFILE"
-  },
-  {
-    "id": "GENRE-documentary",
-    "name": "Documental",
-    "question": "Investigar com fontes e limites",
-    "tools": "Evidência, autoria e contexto",
-    "pacing": "Distinguir arquivo, reconstituição e inferência",
-    "limit": "Não fabricar testemunho",
-    "source": "Síntese didática original, não fórmula universal",
-    "status": "DRAFT_PROFILE"
+    "id": "GENRE-thriller",
+    "limit": "Conferir a intenção do briefing e as evidências do plano.",
+    "source": "Síntese didática original",
+    "status": "DRAFT_PROFILE",
+    "genre": "thriller",
+    "name": "Thriller",
+    "aliases": [
+      "thriller",
+      "thrillers",
+      "thriller film",
+      "thriller narrativo"
+    ],
+    "question": "Prazo e reação a informação contraditória",
+    "tools": "Prazo que restringe escolhas",
+    "pacing": "Pressão crescente",
+    "specialization": [
+      "modules/suspense-engine.md",
+      "modules/dramaturgy.md",
+      "modules/editorial-sound.md"
+    ],
+    "rubrics": [
+      "suspense",
+      "story",
+      "editing"
+    ],
+    "case_id": "THRILLER-01"
   },
   {
     "id": "GENRE-horror",
     "name": "Terror",
-    "question": "Vulnerabilidade diante do desconhecido",
-    "tools": "Espaço, expectativa e revelação",
-    "pacing": "Som e ausência podem carregar ameaça",
+    "question": "Ameaça sensorial e violação do espaço conhecido",
+    "tools": "Repetição espacial que deixa de combinar",
+    "pacing": "Irregular com ruptura",
     "limit": "Não impor sustos em intervalo fixo",
     "source": "Síntese didática original, não fórmula universal",
-    "status": "DRAFT_PROFILE"
+    "status": "DRAFT_PROFILE",
+    "genre": "terror",
+    "aliases": [
+      "terror",
+      "horrores",
+      "horror",
+      "horror film",
+      "terror sobrenatural",
+      "supernatural horror"
+    ],
+    "specialization": [
+      "modules/suspense-engine.md",
+      "modules/editorial-sound.md",
+      "knowledge/light.md"
+    ],
+    "rubrics": [
+      "suspense",
+      "atmosphere",
+      "sound"
+    ],
+    "case_id": "HORROR-01"
   },
   {
-    "id": "GENRE-noir",
-    "name": "Noir",
-    "question": "Desejo e responsabilidade ambígua",
-    "tools": "Ponto de vista e informação parcial",
-    "pacing": "Luz e espaço participam da ambivalência",
-    "limit": "Não resumir a chapéu e sombras",
-    "source": "Síntese didática original, não fórmula universal",
-    "status": "DRAFT_PROFILE"
-  },
-  {
-    "id": "GENRE-realism",
-    "name": "Realismo",
-    "question": "Observar vida com detalhes funcionais",
-    "tools": "Comportamento e tempo concreto",
-    "pacing": "Imperfeição seletiva com causa",
-    "limit": "Não confundir banalidade com ausência de intenção",
-    "source": "Síntese didática original, não fórmula universal",
-    "status": "DRAFT_PROFILE"
+    "id": "GENRE-psychological-horror",
+    "limit": "Conferir a intenção do briefing e as evidências do plano.",
+    "source": "Síntese didática original",
+    "status": "DRAFT_PROFILE",
+    "genre": "terror psicológico",
+    "name": "Terror psicológico",
+    "aliases": [
+      "terror psicológico",
+      "horrores psicológicos",
+      "horror psicológico",
+      "psychological horror",
+      "psychological horror film"
+    ],
+    "question": "Percepção incerta e ameaça à confiança",
+    "tools": "Som fora de fase com causa ambígua",
+    "pacing": "Repetição com pequenas divergências",
+    "specialization": [
+      "modules/audience-psychology.md",
+      "knowledge/composition.md",
+      "modules/editorial-sound.md"
+    ],
+    "rubrics": [
+      "suspense",
+      "atmosphere",
+      "composition"
+    ],
+    "case_id": "PSYCHOLOGICAL-HORROR-01"
   },
   {
     "id": "GENRE-scifi",
     "name": "Ficção científica",
-    "question": "Consequência humana de hipótese",
-    "tools": "Regras do mundo e custo",
-    "pacing": "Tecnologia altera ação, trabalho e espaço",
+    "question": "Regra especulativa e custo material",
+    "tools": "Regra do mundo demonstrada com custo",
+    "pacing": "Demonstração, uso e consequência",
     "limit": "Não usar interfaces só como ornamento",
     "source": "Síntese didática original, não fórmula universal",
-    "status": "DRAFT_PROFILE"
+    "status": "DRAFT_PROFILE",
+    "genre": "ficção científica",
+    "aliases": [
+      "ficção científica",
+      "ficções científicas",
+      "science fiction",
+      "sci fi",
+      "scifi",
+      "speculative science fiction"
+    ],
+    "specialization": [
+      "engines/living-world.md",
+      "knowledge/design.md",
+      "modules/continuity.md"
+    ],
+    "rubrics": [
+      "living-world",
+      "props",
+      "story"
+    ],
+    "case_id": "SCIFI-01"
+  },
+  {
+    "id": "GENRE-epic",
+    "name": "Épico",
+    "question": "Decisão particular e consequência coletiva",
+    "tools": "Migração de escala no corte",
+    "pacing": "Escala ascendente",
+    "limit": "Não confundir escala com excesso de figurantes",
+    "source": "Síntese didática original, não fórmula universal",
+    "status": "DRAFT_PROFILE",
+    "genre": "épico",
+    "aliases": [
+      "épico",
+      "épica",
+      "épicos",
+      "épicas",
+      "epic",
+      "epic film",
+      "epic films",
+      "epopeia"
+    ],
+    "specialization": [
+      "knowledge/collective-direction.md",
+      "knowledge/composition.md",
+      "engines/living-world.md"
+    ],
+    "rubrics": [
+      "composition",
+      "living-world",
+      "direction"
+    ],
+    "case_id": "EPIC-01"
+  },
+  {
+    "id": "GENRE-noir",
+    "name": "Noir",
+    "question": "Informação parcial e cumplicidade",
+    "tools": "Reflexo como evidência contraditória",
+    "pacing": "Controle seguido por inversão",
+    "limit": "Não resumir a chapéu e sombras",
+    "source": "Síntese didática original, não fórmula universal",
+    "status": "DRAFT_PROFILE",
+    "genre": "noir",
+    "aliases": [
+      "noir",
+      "film noir",
+      "filme noir",
+      "filmes noir",
+      "neo noir",
+      "neonoir"
+    ],
+    "specialization": [
+      "knowledge/light.md",
+      "modules/dialogue-engine.md",
+      "knowledge/styles-genres.md"
+    ],
+    "rubrics": [
+      "lighting",
+      "dialogue",
+      "direction"
+    ],
+    "case_id": "NOIR-01"
+  },
+  {
+    "id": "GENRE-realism",
+    "name": "Realismo",
+    "question": "Trabalho concreto e conflito relacional",
+    "tools": "Subtexto na tarefa observável",
+    "pacing": "Duração segue a tarefa",
+    "limit": "Não confundir banalidade com ausência de intenção",
+    "source": "Síntese didática original, não fórmula universal",
+    "status": "DRAFT_PROFILE",
+    "genre": "realismo",
+    "aliases": [
+      "realismo",
+      "realista",
+      "realistas",
+      "realism",
+      "realist",
+      "realistic drama"
+    ],
+    "specialization": [
+      "modules/performance-direction.md",
+      "modules/dialogue-engine.md",
+      "knowledge/design.md"
+    ],
+    "rubrics": [
+      "performance",
+      "dialogue",
+      "props"
+    ],
+    "case_id": "REALISM-01"
+  },
+  {
+    "id": "GENRE-naturalism",
+    "limit": "Conferir a intenção do briefing e as evidências do plano.",
+    "source": "Síntese didática original",
+    "status": "DRAFT_PROFILE",
+    "genre": "naturalismo",
+    "name": "Naturalismo",
+    "aliases": [
+      "naturalismo",
+      "naturalista",
+      "naturalistas",
+      "naturalism",
+      "naturalistic"
+    ],
+    "question": "Comportamento cotidiano sob mudança ambiental",
+    "tools": "Ação parcialmente revelada por luz e som direto",
+    "pacing": "Tempo sustentado pela ação",
+    "specialization": [
+      "modules/performance-direction.md",
+      "modules/editorial-sound.md",
+      "departments/cinematography.md"
+    ],
+    "rubrics": [
+      "performance",
+      "lighting",
+      "sound"
+    ],
+    "case_id": "NATURALISM-01"
+  },
+  {
+    "id": "GENRE-war",
+    "name": "Guerra",
+    "question": "Conflito coletivo altera o mundo e as decisões",
+    "tools": "Causa e custo legíveis no espaço",
+    "pacing": "Varia conforme briefing",
+    "limit": "Não romantizar nem higienizar consequências",
+    "source": "Síntese didática original, não fórmula universal",
+    "status": "DRAFT_PROFILE",
+    "genre": "guerra",
+    "aliases": [
+      "guerra",
+      "guerras",
+      "war",
+      "war film",
+      "war films",
+      "war movie",
+      "military fiction",
+      "feb"
+    ],
+    "specialization": [
+      "engines/war-film.md",
+      "knowledge/war-film.md",
+      "engines/living-world.md"
+    ],
+    "rubrics": [
+      "direction",
+      "story",
+      "editing"
+    ],
+    "case_id": "WAR-00"
   },
   {
     "id": "GENRE-comedy",
     "name": "Comédia",
-    "question": "Objetivo sério em desequilíbrio",
-    "tools": "Expectativa, timing e reação",
-    "pacing": "Preservar lógica da pessoa mesmo no absurdo",
+    "question": "Equívoco com descoberta pública",
+    "tools": "Diferença de informação no tempo de corte",
+    "pacing": "Timing e reação",
     "limit": "Não tratar toda fala como punchline",
     "source": "Síntese didática original, não fórmula universal",
-    "status": "DRAFT_PROFILE"
+    "status": "DRAFT_PROFILE",
+    "genre": "comédia",
+    "aliases": [
+      "comédia",
+      "comédias",
+      "comedy",
+      "comedies",
+      "sitcom",
+      "humor"
+    ],
+    "specialization": [
+      "modules/dialogue-engine.md",
+      "modules/anti-cliche.md"
+    ],
+    "rubrics": [
+      "dialogue",
+      "editing",
+      "performance"
+    ],
+    "case_id": "COM-01"
+  },
+  {
+    "id": "GENRE-romance",
+    "limit": "Conferir a intenção do briefing e as evidências do plano.",
+    "source": "Síntese didática original",
+    "status": "DRAFT_PROFILE",
+    "genre": "romance",
+    "name": "Romance",
+    "aliases": [
+      "romance",
+      "romances",
+      "romantic film",
+      "romance film",
+      "romantic drama",
+      "romântico",
+      "romântica"
+    ],
+    "question": "Proximidade desejada e escolha de reciprocidade",
+    "tools": "Distância física como mudança de relação",
+    "pacing": "Aproximação e recuo",
+    "specialization": [
+      "modules/emotional-engine.md",
+      "modules/character-engine.md",
+      "modules/dialogue-engine.md"
+    ],
+    "rubrics": [
+      "emotion",
+      "performance",
+      "dialogue"
+    ],
+    "case_id": "ROMANCE-01"
+  },
+  {
+    "id": "GENRE-documentary",
+    "name": "Documentário",
+    "question": "Depoimento e autoria da interpretação",
+    "tools": "Agência da pessoa entrevistada",
+    "pacing": "Duração do som e silêncio",
+    "limit": "Não fabricar testemunho",
+    "source": "Síntese didática original, não fórmula universal",
+    "status": "DRAFT_PROFILE",
+    "genre": "documentário",
+    "aliases": [
+      "documentário",
+      "documentários",
+      "documental",
+      "documentary",
+      "documentaries",
+      "observacional",
+      "observational documentary"
+    ],
+    "specialization": [
+      "references/reference-analysis.md",
+      "modules/editorial-sound.md"
+    ],
+    "rubrics": [
+      "story",
+      "editing",
+      "sound"
+    ],
+    "case_id": "DOC-01"
+  },
+  {
+    "id": "GENRE-fantasy",
+    "limit": "Conferir a intenção do briefing e as evidências do plano.",
+    "source": "Síntese didática original",
+    "status": "DRAFT_PROFILE",
+    "genre": "fantasia",
+    "name": "Fantasia",
+    "aliases": [
+      "fantasia",
+      "fantasias",
+      "fantasy",
+      "fantasy film",
+      "filme fantástico",
+      "fantasia épica"
+    ],
+    "question": "Regra extraordinária e dívida",
+    "tools": "Motivo material que torna a regra filmável",
+    "pacing": "Descoberta e retorno",
+    "specialization": [
+      "engines/living-world.md",
+      "knowledge/design.md",
+      "modules/continuity.md"
+    ],
+    "rubrics": [
+      "living-world",
+      "props"
+    ],
+    "case_id": "FANTASY-01"
+  },
+  {
+    "id": "GENRE-adventure",
+    "limit": "Conferir a intenção do briefing e as evidências do plano.",
+    "source": "Síntese didática original",
+    "status": "DRAFT_PROFILE",
+    "genre": "aventura",
+    "name": "Aventura",
+    "aliases": [
+      "aventura",
+      "aventuras",
+      "adventure",
+      "adventures",
+      "adventure film",
+      "filme de aventura"
+    ],
+    "question": "Descoberta, incerteza de percurso e escolha",
+    "tools": "Mudança de escala orienta o percurso",
+    "pacing": "Alternância de exploração e ruptura",
+    "specialization": [
+      "departments/locations.md",
+      "knowledge/composition.md",
+      "engines/living-world.md"
+    ],
+    "rubrics": [
+      "locations",
+      "geometry",
+      "direction"
+    ],
+    "case_id": "ADVENTURE-01"
+  },
+  {
+    "id": "GENRE-crime",
+    "limit": "Conferir a intenção do briefing e as evidências do plano.",
+    "source": "Síntese didática original",
+    "status": "DRAFT_PROFILE",
+    "genre": "crime",
+    "name": "Crime",
+    "aliases": [
+      "crime",
+      "crimes",
+      "de crime",
+      "policial",
+      "crime drama",
+      "crime film",
+      "procedural crime"
+    ],
+    "question": "Vestígio, responsabilidade e versões conflitantes",
+    "tools": "Relevância narrativa de uma diferença material",
+    "pacing": "Investigação por novas consequências",
+    "specialization": [
+      "modules/dramaturgy.md",
+      "references/reference-analysis.md",
+      "modules/continuity.md"
+    ],
+    "rubrics": [
+      "story",
+      "continuity",
+      "dialogue"
+    ],
+    "case_id": "CRIME-01"
+  },
+  {
+    "id": "GENRE-mystery",
+    "limit": "Conferir a intenção do briefing e as evidências do plano.",
+    "source": "Síntese didática original",
+    "status": "DRAFT_PROFILE",
+    "genre": "mistério",
+    "name": "Mistério",
+    "aliases": [
+      "mistério",
+      "mistérios",
+      "mystery",
+      "mysteries",
+      "mystery film",
+      "enigma"
+    ],
+    "question": "Pergunta causal sem resposta imediata",
+    "tools": "Pista visual reutilizada com novo sentido",
+    "pacing": "Releitura em camadas",
+    "specialization": [
+      "modules/suspense-engine.md",
+      "knowledge/narrative-editing.md",
+      "modules/continuity.md"
+    ],
+    "rubrics": [
+      "story",
+      "suspense",
+      "continuity"
+    ],
+    "case_id": "MYSTERY-01"
+  },
+  {
+    "id": "GENRE-survival",
+    "limit": "Conferir a intenção do briefing e as evidências do plano.",
+    "source": "Síntese didática original",
+    "status": "DRAFT_PROFILE",
+    "genre": "sobrevivência",
+    "name": "Sobrevivência",
+    "aliases": [
+      "sobrevivência",
+      "sobrevivências",
+      "survival",
+      "survival film",
+      "survival drama"
+    ],
+    "question": "Necessidade material e distribuição de custo",
+    "tools": "Estado do recurso acompanha decisões",
+    "pacing": "Pressão por esgotamento",
+    "specialization": [
+      "engines/living-world.md",
+      "modules/continuity.md",
+      "modules/character-engine.md"
+    ],
+    "rubrics": [
+      "living-world",
+      "props",
+      "continuity"
+    ],
+    "case_id": "SURVIVAL-01"
   }
 ]
