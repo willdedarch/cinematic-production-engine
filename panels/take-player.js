@@ -228,9 +228,7 @@ async function openDeskPair(item){
 function conversationVote(vote){
  const selection={A:'o take A',B:'o take B',TIE:'empate',BOTH_FAIL:'rejeição dos dois takes'}[vote.choice];
  const scope={deliverable:'a estes takes',scene:'a esta cena',episode:'a este episódio',project:'à série'}[vote.preference_scope];
- const similar=(window.CPE_DESK_DATA?.pairs||[]).filter(p=>p.shot_id===activeDeskPair.shot_id&&p.manifest.question===manifest.question);
- const ref=similar.length>1?' (par '+manifest.pair_id.slice(-8)+')':'';
- return 'Registre '+selection+' no plano '+activeDeskPair.shot_id+' para a comparação “'+manifest.question+'”'+ref+'. Trecho de '+format(vote.start_ms)+' a '+format(vote.end_ms)+', marca '+format(vote.mark_ms)+'. Motivo: '+vote.reason+'. Aplicar '+scope+'.';
+ return 'Registre '+selection+' no plano '+activeDeskPair.shot_id+' para a comparação “'+manifest.question+'”. Trecho de '+format(vote.start_ms)+' a '+format(vote.end_ms)+', marca '+format(vote.mark_ms)+'. Motivo: '+vote.reason+'. Aplicar '+scope+'.\n\nPar apresentado: '+vote.pair_id+'\nVersão do par: '+vote.pair_sha256;
 }
 function setupDesk(){
  const desk=window.CPE_DESK_DATA;if(!desk?.episode)return;

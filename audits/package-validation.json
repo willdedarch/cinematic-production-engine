@@ -1,10 +1,10 @@
 {
   "status": "PASS",
-  "skill_version": "1.4.1",
-  "files": 400,
+  "skill_version": "1.5.0",
+  "files": 424,
   "parsed": {
-    "json": 103,
-    "python": 74
+    "json": 112,
+    "python": 75
   },
   "synthetic_journal_cases": 3,
   "native_account_exports_included": false,

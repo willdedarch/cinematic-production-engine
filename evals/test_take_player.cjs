@@ -70,6 +70,8 @@ async function main(){
  nodes.choice.value='B';nodes.scope.value='scene';nodes.reason.value='A respiração segura o corte.';nodes.reason.oninput();
  nodes.authorize.checked=true;nodes.prepare.onclick();
  assert.match(nodes.out.value,/SH06/);assert.match(nodes.out.value,/4,200 s/);assert.doesNotMatch(nodes.out.value,/CPE_TAKE_VOTE/);count++;
+ assert.ok(nodes.out.value.includes('Par apresentado: '+m.pair_id));
+ assert.ok(nodes.out.value.includes('Versão do par: '+m.pair_sha256));count++;
  await run('setupDesk()');assert.equal(nodes.reason.value,'A respiração segura o corte.');assert.equal(nodes.scope.value,'scene');
  assert.equal(nodes.authorize.checked,false);assert.equal(nodes.copy.disabled,true);assert.equal(run('segment.mark_ms'),4200);count++;
  nodes.seek.oninput({target:{value:'5000'}});nodes.mark.onclick();assert.equal(run('segment.end_ms'),4600);assert.equal(run('segment.mark_ms'),5000);

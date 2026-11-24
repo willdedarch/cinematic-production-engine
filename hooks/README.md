@@ -1,6 +1,6 @@
 # Hooks opcionais
 
-Na revisão 1.4, lifecycle.py implementa os eventos suportados de início, mensagem, uso de ferramenta, compactação, subagentes, parada e encerramento. O binário local informou hooks como recurso estável. O registro de recibos é opcional, privado e contém somente metadados mínimos. A ausência de registro nativo deixa a cobertura como não verificada.
+`lifecycle.py` tem respostas específicas para os eventos de início, mensagem e uso de ferramenta. Compactação, parada, interrupção e encerramento podem registrar recibos privados e mínimos. A falha de um recibo de encerramento usa a saída de erro do evento. O bloqueio estruturado é reservado a `PreToolUse`. A cobertura nativa exige observar o host disparando as definições confiáveis.
 
 scripts/configure_hooks.py prepara e mescla as definições exatas preservando hooks existentes. Use o arquivo .codex/hooks.json de um projeto dedicado à CPE para restringir a guarda de ferramentas a esse projeto. Revise a definição no painel Hooks do host. A confiança depende da definição vigente e da revisão exigida pelo Codex. O instalador não altera o cadastro de confiança. Uma configuração preparada ou um teste por stdin não demonstra acionamento no ciclo nativo.
 

@@ -139,11 +139,12 @@ class DeskIntegrity(unittest.TestCase):
         s=copy.deepcopy(self.base);s['tables']['Shot List'].append(other)
         args={**self.scope,'shot_id':self.shot['id'],'question':'Comparar estes arquivos?',
               'takes':[{'id':a['id'],'revision':a['revision']} for a in (self.a,self.b)]}
-        pair_command('desk-pair',s,args,self.ws)
+        pair=pair_command('desk-pair',s,args,self.ws)['manifest']
         s=self.link(s,other,self.a)
         with self.assertRaisesRegex(StateError,'outro plano'):pair_command('desk-pair',s,args,self.ws)
         with self.assertRaisesRegex(StateError,'outro plano'):
             pair_command('desk-vote',s,{**self.scope,'shot_id':self.shot['id'],'authorization':self.auth,'choice':'A',
+                'pair_id':pair['pair_id'],'pair_sha256':pair['pair_sha256'],
                 'start_ms':0,'mark_ms':1000,'end_ms':2000,'reason':'Mais silêncio','preference_scope':'shot'},self.ws)
 
     def test_handwritten_ticket_requires_unchanged_source_at_preparation_and_resolution(self):

@@ -1,0 +1,87 @@
+{
+  "commands": [
+    "init",
+    "prepare",
+    "task",
+    "briefing-view",
+    "bible",
+    "previs",
+    "storyboard",
+    "shot-card",
+    "handoff-seedance",
+    "handoff-minimax",
+    "compare-unrelated",
+    "compare-original",
+    "inspect",
+    "import-unrelated",
+    "shot-import",
+    "judge",
+    "revise",
+    "checkpoint",
+    "recover"
+  ],
+  "route": {
+    "conditions": [
+      "guerra",
+      "suspense"
+    ],
+    "facets": [
+      "direction",
+      "performance",
+      "prompts",
+      "continuity",
+      "composition"
+    ],
+    "examples": [
+      "examples/war-action-pilot/README.md",
+      "examples/pilot15/focal-shot.json",
+      "examples/prompt-specs/seedance_cinematic.json"
+    ],
+    "selectors": {
+      "department": "direction",
+      "purpose": "handoff",
+      "problem": "continuity",
+      "scene_complexity": "complex"
+    }
+  },
+  "media": [
+    {
+      "technical_review": "MISMATCH",
+      "artistic_review": "PENDING",
+      "media_sha256": "0181bba796712864afb8d73610ec253e42d9731cc542f6233450b97d65c405c9",
+      "expected": {
+        "duration_s": 8,
+        "aspect_ratio": "16:9"
+      },
+      "observed": {
+        "duration_s": 10.0,
+        "display_aspect_ratio": null,
+        "pixel_width": 640,
+        "pixel_height": 360,
+        "audio_stream": true
+      },
+      "approved": false
+    },
+    {
+      "technical_review": "SPEC_CHECKED",
+      "artistic_review": "PENDING",
+      "media_sha256": "464469e43332012a95d748e5b452a0f2a795a8f0e21fcd91a8a5ece75c8f6919",
+      "expected": {
+        "duration_s": 8,
+        "aspect_ratio": "16:9"
+      },
+      "observed": {
+        "duration_s": 8.0,
+        "display_aspect_ratio": "16:9",
+        "pixel_width": 1280,
+        "pixel_height": 720,
+        "audio_stream": false
+      },
+      "approved": false
+    }
+  ],
+  "import_planned_only": true,
+  "recovery": "MATCHES_CURRENT_READ_COPY",
+  "remote_writes": 0,
+  "artistic_approval": false
+}

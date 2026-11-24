@@ -6,6 +6,7 @@ import sys
 import tempfile
 import unittest
 from pathlib import Path
+from unittest.mock import patch
 
 import test_series_release as fixtures
 from episode_workflow import initialize_episode
@@ -168,3 +169,30 @@ class ShotIntegrity(unittest.TestCase):
         stale = {**spec,'shot':{**spec['shot'],'revision':0}}
         with self.assertRaisesRegex(StateError,'Shot changed'):
             self.run_shot('shot-handoff',stale)
+
+        omitted=copy.deepcopy(spec)
+        del omitted['cinematic_plan']['beats'][-1]['exit'][field]
+        with self.assertRaisesRegex(StateError,'conflicts with shot out state'):
+            self.run_shot('shot-handoff',omitted)
+
+        # JSON key ordering must never affect a retained packet's validity or generated text.
+        canonical_packet=json.loads(canonical(result))
+        with patch('shot_workflow.shutil.which',return_value=None):
+            source=fixtures.ROOT/'examples/series-worked/SH06-previs.mp4'
+            request={'handoff':canonical_packet,'path':str(source),'rights_confirmed':True}
+            review=self.run_shot('shot-compare',request)
+            self.assertEqual(review['technical_review'],'UNAVAILABLE')
+            self.assertFalse(review['approved'])
+            self.snapshot['spreadsheet_id']='ANOTHER-COPY'
+            with self.assertRaisesRegex(StateError,'different spreadsheet'):
+                self.run_shot('shot-compare',request)
+
+    def test_missing_next_entry_has_a_visible_continuity_warning(self):
+        shot=self.ix['Shot List']['SH06']
+        state=json.loads(shot['start_end_state'])
+        del state['in']['cantil']
+        shot.update(start_end_state=canonical(state),revision=shot['revision']+1)
+        result=self.run_shot('shot-card',{'shot_id':shot['id']})
+        self.assertTrue(any(row['field']=='cantil' and row['issue']=='MISSING_ENTRY' for row in result['continuity_review']))
+        with self.assertRaisesRegex(StateError,'continuity change'):
+            self.run_shot('shot-handoff',{'shot_id':shot['id'],'model_id':'seedance_2_5'})

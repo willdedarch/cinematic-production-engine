@@ -188,6 +188,8 @@ def check_guards(plan,fresh,require_prepared=False):
  verify_new(fresh,plan['candidate'],plan['changes'],plan['authorization_ref'])
  from takes import verify_vote_sources
  verify_vote_sources(plan,fresh)
+ from shot_workflow import verify_return_sources
+ verify_return_sources(plan)
  return True
 
 def prepare(snapshot,intent,review=None):

@@ -107,7 +107,7 @@ class DeskPublication(unittest.TestCase):
         scope={'project_id':shot['project_id'],'episode_id':shot['episode_id'],'shot_id':shot['id'],'include_test':True}
         pair=pairs_dispatch('desk-pair',state,{**scope,'question':'Em qual take funciona a pausa?',
             'takes':[{'id':r['id'],'revision':r['revision']} for r in sample['takes'].values()]},self.workspace)['manifest']
-        plan=pairs_dispatch('desk-vote',state,{**scope,'pair_id':pair['pair_id'],'choice':'B','start_ms':3800,'mark_ms':4200,
+        plan=pairs_dispatch('desk-vote',state,{**scope,'pair_id':pair['pair_id'],'pair_sha256':pair['pair_sha256'],'choice':'B','start_ms':3800,'mark_ms':4200,
             'end_ms':4600,'reason':'A pausa antes da fala.','preference_scope':'scene','authorization':{
             'authorized':True,'actor':'ensaio','user_message_ref':'pedido-de-ensaio'}},self.workspace)
         candidate=plan['candidate']

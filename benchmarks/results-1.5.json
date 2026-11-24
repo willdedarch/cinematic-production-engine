@@ -1,0 +1,594 @@
+{
+  "schema_version": "1.0",
+  "kind": "textual_fixture_audit",
+  "target": "CPE 1.5.0 em checkout candidato",
+  "base_commit": "9b55e5ad25dc17fabc4c750a1381712c1e903a34",
+  "script": {
+    "path": "scripts/judgment.py",
+    "sha256": "ef5692586a7d2db420fff1150ea52303f51d8eb090c5c1db0760f859d1f0bb5b",
+    "functions_executed": [
+      "rubric",
+      "blind_packets",
+      "consolidate",
+      "metrics"
+    ]
+  },
+  "inputs": {
+    "path": "examples/pilot15/revisao-e-estudos.md",
+    "sha256": "0b805e02c74643f32113f5a036ddf671ad33bfeada422264877c609fd04b407c",
+    "rubrics_path": "judgment-engine/rubrics.json",
+    "rubrics_sha256": "25e47bb1f30727d1f92142eb98fb9ed001b52bf994a065cc752713dfa8cda11a",
+    "context": "Um contexto do agente atual. Briefs e rótulos de Antes/Reparo conhecidos antes da avaliação. Excertos relacionais usam a versão anterior como contexto. Sem tokens pareados ou orçamento de contexto mensurado.",
+    "calibration": "Nenhum exemplo rotulado ou preferência do diretor aplicado ao parecer. Como os rótulos das versões já eram conhecidos, casos não constituem holdout.",
+    "model": "Mesma sessão Codex/GPT para todos os pareceres. Identificador exato de modelo de inferência indisponível. Empacotamento e consolidação executados em Python local.",
+    "source_policy": "A fonte histórica permaneceu intacta. Nenhuma nova geração de variante, avaliação independente ou escuta/filmagem."
+  },
+  "legacy14": {
+    "order_a": [
+      "B17",
+      "F62",
+      "R94",
+      "W38"
+    ],
+    "order_b": [
+      "W38",
+      "R94",
+      "F62",
+      "B17"
+    ],
+    "word_counts_and_hashes": {
+      "B17": {
+        "expected": "283f41e2a66cf8517facd0d116cd5accc6afbf362b35789e33e0017ac05780cf",
+        "actual": "283f41e2a66cf8517facd0d116cd5accc6afbf362b35789e33e0017ac05780cf",
+        "words_reported": 1342,
+        "words_now": 1342
+      },
+      "F62": {
+        "expected": "1a6b7d5afec9a945678d87e8a8480bbec5b7788dcf115364cd127a5a91b8590a",
+        "actual": "1a6b7d5afec9a945678d87e8a8480bbec5b7788dcf115364cd127a5a91b8590a",
+        "words_reported": 1212,
+        "words_now": 1212
+      },
+      "R94": {
+        "expected": "ac7b81e89ebd1ca6afdd7239b154ab8b65de65f8c446d07dc18d35aa0b40c230",
+        "actual": "ac7b81e89ebd1ca6afdd7239b154ab8b65de65f8c446d07dc18d35aa0b40c230",
+        "words_reported": 1144,
+        "words_now": 1144
+      },
+      "W38": {
+        "expected": "d70a3e639df7c918b3ca9c08468c33e212979aa5f2197bff84fd8ab5a9e908f7",
+        "actual": "d70a3e639df7c918b3ca9c08468c33e212979aa5f2197bff84fd8ab5a9e908f7",
+        "words_reported": 1084,
+        "words_now": 1084
+      }
+    },
+    "pairs": [
+      {
+        "materials": [
+          "B17",
+          "F62"
+        ],
+        "review_a": "F62",
+        "review_b": "F62",
+        "same": true
+      },
+      {
+        "materials": [
+          "B17",
+          "R94"
+        ],
+        "review_a": "R94",
+        "review_b": "R94",
+        "same": true
+      },
+      {
+        "materials": [
+          "B17",
+          "W38"
+        ],
+        "review_a": "W38",
+        "review_b": "W38",
+        "same": true
+      },
+      {
+        "materials": [
+          "F62",
+          "R94"
+        ],
+        "review_a": "R94",
+        "review_b": "F62",
+        "same": false
+      },
+      {
+        "materials": [
+          "F62",
+          "W38"
+        ],
+        "review_a": "W38",
+        "review_b": "F62",
+        "same": false
+      },
+      {
+        "materials": [
+          "R94",
+          "W38"
+        ],
+        "review_a": "EMPATE",
+        "review_b": "R94",
+        "same": false
+      }
+    ],
+    "older_replay": {
+      "outcome": "MAT-84",
+      "per_reviewer": {
+        "/root/blind_critic_one": "MAT-84",
+        "/root/blind_critic_two": "MAT-84"
+      },
+      "disagreements": [],
+      "order_changes": [],
+      "reviewer_dissent": [],
+      "human_decision_required": true,
+      "approved": false,
+      "position_bias_rate": null,
+      "position_bias_limit": "Same-context repeats are descriptive, not isolated fresh-context position-bias measurement."
+    },
+    "pair_agreement_count": 3,
+    "pair_total": 6,
+    "independent_contexts_reported": 2,
+    "same_model_family": true,
+    "briefs": 1,
+    "outputs_per_condition": 1,
+    "matched_token_budget": false,
+    "position_bias_rate": null,
+    "human_n": 0
+  },
+  "experimental": {
+    "brief_count": 3,
+    "reviewer_count": 1,
+    "order_passes": 6,
+    "independent_contexts": 0,
+    "human_metrics": {
+      "real_human_n": 0,
+      "human_agreement": null,
+      "false_approval_rate": null,
+      "false_rejection_rate": null,
+      "denominators": {
+        "human_reject": 0,
+        "human_approve": 0
+      },
+      "not_measured": [
+        "audience retention",
+        "viral performance",
+        "population-level artistic quality",
+        "fresh-context position bias"
+      ]
+    },
+    "position_bias_rate": null,
+    "order_outcome_changes_observed": 0,
+    "editorial_outcome_count": {
+      "repair_preferred": 2,
+      "tie": 1,
+      "baseline_preferred": 0
+    },
+    "causal_effect_established": false
+  },
+  "cases": [
+    {
+      "id": "CPE15-WAR",
+      "title": "A linha azul",
+      "department": "continuity",
+      "rubric": {
+        "id": "RUB-CONTINUITY",
+        "criteria": [
+          "Estados antes/depois têm evento causal",
+          "Referências de identidade e geometria são atuais",
+          "Mudança legítima distingue-se de erro"
+        ],
+        "required_evidence": [
+          "Intenção e versão do entregável",
+          "Arquivo ou representação pertinente acessível com origem",
+          "Trechos/quadros/timecodes comparáveis quando a conclusão depende de mídia",
+          "Mapa de protegidos e referência aprovada"
+        ]
+      },
+      "rubric_sha256": "b40f3c69fd3b9fa69679e24980bcf698eccbf0fb7636874bfd3c75711b8329f8",
+      "character_counts": [
+        174,
+        243
+      ],
+      "word_counts": [
+        29,
+        46
+      ],
+      "packet_session": {
+        "public_packets": [
+          {
+            "packet_id": "4200171c-71b3-4462-b4c2-8c16edd99161-1",
+            "context": {
+              "intention": "Transicao SH05/SH06: revelar a curva para o arco preservando apoio e o estado dos objetos.",
+              "genre": "guerra ficcional / acao coletiva",
+              "format": "planning excerpt; before and repair share the same facts unless the later excerpt specifies a change",
+              "limits": "assess textual evidence only"
+            },
+            "alternatives": [
+              {
+                "label": "A",
+                "text": "SH05 acabava no contato dos braços. SH06 abria com a frente da fila reenquadrada já de costas e alinhada ao arco. A montagem pretendia intensificar a desorientação da virada."
+              },
+              {
+                "label": "B",
+                "text": "Em P15-B05c, primeiro a pessoa vê Bento e depois vira os ombros. SH06 entra no fim da virada, ainda do mesmo lado do eixo, e mostra a passagem ao fundo. Preservar 8 s, continuidade dos braços, caderno no piso, posição do banco e origem da luz."
+              }
+            ],
+            "allowed_choices": [
+              "A",
+              "B",
+              "TIE",
+              "BOTH_FAIL"
+            ],
+            "warnings": [
+              "Inspect text for authorship clues; metadata removal does not guarantee blinding."
+            ]
+          },
+          {
+            "packet_id": "4200171c-71b3-4462-b4c2-8c16edd99161-2",
+            "context": {
+              "intention": "Transicao SH05/SH06: revelar a curva para o arco preservando apoio e o estado dos objetos.",
+              "genre": "guerra ficcional / acao coletiva",
+              "format": "planning excerpt; before and repair share the same facts unless the later excerpt specifies a change",
+              "limits": "assess textual evidence only"
+            },
+            "alternatives": [
+              {
+                "label": "A",
+                "text": "Em P15-B05c, primeiro a pessoa vê Bento e depois vira os ombros. SH06 entra no fim da virada, ainda do mesmo lado do eixo, e mostra a passagem ao fundo. Preservar 8 s, continuidade dos braços, caderno no piso, posição do banco e origem da luz."
+              },
+              {
+                "label": "B",
+                "text": "SH05 acabava no contato dos braços. SH06 abria com a frente da fila reenquadrada já de costas e alinhada ao arco. A montagem pretendia intensificar a desorientação da virada."
+              }
+            ],
+            "allowed_choices": [
+              "A",
+              "B",
+              "TIE",
+              "BOTH_FAIL"
+            ],
+            "warnings": [
+              "Inspect text for authorship clues; metadata removal does not guarantee blinding."
+            ]
+          }
+        ],
+        "private_mapping": {
+          "4200171c-71b3-4462-b4c2-8c16edd99161-1": {
+            "A": "CPE15-WAR-R0",
+            "B": "CPE15-WAR-R1"
+          },
+          "4200171c-71b3-4462-b4c2-8c16edd99161-2": {
+            "A": "CPE15-WAR-R1",
+            "B": "CPE15-WAR-R0"
+          }
+        },
+        "session_id": "4200171c-71b3-4462-b4c2-8c16edd99161",
+        "source_hashes": {
+          "CPE15-WAR-R0": "5342ef84e94ccce5df4a852e1eef2b8f2370d5212bc61d38d84f5329eee9c16b",
+          "CPE15-WAR-R1": "565cfa95a24542aa0ec3087f94b015a2137de51d2a01ed8e00b45dbac15e0689"
+        }
+      },
+      "reviews": [
+        {
+          "choice": "B",
+          "rationale": "Em texto, a entrada do olhar e do giro antes do corte preserva o elo causal. O risco de perder orientação pode ser deliberado; o recorte A deixa sem marca como a cena recupera a curva.",
+          "evidence": [
+            "A desloca da ajuda ao grupo já de costas.",
+            "B descreve perceber Bento, iniciar o giro e entrar no fim da virada.",
+            "Age no intervalo SH05/SH06, com 8 s previstos e persistência do apoio explicitada em B."
+          ],
+          "reviewer": "painel-unico-auditoria-15",
+          "packet_id": "4200171c-71b3-4462-b4c2-8c16edd99161-1"
+        },
+        {
+          "choice": "A",
+          "rationale": "O parecer se mantém quando o reparo aparece primeiro. A oferece a passagem com causa e mantém o outro lado da ação visível em planejamento; ver o percurso na imagem continua pendente.",
+          "evidence": [
+            "A mantém o lado do eixo, mostra passagem ao fundo e marca continuidade de apoio.",
+            "B contém ponto de partida e destino, mas omite a transição entre eles."
+          ],
+          "reviewer": "painel-unico-auditoria-15",
+          "packet_id": "4200171c-71b3-4462-b4c2-8c16edd99161-2"
+        }
+      ],
+      "consolidation": {
+        "outcome": "CPE15-WAR-R1",
+        "per_reviewer": {
+          "painel-unico-auditoria-15": "CPE15-WAR-R1"
+        },
+        "disagreements": [],
+        "order_changes": [],
+        "reviewer_dissent": [],
+        "human_decision_required": true,
+        "approved": false,
+        "position_bias_rate": null,
+        "position_bias_limit": "Same-context repeats are descriptive, not isolated fresh-context position-bias measurement."
+      }
+    },
+    {
+      "id": "CPE15-SUS",
+      "title": "O intervalo",
+      "department": "suspense",
+      "rubric": {
+        "id": "RUB-SUSPENSE",
+        "criteria": [
+          "Ameaça ou perda compreensível",
+          "Distribuição de informação deliberada",
+          "Prazo e alternativas interferem nas escolhas"
+        ],
+        "required_evidence": [
+          "Brief e intenção aprovados",
+          "Texto/versão acessível",
+          "Trechos e causalidade apontados",
+          "Restrições e protegidos do projeto"
+        ]
+      },
+      "rubric_sha256": "71a62922c266c62df6e48c894ca8a6e0f231bd62cb95981db21774199972b131",
+      "character_counts": [
+        346,
+        386
+      ],
+      "word_counts": [
+        58,
+        64
+      ],
+      "packet_session": {
+        "public_packets": [
+          {
+            "packet_id": "e90cc86b-7c9c-47c3-8e48-a9531850aefb-1",
+            "context": {
+              "intention": "Nara trabalha sozinha numa sala de manutenção de arquivo à noite. Duas batidas curtas, vindas da lateral de um armário técnico, retornam no intervalo em que ela costuma recuar para ouvir. Nara tenta distinguir o que ouve do que espera ouvir. A cena fica com ela no mesmo lugar durante 11 s. A origem do som e a existência de qualquer intruso permanecem abertas.",
+              "genre": "suspense psicologico",
+              "format": "planning excerpt; before and repair share the same facts unless the later excerpt specifies a change",
+              "limits": "assess textual evidence only"
+            },
+            "alternatives": [
+              {
+                "label": "A",
+                "text": "00:00–00:04 Médio fixo. Lâmpada sobre a bancada e armário no fundo. Nara encaixa uma pasta na prateleira. Ouvem-se ventilação e duas batidas laterais.\n00:04–00:08 Nara vira o rosto e diz «Tem alguém aí». A segunda ocorrência de duas batidas entra no instante da pergunta.\n00:08–00:11 Nara ergue a mão à altura do puxador. A câmera retém o quadro."
+              },
+              {
+                "label": "B",
+                "text": "00:00–00:04 Mesma ação, quadro e som. A primeira ocorrência estabelece o nível da ventilação e a posição lateral das batidas.\n00:04–00:08 A segunda ocorrência surge depois de Nara parar diante do armário, enquanto a frase continua sem ser dita. Mantém-se a pausa no mesmo trecho e o ruído constante da ventilação.\n00:08–00:11 Mesma mão suspensa, com a espera audível até o fim do plano."
+              }
+            ],
+            "allowed_choices": [
+              "A",
+              "B",
+              "TIE",
+              "BOTH_FAIL"
+            ],
+            "warnings": [
+              "Inspect text for authorship clues; metadata removal does not guarantee blinding."
+            ]
+          },
+          {
+            "packet_id": "e90cc86b-7c9c-47c3-8e48-a9531850aefb-2",
+            "context": {
+              "intention": "Nara trabalha sozinha numa sala de manutenção de arquivo à noite. Duas batidas curtas, vindas da lateral de um armário técnico, retornam no intervalo em que ela costuma recuar para ouvir. Nara tenta distinguir o que ouve do que espera ouvir. A cena fica com ela no mesmo lugar durante 11 s. A origem do som e a existência de qualquer intruso permanecem abertas.",
+              "genre": "suspense psicologico",
+              "format": "planning excerpt; before and repair share the same facts unless the later excerpt specifies a change",
+              "limits": "assess textual evidence only"
+            },
+            "alternatives": [
+              {
+                "label": "A",
+                "text": "00:00–00:04 Mesma ação, quadro e som. A primeira ocorrência estabelece o nível da ventilação e a posição lateral das batidas.\n00:04–00:08 A segunda ocorrência surge depois de Nara parar diante do armário, enquanto a frase continua sem ser dita. Mantém-se a pausa no mesmo trecho e o ruído constante da ventilação.\n00:08–00:11 Mesma mão suspensa, com a espera audível até o fim do plano."
+              },
+              {
+                "label": "B",
+                "text": "00:00–00:04 Médio fixo. Lâmpada sobre a bancada e armário no fundo. Nara encaixa uma pasta na prateleira. Ouvem-se ventilação e duas batidas laterais.\n00:04–00:08 Nara vira o rosto e diz «Tem alguém aí». A segunda ocorrência de duas batidas entra no instante da pergunta.\n00:08–00:11 Nara ergue a mão à altura do puxador. A câmera retém o quadro."
+              }
+            ],
+            "allowed_choices": [
+              "A",
+              "B",
+              "TIE",
+              "BOTH_FAIL"
+            ],
+            "warnings": [
+              "Inspect text for authorship clues; metadata removal does not guarantee blinding."
+            ]
+          }
+        ],
+        "private_mapping": {
+          "e90cc86b-7c9c-47c3-8e48-a9531850aefb-1": {
+            "A": "CPE15-SUS-R0",
+            "B": "CPE15-SUS-R1"
+          },
+          "e90cc86b-7c9c-47c3-8e48-a9531850aefb-2": {
+            "A": "CPE15-SUS-R1",
+            "B": "CPE15-SUS-R0"
+          }
+        },
+        "session_id": "e90cc86b-7c9c-47c3-8e48-a9531850aefb",
+        "source_hashes": {
+          "CPE15-SUS-R0": "83816530eefddee19213e525afbeb855990c9eb978a3d745b09dfbe5d43e0f7e",
+          "CPE15-SUS-R1": "eae7e9da3597aa07a1316121e5f3eba4ea38ec4e5a431f6a21ad5b6dc7626d45"
+        }
+      },
+      "reviews": [
+        {
+          "choice": "B",
+          "rationale": "B preserva a segunda pista sem anexá-la à pergunta, mais compatível com a intenção de origem aberta. Se o objetivo fosse mostrar Nara provocar uma resposta, A ofereceria uma mudança de postura própria.",
+          "evidence": [
+            "Entre 00:04 e 00:08, A põe a segunda batida no instante de «Tem alguém aí».",
+            "B põe a repetição após Nara parar e suprime a fala; duas variáveis mudam.",
+            "O gesto no puxador continua em ambos na última janela."
+          ],
+          "reviewer": "painel-unico-auditoria-15",
+          "packet_id": "e90cc86b-7c9c-47c3-8e48-a9531850aefb-1"
+        },
+        {
+          "choice": "A",
+          "rationale": "A faz a ameaça reaparecer após parada e mantém a informação sonora separada de uma pergunta explícita. Escuta real poderia alterar a leitura, e a comparação não isola fala de tempo.",
+          "evidence": [
+            "A registra pausa no ruído contínuo antes da mão em espera.",
+            "B encadeia segunda batida e frase no mesmo instante."
+          ],
+          "reviewer": "painel-unico-auditoria-15",
+          "packet_id": "e90cc86b-7c9c-47c3-8e48-a9531850aefb-2"
+        }
+      ],
+      "consolidation": {
+        "outcome": "CPE15-SUS-R1",
+        "per_reviewer": {
+          "painel-unico-auditoria-15": "CPE15-SUS-R1"
+        },
+        "disagreements": [],
+        "order_changes": [],
+        "reviewer_dissent": [],
+        "human_decision_required": true,
+        "approved": false,
+        "position_bias_rate": null,
+        "position_bias_limit": "Same-context repeats are descriptive, not isolated fresh-context position-bias measurement."
+      }
+    },
+    {
+      "id": "CPE15-DRA",
+      "title": "Farinha na dobra",
+      "department": "dialogue",
+      "rubric": {
+        "id": "RUB-DIALOGUE",
+        "criteria": [
+          "Cada fala tenta obter ou evitar algo",
+          "Informação nova não repete o gesto",
+          "Voz e resposta pertencem à situação"
+        ],
+        "required_evidence": [
+          "Brief e intenção aprovados",
+          "Texto/versão acessível",
+          "Trechos e causalidade apontados",
+          "Restrições e protegidos do projeto"
+        ]
+      },
+      "rubric_sha256": "865f7726944d714b40ec72c03a518f401bc161625e7d078278b4663f0ee88f9e",
+      "character_counts": [
+        383,
+        310
+      ],
+      "word_counts": [
+        68,
+        53
+      ],
+      "packet_session": {
+        "public_packets": [
+          {
+            "packet_id": "180fc91c-54e2-4d30-97dc-047d3cdd5afe-1",
+            "context": {
+              "intention": "Lia e Rui fecham a confeitaria da família. Lia empilha panos dobrados para si e para o irmão. Rui quer ajudar, mas adianta o passo de tirar as coisas. A relação muda quando ele aceita fazer mais uma dobra do jeito que ela mostra. A discussão que levou ao fechamento fica fora da cena. Um plano médio conjunto de 12 s, com luz de fim de tarde entrando da frente da loja.",
+              "genre": "drama emocional",
+              "format": "planning excerpt; before and repair share the same facts unless the later excerpt specifies a change",
+              "limits": "assess textual evidence only"
+            },
+            "alternatives": [
+              {
+                "label": "A",
+                "text": "00:00–00:04 Rui põe a caixa vazia na mesa. Lia dobra o primeiro pano pela costura. O tecido deixa farinha sobre o tampo.\n00:04–00:08 Rui pega o segundo pano, dobra às pressas e diz «Desculpa ter feito tudo depressa». Lia passa o dedo pela costura exposta.\n00:08–00:12 Rui desfaz a segunda dobra e segue a costura apontada. Lia muda o lugar do primeiro pano para abrir espaço na mesa."
+              },
+              {
+                "label": "B",
+                "text": "00:00–00:04 Mesma entrada, rotina e marca de farinha.\n00:04–00:08 Conservar a dobra apressada e o dedo de Lia sobre a costura. Rui permanece em silêncio e conserva a respiração entre o toque e o gesto seguinte.\n00:08–00:12 Mesmas mãos, tempo e decisão de Lia. A segunda dobra termina perto da marca de farinha."
+              }
+            ],
+            "allowed_choices": [
+              "A",
+              "B",
+              "TIE",
+              "BOTH_FAIL"
+            ],
+            "warnings": [
+              "Inspect text for authorship clues; metadata removal does not guarantee blinding."
+            ]
+          },
+          {
+            "packet_id": "180fc91c-54e2-4d30-97dc-047d3cdd5afe-2",
+            "context": {
+              "intention": "Lia e Rui fecham a confeitaria da família. Lia empilha panos dobrados para si e para o irmão. Rui quer ajudar, mas adianta o passo de tirar as coisas. A relação muda quando ele aceita fazer mais uma dobra do jeito que ela mostra. A discussão que levou ao fechamento fica fora da cena. Um plano médio conjunto de 12 s, com luz de fim de tarde entrando da frente da loja.",
+              "genre": "drama emocional",
+              "format": "planning excerpt; before and repair share the same facts unless the later excerpt specifies a change",
+              "limits": "assess textual evidence only"
+            },
+            "alternatives": [
+              {
+                "label": "A",
+                "text": "00:00–00:04 Mesma entrada, rotina e marca de farinha.\n00:04–00:08 Conservar a dobra apressada e o dedo de Lia sobre a costura. Rui permanece em silêncio e conserva a respiração entre o toque e o gesto seguinte.\n00:08–00:12 Mesmas mãos, tempo e decisão de Lia. A segunda dobra termina perto da marca de farinha."
+              },
+              {
+                "label": "B",
+                "text": "00:00–00:04 Rui põe a caixa vazia na mesa. Lia dobra o primeiro pano pela costura. O tecido deixa farinha sobre o tampo.\n00:04–00:08 Rui pega o segundo pano, dobra às pressas e diz «Desculpa ter feito tudo depressa». Lia passa o dedo pela costura exposta.\n00:08–00:12 Rui desfaz a segunda dobra e segue a costura apontada. Lia muda o lugar do primeiro pano para abrir espaço na mesa."
+              }
+            ],
+            "allowed_choices": [
+              "A",
+              "B",
+              "TIE",
+              "BOTH_FAIL"
+            ],
+            "warnings": [
+              "Inspect text for authorship clues; metadata removal does not guarantee blinding."
+            ]
+          }
+        ],
+        "private_mapping": {
+          "180fc91c-54e2-4d30-97dc-047d3cdd5afe-1": {
+            "A": "CPE15-DRA-R0",
+            "B": "CPE15-DRA-R1"
+          },
+          "180fc91c-54e2-4d30-97dc-047d3cdd5afe-2": {
+            "A": "CPE15-DRA-R1",
+            "B": "CPE15-DRA-R0"
+          }
+        },
+        "session_id": "180fc91c-54e2-4d30-97dc-047d3cdd5afe",
+        "source_hashes": {
+          "CPE15-DRA-R0": "4b55e3d0c9cf149293ff1cc55d77d261973e260e2dff7b0ba2b9c40afd1357b0",
+          "CPE15-DRA-R1": "bb4694e9ddfb89696fdfca9ebc4b16694c7aab534c6078b8b8c0fb4f84a28a3b"
+        }
+      },
+      "reviews": [
+        {
+          "choice": "TIE",
+          "rationale": "A desculpa verbal tem função de reparação e a ação já possui o desfazer da dobra. B confia no gesto e introduz uma direção de respiração. O mesmo texto de intenção permite ambos, com efeitos diferentes de explicitude.",
+          "evidence": [
+            "Em A, 00:04–00:08 inclui pedido de desculpa; a seguir, Rui desfaz a dobra.",
+            "B mantém a costura e a abertura da mesa por remissão e pede silêncio e respiração.",
+            "Distinção entre reconhecimento explícito e implícito depende de visibilidade da costura e tempo de resposta."
+          ],
+          "reviewer": "painel-unico-auditoria-15",
+          "packet_id": "180fc91c-54e2-4d30-97dc-047d3cdd5afe-1"
+        },
+        {
+          "choice": "TIE",
+          "rationale": "O gesto é preservado nas duas ordens. A dá mais espaço à negociação não verbal; B verbaliza a decisão com utilidade plausível se o pequeno sinal não chegar. Não há ganho inequívoco no recorte textual.",
+          "evidence": [
+            "A prescreve silêncio até a resposta de Rui e mantém a decisão de Lia por remissão.",
+            "B combina a desculpa com ação posterior que verifica se Rui aceitou o gesto da irmã."
+          ],
+          "reviewer": "painel-unico-auditoria-15",
+          "packet_id": "180fc91c-54e2-4d30-97dc-047d3cdd5afe-2"
+        }
+      ],
+      "consolidation": {
+        "outcome": "TIE",
+        "per_reviewer": {
+          "painel-unico-auditoria-15": "TIE"
+        },
+        "disagreements": [],
+        "order_changes": [],
+        "reviewer_dissent": [],
+        "human_decision_required": true,
+        "approved": false,
+        "position_bias_rate": null,
+        "position_bias_limit": "Same-context repeats are descriptive, not isolated fresh-context position-bias measurement."
+      }
+    }
+  ]
+}

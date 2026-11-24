@@ -15,7 +15,7 @@ class Routes(unittest.TestCase):
   native = paths('guerra')
   self.assertIn('engines/war-film.md',native)
   self.assertNotIn('project-profiles/project-template.md',native)
-  for alias in ('War','FEB','drama de guerra'):
+  for alias in ('War','War film','FEB','drama de guerra','Guerra histórica','Filmes de guerra'):
    self.assertEqual(paths(alias),native)
 
  def test_task_cli_recovers_war_in_a_mixed_genre_and_chooses_relevant_examples(self):
@@ -29,7 +29,8 @@ class Routes(unittest.TestCase):
    snapshot = base/'fixture.json'
    snapshot.write_text(json.dumps(fixture),encoding='utf8')
    request = base/'request.json'
-   request.write_text(json.dumps({'department':'direction','purpose':'handoff','problem':'continuity'}),encoding='utf8')
+   request.write_text(json.dumps({'department':' Direção ','deliverable':'Plano cinematográfico','problem':'Continuidade',
+                                  'scene_complexity':'Coletiva'}),encoding='utf8')
    run = subprocess.run([sys.executable,'-B',str(root/'scripts/cpe.py'),'task','--workspace',str(base/'run'),
                          '--snapshot',str(snapshot),'--input',str(request),'--project',project,'--episode',episode['id'],
                          '--gate','G10','--model','minimax_h3','--include-test'],capture_output=True,encoding='utf8')
@@ -42,4 +43,8 @@ class Routes(unittest.TestCase):
   self.assertIn('engines/war-film.md',result['retrieved_hashes'])
   self.assertIn('modules/performance-direction.md',result['retrieved_hashes'])
   self.assertIn('modules/continuity.md',result['retrieved_hashes'])
+  self.assertIn('examples/pilot15/focal-shot.json',result['retrieved_hashes'])
+  self.assertIn('references/professional-methods-1.5.md',result['retrieved_hashes'])
+  self.assertEqual(result['routing']['selectors'],{'department':'direction','deliverable':'handoff',
+                   'problem':'continuity','scene_complexity':'complex'})
   self.assertEqual(result['used_knowledge'],[])

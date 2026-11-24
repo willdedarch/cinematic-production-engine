@@ -10,8 +10,7 @@ import time
 from cpe_hook import handle as pretool
 
 START_EVENTS={'SessionStart','SubagentStart'}
-CONTEXT_EVENTS={'UserPromptSubmit','PreCompact','PostCompact','SubagentStop','Stop'}
-RECEIPT_EVENTS={'PostToolUse','SessionEnd','Interrupt'}
+RECEIPT_EVENTS={'PostToolUse','SessionEnd','Interrupt','PreCompact','PostCompact','SubagentStop','Stop'}
 
 
 def contextual(event,text):
@@ -29,10 +28,6 @@ def handle(payload):
         if isinstance(prompt,str) and re.search(r'cinematic.production.engine|\bcpe\b|skill de cinema',prompt,re.I):
             return contextual(event,'Present the relevant CPE support panel in this conversation. Read the connected project state before production advice. A local HTML click is a draft until communicated and validated.')
         return {}
-    if event in {'PreCompact','PostCompact'}:
-        return contextual(event,'CPE continuity comes from the configured project, saved artifact versions and a fresh native state read. Do not infer persistence from a tool success or transfer synthetic preferences to production.')
-    if event in {'SubagentStop','Stop'}:
-        return contextual(event,'If this turn used CPE, preserve rejection and UNKNOWN results. Report the observed artifact, scope and remaining human review. A comparative winner does not imply artistic approval.')
     return {}
 
 
@@ -57,17 +52,23 @@ def main():
     parser=argparse.ArgumentParser()
     parser.add_argument('--receipts',type=Path)
     args=parser.parse_args()
+    event=None
     try:
         payload=json.load(sys.stdin)
         if not isinstance(payload,dict):raise ValueError('Expected object')
+        event=payload.get('hook_event_name')
         result=handle(payload)
-        if payload.get('hook_event_name') in RECEIPT_EVENTS:receipt(payload,args.receipts)
+        if event in RECEIPT_EVENTS:receipt(payload,args.receipts)
     except Exception:
-        # Advisory lifecycle events never fabricate a successful production state.
-        result={'systemMessage':'CPE hook could not process this event. Verify production state explicitly.',
-                'hookSpecificOutput':{'hookEventName':'PreToolUse','permissionDecision':'deny',
-                'permissionDecisionReason':'CPE could not validate this hook input.'}}
+        result={'systemMessage':'CPE hook could not process this event. Verify production state explicitly.'}
+        if event=='PreToolUse':
+            result['hookSpecificOutput']={'hookEventName':'PreToolUse','permissionDecision':'deny',
+                                          'permissionDecisionReason':'CPE could not validate this hook input.'}
+        elif event=='SessionEnd':
+            print(result['systemMessage'],file=sys.stderr)
+            return 1
     print(json.dumps(result,ensure_ascii=False))
+    return 0
 
 
-if __name__=='__main__':main()
+if __name__=='__main__':raise SystemExit(main())

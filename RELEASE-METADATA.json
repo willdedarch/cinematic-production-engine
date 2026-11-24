@@ -1,13 +1,13 @@
 {
-  "skill_version": "1.4.1",
+  "skill_version": "1.5.0",
   "state_contract_version": "3.1.0",
-  "based_on": "CPE 1.4.0 c7484f0",
+  "based_on": "CPE 1.4.1 9b55e5a",
   "native_source": "https://docs.google.com/spreadsheets/d/CONFIGURE_YOUR_SPREADSHEET_ID/edit",
   "account": "production@example.invalid",
   "sync": "on_each_relevant_user_interaction",
   "atomic": false,
-  "python_tests": 321,
-  "dom_checks": 73,
+  "python_tests": 325,
+  "dom_checks": 74,
   "native_tables": 35,
   "native_sheets": 39,
   "original_sha256": "38582e59b870ff1bb6f261a54cdf8d01569661bbc18bf436f6c38c4a75692e8e",
@@ -15,22 +15,23 @@
   "paid_generations": 0,
   "native_concept_generations": 0,
   "limitations": [
-    "State read per interaction; optimistic revision without atomicity",
-    "Director rejected shelter studies; no artistic approval inferred",
-    "Native hook trust and lifecycle verification pending",
-    "Panel browser visual and listening acceptance pending",
-    "One-brief exploratory textual benchmark is not general efficacy evidence"
+    "Scoped read per interaction and optimistic revisions",
+    "Native reads verified in bounded ranges; new remote writes not performed",
+    "Host trust and native hook dispatch pending",
+    "Browser visual and listening acceptance pending",
+    "Local schematic and exploratory textual reviews do not constitute artistic acceptance"
   ],
-  "audit_report": "audits/review-1.4.1.md",
+  "audit_report": "audits/review-1.5.0.md",
   "manual": "MANUAL.md",
   "requirements_matrix": "audits/requirements-traceability.csv",
-  "previous_release_sha256": "17ff0ca52a898bb57e65710a309ce219456958e5d520b14005bed7a0731444e8",
-  "native_test_receipt": "audits/native-validation-summary.json",
+  "previous_release_sha256": "d44def47872695a218d46e331292779b6279de541ec4c720e0df2d963ea6ea38",
+  "native_test_receipt": "audits/connector-readback-1.5.json",
   "public_distribution": {
     "raw_account_exports": false,
     "private_original_v3_included": false,
     "local_configuration_included": false,
     "prior_director_preference_in_seed": false
   },
-  "previous_release_version": "1.4.0"
+  "previous_release_version": "1.4.1",
+  "distribution_status": "LOCAL_CANDIDATE"
 }

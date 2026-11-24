@@ -14,7 +14,7 @@ Use `bible` para leitura, `canon-plan` para propor ou registrar fatos autorizado
 
 Abra `shot-card` para ver intenção, ação, duração, som, câmera, entrada e saída, versões das referências e take escolhido. `storyboard` reutiliza esses dados. Uma divergência entre planos pede explicação, transferência em quadro ou ajuste. Para «o que muda se Lia trocar a mão?», use `shot-impact` e examine os vínculos registrados. Peça ao diretor que identifique dependências editoriais ainda implícitas. Uma exceção documentada preserva os dois estados e o motivo.
 
-Aplique `shot-repair` com o impacto exibido, o campo e as versões que foram examinadas. Preserve ativos aprovados criando sucessores. Em `shot-handoff`, selecione um modelo do catálogo, confira a interface na data da produção, leia o pacote por plano e entregue as referências nos campos indicados. O retorno manual passa por `shot-import`. Ele entra em revisão com origem, direitos, arquivo, hash e plano de origem. Escolher um take para montagem deixa pendentes seus critérios de aprovação final.
+Aplique `shot-repair` com o impacto exibido, o campo e as versões que foram examinadas. Preserve ativos aprovados criando sucessores. Em `shot-handoff`, selecione um modelo do catálogo, confira a interface na data da produção, leia o pacote por plano e entregue as referências nos campos indicados. Na conversa, compare o retorno com `shot-compare` antes de preparar `shot-import`. O take recebe origem, direitos, hash, vínculo a uma versão de plano e revisão pendente. A escolha de um take para montagem tem critérios próprios de aprovação final.
 
 ## Comparar takes e aprender o gosto do diretor
 

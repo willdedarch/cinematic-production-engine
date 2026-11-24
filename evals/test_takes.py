@@ -173,6 +173,17 @@ class TakeReviews(unittest.TestCase):
         self.assertEqual(native_metrics(init,[])['excluded'][0]['reason'],'unconfirmed_message_origin')
         res=native_metrics(init,[fb['user_message_ref']]);self.assertEqual(res['real_human_n'],1)
         self.assertEqual(res['false_approval_rate'],1.0)
+        with tempfile.TemporaryDirectory() as directory:
+            folder=Path(directory)
+            data,request=folder/'state.json',folder/'request.json'
+            data.write_text(json.dumps(init),encoding='utf8')
+            request.write_text(json.dumps({'confirmed_messages':[fb['user_message_ref']]}),encoding='utf8')
+            result=subprocess.run([sys.executable,'-B',str(ROOT/'scripts/cpe.py'),'feedback-metrics',
+                '--workspace',str(folder/'run'),'--snapshot',str(data),'--input',str(request)],
+                capture_output=True,check=True,encoding='utf8')
+            receipt=json.loads(Path(json.loads(result.stdout)['result']).read_text(encoding='utf8'))
+            self.assertEqual(receipt['real_human_n'],0)
+            self.assertEqual(receipt['message_origin'],'UNVERIFIED_BY_LOCAL_CLI')
         target['revision']=2;fb['target_revision']=2
         self.assertEqual(native_metrics(init,[fb['user_message_ref']])['excluded'][0]['reason'],'evaluation_scope_or_version_mismatch')
 

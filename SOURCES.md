@@ -1,4 +1,10 @@
-# Fontes e proveniência — CPE 1.4
+# Fontes e proveniência — CPE 1.5
+
+A [revisão de fontes 1.5](sources/review-1.5.md) registra novas consultas, conflitos e lacunas. O [registro de cobertura](sources/coverage-1.5.json) distingue documentos recebidos, trechos examinados, textos técnicos, inspeção de código e material audiovisual observado. A [matriz de rastreabilidade 1.5](sources/methodological-traceability-1.5.csv) liga cada técnica incorporada à seção, ao destino, ao critério e ao contexto de aplicação.
+
+Para decidir em produção, use os [procedimentos e exercícios originais](references/professional-methods-1.5.md) e as [fichas de referência profissional](references/professional-study-cards-1.5.json). As fichas indicam o que foi efetivamente observado, o que a equipe relatou e o que ainda exige imagem, som, ensaio ou decisão do diretor.
+
+## Registro herdado da 1.4
 
 Registro de consulta e aplicação, atualizado em 24/11/2026. A [revisão recursiva](SOURCES-REVISION-1.4.md) delimita os 113 documentos lidos, conflitos, licenças e exclusões. Não se afirma leitura integral de todos os repositórios. V3 e textos brutos permanecem privados.
 

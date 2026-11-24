@@ -1,0 +1,23 @@
+{
+  "test_panel_runtime.cjs": {
+    "tests": 29,
+    "passed": 29,
+    "support_boards": 37,
+    "environment": "Node VM with minimal DOM test double",
+    "browser_verified": false,
+    "network_calls": 0
+  },
+  "test_desk_runtime.cjs": {
+    "tests": 24,
+    "passed": 24,
+    "environment": "production desk JS; DOM and storage doubles",
+    "browser_verified": false,
+    "network_calls": 0
+  },
+  "test_take_player.cjs": {
+    "tests": 21,
+    "passed": 21,
+    "environment": "real controller; DOM and media clock doubles",
+    "browser_media_verified": false
+  }
+}

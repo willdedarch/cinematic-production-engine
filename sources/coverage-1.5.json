@@ -1,0 +1,640 @@
+{
+  "schema_version": "1.0",
+  "date": "2026-11-24",
+  "scope": "Pesquisa em fontes públicas e consulta nativa somente leitura. Receber um documento indica disponibilidade do conteúdo, sem inferir leitura integral da árvore ou validação de produto.",
+  "connector_snapshot": {
+    "tool": "get_preset_instructions",
+    "retrieved": 13,
+    "focused": 13,
+    "paid_or_generated": 0,
+    "hash_protocol": "SHA-256 de instructions_markdown em UTF-8, sem conversão de quebras de linha",
+    "documents": [
+      {
+        "id": "HF-01",
+        "status": "trechos_examinados",
+        "locator": "connector:/short-drama",
+        "version": "snapshot nativo de 2026-11-24; sem versão pública",
+        "text_sha256": "7fb24a19f7bbea9940a21942b3fe30ba2ab1f1b820a47e219c880b787474f05c",
+        "characters_utf16": 91171,
+        "sections": [
+          "## Looking at results",
+          "## Money",
+          "## 1. The plan (stop 1)"
+        ],
+        "scope": "Snapshot textual fornecido pelo conector; seções selecionadas examinadas."
+      },
+      {
+        "id": "HF-12",
+        "status": "trechos_examinados",
+        "locator": "connector:/shorts",
+        "version": "snapshot nativo de 2026-11-24; sem versão pública",
+        "text_sha256": "5b622b55cd51205b916f6eb8f1f6810b684978cbccaac3ddf924ed97635e4375",
+        "characters_utf16": 34159,
+        "sections": [
+          "## Scope and supplied inputs",
+          "## Own-recording mode",
+          "## 7. Review and deliver"
+        ],
+        "scope": "Snapshot textual fornecido pelo conector; seções selecionadas examinadas."
+      },
+      {
+        "id": "HF-02",
+        "status": "trechos_examinados",
+        "locator": "connector:/short-drama/references/script",
+        "version": "snapshot nativo de 2026-11-24; sem versão pública",
+        "text_sha256": "a34010fb05013c45507c16638d47df9a412392cfe7cb6f4fdf51ce7a787fdb9c",
+        "characters_utf16": 40465,
+        "sections": [
+          "## 4. Staging",
+          "### Read each scene backwards",
+          "## 6. The episode ledger"
+        ],
+        "scope": "Snapshot textual fornecido pelo conector; seções selecionadas examinadas."
+      },
+      {
+        "id": "HF-03",
+        "status": "trechos_examinados",
+        "locator": "connector:/short-drama/references/pictures",
+        "version": "snapshot nativo de 2026-11-24; sem versão pública",
+        "text_sha256": "a43b8e7af17c878546d21eac793355c0c4df0e08732cd5bfe6509ff47b0a338b",
+        "characters_utf16": 24053,
+        "sections": [
+          "## 2. Line-up check",
+          "## 3. The character chain",
+          "### Reverse view and state variant",
+          "## 7. Props"
+        ],
+        "scope": "Snapshot textual fornecido pelo conector; seções selecionadas examinadas."
+      },
+      {
+        "id": "HF-05",
+        "status": "trechos_examinados",
+        "locator": "connector:/short-drama/references/clips",
+        "version": "snapshot nativo de 2026-11-24; sem versão pública",
+        "text_sha256": "c12a07d286e2560e2e7cded751308ffffed4f8e2056bb59ac3538c70cedf2ed4",
+        "characters_utf16": 30609,
+        "sections": [
+          "## 3. Timed speech",
+          "## 6. Reference lines",
+          "## 8. Continuing a scene into a second clip"
+        ],
+        "scope": "Snapshot textual fornecido pelo conector; seções selecionadas examinadas."
+      },
+      {
+        "id": "HF-06",
+        "status": "trechos_examinados",
+        "locator": "connector:/short-drama/references/pacing",
+        "version": "snapshot nativo de 2026-11-24; sem versão pública",
+        "text_sha256": "27cca5536ec97342dafaa457c99e3f5f8a794bc831dfa359f12abf38388f86f9",
+        "characters_utf16": 7763,
+        "sections": [
+          "## The two paces",
+          "## Rhythm by what the shot carries"
+        ],
+        "scope": "Snapshot textual fornecido pelo conector; seções selecionadas examinadas."
+      },
+      {
+        "id": "HF-07",
+        "status": "trechos_examinados",
+        "locator": "connector:/short-drama/references/editing",
+        "version": "snapshot nativo de 2026-11-24; sem versão pública",
+        "text_sha256": "2bcc39c5daf6252ea47b102e48f4be6f3fe40f4c860f2aacfd55174684671b65",
+        "characters_utf16": 21649,
+        "sections": [
+          "## The viewer's test",
+          "## Joins: where most goes wrong",
+          "## Air: a beat held past its point"
+        ],
+        "scope": "Snapshot textual fornecido pelo conector; seções selecionadas examinadas."
+      },
+      {
+        "id": "HF-08",
+        "status": "trechos_examinados",
+        "locator": "connector:/short-drama/references/auto-edit",
+        "version": "snapshot nativo de 2026-11-24; sem versão pública",
+        "text_sha256": "f84415bbd92895ec5d05a104002b2258dbc626fcbf4a4028aa9823485ea5b9e0",
+        "characters_utf16": 19872,
+        "sections": [
+          "## Working rules",
+          "## The contract",
+          "## The report"
+        ],
+        "scope": "Snapshot textual fornecido pelo conector; seções selecionadas examinadas."
+      },
+      {
+        "id": "HF-09",
+        "status": "trechos_examinados",
+        "locator": "connector:/short-drama/references/sound",
+        "version": "snapshot nativo de 2026-11-24; sem versão pública",
+        "text_sha256": "559b506ae8eda848430f5e1b4ca8e6e30dda7c22ce3ead97512d8c89a51f823b",
+        "characters_utf16": 3238,
+        "sections": [
+          "## 1. The beat list",
+          "## 3. One carrier per beat",
+          "## 4. The check"
+        ],
+        "scope": "Snapshot textual fornecido pelo conector; seções selecionadas examinadas."
+      },
+      {
+        "id": "HF-10",
+        "status": "trechos_examinados",
+        "locator": "connector:/short-drama/references/music",
+        "version": "snapshot nativo de 2026-11-24; sem versão pública",
+        "text_sha256": "29003104ff1d427167c735fa35140a1aa5ab6c9b12761e709280f818ddaa1c1b",
+        "characters_utf16": 12799,
+        "sections": [
+          "## 1. The spotting session",
+          "## Listening"
+        ],
+        "scope": "Snapshot textual fornecido pelo conector; seções selecionadas examinadas."
+      },
+      {
+        "id": "HF-11",
+        "status": "trechos_examinados",
+        "locator": "connector:/short-drama/references/qc",
+        "version": "snapshot nativo de 2026-11-24; sem versão pública",
+        "text_sha256": "9fa7d8736bee9e77e99fe9e24039acd42422c1775c5e162dfbc3f64a9d87a5c1",
+        "characters_utf16": 8052,
+        "sections": [
+          "## After rendering: hard checks (must pass)",
+          "## After rendering: flags",
+          "## Visual pass"
+        ],
+        "scope": "Snapshot textual fornecido pelo conector; seções selecionadas examinadas."
+      },
+      {
+        "id": "HF-12-SCRIPT",
+        "status": "trechos_examinados",
+        "locator": "connector:/shorts/references/script",
+        "version": "snapshot nativo de 2026-11-24; sem versão pública",
+        "text_sha256": "e9a3a7f6ed27f7ca404afe2558b3f7ae96c8468dc68e75f6dc5c7d8e0b001f10",
+        "characters_utf16": 14586,
+        "sections": [
+          "## Interpret the input",
+          "## Adapting a reference"
+        ],
+        "scope": "Snapshot textual fornecido pelo conector; seções selecionadas examinadas."
+      },
+      {
+        "id": "HF-13",
+        "status": "trechos_examinados",
+        "locator": "connector:/shorts/references/reference",
+        "version": "snapshot nativo de 2026-11-24; sem versão pública",
+        "text_sha256": "6644fd7d223a84992715b3b4675175da92442ab69b1600050fa8bf17699866f7",
+        "characters_utf16": 20194,
+        "sections": [
+          "## Measure",
+          "## Mechanisms",
+          "## Adapt",
+          "## Review"
+        ],
+        "scope": "Snapshot textual fornecido pelo conector; seções selecionadas examinadas."
+      }
+    ]
+  },
+  "github_snapshot": {
+    "retrieved": 24,
+    "focused": 20,
+    "missing_initial_paths": 2,
+    "documents": [
+      {
+        "repository": "higgsfield-ai/higgsfield-video-engineer",
+        "commit": "082bfd7b7b0b863799fa9afcdfeb3e84ba72e015",
+        "path": "README.md",
+        "locator": "https://github.com/higgsfield-ai/higgsfield-video-engineer/blob/082bfd7b7b0b863799fa9afcdfeb3e84ba72e015/README.md",
+        "git_blob_sha": "2eae302d4d767e60c88f238113cf64f7334682d7",
+        "status": "trechos_examinados",
+        "sections": ["Get started", "Install for your AI agent", "Licence"]
+      },
+      {
+        "repository": "higgsfield-ai/higgsfield-video-engineer",
+        "commit": "082bfd7b7b0b863799fa9afcdfeb3e84ba72e015",
+        "path": "package.json",
+        "locator": "https://github.com/higgsfield-ai/higgsfield-video-engineer/blob/082bfd7b7b0b863799fa9afcdfeb3e84ba72e015/package.json",
+        "git_blob_sha": "403f629efff2a8008b6219e9aaf5378c6a20ebad",
+        "status": "versao_verificada",
+        "sections": []
+      },
+      {
+        "repository": "higgsfield-ai/higgsfield-video-engineer",
+        "commit": "082bfd7b7b0b863799fa9afcdfeb3e84ba72e015",
+        "path": "skills/code-based-films/SKILL.md",
+        "locator": "https://github.com/higgsfield-ai/higgsfield-video-engineer/blob/082bfd7b7b0b863799fa9afcdfeb3e84ba72e015/skills/code-based-films/SKILL.md",
+        "git_blob_sha": "0500d52840ddba7f01d5c4b5742ff7c2c0a74090",
+        "status": "trechos_examinados",
+        "sections": ["Pipeline", "Hard rules", "Default format"]
+      },
+      {
+        "repository": "higgsfield-ai/higgsfield-video-engineer",
+        "commit": "082bfd7b7b0b863799fa9afcdfeb3e84ba72e015",
+        "path": "skills/code-based-films/references/production-map.md",
+        "locator": "https://github.com/higgsfield-ai/higgsfield-video-engineer/blob/082bfd7b7b0b863799fa9afcdfeb3e84ba72e015/skills/code-based-films/references/production-map.md",
+        "git_blob_sha": "e9283aff0ed58937b5f17c31fd7c95af2c3f9216",
+        "status": "trechos_examinados",
+        "sections": [
+          "Music and bar map",
+          "Beat sheet",
+          "Animatic under music",
+          "Notes"
+        ]
+      },
+      {
+        "repository": "higgsfield-ai/higgsfield-video-engineer",
+        "commit": "082bfd7b7b0b863799fa9afcdfeb3e84ba72e015",
+        "path": "skills/code-based-films/references/light-standard.md",
+        "locator": "https://github.com/higgsfield-ai/higgsfield-video-engineer/blob/082bfd7b7b0b863799fa9afcdfeb3e84ba72e015/skills/code-based-films/references/light-standard.md",
+        "git_blob_sha": "c60b56f283d14f47ef11bcc95c7d130df9890ae4",
+        "status": "trechos_examinados",
+        "sections": [
+          "Core rules",
+          "Cinematic variant",
+          "Practical setup in code"
+        ]
+      },
+      {
+        "repository": "higgsfield-ai/higgsfield-video-engineer",
+        "commit": "082bfd7b7b0b863799fa9afcdfeb3e84ba72e015",
+        "path": "skills/code-based-films/references/asset-contract.md",
+        "locator": "https://github.com/higgsfield-ai/higgsfield-video-engineer/blob/082bfd7b7b0b863799fa9afcdfeb3e84ba72e015/skills/code-based-films/references/asset-contract.md",
+        "git_blob_sha": "018630c021ca6262fffd3256208cf0c18eb50a09",
+        "status": "trechos_examinados",
+        "sections": [
+          "Materials",
+          "Proof per asset"
+        ]
+      },
+      {
+        "repository": "higgsfield-ai/higgsfield-video-engineer",
+        "commit": "082bfd7b7b0b863799fa9afcdfeb3e84ba72e015",
+        "path": "skills/code-based-films/references/shots-and-timeline.md",
+        "locator": "https://github.com/higgsfield-ai/higgsfield-video-engineer/blob/082bfd7b7b0b863799fa9afcdfeb3e84ba72e015/skills/code-based-films/references/shots-and-timeline.md",
+        "git_blob_sha": "f3dc7bdbc5552251ce0046701d278d37462c066f",
+        "status": "trechos_examinados",
+        "sections": [
+          "Story timeline",
+          "Shot list",
+          "Cameras",
+          "Timing on the bar map"
+        ]
+      },
+      {
+        "repository": "higgsfield-ai/higgsfield-video-engineer",
+        "commit": "082bfd7b7b0b863799fa9afcdfeb3e84ba72e015",
+        "path": "skills/code-based-films/references/rendering.md",
+        "locator": "https://github.com/higgsfield-ai/higgsfield-video-engineer/blob/082bfd7b7b0b863799fa9afcdfeb3e84ba72e015/skills/code-based-films/references/rendering.md",
+        "git_blob_sha": "792f3fce9afdecd35db810254f7d82682571ff40",
+        "status": "recebido_para_inventario",
+        "sections": []
+      },
+      {
+        "repository": "higgsfield-ai/higgsfield-video-engineer",
+        "commit": "082bfd7b7b0b863799fa9afcdfeb3e84ba72e015",
+        "path": "skills/code-based-films/references/qa.md",
+        "locator": "https://github.com/higgsfield-ai/higgsfield-video-engineer/blob/082bfd7b7b0b863799fa9afcdfeb3e84ba72e015/skills/code-based-films/references/qa.md",
+        "git_blob_sha": "51437c932c7dd5fd3a39b0805d9f272bf69b24da",
+        "status": "trechos_examinados",
+        "sections": [
+          "Machine pass over every frame and every audio sample",
+          "Film-specific criteria",
+          "Read the protocol"
+        ]
+      },
+      {
+        "repository": "higgsfield-ai/higgsfield-video-engineer",
+        "commit": "082bfd7b7b0b863799fa9afcdfeb3e84ba72e015",
+        "path": "skills/code-based-films/references/ip-clean-delivery.md",
+        "locator": "https://github.com/higgsfield-ai/higgsfield-video-engineer/blob/082bfd7b7b0b863799fa9afcdfeb3e84ba72e015/skills/code-based-films/references/ip-clean-delivery.md",
+        "git_blob_sha": "5937bb3ef50fe1b702a90756e4c5f2db22e4b634",
+        "status": "trechos_examinados",
+        "sections": [
+          "Music",
+          "Reference images",
+          "Final IP checklist"
+        ]
+      },
+      {
+        "repository": "higgsfield-ai/higgsfield-video-engineer",
+        "commit": "082bfd7b7b0b863799fa9afcdfeb3e84ba72e015",
+        "path": "skills/code-based-films/references/briefing-agents.md",
+        "locator": "https://github.com/higgsfield-ai/higgsfield-video-engineer/blob/082bfd7b7b0b863799fa9afcdfeb3e84ba72e015/skills/code-based-films/references/briefing-agents.md",
+        "git_blob_sha": "ce94677eafdf01e86dfcd04ce82b650494028586",
+        "status": "recebido_para_inventario",
+        "sections": []
+      },
+      {
+        "repository": "higgsfield-ai/higgsfield-video-engineer",
+        "commit": "082bfd7b7b0b863799fa9afcdfeb3e84ba72e015",
+        "path": "examples/felt-good-morning/BEATS.md",
+        "locator": "https://github.com/higgsfield-ai/higgsfield-video-engineer/blob/082bfd7b7b0b863799fa9afcdfeb3e84ba72e015/examples/felt-good-morning/BEATS.md",
+        "git_blob_sha": "16785efc005818e78a10d78dec9f0b2c9d77b3e2",
+        "status": "trechos_examinados",
+        "sections": [
+          "Beat table",
+          "Material read"
+        ]
+      },
+      {
+        "repository": "higgsfield-ai/higgsfield-video-engineer",
+        "commit": "082bfd7b7b0b863799fa9afcdfeb3e84ba72e015",
+        "path": "examples/felt-good-morning/film.mjs",
+        "locator": "https://github.com/higgsfield-ai/higgsfield-video-engineer/blob/082bfd7b7b0b863799fa9afcdfeb3e84ba72e015/examples/felt-good-morning/film.mjs",
+        "git_blob_sha": null,
+        "status": "caminho_incorreto_404",
+        "sections": [],
+        "limit": "Resolver em examples/felt-good-morning/shots/; caminho correto listado abaixo."
+      },
+      {
+        "repository": "higgsfield-ai/higgsfield-video-engineer",
+        "commit": "082bfd7b7b0b863799fa9afcdfeb3e84ba72e015",
+        "path": "examples/felt-good-morning/story.mjs",
+        "locator": "https://github.com/higgsfield-ai/higgsfield-video-engineer/blob/082bfd7b7b0b863799fa9afcdfeb3e84ba72e015/examples/felt-good-morning/story.mjs",
+        "git_blob_sha": null,
+        "status": "caminho_incorreto_404",
+        "sections": [],
+        "limit": "Resolver em examples/felt-good-morning/shots/; caminho correto listado abaixo."
+      },
+      {
+        "repository": "higgsfield-ai/skills",
+        "commit": "27000402070db19d958789d05b3b52b6f4718d7c",
+        "path": "README.md",
+        "locator": "https://github.com/higgsfield-ai/skills/blob/27000402070db19d958789d05b3b52b6f4718d7c/README.md",
+        "git_blob_sha": "df958830dcf6fc3f7f3b1722fb9f56d6e6137a52",
+        "status": "trechos_examinados",
+        "sections": ["Skills", "Modes", "Quick Reference"]
+      },
+      {
+        "repository": "higgsfield-ai/skills",
+        "commit": "27000402070db19d958789d05b3b52b6f4718d7c",
+        "path": "higgsfield-generate/SKILL.md",
+        "locator": "https://github.com/higgsfield-ai/skills/blob/27000402070db19d958789d05b3b52b6f4718d7c/higgsfield-generate/SKILL.md",
+        "git_blob_sha": "3094e15be8934f077277636fd0f478d15644f252",
+        "status": "trechos_examinados",
+        "sections": [
+          "Discovery guardrail",
+          "Workflow — generic generation"
+        ]
+      },
+      {
+        "repository": "higgsfield-ai/skills",
+        "commit": "27000402070db19d958789d05b3b52b6f4718d7c",
+        "path": "higgsfield-faceless-video/SKILL.md",
+        "locator": "https://github.com/higgsfield-ai/skills/blob/27000402070db19d958789d05b3b52b6f4718d7c/higgsfield-faceless-video/SKILL.md",
+        "git_blob_sha": "c6863c475687a29440eb376c27ddba9adb7362dc",
+        "status": "recebido_para_inventario",
+        "sections": []
+      },
+      {
+        "repository": "higgsfield-ai/skills",
+        "commit": "27000402070db19d958789d05b3b52b6f4718d7c",
+        "path": "higgsfield-faceless-video/references/editing.md",
+        "locator": "https://github.com/higgsfield-ai/skills/blob/27000402070db19d958789d05b3b52b6f4718d7c/higgsfield-faceless-video/references/editing.md",
+        "git_blob_sha": "d2437b36a26e4974aa75f36f761c6bb8603660f3",
+        "status": "trechos_examinados",
+        "sections": [
+          "Edit a previously generated video"
+        ]
+      },
+      {
+        "repository": "0xhughs/director-skills",
+        "commit": "35ca0a2b4cd55b0668aa9ea0f40273324b774bb4",
+        "path": "skills/shotlist-and-visual-breakdown/SKILL.md",
+        "locator": "https://github.com/0xhughs/director-skills/blob/35ca0a2b4cd55b0668aa9ea0f40273324b774bb4/skills/shotlist-and-visual-breakdown/SKILL.md",
+        "git_blob_sha": "777f2a6c5c64b794c642b3d0128100fa4fe4f9d8",
+        "status": "trechos_examinados",
+        "sections": [
+          "Workflow",
+          "Quality checks"
+        ]
+      },
+      {
+        "repository": "0xhughs/director-skills",
+        "commit": "35ca0a2b4cd55b0668aa9ea0f40273324b774bb4",
+        "path": "skills/model-adaptation/SKILL.md",
+        "locator": "https://github.com/0xhughs/director-skills/blob/35ca0a2b4cd55b0668aa9ea0f40273324b774bb4/skills/model-adaptation/SKILL.md",
+        "git_blob_sha": "4c0b5a9a2ef0d82ddcc58c5850fccbed0086e369",
+        "status": "trechos_examinados",
+        "sections": [
+          "Workflow",
+          "Decision logic"
+        ]
+      },
+      {
+        "repository": "62656456/ai-film-skills",
+        "commit": "5fda5740853969c3dcb690b5b386dd1acc4c5f02",
+        "path": "docs/WORKFLOW.md",
+        "locator": "https://github.com/62656456/ai-film-skills/blob/5fda5740853969c3dcb690b5b386dd1acc4c5f02/docs/WORKFLOW.md",
+        "git_blob_sha": "8c60a2ae3751ef3e81c9df5fdef57a8601caef64",
+        "status": "trechos_examinados",
+        "sections": [
+          "Complete filmmaking workflow",
+          "每个阶段实际交付什么"
+        ]
+      },
+      {
+        "repository": "Benitoow/cinema-skills",
+        "commit": "b3d96caaf90729f086ce8bfa96654f40fd98e4e5",
+        "path": "skills/shot-list/SKILL.md",
+        "locator": "https://github.com/Benitoow/cinema-skills/blob/b3d96caaf90729f086ce8bfa96654f40fd98e4e5/skills/shot-list/SKILL.md",
+        "git_blob_sha": "cda95fe902cbedf42df3a8671638d5e31b270886",
+        "status": "trechos_examinados",
+        "sections": [
+          "Process",
+          "Output format"
+        ]
+      },
+      {
+        "repository": "Benitoow/cinema-skills",
+        "commit": "b3d96caaf90729f086ce8bfa96654f40fd98e4e5",
+        "path": "skills/cut-list/SKILL.md",
+        "locator": "https://github.com/Benitoow/cinema-skills/blob/b3d96caaf90729f086ce8bfa96654f40fd98e4e5/skills/cut-list/SKILL.md",
+        "git_blob_sha": "d4940552b8cc7fba8d0ac3be1aee79653541dd7d",
+        "status": "trechos_examinados",
+        "sections": [
+          "Process",
+          "Output format"
+        ]
+      },
+      {
+        "repository": "higgsfield-ai/higgsfield-video-engineer",
+        "commit": "082bfd7b7b0b863799fa9afcdfeb3e84ba72e015",
+        "path": "examples/felt-good-morning/shots/film.mjs",
+        "locator": "https://github.com/higgsfield-ai/higgsfield-video-engineer/blob/082bfd7b7b0b863799fa9afcdfeb3e84ba72e015/examples/felt-good-morning/shots/film.mjs",
+        "git_blob_sha": "e5715f01e89c7c1b61e7b23f693ca1885e085743",
+        "status": "trechos_examinados",
+        "sections": ["SHOTS S6 e S8, linhas 37–48", "shotFor, linha 49", "sceneFor, linhas 63–89"]
+      },
+      {
+        "repository": "higgsfield-ai/higgsfield-video-engineer",
+        "commit": "082bfd7b7b0b863799fa9afcdfeb3e84ba72e015",
+        "path": "examples/felt-good-morning/shots/story.mjs",
+        "locator": "https://github.com/higgsfield-ai/higgsfield-video-engineer/blob/082bfd7b7b0b863799fa9afcdfeb3e84ba72e015/examples/felt-good-morning/shots/story.mjs",
+        "git_blob_sha": "11018dc944c6b4fc6bb6a1e396e04bf0d0744c23",
+        "status": "trechos_examinados",
+        "sections": ["keys, linha 17", "estado de sol, lua e dia, linhas 26–41"]
+      },
+      {
+        "repository": "higgsfield-ai/higgsfield-video-engineer",
+        "commit": "082bfd7b7b0b863799fa9afcdfeb3e84ba72e015",
+        "path": "skills/code-based-films/engine/README.md",
+        "locator": "https://github.com/higgsfield-ai/higgsfield-video-engineer/blob/082bfd7b7b0b863799fa9afcdfeb3e84ba72e015/skills/code-based-films/engine/README.md",
+        "git_blob_sha": "07b12c2f36bda8d6e6f1723a694a7e1675e859a1",
+        "status": "trechos_examinados",
+        "sections": ["Camera, linhas 130–138", "limite de movimento, linha 202"]
+      }
+    ]
+  },
+  "inherited_1_4": {
+    "retrieved": 124,
+    "full_content_read": 113,
+    "sources": [
+      {
+        "id": "SW-01/SW-02",
+        "locator": "https://github.com/jtydhr88/screenwriting-skills/tree/81110874ee98d4415f86efb8310e06b0e778e2d9",
+        "commit": "81110874ee98d4415f86efb8310e06b0e778e2d9",
+        "status": "evidencia_herdada_1_4",
+        "read": 27,
+        "fetched": 27,
+        "manifest": "current-source-audit.json",
+        "limit": "Escopo metodológico enumerado. Livros e roteiros não redistribuídos."
+      },
+      {
+        "id": "OS-01",
+        "locator": "https://github.com/OSideMedia/higgsfield-ai-prompt-skill/tree/e90ed07753b879bb6be157a7cb12e3043a2cbe6f",
+        "commit": "e90ed07753b879bb6be157a7cb12e3043a2cbe6f",
+        "status": "evidencia_herdada_1_4",
+        "read": 28,
+        "fetched": 39,
+        "manifest": "current-source-audit.json",
+        "limit": "Onze itens fora da leitura integral por limites registrados. Arquivo comunitário."
+      },
+      {
+        "id": "HF-16",
+        "locator": "https://github.com/RICKY556677/ai-film-skills/tree/dd9add981f04b914fc3355b7afed3953604261fa",
+        "commit": "dd9add981f04b914fc3355b7afed3953604261fa",
+        "status": "evidencia_herdada_1_4",
+        "read": 2,
+        "fetched": 2,
+        "manifest": "current-source-audit.json",
+        "limit": "Adaptação comunitária. Identidade oficial não demonstrada."
+      },
+      {
+        "id": "DR-01",
+        "locator": "https://github.com/wuwangzhang1216/DirectorSKILL/tree/c65ae0d14457053efb1e354c7e7f7e120d97fad1",
+        "commit": "c65ae0d14457053efb1e354c7e7f7e120d97fad1",
+        "status": "evidencia_herdada_1_4",
+        "read": 45,
+        "fetched": 45,
+        "manifest": "current-source-audit.json",
+        "limit": "Vinte lentes e demais documentos selecionados. Os estudos 1.5 são originais."
+      },
+      {
+        "id": "HF-15",
+        "locator": "https://github.com/XucroYuri/higgsfield-hell-grind-opensource/tree/79c8d13fabfeab38cded2a1ccfa0a21869b2d2d3",
+        "commit": "79c8d13fabfeab38cded2a1ccfa0a21869b2d2d3",
+        "status": "evidencia_herdada_1_4",
+        "read": 11,
+        "fetched": 11,
+        "manifest": "current-source-audit.json",
+        "limit": "Página pública do mirror voltou a abrir. Corpus audiovisual e procedência integral ficam pendentes."
+      }
+    ]
+  },
+  "web_sources": [
+    {
+      "id": "HF-14",
+      "title": "Higgsfield Originals / Hell Grind",
+      "locator": "https://higgsfield.ai/blog/inside-higgsfield-3-how-we-built-higgsfield-originals",
+      "version": "página datada por consulta",
+      "status": "trechos_examinados",
+      "limit": "Produção, seleção de atuações e remontagem, conforme relato do produtor; sem prova independente."
+    },
+    {
+      "id": "HF-DRAMA-PAGE",
+      "title": "Short Drama Studio",
+      "locator": "https://higgsfield.ai/blog/higgsfield-short-drama-studio",
+      "version": "página datada por consulta",
+      "status": "trechos_examinados",
+      "limit": "Reescrita automática pode alterar detalhes do original. Produto distinto do fluxo manual CPE."
+    },
+    {
+      "id": "PD-01",
+      "title": "Pitch Drama",
+      "locator": "https://higgsfield.ai/enterprise-help-center/platform/script-to-finished-video#the-open-source-skill-we-used-to-write-the-story",
+      "version": "página datada por consulta",
+      "status": "pagina_examinada_arquivo_403",
+      "limit": "O próprio botão da página retornou 403 novamente. Só os entregáveis declarados foram lidos."
+    },
+    {
+      "id": "UNKNOWN-01",
+      "title": "Cinematic Skills",
+      "locator": null,
+      "version": null,
+      "status": "origem_ambigua",
+      "limit": "Título genérico, sem vínculo histórico inequívoco. Aguardam-se autor ou URL para auditoria da fonte exata."
+    },
+    {
+      "id": "OPT-COOKE",
+      "title": "Cooke Anamorphic/i FF e comparação óptica",
+      "locator": "https://cookeoptics.com/lens/anamorphic-i-ff/",
+      "version": "Anamorphic/i Full Frame Plus 1,8×",
+      "status": "trechos_examinados",
+      "limit": "Cobertura, squeeze e elementos de aparência são específicos do conjunto óptico."
+    },
+    {
+      "id": "OPT-PV",
+      "title": "Panavision C Series",
+      "locator": "https://www.panavision.com/camera-and-optics/optics/product-detail/c-c-series",
+      "version": "ficha C Series",
+      "status": "trechos_examinados",
+      "limit": "Alegações do fabricante. Variação por unidade requer teste."
+    },
+    {
+      "id": "OPT-ZEISS",
+      "title": "ZEISS Supreme Prime Radiance",
+      "locator": "https://www.zeiss.com/photonics-and-optics/en/cinematography/lenses/supreme-prime-radiance-lenses.html",
+      "version": "Supreme Prime Radiance T* blue",
+      "status": "trechos_examinados",
+      "limit": "Alegações do fabricante. Exemplo de desenho moderno de flare; não representa todo vidro vintage."
+    },
+    {
+      "id": "OPT-ARRI",
+      "title": "ARRI ALEXA Studio Electronic and Mirror Shutter",
+      "locator": "https://www.arri.com/resource/blob/186770/ad23969317dafff402f0902d47bb4ab7/alexa-studio-electronic-and-mirror-shutter-white-paper-data.pdf",
+      "version": "white paper ALEXA Studio/XT Studio",
+      "status": "trechos_examinados",
+      "limit": "Pág. 4 e seção Motion Portrayal. Extração textual disponível; captura da página falhou."
+    },
+    {
+      "id": "IMG-KODAK",
+      "title": "Kodak VISION3 500T",
+      "locator": "https://www.kodak.com/content/products-brochures/Film/VISION3-500T-Color-Negative-Film-7219-TECHNICAL-DATA.pdf",
+      "version": "H-1-5219t revisado 7-15",
+      "status": "trechos_examinados",
+      "limit": "Pág. 4, curvas sensitométricas/espectrais via leitura textual. PDF em condições específicas, sem calibração de emulação."
+    },
+    {
+      "id": "IMG-BLENDER",
+      "title": "Blender manual câmeras e gerenciamento de cor",
+      "locator": "https://docs.blender.org/manual/en/4.5/render/cameras.html",
+      "version": "manual Blender 4.5 LTS",
+      "status": "excerto_indexado",
+      "limit": "Busca forneceu excertos oficiais de Camera/Sensor Fit/DoF e AgX. A abertura das páginas completas retornou 402."
+    },
+    {
+      "id": "DIR-ZONE",
+      "title": "ASC Clubhouse Conversations — The Zone of Interest",
+      "locator": "https://theasc.com/video/clubhouse-conversations-the-zone-of-interest/",
+      "version": "ficha de entrevista",
+      "status": "descricao_primaria_examinada",
+      "limit": "Descrição da entrevista com Łukasz Żal. Vídeo e filme não analisados."
+    },
+    {
+      "id": "EDIT-MURCH",
+      "title": "ASC — Walter Murch Editing In Real Time",
+      "locator": "https://theasc.com/post/the-film-book/walter-murch-2-real-time-cuts-image-editing/",
+      "version": "entrevista publicada",
+      "status": "descricao_primaria_examinada",
+      "limit": "Sinopse publicada pela ASC descreve o procedimento do montador. Entrevista em vídeo e efeito no público não aferidos."
+    }
+  ]
+}

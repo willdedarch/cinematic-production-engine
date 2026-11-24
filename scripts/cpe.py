@@ -43,8 +43,10 @@ def execute(a,run):
  if c=='task':
   require(s is not None,'Agent must provide latest native read copy')
   return context(s,a.project,a.episode,a.gate or a.task.upper(),a.facet,a.model,a.include_test,
-                 spec.get('intention',''),spec.get('target_ids',[]),spec.get('confirmed_messages',[]),
-                 department=spec.get('department',''),purpose=spec.get('purpose',''),problem=spec.get('problem',''))
+                 spec.get('intention',''),spec.get('target_ids',[]),
+                 department=spec.get('department',''),purpose=spec.get('purpose',''),problem=spec.get('problem',''),
+                 secondary_genres=spec.get('secondary_genres',[]),scene_complexity=spec.get('scene_complexity',''),
+                 deliverable=spec.get('deliverable',''))
  if c in {'status','resume','next'}:
   require(s is not None,'Latest shared-state read copy required');validate(s);wf=[w for w in s['tables']['Workflow'] if w['episode_id']==a.episode];require(wf,'Episode not found');done={'APPROVED','LOCKED','SKIPPED'};eligible=[w for w in wf if w['status'] not in done and all(next(x for x in wf if x['gate_id']==d)['status'] in done for d in w['depends_on'].split(',') if d)]
   return {'kind':'STATE_READ_COPY','source_read_at':s['read_at'],'remote_read_performed_by_cli':False,'episode_handoff':__import__('series_bible').handoff(s,wf[0]['project_id'],a.episode,before_episode=True),'workflow':wf,'eligible':[w['gate_id'] for w in eligible],'next':'Ask agent to present eligible stage; never approve automatically'}
@@ -72,8 +74,9 @@ def execute(a,run):
   from judgment import native_metrics
   if c=='take-pair':return take_pair(s,spec)
   if c=='take-vote':return vote_plan(s,spec)
-  return native_metrics(s,spec.get('confirmed_messages',[]))
- if c in {'shot-card','storyboard','shot-impact','shot-handoff','shot-import','shot-link','shot-repair'}:
+  return {**native_metrics(s),'message_origin':'UNVERIFIED_BY_LOCAL_CLI'}
+ if c in {'shot-card','storyboard','shot-impact','shot-handoff','shot-compare','shot-import','shot-link','shot-repair'}:
+  require(s is not None,'Latest shared-state read copy required')
   from shot_workflow import dispatch
   return dispatch(c,s,spec,run.dir)
  if c=='prewrite':
@@ -113,13 +116,14 @@ def execute(a,run):
    matches=[(name,row) for name in PRODUCTION_ASSETS for row in s['tables'].get(name,[]) if row['id']==packet['target']['id']]
    require(len(matches)==1 and matches[0][1]['revision']==packet['target']['revision'],'Packet target must match current state copy')
    table,row=matches[0]
+   require(not row['is_test'] or a.include_test,'Explicit test scope required')
    require(table!='Artifact Registry' or packet['target']['sha256']==row['sha256'],'Review file differs from the registered take')
    require(not a.project or a.project==row['project_id'],'Review target belongs to another project')
    episode=a.episode or row['episode_id']
    require(not a.episode or not row['episode_id'] or a.episode==row['episode_id'],'Review target belongs to another episode')
    if episode:require(any(e['id']==episode and e['project_id']==row['project_id'] for e in s['tables']['Episodes']),'Unknown review episode')
-   packet['target']['record_sha256']=fingerprint(row);packet['source_read_at']=s['read_at']
-   packet['take_preferences']=[] if spec.get('holdout') else take_preferences(s,row['project_id'],episode,[row['id']],a.include_test,spec.get('confirmed_messages',[]))
+   packet['target']['record_sha256']=fingerprint(row);packet['target']['is_test']=row['is_test'];packet['source_read_at']=s['read_at']
+   packet['take_preferences']=[] if spec.get('holdout') else take_preferences(s,row['project_id'],episode,[row['id']],a.include_test)
   return packet
  if c=='revise':
   from judgment import revision_decision
@@ -133,9 +137,9 @@ def execute(a,run):
  raise StateError('Unknown command; use natural language with agent or --help')
 def main(argv=None):
  p=argparse.ArgumentParser(description=__doc__);p.add_argument('command');p.add_argument('--workspace',type=Path,required=True);p.add_argument('--input',type=Path);p.add_argument('--source',type=Path);p.add_argument('--second',type=Path);p.add_argument('--paths',nargs='+',type=Path);p.add_argument('--snapshot',type=Path);p.add_argument('--review',type=Path);p.add_argument('--plan',type=Path);p.add_argument('--project');p.add_argument('--episode');p.add_argument('--gate');p.add_argument('--task',default='STATUS');p.add_argument('--facet',action='append',default=[]);p.add_argument('--model',default='');p.add_argument('--include-test',action='store_true');p.add_argument('--blender');p.add_argument('--model-path',type=Path);p.add_argument('--max-seconds',type=float,default=60);p.add_argument('--sample-fps',type=float,default=1);a=p.parse_args(argv)
- run=Run(a.workspace,{'project_id':a.project,'episode_id':a.episode,'department':a.facet,'command':a.command});cmd=a.command.lower();pair={'experiment':('before_experiment','after_experiment'),'judge':('before_judgment','after_judgment'),'revise':('before_revision','after_revision'),'prepare':('before_transition','after_transition'),'compile':('before_export','after_export'),'import':('before_import','after_import'),'recover':('before_stage','on_recovery'),'checkpoint':('before_checkpoint','after_checkpoint')}.get(cmd,('before_stage','after_stage'))
+ run=Run(a.workspace,{'project_id':a.project,'episode_id':a.episode,'department':a.facet,'command':a.command});cmd=a.command.lower();pair={'experiment':('before_experiment','after_experiment'),'judge':('before_judgment','after_judgment'),'revise':('before_revision','after_revision'),'prepare':('before_transition','after_transition'),'compile':('before_export','after_export'),'shot-handoff':('before_export','after_export'),'import':('before_import','after_import'),'shot-import':('before_import','after_import'),'recover':('before_stage','on_recovery'),'checkpoint':('before_checkpoint','after_checkpoint')}.get(cmd,('before_stage','after_stage'))
  run.event(pair[0],'REQUESTED',inputs={'input':str(a.input) if a.input else None,'source':str(a.source) if a.source else None})
- creating=cmd in {'overlay','contact','previs','blender','compile','import','experiment'}
+ creating=cmd in {'overlay','contact','previs','blender','compile','shot-handoff','import','shot-import','experiment'}
  if creating:run.event('before_create','REQUESTED',operation=cmd,scope_note='Local derivative or evidence artifact; not final generative production')
  try:
   approving=cmd=='prepare' and any(c.get('values',{}).get('status') in {'APPROVED','LOCKED'} for c in read(a.input).get('changes',[]))

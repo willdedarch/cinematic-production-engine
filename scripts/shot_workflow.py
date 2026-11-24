@@ -2,7 +2,7 @@
 from collections import defaultdict, deque
 from datetime import datetime, timezone
 from pathlib import Path
-import hashlib, json, re
+import hashlib, json, math, re, shutil
 
 from shared_state import ASSETS, SCHEMA, canonical, fingerprint, index, prepare, require, validate, timestamp
 from series_bible import source_link
@@ -42,7 +42,19 @@ def check_relationship(ix, decision, data, current=False):
     elif relation in {"take","selected_take"}:
         require(source=="Shot List" and target=="Artifact Registry" and left["episode_id"]==right["episode_id"]
                 and (not current or right["kind"]!="REFERENCE"),"Take must be registered media for this episode")
-    elif relation=="exception":
+    if "return_provenance" in data:
+        provenance=data["return_provenance"]
+        require(relation=="take" and isinstance(provenance,dict),"Return provenance needs a take relationship")
+        if provenance.get("status")=="UNBOUND_LEGACY_IMPORT":
+            require(set(provenance)=={"status"},"Legacy import has no return packet evidence")
+        else:
+            require(set(provenance)=={"status","handoff_sha256","media_sha256"}
+                    and provenance["status"]=="DECLARED_RETURN_PACKET"
+                    and all(isinstance(provenance[k],str) and re.fullmatch(r"[0-9a-f]{64}",provenance[k])
+                            for k in ("handoff_sha256","media_sha256")),"Invalid declared return packet")
+            if current or data["to"]["revision"]==right["revision"]:
+                require(provenance["media_sha256"]==right["sha256"],"Declared return bytes differ from the registered asset")
+    if relation=="exception":
         require(source==target=="Shot List" and left["episode_id"]==right["episode_id"] and data.get("field")
                 and (not current or left["scene_beat"]==right["scene_beat"] and left["order"]<right["order"]),
                 "Continuity exception must identify a field between ordered shots in the same scene")
@@ -62,6 +74,27 @@ def validate_shot_links(snapshot):
         if decision["topic"]!=TOPIC:continue
         check_relationship(ix,decision,json.loads(decision["choice"]))
     return True
+
+
+def verify_return_sources(plan):
+    """Recheck locally inspected bytes before attempting the state write."""
+    from takes import local_media_path
+
+    after=index(plan['candidate'])['Artifact Registry']
+    for change in plan['changes']:
+        decision=change['after']
+        if change['table']!='Decisions' or decision['topic']!=TOPIC or decision['status']!='RECORDED':
+            continue
+        data=json.loads(decision['choice'])
+        if data.get('return_provenance',{}).get('status')!='DECLARED_RETURN_PACKET':
+            continue
+        asset=after[data['to']['id']]
+        require(Path(asset['uri']).is_absolute(), 'Return packet needs the inspected absolute local path')
+        path=local_media_path(asset['uri'])
+        require(path.is_absolute() and path.is_file() and digest_file(path)==asset['sha256'],
+                'Returned take changed or is unavailable before write')
+
+
 def ref(table,row):
     return {"table":table,"id":row["id"],"revision":row["revision"],"sha256":fingerprint(row)}
 def resolve(ix,descriptor):
@@ -126,10 +159,12 @@ def card(snapshot,shot_id):
     warnings=[]
     if previous:
         outgoing=state(previous[-1]).get("out",{})
-        for key in sorted(set(incoming)&set(outgoing)):
-            if incoming[key]!=outgoing[key]:
+        require(isinstance(incoming,dict) and isinstance(outgoing,dict),"Structured continuity states must be objects")
+        for key in sorted(outgoing):
+            if incoming.get(key)!=outgoing[key] or key not in incoming:
                 exceptions=[e["decision"] for e in links if e["relation"]=="exception" and not e["stale"] and e["field"]==key and e["from"]["id"]==previous[-1]["id"] and e["to"]["id"]==shot_id]
-                warnings.append({"field":key,"previous_shot":previous[-1]["id"],"before":outgoing[key],"after":incoming[key],
+                warnings.append({"field":key,"previous_shot":previous[-1]["id"],"before":outgoing[key],"after":incoming.get(key),
+                                 "issue":"CHANGED" if key in incoming else "MISSING_ENTRY",
                                  "status":"JUSTIFIED" if exceptions else "REVIEW_REQUIRED","decisions":exceptions})
     def order_decision(d):return timestamp(ix["Decisions"][d["id"]]["updated_at"]),d["id"]
     latest=sorted((l["decision"] for l in links if l["decision"]),key=order_decision)
@@ -160,6 +195,8 @@ def impact(snapshot,shot_id,field,*,current_links_only=False):
     return {"source":ref("Shot List",origin),"field":field,"affected":affected,"implicit_unlinked_dependencies":"Ask director to confirm undeclared dependencies"}
 
 def handoff(snapshot,spec):
+    from takes import local_media_path
+
     sheet=card(snapshot,spec["shot_id"])
     require(not any(w["status"]=="REVIEW_REQUIRED" for w in sheet["continuity_review"]),"Resolve or justify the continuity change first")
     ix=index(snapshot);shot=resolve(ix,sheet["shot"])
@@ -177,8 +214,8 @@ def handoff(snapshot,spec):
             if key not in latest or order>latest[key][0]:latest[key]=(order,link)
     for _,link in latest.values():
         require(not link["stale"],"Reconfirm the reference after version change")
-        record=resolve(ix,link["from"]);uri=Path(record["uri"])
-        path=uri if uri.is_absolute() else ROOT/uri
+        record=resolve(ix,link["from"])
+        path=local_media_path(record["uri"])
         require(path.is_file() and digest_file(path)==record["sha256"],"Local reference bytes differ or are missing")
         require(record["rights"].strip(),"Reference rights missing")
         references.append({"id":record["id"],"revision":record["revision"],"sha256":record["sha256"],"uri":record["uri"],
@@ -224,16 +261,103 @@ def handoff(snapshot,spec):
     compiled = compile_prompt(prompt_spec)
     if plan is not None:
         first_entry = plan["beats"][0].get("entry", {})
-        final_state = {}
-        for beat in plan["beats"]:
-            final_state.update(beat.get("entry", {}))
-            final_state.update(beat.get("exit", {}))
-        for name, facts in (("in", first_entry), ("out", final_state)):
+        final_exit = plan["beats"][-1].get("exit", {})
+        for name, facts in (("in", first_entry), ("out", final_exit)):
             expected = sheet["states"].get(name, {})
-            require(not isinstance(expected, dict) or all(facts[field] == expected[field] for field in facts.keys() & expected.keys()),
+            require(isinstance(expected, dict) and all(field in facts and facts[field] == value for field,value in expected.items()),
                     "Cinematic plan conflicts with shot " + name + " state")
-    return {"shot":sheet["shot"],"delivery":compiled,**({"cinematic_plan":plan} if plan is not None else {}),"attachment_order":[{"id":r["id"],"field":r["role"],"position":r["position"],"file":r["uri"],"revision":r["revision"],"sha256":r["sha256"]} for r in references],
-            "return_checklist":["Identificar plano, versão e origem","Conferir duração e ação no take","Registrar direitos e revisão técnica/artística"],"execution":"MANUAL"}
+    episode = ix["Episodes"][shot["episode_id"]]
+    entities = []
+    for table, field, columns in (
+        ("Locations", "location_id", ("geo_version", "anchors", "dimensions", "light_weather", "state")),
+        ("Characters", "character_ids", ("identity", "costume", "performance")),
+        ("Props", "prop_ids", ("material_scale", "owner_character_id", "state")),
+    ):
+        for entity_id in filter(None, shot[field].split(",")):
+            row = ix[table][entity_id]
+            entities.append({**ref(table,row), "status":row["status"], "name":row["name"],
+                             "description":{column:row[column] for column in columns if row[column]}})
+    directions = compiled.get("authored_directions", "")
+    packet = {
+        "kind":"MANUAL_SHOT_HANDOFF", "spreadsheet_id":snapshot["spreadsheet_id"],
+        "shot":sheet["shot"], "delivery":compiled,
+        **({"cinematic_plan":plan} if plan is not None else {}),
+        "attachment_order":[{"id":r["id"],"field":r["role"],"position":r["position"],"file":r["uri"],"revision":r["revision"],"sha256":r["sha256"]} for r in references],
+        "production_brief":{
+            "project_id":shot["project_id"], "episode_id":shot["episode_id"], "is_test":shot["is_test"],
+            "scene":sheet["beat"], "order":sheet["order"], "source_status":shot["status"], "entities":entities,
+            "objective":sheet["intention"], "action":sheet["action"], "camera_and_blocking":sheet["camera"],
+            "sound_and_edit":sheet["sound"], "entry_and_exit":sheet["states"],
+            "continuity_review":sheet["continuity_review"], "authored_directions":directions,
+            "model_neutral_prompt":"\n".join(value for value in (sheet["intention"],sheet["action"],sheet["camera"],sheet["sound"],directions) if value),
+            "protected":{"outgoing_state":sheet["states"].get("out",{}), "authored":plan.get("protected", "") if plan else ""},
+            "planning_status":"BEATS_AUTHORED" if plan else "SHOT_CARD_ONLY",
+            "expected_media":{"duration_s":sheet["duration_s"], "aspect_ratio":episode["aspect_ratio"]},
+            "check_technical":["Conferir duração, proporção e faixas", "Verificar a ordem e a origem das referências"],
+            "repair_if_needed":["Se um gesto ficou ilegível, isolar esse beat e testar ponto de vista ou duração",
+                                 "Se um estado protegido mudou, corrigir o retorno ou abrir sucessor autorizado"],
+            "review_after_return":["Ler ação e mudança de estado em cada beat", "Rever atuação, espaço e som com timecode",
+                                   "Conferir continuidade dos elementos protegidos e registrar reparo por trecho"],
+        },
+        "return_checklist":["Identificar plano, versão, origem e direitos", "Conferir duração e proporção",
+                            "Registrar revisão técnica e artística"], "execution":"MANUAL",
+        "execution_instructions":["Conferir o nome, modo e campos na interface do modelo escolhido",
+                                  "Anexar referências na ordem registrada e executar manualmente após autorização",
+                                  "Devolver a mídia com origem e direitos e manter este pacote para comparação"],
+        "request":{k:spec[k] for k in ("shot_id","model_id","parameters","reference_order","cinematic_plan") if k in spec},
+    }
+    return {**packet, "handoff_sha256":fingerprint(packet)}
+
+
+def compare_handoff(snapshot, packet, path, rights_confirmed):
+    from media_tools import local_file, probe
+    from takes import local_media_path
+
+    require(rights_confirmed is True,"Confirm rights for local take inspection")
+    require(isinstance(packet,dict) and packet.get("kind")=="MANUAL_SHOT_HANDOFF","A sealed shot handoff is required")
+    digest = packet.get("handoff_sha256")
+    require(digest==fingerprint({k:v for k,v in packet.items() if k!="handoff_sha256"}),"Handoff content changed")
+    require(packet["spreadsheet_id"]==snapshot["spreadsheet_id"],"Handoff belongs to a different spreadsheet")
+    current = handoff(snapshot,{**packet["request"], "shot":packet["shot"]})
+    require(current==packet,"References, shot context or adapter changed since export")
+    source = local_file(local_media_path(path))
+    expected = packet["production_brief"]["expected_media"]
+    result = {
+        "kind":"LOCAL_SHOT_RETURN_REVIEW", "handoff_sha256":digest, "shot":packet["shot"],
+        "media_sha256":digest_file(source), "expected":expected,
+        "artistic_review":"PENDING", "approved":False, "saved":False,
+        "review_after_return":packet["production_brief"]["review_after_return"],
+        "review_beats":[{k:b[k] for k in ("id","start_s","end_s","action")} for b in packet.get("cinematic_plan",{}).get("beats",[])],
+    }
+    if not shutil.which("ffprobe"):
+        return {**result,"technical_review":"UNAVAILABLE", "reason":"FFprobe não encontrado. Conferir a mídia manualmente."}
+    metadata = probe(source)
+    require(metadata["source_sha256"]==result["media_sha256"],"Take changed during inspection")
+    streams = metadata.get("streams",[])
+    video = next((s for s in streams if s.get("codec_type")=="video" and not s.get("disposition",{}).get("attached_pic")),{})
+    raw_duration = video.get("duration",metadata.get("format",{}).get("duration"))
+    duration = float(raw_duration) if raw_duration and raw_duration!="N/A" else None
+    if duration is not None and (not math.isfinite(duration) or duration<=0):
+        duration = None
+    width,height=video.get("width"),video.get("height")
+    # Display aspect ratio accounts for non-square pixels. Rotation metadata is separate.
+    ratio=video.get("display_aspect_ratio")
+    rotation=next((s["rotation"] for s in video.get("side_data_list",[]) if "rotation" in s),0)
+    if ratio and re.fullmatch(r"[1-9][0-9]*:[1-9][0-9]*",ratio) and abs(rotation)%180==90:
+        ratio=":".join(reversed(ratio.split(":")))
+    matched_ratio=None
+    if ratio and re.fullmatch(r"[1-9][0-9]*:[1-9][0-9]*",ratio) and expected["aspect_ratio"]:
+        observed_x,observed_y=map(int,ratio.split(":"))
+        expected_x,expected_y=map(int,expected["aspect_ratio"].split(":"))
+        matched_ratio=observed_x*expected_y==observed_y*expected_x
+    rate=video.get("avg_frame_rate_numeric") or video.get("r_frame_rate_numeric") or 0
+    matches={"video":bool(video), "duration":abs(duration-expected["duration_s"])<=max(0.05,1/rate if rate else 0) if duration is not None else None,
+             "aspect_ratio":matched_ratio}
+    status="MISMATCH" if False in matches.values() else "INCOMPLETE" if None in matches.values() else "SPEC_CHECKED"
+    return {**result,"technical_review":status,"checks":matches,
+            "observed":{"duration_s":duration,"display_aspect_ratio":ratio,"pixel_width":width,"pixel_height":height,
+                        "audio_stream":any(s.get("codec_type")=="audio" for s in streams)},
+            "measurement_scope":"Duração, proporção e presença de stream. Sincronia, ação e qualidade exigem revisão."}
 
 def repair_changes(snapshot, spec):
     """Constrain a repair to the reviewed impact, versions, fields and episode."""
@@ -301,21 +425,35 @@ def dispatch(cmd,snapshot,spec,outdir):
     if cmd=="shot-card":return card(snapshot,spec["shot_id"])
     if cmd=="shot-impact":return impact(snapshot,spec["shot_id"],spec.get("field",""))
     if cmd=="shot-handoff":return handoff(snapshot,spec)
+    if cmd=="shot-compare":return compare_handoff(snapshot,spec["handoff"],spec["path"],spec.get("rights_confirmed"))
     if cmd=="shot-link":changes=[link_change(snapshot,spec,spec["from"],spec["to"])]
     if cmd=="shot-repair":
         changes=repair_changes(snapshot,spec)
     if cmd=="shot-import":
         from harness_runtime import import_asset
+        from takes import local_media_path
         shot=resolve(ix,spec["shot"])
         require(spec["shot"]["table"]=="Shot List","Import needs a current shot")
-        asset=import_asset(spec["path"],spec.get("kind","FINAL_ASSET"),spec["asset_id"],1,spec["origin"],spec["rights_confirmed"])
+        asset=import_asset(local_media_path(spec["path"]),spec.get("kind","FINAL_ASSET"),spec["asset_id"],1,spec["origin"],spec["rights_confirmed"])
+        comparison=None
+        if "handoff" in spec:
+            require(spec["handoff"].get("shot")==spec["shot"],"Handoff belongs to another shot")
+            comparison=compare_handoff(snapshot,spec["handoff"],spec["path"],spec["rights_confirmed"])
+            require(comparison["media_sha256"]==asset["sha256"],"Imported bytes differ from inspected take")
+            require(comparison["technical_review"]!="MISMATCH","Returned take differs from the handoff specification")
         entry={"table":"Artifact Registry","id":asset["id"],"expected_revision":None,"values":{
             "project_id":shot["project_id"],"episode_id":shot["episode_id"],"is_test":shot["is_test"],"gate_id":"G12","kind":asset["kind"],
             "department":"editing","version":1,"uri":asset["uri"],"sha256":asset["sha256"],"origin":spec["origin"],"rights":spec["rights"],"status":"REVIEW_REQUIRED"}}
         at=stamp()
         draft=prepare(snapshot,{**spec["authorization"],"at":at,"changes":[entry]})
         dest=ref("Artifact Registry",index(draft["candidate"])["Artifact Registry"][asset["id"]])
+        provenance={"status":"UNBOUND_LEGACY_IMPORT"}
+        if comparison:
+            provenance={"status":"DECLARED_RETURN_PACKET", "handoff_sha256":comparison["handoff_sha256"],
+                        "media_sha256":asset["sha256"]}
         link=link_change(draft["candidate"],{**spec,"relation":"take"},spec["shot"],dest)
-        return prepare(snapshot,{**spec["authorization"],"at":at,"changes":[entry,link]})
+        link["values"]["choice"]=canonical({**json.loads(link["values"]["choice"]),"return_provenance":provenance})
+        plan=prepare(snapshot,{**spec["authorization"],"at":at,"changes":[entry,link]})
+        return {**plan,"return_provenance":provenance,**({"return_comparison":comparison} if comparison else {})}
     return prepare(snapshot,{**spec["authorization"],"at":stamp(),"changes":changes})
 

@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.5.0 — candidata corretiva de 24/11/2026
+
+- Normaliza seletores em português e inglês, gêneros secundários, tipo de entrega e complexidade. Recupera o exemplo pertinente e registra a rota.
+- Confere omissões de fatos de continuidade e admite ações paralelas, olhar, subtexto, composição, luz, óptica e ambiente em planos temporais.
+- Entrega pacote manual selado e comparação técnica localizada. O retorno vinculado exige planilha, plano e mídia correspondentes e segue para revisão.
+- Vincula votos A/B à apresentação exata, distingue referências de mensagens de confirmação humana, melhora respostas dos hooks e amplia a inspeção de distribuição a UTF-16 e arquivos Office compactados.
+- Exercita três estudos de direção e revisa fontes profissionais, com escopo de leitura, aplicações, hipóteses e verificações registradas.
+
 ## 1.4.1 — candidata local de 24/11/2026
 
 - Unifica os aliases de guerra e escolhe exemplos por etapa e contexto, incluindo departamento, finalidade, problema e modelo.

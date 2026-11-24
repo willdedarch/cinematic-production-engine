@@ -1,6 +1,16 @@
 """Translate an optional authored beat plan while checking temporal and reference identity."""
 import math
 
+PLAN_DIRECTIONS = {
+    'objective': 'Intenção', 'space': 'Espaço', 'perspective': 'Ponto de vista',
+    'composition': 'Composição', 'lighting': 'Luz', 'optics': 'Óptica',
+    'environment': 'Ambiente',
+}
+BEAT_DIRECTIONS = {
+    'action': 'Ação', 'performance': 'Atuação', 'attention': 'Atenção',
+    'gaze': 'Olhar', 'subtext': 'Subtexto', 'camera': 'Câmera', 'sound': 'Som',
+}
+
 
 class PlanError(ValueError):
     pass
@@ -17,7 +27,7 @@ def finite_number(value):
 
 def compile_plan(plan, model, parameters, references):
     require(isinstance(plan, dict), 'Cinematic plan must be an object')
-    require(set(plan) <= {'objective', 'space', 'cast', 'beats', 'protected', 'duration_s'},
+    require(set(plan) <= {*PLAN_DIRECTIONS, 'cast', 'beats', 'protected', 'duration_s'},
             'Unknown cinematic plan field')
     require(model['output_type'] == 'video', 'A timed plan needs a video model')
     duration = plan.get('duration_s', parameters.get('duration'))
@@ -28,7 +38,7 @@ def compile_plan(plan, model, parameters, references):
     require(isinstance(cast, dict) and cast and
             all(isinstance(k, str) and k.strip() and isinstance(v, str) and v.strip() for k, v in cast.items()),
             'Name the people or subjects in this shot')
-    for field in ('objective', 'space', 'protected'):
+    for field in (*PLAN_DIRECTIONS, 'protected'):
         require(isinstance(plan.get(field, ''), str), 'Plan text must be text')
     beats = plan.get('beats')
     require(isinstance(beats, list) and beats, 'Provide the authored beats')
@@ -37,15 +47,15 @@ def compile_plan(plan, model, parameters, references):
     state = {}
     seen = set()
     lines = []
-    for field, label in [('objective', 'Intenção'), ('space', 'Espaço')]:
+    for field, label in PLAN_DIRECTIONS.items():
         if plan.get(field, '').strip():
             lines.append(label + ' — ' + plan[field].strip())
-    lines.append('Pessoas — ' + ' / '.join(key + ' = ' + value for key, value in cast.items()))
+    lines.append('Pessoas — ' + ' / '.join(key + ' = ' + value for key, value in sorted(cast.items())))
     warnings = []
     for beat in beats:
         require(isinstance(beat, dict) and set(beat) <= {
-            'id', 'start_s', 'end_s', 'subjects', 'action', 'performance', 'attention', 'camera',
-            'sound', 'entry', 'exit', 'references', 'continuity_exception'},
+            *BEAT_DIRECTIONS, 'id', 'start_s', 'end_s', 'subjects', 'simultaneous',
+            'entry', 'exit', 'references', 'continuity_exception'},
             'Unknown beat field')
         identifier = beat.get('id')
         require(isinstance(identifier, str) and identifier.strip() and identifier not in seen,
@@ -80,15 +90,24 @@ def compile_plan(plan, model, parameters, references):
         state.update(entry)
         state.update(exit_state)
         lines.append(f'{start:g}–{end:g} s · {identifier} · ' + ', '.join(cast[s] for s in subjects))
-        for field, label in [('action', 'Ação'), ('performance', 'Atuação'), ('attention', 'Atenção'),
-                             ('camera', 'Câmera'), ('sound', 'Som')]:
+        for field, label in BEAT_DIRECTIONS.items():
             value = beat.get(field, '')
             require(isinstance(value, str), 'Beat directions must be text')
             if value.strip():
                 lines.append(label + ' — ' + value.strip())
+        simultaneous = beat.get('simultaneous', [])
+        require(isinstance(simultaneous, list), 'Simultaneous actions must be a list')
+        for activity in simultaneous:
+            require(isinstance(activity, dict) and set(activity) == {'subjects', 'action'},
+                    'Each simultaneous action needs subjects and an observable action')
+            actors, action = activity['subjects'], activity['action']
+            require(isinstance(actors, list) and actors and all(actor in subjects for actor in actors)
+                    and len(actors) == len(set(actors)), 'Simultaneous action introduces unknown or repeated subjects')
+            require(isinstance(action, str) and action.strip(), 'Describe the simultaneous action')
+            lines.append('Em paralelo — ' + ', '.join(cast[actor] for actor in actors) + ' · ' + action.strip())
         for label, values in [('Entrada', entry), ('Saída', exit_state)]:
             if values:
-                lines.append(label + ' — ' + ' / '.join(key + ' = ' + value for key, value in values.items()))
+                lines.append(label + ' — ' + ' / '.join(key + ' = ' + value for key, value in sorted(values.items())))
         if attached:
             lines.append('Referências anexadas — ' + ', '.join(attached))
     if previous_end < duration:

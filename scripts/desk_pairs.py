@@ -189,6 +189,7 @@ def select_pair(snapshot,spec,workspace):
     require(pairs,'Nenhum par apresentado corresponde a esta decisão.')
     if len(pairs)>1:
         return {'kind':'PAIR_CLARIFICATION','choices':[{'pair_id':r['manifest']['pair_id'],'shot_id':r['shot_id'],
+                'pair_sha256':r['manifest']['pair_sha256'],
                 'question':r['manifest']['question'],'presented_at':r['at']} for r in pairs], 'remote_write':False}
     return pairs[0]
 
@@ -199,6 +200,8 @@ def vote_from_message(snapshot,spec,workspace):
     entry=select_pair(snapshot,spec,workspace)
     if entry.get('kind')=='PAIR_CLARIFICATION':return entry
     manifest=entry['manifest']
+    require(spec.get('pair_id')==manifest['pair_id'] and spec.get('pair_sha256')==manifest['pair_sha256'],
+            'Confirme o ID e a versão do par que o diretor viu. Apresente novamente se o par mudou.')
     require(not manifest['is_test'] or spec.get('include_test') is True,'Exija o escopo explícito de ensaio.')
     root=state_dir(snapshot,spec['project_id'],spec['episode_id'],workspace)
     vote={k:spec[k] for k in ('choice','mark_ms','reason','preference_scope')}

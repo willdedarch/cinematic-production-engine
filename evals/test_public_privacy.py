@@ -15,6 +15,16 @@ class PublicPrivacyTests(unittest.TestCase):
                 archive.writestr('private.txt','docs.google.com/spreadsheets/d/'+'x'*44)
             self.assertEqual(scan(root)['status'],'REVIEW_REQUIRED')
             self.assertTrue(any('!private.txt' in x['file'] for x in scan(root)['findings']))
+    def test_scanner_inspects_utf16_and_office_archive_members(self):
+        marker='docs.google.com/spreadsheets/d/'+'x'*44
+        with tempfile.TemporaryDirectory() as folder:
+            root=Path(folder)
+            (root/'wide.txt').write_bytes(('前文'*320+marker).encode('utf-16-be'))
+            with zipfile.ZipFile(root/'fixture.xlsx','w') as archive:
+                archive.writestr('xl/sharedStrings.xml',marker.encode('utf-16'))
+            findings=scan(root)['findings']
+            self.assertEqual({r['file'] for r in findings},{'wide.txt','fixture.xlsx!xl/sharedStrings.xml'})
+            self.assertTrue(all(r['offset_basis']=='decoded_utf8' for r in findings))
     def test_public_seed_cannot_supply_a_director_preference(self):
         seed=json.loads((ROOT/'templates/library-seed.json').read_text(encoding='utf8'))
         self.assertEqual(seed['tables']['Creative Preferences'],[])
@@ -64,12 +74,25 @@ class PublicPrivacyTests(unittest.TestCase):
         self.assertIsNone(result['artistic_approval_rate'])
         self.assertFalse(result['generalization_measured'])
     def test_lifecycle_reminders_never_claim_native_persistence(self):
-        for event in ['SessionStart','UserPromptSubmit','PreCompact','PostCompact','Stop','SubagentStop']:
+        for event in ['SessionStart','UserPromptSubmit','SubagentStart']:
             result=handle({'hook_event_name':event,'prompt':'Use CPE'})
             self.assertIn('hookSpecificOutput',result)
+        for event in ['PreCompact','PostCompact','Stop','SubagentStop','SessionEnd','Interrupt','PostToolUse']:
+            self.assertEqual(handle({'hook_event_name':event}),{})
         self.assertEqual(handle({'hook_event_name':'UserPromptSubmit','prompt':'unrelated'}),{})
         blocked=handle({'hook_event_name':'PreToolUse','tool_name':'mcp__codex_apps__higgsfield_generate_video'})
         self.assertEqual(blocked['hookSpecificOutput']['permissionDecision'],'deny')
+    def test_receipt_error_preserves_the_native_event_contract(self):
+        with tempfile.TemporaryDirectory() as folder:
+            target=Path(folder)/'file.txt';target.touch()
+            for event in ('SessionEnd','Interrupt','Stop'):
+                result=subprocess.run([sys.executable,'-B',str(ROOT/'hooks/lifecycle.py'),'--receipts',str(target)],
+                    input=json.dumps({'hook_event_name':event}),text=True,capture_output=True)
+                self.assertNotIn('PreToolUse',result.stdout)
+                if event=='SessionEnd':
+                    self.assertNotEqual(result.returncode,0)
+                else:
+                    self.assertEqual(set(json.loads(result.stdout)),{'systemMessage'})
     def test_native_hook_receipt_does_not_store_prompt_result_or_transcript(self):
         with tempfile.TemporaryDirectory() as folder:
             payload={'hook_event_name':'PostToolUse','session_id':'example','prompt':'private',

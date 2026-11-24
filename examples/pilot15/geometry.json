@@ -1,0 +1,43 @@
+{
+  "id": "GEO-P15-TERMINAL",
+  "shot_id": "P15-SH05",
+  "status": "DIDACTIC_NOT_HUMAN_APPROVED",
+  "origin": "SW",
+  "room_m": [11.2, 9.2, 4.1],
+  "allow_external_camera": false,
+  "anchors": [
+    {"id": "ENTRADA_OESTE", "position_m": [0, 4.35, 0], "note": "Entrada do grupo no primeiro plano da sequência."},
+    {"id": "VIDRO_SUL", "position_m": [2.6, 0, 2.15], "note": "Origem da claridade do rio, atrás e à esquerda da câmera do SH05."},
+    {"id": "PORTAO_LESTE", "position_m": [11.2, 8.4, 0.75], "note": "Já fechado no início de SH05. Marco da borda leste, perto do limite direito do quadro."},
+    {"id": "ARCO_NORTE", "position_m": [9.5, 8.82, 2.15], "note": "A escada continua além do arco e do limite do térreo desenhado."},
+    {"id": "EIXO_AZUL", "position_m": [7.85, 3.82, 0.02], "note": "Ponto na faixa do piso que servia à progressão oeste–leste."},
+    {"id": "VIRADA_FILA", "position_m": [9.6, 6.45, 0.03], "note": "Cabeça da fila vira para a profundidade do arco no último beat."}
+  ],
+  "actors": [
+    {"id": "JOA", "position_m": [5.45, 4.45, 0], "note": "De pé à esquerda do quadro de SH05, livre para agachar e oferecer o antebraço direito."},
+    {"id": "EMA", "position_m": [6.8, 4.57, 0], "note": "Junto ao banco. De joelho na entrada e termina meio de pé; o proxy do Blender marca a posição."},
+    {"id": "BEN", "position_m": [8.98, 8.07, 0], "note": "À esquerda da abertura, com espaço no quadro para indicar a progressão da fila."},
+    {"id": "FIL", "position_m": [7.85, 6.62, 0], "note": "Marca da frente da fila antes de fazer a curva. O restante avança no eixo abaixo do banco."}
+  ],
+  "props": [
+    {"id": "BANCO_FIXO", "position_m": [7.34, 5.38, 0.48], "note": "Centro do banco. Seu lado sul serve de referência para o joelho de Ema."},
+    {"id": "CADERNO_PISO", "position_m": [6.08, 4.03, 0.035], "note": "Posição de saída. Na entrada, o caderno está na mão direita de Joana."},
+    {"id": "PELICULA_JUNTA", "position_m": [5.51, 3.66, 0.012], "note": "Borda sul da película de água. A área úmida cobre parte da junta e alcança o caderno."}
+  ],
+  "cameras": [
+    {
+      "id": "CAM_SH05",
+      "position_m": [6.15, 0.45, 1.25],
+      "target_m": [7, 5.5, 0.65],
+      "focal_mm": 35,
+      "sensor_width_mm": 36,
+      "sensor_height_mm": 20.25,
+      "note": "Câmera fixa ao sul do eixo e à altura da cintura. Mantém o primeiro plano da oferta e o arco ao fundo. Verificar o enquadramento usando os proxies e a decupagem."
+    }
+  ],
+  "limits": [
+    "Medidas de trabalho para a locação ficcional. Planta e volumes não são medição de locação real.",
+    "Um único estado de implantação. Caderno marcado no estado de saída. Câmera permanece fixa durante os três beats.",
+    "O fluxo 2D e o Blender do pacote representam âncoras como marcadores e atores como volumes. As legendas descrevem a intenção das marcações."
+  ]
+}

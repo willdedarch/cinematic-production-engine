@@ -17,6 +17,27 @@ ORDER={
 class CompileError(ValueError):pass
 def need(ok,msg):
  if not ok:raise CompileError(msg)
+
+
+def manual_strategy(model_id, parameters):
+ if model_id=='seedance_2_5':
+  return {
+   't2v':'Descrever primeira imagem, ação observável e consequência. Este modo é textual.',
+   'omni_reference':'Vincular cada anexo ao papel registrado. Conferir o primeiro e o último quadro quando enviados.',
+   'video_edit':'Identificar origem e intervalo da alteração. Conferir duração e proporção a partir do material de retorno.',
+   'video_extension':'Inspecionar a junção com a fonte e comparar continuidade da ação, escala e eixo.',
+  }[parameters.get('mode','t2v')]
+ return {
+  'kling3_0_turbo':'Usar o quadro inicial quando houver. Conferir o destino do gesto pela mídia devolvida, e o som na montagem.',
+  'minimax_h3':'Conferir início, fim e dependências dos anexos. Rever o gesto intermediário e a relação entre áudio e ação.',
+  'wan2_7':'Identificar a ação pela mudança de estado. Se houver áudio anexado, confirmar as dependências na interface e rever a sincronia.',
+  'seedream_v5_pro':'Separar a criação da edição localizada. Conferir dimensão, escala dos objetos e área preservada no retorno.',
+  'gpt_image_2_6':'Escolher o formato antes de anexar referências. Conferir transparência, formato e quadros quando pertinentes.',
+  'nano_banana_2_1':'Separar referências de imagem, vídeo e máscara. Revisar identidade, pontos alterados e elementos protegidos.',
+  'flux_3_image':'Entregar referências na ordem registrada. Conferir composição e preservação de posição e escala.',
+ }[model_id]
+
+
 def compile_prompt(spec):
  mid=spec['model_id'];need(mid in CAT['models'],'Model not verified in catalog; refresh through read-only connector')
  model=CAT['models'][mid];params=spec.get('parameters',{});fields={p['name']:p for p in model['parameters']}
@@ -78,6 +99,7 @@ def compile_prompt(spec):
  need(bool(intent.get('subject') or intent.get('initial_state')),'Subject or initial state required')
  need(model['output_type']!='video' or bool(intent.get('action')),'Video action required')
  prompt='\n'.join(k.replace('_',' ').capitalize()+': '+intent[k].strip() for k in order if intent.get(k,'').strip())
+ authored=''
  if spec.get('cinematic_plan') is not None:
   from cinematic_plan import compile_plan,PlanError
   try:
@@ -89,7 +111,7 @@ def compile_prompt(spec):
  if len(prompt.split())>220:warnings.append('Long prompt: inspect competing instructions; 220 words is advisory, not a model limit')
  if refs:warnings.append('Attach each reference in the supported UI role; local labels are not native @bindings')
  warnings+=['Natural-language camera/light/acting intent is a request, not a verified native parameter or result.', 'Refresh capabilities at production time; catalog snapshot is not a generation benchmark.']
- return {'kind':'MANUAL_PRODUCTION_EXPORT_NOT_EXECUTED','model_id':mid,'output_type':model['output_type'],'prompt':prompt,'native_parameters':params,'aspect_ratio':ratio,'reference_manifest':refs,'protected':intent.get('protected',''),'warnings':warnings,'catalog_checked_at':CAT['checked_at'],'generation_tested':False,'credits_consumed':0,'source_spec_sha256':hashlib.sha256(json.dumps(spec,sort_keys=True,ensure_ascii=False).encode()).hexdigest()}
+ return {'kind':'MANUAL_PRODUCTION_EXPORT_NOT_EXECUTED','model_id':mid,'model_name':model['name'],'output_type':model['output_type'],'prompt':prompt,'native_parameters':params,'aspect_ratio':ratio,'reference_manifest':refs,'protected':intent.get('protected',''),'warnings':warnings,'catalog_checked_at':CAT['checked_at'],'manual_strategy':manual_strategy(mid,params),'generation_tested':False,'credits_consumed':0,'source_spec_sha256':hashlib.sha256(json.dumps(spec,sort_keys=True,ensure_ascii=False).encode()).hexdigest(),**({'authored_directions':authored} if authored else {})}
 def main():
  p=argparse.ArgumentParser(description=__doc__);p.add_argument('spec',type=Path);p.add_argument('--out',type=Path);a=p.parse_args();value=compile_prompt(json.loads(a.spec.read_text(encoding='utf-8')));text=json.dumps(value,ensure_ascii=False,indent=2)+'\n'
  if a.out:

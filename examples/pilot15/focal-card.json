@@ -1,0 +1,18 @@
+{
+  "shot_id": "P15-SH05",
+  "title": "A mão desocupada",
+  "duration_s": 8,
+  "action": "No mesmo quadro, Joana deposita o caderno em piso molhado, oferece o braço a Ema e recebe seu peso enquanto a cabeça da fila inicia a curva para norte.",
+  "actors": ["JOA", "EMA", "BEN", "FIL"],
+  "space": "Terminal fictício. Ema junto do banco fixo e da faixa azul. Bento no arco que leva à escada norte. O portão está fechado a leste e o rio fica atrás do vidro ao sul.",
+  "in": {"caderno": "na mão direita de Joana, capa vermelha, bordas úmidas", "ema": "de joelho ao lado do banco, sem apoio de Joana", "fila": "deslocamento lateral da esquerda para a direita", "portao_leste": "fechado e imóvel"},
+  "out": {"caderno": "no piso molhado junto à faixa azul, água alcançando as páginas", "ema": "meio de pé, apoiada no antebraço direito de Joana", "fila": "cabeça da fila começa a curva para o arco norte", "portao_leste": "fechado e imóvel"},
+  "protected": ["Plano único com mão, joelho e arco legíveis", "Caderno vermelho no piso até a saída", "Portão leste fechado", "Banco fixo e persistência da luz do sul"],
+  "camera": "Plano médio aberto fixo à altura da cintura, equivalente a 35 mm, com profundidade suficiente para manter o arco legível. Manter o eixo oeste–leste até o plano seguinte.",
+  "performance": "Um fechamento breve da mão de Joana antes da renúncia. Ema inicia a aproximação e a transferência do seu próprio peso.",
+  "sound": "Passos em deslocamento, respiração de Ema, contato da capa com piso molhado e arrasto da sola na subida.",
+  "decision": "A mão deve ficar livre na imagem antes que Ema se apoie. A curva da fila tem início no último beat e se completa no plano seguinte.",
+  "review_markers": ["00:02 — tentativa de Ema cede", "00:05 — caderno está no piso e Ema ainda está no joelho", "00:08 — carga de Ema e início de virada já visíveis"],
+  "status": "planejado",
+  "evidence": "Decupagem e implantação pretendidas. A execução e as leituras de plateia estão pendentes."
+}

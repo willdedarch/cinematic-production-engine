@@ -14,7 +14,7 @@ def matching_genre_cases(genre):
 def genre_case(genre):
     return next(iter(matching_genre_cases(genre)),None)
 
-def select(snapshot,project,episode,gate,facets,model,intention):
+def select(snapshot,project,episode,gate,facets,model,intention,*,confirmed_messages=()):
     project_id,episode_id=project["id"],episode["id"]
     depts=set(facets)|GATE_DEPTS.get(gate,set())
     keywords=words(intention)
@@ -24,7 +24,8 @@ def select(snapshot,project,episode,gate,facets,model,intention):
     for table in ("Techniques","Examples","Reference Library","Creative Preferences","Production Lessons","Model Compatibility","Human Feedback","Failure Diagnostics","Evaluation Results"):
         ranked=[]
         for row in snapshot["tables"][table]:
-            if table=="Human Feedback" and row["target_table"]=="Pairwise Comparisons":continue
+            if table=="Human Feedback" and (row["target_table"]=="Pairwise Comparisons" or row["is_test"]
+                    or row["status"] not in {"APPROVED","LOCKED"} or row["user_message_ref"] not in confirmed_messages):continue
             if table=="Examples" and row["kind"]=="TAKE_COMPARISON":continue
             local=row["project_id"]==project_id and row["episode_id"] in ("",episode_id)
             shared=row["project_id"]=="LIB-CPE31" and table in {"Techniques","Examples","Reference Library","Production Lessons","Model Compatibility","Creative Preferences"}
@@ -42,7 +43,8 @@ def select(snapshot,project,episode,gate,facets,model,intention):
             if genre_match:reasons.append("gênero: "+", ".join(sorted(genre_match)))
             if local:reasons.append("contexto do projeto")
             if model and row.get("model_id")==model:reasons.append("modelo escolhido")
-            constraint=table=="Creative Preferences" and row.get("category")=="USER_CONSTRAINT"
+            constraint=(table=="Creative Preferences" and row.get("category")=="USER_CONSTRAINT"
+                        and row["status"] in {"APPROVED","LOCKED"})
             if constraint:reasons.append("restrição explícita")
             if not reasons and dep!="integrated":continue
             score=50*constraint+12*bool(matches)+min(len(matches),8)+8*(dep in depts)+6*bool(genre_match)+4*local+2*(row["status"] in {"APPROVED","LOCKED"})

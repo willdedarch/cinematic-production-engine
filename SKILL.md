@@ -2,11 +2,11 @@
 name: cinematic-production-engine
 description: Conduz histórias, séries e produção cinematográfica guiada: bíblia viva de série, comparação audiovisual de takes com timecode, roteiro, direção, casting, locações, props, fotografia, previs, experimentos, crítica, prompts por modelo, importação e QC. Usa Google Sheets compartilhado por interação e ferramentas locais disponíveis. Produção definitiva manual; conceito nativo somente com autorização específica.
 metadata:
-  version: '1.4.1'
+  version: '1.5.0'
   language: pt-BR
   base: 'CPE V3; evolução de estado V3.1'
 ---
-# Cinematic Production Engine 1.4.1
+# Cinematic Production Engine 1.5.0
 
 Ler [métodos auditados](knowledge/source-methods.md) ao desenvolver encenação, dramaturgia ou referências. As fontes têm escopo de leitura e licença em sources/current-source-audit.json. Aplicar os mecanismos à cena e manter hipóteses da fonte como hipóteses.
 
@@ -56,7 +56,9 @@ Diagnosticar sintoma, causa provável/alternativas, evidência ausente, confian�
 
 Selecionar modelo/versão com documentação ou consulta gratuita verificada. Compilar intenção em estrutura adequada, separar parâmetro nativo e descrição estética. Cinema Studio UI continua experimental até inspeção atual; não inventar versão/controles. Exportar instruções e referências para execução definitiva manual pelo usuário. Importar resultado com origem/direitos e nova avaliação técnica/artística, mesmo com prévia aprovada.
 
-Quando houver plano temporal dirigido, passe `cinematic_plan` pelo próprio `shot-handoff`. Use a versão devolvida por `shot-card` em `shot` e os IDs das referências autorizadas. O pacote conserva chaves, duração e limite de execução manual. Consulte [o contrato dos blocos de tempo](adapters/cinematic-plans.md).
+Quando houver plano temporal dirigido, passe `cinematic_plan` pelo próprio `shot-handoff`. Mostre versões, intenção, ações paralelas e lacunas no painel da conversa. Use o registro devolvido por `shot-card` em `shot` e os IDs das referências autorizadas. Preserve o pacote inteiro e a versão ao apresentar a execução manual. Compare o retorno com `shot-compare` e use `shot-import` para preparar o registro autorizado. Mostre o que foi medido e os trechos que exigem julgamento. Consulte [o contrato dos blocos de tempo](adapters/cinematic-plans.md).
+
+Para registrar uma escolha A/B, encaminhe `pair_id` e `pair_sha256` do par que acompanhou a apresentação ao diretor. Se ele responder em linguagem natural, associe a mensagem àquela apresentação. Se a origem do par estiver ambígua, reapresente antes de registrar. O resultado de `feedback-metrics` local não autentica mensagens. Um ID no input ou na planilha é uma referência a verificar.
 
 Antes de gravar: conferir mensagem realmente recebida, escopo, alvo, revisão, dependências, conteúdo e arte quando pertinente. `cpe.py prepare` liga review ao registro/hash corrente e departamento; não aprova conteúdo alterado depois de avaliado. CLI e checkbox não autenticam uma autorização humana por si. Não combinar edição de conteúdo e aprovação. Usar somente novos registros ou alterações autorizadas, preservando aprovados/bloqueados.
 

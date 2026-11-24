@@ -7,6 +7,7 @@ from pathlib import Path
 import sys
 import tempfile
 import unittest
+from unittest.mock import patch
 
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'scripts'))
@@ -29,7 +30,9 @@ class DesktopPairs(unittest.TestCase):
             'choice':'B','start_ms':3800,'mark_ms':4200,'end_ms':4600,'reason':'Sintético · pausa de ensaio.','preference_scope':'scene'}
 
     def present(self,spec=None,state=None):
-        return dispatch('desk-pair',state or self.snapshot,spec or self.spec,self.ws)['manifest']
+        manifest=dispatch('desk-pair',state or self.snapshot,spec or self.spec,self.ws)['manifest']
+        self.vote.update({key:manifest[key] for key in ('pair_id','pair_sha256')})
+        return manifest
 
     def submit(self,spec=None,state=None):
         return dispatch('desk-vote',state or self.snapshot,spec or self.vote,self.ws)
@@ -49,13 +52,26 @@ class DesktopPairs(unittest.TestCase):
     def test_ambiguous_pair_requires_explicit_selection(self):
         first=self.present()
         self.present({**self.spec,'question':'Outro critério?'})
-        ask=self.submit()
+        unpinned={key:value for key,value in self.vote.items() if key not in ('pair_id','pair_sha256')}
+        ask=self.submit(unpinned)
         self.assertEqual(ask['kind'],'PAIR_CLARIFICATION')
         self.assertEqual(len(ask['choices']),2)
-        plan=self.submit({**self.vote,'pair_id':first['pair_id']})
+        plan=self.submit({**unpinned,'pair_id':first['pair_id'],'pair_sha256':first['pair_sha256']})
         self.assertEqual(len(plan['changes']),3)
-        same=self.submit({**self.vote,'question':first['question'],'pair_hint':first['pair_id'][-8:]})
-        self.assertEqual(same['op_id'],plan['op_id'])
+        with self.assertRaisesRegex(StateError,'versão do par'):
+            self.submit({**unpinned,'question':first['question'],'pair_hint':first['pair_id'][-8:]})
+
+    def test_choice_cannot_be_rebound_to_an_inverted_presentation(self):
+        with patch('takes.secrets.SystemRandom'):
+            original=self.present()
+        stale=copy.deepcopy(self.vote)
+        with patch('takes.secrets.SystemRandom') as random_factory:
+            random_factory.return_value.shuffle.side_effect=lambda choices: choices.reverse()
+            inverted=self.present({**self.spec,'presentation_ref':'segunda apresentação'})
+        self.assertEqual(original['takes']['A'],inverted['takes']['B'])
+        self.assertNotEqual(original['pair_sha256'],inverted['pair_sha256'])
+        with self.assertRaisesRegex(StateError,'versão do par'):
+            self.submit({**stale,'pair_id':inverted['pair_id']})
 
     def test_scene_scope_excludes_other_scene_and_project(self):
         self.present()

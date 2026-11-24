@@ -1,0 +1,75 @@
+{
+  "shot_id": "P15-SH05",
+  "model_id": "seedance_2_5",
+  "parameters": {
+    "mode": "t2v",
+    "duration": 8
+  },
+  "cinematic_plan": {
+    "objective": "Mostrar a troca irreversível de prioridade de Joana: largar o caderno para receber o peso de Ema enquanto a fila ainda avança.",
+    "space": "Térreo de um terminal fluvial fictício. Entrada a oeste, portão fechado a leste, vidro voltado ao rio ao sul, arco e escada a norte visíveis atrás de um banco fixo. Faixa azul e junta do piso visíveis junto aos pés de Joana.",
+    "cast": {
+      "JOA": "Joana, funcionária adulta, casaco azul-petróleo e manga esquerda empoeirada",
+      "EMA": "Ema, passageira adulta, colete ocre, de joelho junto ao banco fixo",
+      "BEN": "Bento, barqueiro adulto, gorro cinza, no arco ao fundo",
+      "FIL": "Primeiro grupo de passageiros adultos em diferentes profundidades"
+    },
+    "duration_s": 8,
+    "perspective": "Acompanhamos Joana e Ema, com Bento discernível no fundo e o fluxo da fila atravessando a margem direita.",
+    "lighting": "Claridade fria do rio ainda atravessa os vidros ao sul. O primeiro patamar norte já aparece sob uma luz âmbar fraca.",
+    "optics": "Distância focal equivalente a 35 mm, com profundidade suficiente para ler mão, joelho e arco no mesmo plano.",
+    "composition": "Joana à esquerda, Ema baixo ao centro, Bento no terço superior direito. Banco e faixa azul sustentam a relação entre os três níveis.",
+    "environment": "Lâmina rasa de água no piso junto da junta. Portão leste imóvel e fechado. Poeira fina na manga esquerda de Joana, sem nova queda de entulho neste plano.",
+    "protected": "Um plano contínuo. Caderno de capa vermelha parte da mão direita de Joana e permanece na película de água, ao lado da faixa azul. Ombros dos passageiros mantêm o percurso lateral antes da virada. Portão fica fechado, banco não se desloca e o clarão do sul continua.",
+    "beats": [
+      {
+        "id": "P15-B05a",
+        "start_s": 0,
+        "end_s": 2,
+        "subjects": ["JOA", "EMA", "FIL"],
+        "action": "A mão direita de Joana chega à altura do ombro de Ema ainda fechada sobre o caderno vermelho. Ema tenta apoiar o peso na própria perna e volta ao joelho.",
+        "performance": "Joana entreabre os dedos e volta a fechar uma vez. Ema expira quando a primeira tentativa cede.",
+        "gaze": "Joana olha para a mão direita ocupada e volta os olhos a Ema antes de se abaixar.",
+        "subtext": "Joana ainda tenta preservar as duas responsabilidades.",
+        "attention": "A mão com o caderno e o joelho de Ema se leem juntos.",
+        "camera": "Plano médio aberto em tripé, à altura da cintura, mantém joelho, mão e arco no quadro.",
+        "sound": "Passos e tecido raspando passam à direita. A respiração curta de Ema fica audível no final.",
+        "simultaneous": [{"subjects": ["FIL"], "action": "Os primeiros passageiros ainda avançam da esquerda para a direita na margem do quadro."}],
+        "entry": {"caderno": "na mão direita de Joana, capa vermelha, bordas úmidas", "ema": "de joelho ao lado do banco, sem apoio de Joana", "fila": "deslocamento lateral da esquerda para a direita", "portao_leste": "fechado e imóvel"},
+        "exit": {"caderno": "na mão direita de Joana, capa vermelha, bordas úmidas", "ema": "de joelho ao lado do banco, sem apoio de Joana", "fila": "deslocamento lateral da esquerda para a direita", "portao_leste": "fechado e imóvel"}
+      },
+      {
+        "id": "P15-B05b",
+        "start_s": 2,
+        "end_s": 5,
+        "subjects": ["JOA", "EMA", "BEN", "FIL"],
+        "action": "Joana agacha, põe o caderno na película de água ao lado da faixa azul e oferece a mão direita aberta a Ema. Ema olha para a mão e ainda não desloca o peso.",
+        "performance": "Joana olha para Ema enquanto abre a mão. Espera Ema mover os dedos antes de tensionar o braço.",
+        "gaze": "Ema levanta o olhar da mão desocupada para o rosto de Joana.",
+        "subtext": "A oferta depende da decisão de Ema sobre o momento de se erguer.",
+        "attention": "Soltura da capa e primeiro contato da água com o papel.",
+        "camera": "Mesmo quadro e mesma perspectiva. O braço de Joana reaparece inteiro ao subir do piso.",
+        "sound": "Toque curto da capa sobre o azulejo molhado. O ruído de passos prossegue.",
+        "simultaneous": [{"subjects": ["BEN"], "action": "Bento abre o braço no arco ao fundo e torna o patamar visível pelo espaço deixado ao lado do corpo."}, {"subjects": ["FIL"], "action": "O trecho visível da fila mantém o avanço lateral."}],
+        "entry": {"caderno": "na mão direita de Joana, capa vermelha, bordas úmidas", "ema": "de joelho ao lado do banco, sem apoio de Joana", "fila": "deslocamento lateral da esquerda para a direita", "portao_leste": "fechado e imóvel"},
+        "exit": {"caderno": "no piso molhado junto à faixa azul, água alcançando as páginas", "ema": "de joelho ao lado do banco, diante da mão oferecida", "fila": "deslocamento lateral da esquerda para a direita", "portao_leste": "fechado e imóvel"}
+      },
+      {
+        "id": "P15-B05c",
+        "start_s": 5,
+        "end_s": 8,
+        "subjects": ["JOA", "EMA", "BEN", "FIL"],
+        "action": "Ema agarra o antebraço direito de Joana e chega a meio pé. Joana se inclina contra o peso. A cabeça da fila inicia a curva em direção ao arco norte.",
+        "performance": "Ema conduz a subida no primeiro impulso. Joana absorve o peso com o ombro e conserva os olhos nela.",
+        "gaze": "A primeira pessoa da fila vira o rosto para Bento e só então vira os ombros.",
+        "subtext": "A passagem precisa acomodar quem chegou em outro ritmo.",
+        "attention": "Transferência de peso no primeiro plano e início da curva legível atrás.",
+        "camera": "Mesmo quadro. Mantém caderno embaixo, antebraço sob carga no centro e arco ao fundo até o corte.",
+        "sound": "A sola de Ema arrasta e prende. Os passos ao fundo mudam de direção e a respiração volta a superar o ruído próximo.",
+        "simultaneous": [{"subjects": ["BEN"], "action": "Bento sustenta a posição no arco enquanto a cabeça da fila começa a virar."}],
+        "entry": {"caderno": "no piso molhado junto à faixa azul, água alcançando as páginas", "ema": "de joelho ao lado do banco, diante da mão oferecida", "fila": "deslocamento lateral da esquerda para a direita", "portao_leste": "fechado e imóvel"},
+        "exit": {"caderno": "no piso molhado junto à faixa azul, água alcançando as páginas", "ema": "meio de pé, apoiada no antebraço direito de Joana", "fila": "cabeça da fila começa a curva para o arco norte", "portao_leste": "fechado e imóvel"}
+      }
+    ]
+  }
+}
