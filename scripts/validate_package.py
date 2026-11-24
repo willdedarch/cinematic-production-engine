@@ -24,8 +24,9 @@ def main():
     front=(ROOT/'SKILL.md').read_text(encoding='utf8').split('---',2)
     check(len(front)==3 and "version: '"+version+"'" in front[1],'Skill frontmatter/version')
     check(re.search(r'^name: cinematic-production-engine$',front[1],re.M) is not None,'Skill name')
-    description=re.search(r'^description: (.+)$',front[1],re.M)
-    check(description is not None and 0<len(description[1])<=1024,'Skill description')
+    description=re.search(r'^description: >-\n((?:^  \S[^\n]*\n)+)',front[1],re.M)
+    folded=' '.join(description[1].split()) if description else ''
+    check(0<len(folded)<=1024,'Skill description must be a nonempty folded YAML scalar')
     parsed={'json':0,'python':0}
     for path in files:
         if path.suffix=='.json':

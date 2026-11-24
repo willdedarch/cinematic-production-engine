@@ -27,8 +27,8 @@
     },
     {
       "path": "adapters/creative-intent.md",
-      "sha256": "6f9b5440064479fe35400bc2eea1564230eedd2e80957ae8555d02e844f888ed",
-      "bytes": 2481
+      "sha256": "84892b55b4caf9cd0cc33aaddd16cf68d215d8f1860909be28165a019b076eb6",
+      "bytes": 2723
     },
     {
       "path": "adapters/media-qc.md",
@@ -42,8 +42,13 @@
     },
     {
       "path": "AGENTS.md",
-      "sha256": "e3a826a94057464127a3f948662b2197292fa22897de15d0d95ac11b4ccf487e",
-      "bytes": 3193
+      "sha256": "80cc39a9ac091cf75ec92220537f30675dfe82cb9864a80c816513c51c392737",
+      "bytes": 3529
+    },
+    {
+      "path": "agents/openai.yaml",
+      "sha256": "e09ff30d35de3959bebfc25025318a47b55f3ff975eaddb8f01f5a144375fc64",
+      "bytes": 377
     },
     {
       "path": "assets/templates.md",
@@ -342,8 +347,8 @@
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "87113ce91586f6e760cce15afb97561ed1ab3e5bd0ccdf9e351bfa9e587cba6d",
-      "bytes": 6790
+      "sha256": "dee1021e62b103fa59bd4efe9dfc40f2625c7c1593bde6a60c79d74ea5c64176",
+      "bytes": 7230
     },
     {
       "path": "departments/casting.md",
@@ -382,8 +387,8 @@
     },
     {
       "path": "engines/war-film.md",
-      "sha256": "ba0b90943398d188cbe06c5552a0aaa8a6ce3f2e58c83a2b185f0426f7d72dc5",
-      "bytes": 6115
+      "sha256": "fbb28b5d6ede4e7d49f7511c7ac7a16611576e0c774b056db6aa8ea70291f66a",
+      "bytes": 6141
     },
     {
       "path": "evals/behavioral_run.py",
@@ -1227,8 +1232,8 @@
     },
     {
       "path": "harness/manual.md",
-      "sha256": "3cf93e9d3014c3df2d9202bb16684430ce9ad2bed53dd8a3c9d4b88d0c95ddd7",
-      "bytes": 8042
+      "sha256": "125906d0791d78533933387cea5c4ae4abbf0e764fb04c9595dc3c8a11ebb1e0",
+      "bytes": 9813
     },
     {
       "path": "harness/media-analysis.md",
@@ -1287,8 +1292,8 @@
     },
     {
       "path": "integrations/director-skill.md",
-      "sha256": "663ff7ee288fb1bd813729326d8599ca872541d201c112b7fd87bb1a8ac9bfea",
-      "bytes": 474
+      "sha256": "26b3e9f966fb1dcb254ecdcf8aa1c2442d092e159880c9aa6bc742359be360d6",
+      "bytes": 566
     },
     {
       "path": "integrations/google-sheets-link.txt",
@@ -1332,13 +1337,13 @@
     },
     {
       "path": "integrations/public-distribution.md",
-      "sha256": "116ea17e5bf15409a8c858e2cb88a3bfa00f7298e63e6902147a477b565defa8",
-      "bytes": 1636
+      "sha256": "9b91b9a1a81b101021aafc989dc93e4d879a6d109ff79c14b5a98ec6138a61c8",
+      "bytes": 2899
     },
     {
       "path": "integrations/screenwriting-skills.md",
-      "sha256": "caa2111889c955e15c557025a940409d6f1ca98ac0b27a3cef582b0efce6c0cf",
-      "bytes": 506
+      "sha256": "d7d29a4e5b849f0a5ef9685a8798805f2c51e4493e000ab77cd8e042fb338117",
+      "bytes": 545
     },
     {
       "path": "integrations/state-integrity-1.2.md",
@@ -1547,8 +1552,8 @@
     },
     {
       "path": "MANUAL.md",
-      "sha256": "589717e5486bed0bd5646cdcf1e354e850dd2031895b1b40e6a895b7ec13348d",
-      "bytes": 15003
+      "sha256": "89e9a990c8e0640b145a2852e8b227e8d0313425d7ceb96746bfd74bc042c451",
+      "bytes": 15295
     },
     {
       "path": "modules/anti-cliche.md",
@@ -1632,8 +1637,8 @@
     },
     {
       "path": "modules/writers-room.md",
-      "sha256": "8e9c9c4d76d9ba4662f4054ca434be82d2304325ae9d96a47cdecd80f6e6216d",
-      "bytes": 1778
+      "sha256": "62640c59dc65215b9baa3d39ac1c0ae5708fd1d572a14d4b3b77a76d8c880bec",
+      "bytes": 1761
     },
     {
       "path": "orchestration/gates.json",
@@ -1642,13 +1647,13 @@
     },
     {
       "path": "orchestration/knowledge-router.json",
-      "sha256": "10d2d202263c6ed71355caf519014e4aa79d2b1cd0bb2082bc2dfafa21ebe08b",
-      "bytes": 11775
+      "sha256": "000832d38735a4a7aca2998e47a876052a686249561ead42c3a2bafdf2280afb",
+      "bytes": 11872
     },
     {
       "path": "orchestration/panels.md",
-      "sha256": "c07af4a911ddd2e9eb802a726705fcadf952bdb2ccc04912fa04f9a6dd030b35",
-      "bytes": 3393
+      "sha256": "1afe62dd7a5a0f08dc5601ca164d2c9db5aecb29da21af5f4a0d68082f98f392",
+      "bytes": 3993
     },
     {
       "path": "orchestration/state.md",
@@ -1657,8 +1662,8 @@
     },
     {
       "path": "orchestration/workflow.md",
-      "sha256": "5f1b9774ca26d83051481fcd979873246ddd23300b698774fc8245267b37b39c",
-      "bytes": 1623
+      "sha256": "abe2cb4085ce6297138d3781fb022bf85d0c183b8fa3339befa6cdbfc21f5cda",
+      "bytes": 1797
     },
     {
       "path": "panels/boards-runtime.js",
@@ -1727,8 +1732,8 @@
     },
     {
       "path": "README.md",
-      "sha256": "a112ea487da178cbb9c7622933a22c208b0cbe34172e7ebcce053015a89812a6",
-      "bytes": 4160
+      "sha256": "55079a0df3644edfa77165274ee65d9a1b665adb10d2632cd0968b3cab6402ed",
+      "bytes": 4938
     },
     {
       "path": "references/dramaturgy.md",
@@ -1942,8 +1947,8 @@
     },
     {
       "path": "RELEASE-METADATA.json",
-      "sha256": "b6258fb772c6c496a9c87238ba4d5173df82b98b3d13861e7eff786bf03dc786",
-      "bytes": 1702
+      "sha256": "7e22e9366edb91bfae858b5cc8ca49f71aef0d62fccc03d5bda3720dbfab293a",
+      "bytes": 1807
     },
     {
       "path": "schemas/data-dictionary.md",
@@ -1987,13 +1992,13 @@
     },
     {
       "path": "scripts/cpe.py",
-      "sha256": "53e015fb35397beb0185491ca8b78995d011f4ac71cdd58b8803151092766d88",
-      "bytes": 15483
+      "sha256": "c96363c4460228279f08e34f11612e4e8be85054bb283842d677839482fddd30",
+      "bytes": 15491
     },
     {
       "path": "scripts/creative_intent.py",
-      "sha256": "d583ac9acabf6851e7f7f723e9e01e7f5c6bbcb98495fc168b1179b2921ba509",
-      "bytes": 13788
+      "sha256": "f76bdcf5a657a3a0d89680c61b6531e74123dbc67b75e274eaad43494febf610",
+      "bytes": 14206
     },
     {
       "path": "scripts/desk_connector.py",
@@ -2067,8 +2072,8 @@
     },
     {
       "path": "scripts/knowledge_select.py",
-      "sha256": "6f309b36bd258a8cc3eb524d8e424a74d2602056e2cf23e57fc61a40d4a411b9",
-      "bytes": 9262
+      "sha256": "b7dc483bf8a4fbdff617e11cff03e169e118f7fbcf9b55c7303bc8f823a21c3a",
+      "bytes": 9508
     },
     {
       "path": "scripts/lab_execution.py",
@@ -2157,8 +2162,8 @@
     },
     {
       "path": "scripts/validate_package.py",
-      "sha256": "0f98ce20f6236180132d3f0d4e7c0b63df23205dd4e2d982edef5fab9ce0e88b",
-      "bytes": 6159
+      "sha256": "6524d7fc5cf3e6dd4b8e150440ec18052fa7201d79b4a989633800e6cdc970c3",
+      "bytes": 6248
     },
     {
       "path": "scripts/validate_plan.py",
@@ -2167,8 +2172,8 @@
     },
     {
       "path": "SKILL.md",
-      "sha256": "52059801e9783e9f0846f9093fbbd40404e5da0d893ec33de7a0e607d98f91ef",
-      "bytes": 13698
+      "sha256": "8e4fbfabd5a5b53d6b4f07ba678b164fc280527f1867abcf0b4db0584b606910",
+      "bytes": 21450
     },
     {
       "path": "sources/coverage-1.5.json",

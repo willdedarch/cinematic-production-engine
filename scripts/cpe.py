@@ -54,9 +54,9 @@ def execute(a,run):
  if c=='doctor':return doctor(spec,a.blender)
  if c in {'optics','dof','exposure'}:
   cost_guard(c);return optics(spec) if c=='optics' else dof(spec) if c=='dof' else exposure(spec['fps'],spec['shutter_angle_deg'])
- if c in {'task','analyze'}:
+ if c in {'task','analyze','analisar'}:
   require(s is not None,'Agent must provide latest native read copy')
-  return context(s,a.project,a.episode,a.gate or ('ANALYZE' if c=='analyze' else a.task.upper()),a.facet,a.model,a.include_test,
+  return context(s,a.project,a.episode,a.gate or (a.task.upper() if c=='task' else c.upper()),a.facet,a.model,a.include_test,
                  spec.get('intention',''),spec.get('target_ids',[]),
                  department=spec.get('department',''),purpose=spec.get('purpose',''),problem=spec.get('problem',''),
                  secondary_genres=spec.get('secondary_genres',[]),scene_complexity=spec.get('scene_complexity',''),

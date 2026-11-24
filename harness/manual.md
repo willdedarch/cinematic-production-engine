@@ -4,15 +4,29 @@ O agente conduz a conversa. O usuário pode pedir EP1, NEXT, STATUS, RESUME, CAS
 
 ## Ciclo integrado
 
-1. Consultar o estado nativo atual pelo conector, conferir cobertura, revisão, conteúdo e dependências. Retomar decisões e bloqueados; perguntar somente lacunas necessárias.
+1. Consultar o estado nativo atual pelo conector. Ler as tabelas e a fila pelo plano de `desk-read-plan` e reconstruir com `desk-read-copy`. Resolver projeto, episódio e dependências na cópia validada. Em criação autorizada, preparar `init` ou `new-episode` e confirmar a escrita antes de apresentar o cadastro. Retomar decisões e bloqueados.
 2. Resolver fase em `gates.json`, recuperar conhecimento e exemplos pertinentes. `cpe.py task` lê arquivos reais por rota e registra hashes. O resultado é contexto de uma cópia lida, sem alegar consulta remota pelo CLI. Priorizar aprovados e protegidos. Registrar aplicação concreta em `used_knowledge`, com trecho/quadro e limite; leitura sozinha não prova uso.
-3. Apresentar uma decisão de cada vez. Se for útil, escolher laboratório e formular hipótese. Referência, cálculo, planta, overlay ou texto podem resolver a questão sem geração. Experimentos são opcionais.
+3. Delimitar uma etapa decisória e a entrega esperada. Se for útil, escolher laboratório e formular hipótese. Referência, cálculo, planta, overlay ou texto podem resolver a questão sem geração. Experimentos são opcionais.
 4. Executar ferramenta local disponível e guardar saída real. Pedidos de ferramenta nativa de imagem exigem mensagem explícita do usuário, finalidade PREVIS/CONCEPT/VISUAL_DRAFT e quantidade máxima. O CLI apenas prepara esse pedido; o agente usa a ferramenta nativa disponível dentro do escopo. Nunca substitui por API paga. Plano solicitado não é resultado executado.
 5. Avaliar técnica e arte separadamente, usando rubrica real e evidência acessível. Para crítica independente, utilizar agentes relevantes se disponíveis e autorizados. Conservar limitações e divergências.
 6. Corrigir somente a causa testável, preservar aprovados e reavaliar. Default duas rodadas, sem aprovação artificial ao atingir limite.
-7. Receber decisão humana em nova mensagem. Validar conteúdo e versão antes de planejar persistência. No harness, `prepare` exige review corrente e departamento pertinente para gates/asset approvals. Não combinar mudança de conteúdo e aprovação; primeiro salvar rascunho, depois avaliar. O review deve incluir record_sha256 da leitura atual, além do hash do material. QC pode apontar a um asset de G10 com `context.review_gate_id=G13/G14`, mantendo seu gate de origem.
+7. Apresentar a entrega no painel da conversa, com o controle que a sessão oferece ou resposta natural. Aguardar a decisão humana vinculada ao material apresentado. Validar conteúdo e versão antes de planejar persistência. No harness, `prepare` exige review corrente e departamento pertinente para gates/asset approvals. Não combinar mudança de conteúdo e aprovação; primeiro salvar rascunho, depois avaliar. O review deve incluir record_sha256 da leitura atual, além do hash do material. QC pode apontar a um asset de G10 com `context.review_gate_id=G13/G14`, mantendo seu gate de origem.
 8. Aplicar o protocolo Google Sheets PREPARED → nova leitura/guardas → escrita → leitura independente → CONFIRMED → releitura. Fragmentos de journal conservam ordem e digest canônico; ausência/duplicação/divergência impede confirmação. Não há compare-and-swap nem transação atômica.
 9. Criar checkpoint local após confirmação, aprovação, bloqueio, importação, exportação ou alteração material. Local não sincronizado permanece identificado. Antes de recuperar/gravar, reler o Sheets e reconciliar divergências; nunca repor uma cópia antiga cegamente.
+
+## Comandos de conversa e CLI
+
+| Pedido na conversa | Operação real |
+| --- | --- |
+| STATUS, NEXT, RESUME | `cpe.py status`, `next`, `resume`. Leia as etapas elegíveis. |
+| MINE, IDEATE, DEVELOP, WRITE, DIRECT, QC | `cpe.py task --task ALIAS` ou `--gate Gx`. Recupere o contexto e execute a etapa. |
+| PROMPT, PROMPTS | Em produção, `task --task PROMPT` ou `PROMPTS` seleciona G10. Use `compile` para um prompt avulso ou `shot-handoff` para um plano vinculado. |
+| ANALYZE, ANALISAR | `cpe.py analyze` ou `analisar`, ou `task --task ANALYZE` / `ANALISAR`. Escopo de análise, sem avanço automático. |
+| JUDGE, REVISE | `judge` prepara ou valida um parecer, `revise` prepara uma revisão. Use a rota do departamento e a mesma versão observada. |
+| IMPORT | `import` para artefato local, `shot-import` para take de plano. O resultado exige revisão. |
+| DOCTOR, Script Doctor | `doctor` diagnostica o ambiente. `task --task DOCTOR` recupera G4 para uma revisão de roteiro. |
+
+Passe `--workspace` nas execuções. Para contexto de produção, passe `--snapshot`, `--project` e `--episode` com a leitura e o escopo resolvidos. Use os seletores documentados no [Router](../orchestration/knowledge-router.json). Comandos de conversa como FULL, APPROVE e LOCK são operações conduzidas pelo agente, com a elegibilidade e as guardas aplicáveis. Quando o pedido autorizar gravação, siga o contrato nativo e confira o resultado por releitura.
 
 ## Classes de material
 

@@ -2,7 +2,7 @@
 
 ## Instalação e versão
 
-Extraia o ZIP em uma pasta nova e mantenha a estrutura, inclusive `SKILL.md`, `scripts`, `panels` e `integrations`. A Skill está na versão 1.6.1 e o contrato de estado é 3.1.0. Valide a pasta extraída conforme o [README](README.md). Para atualizar uma instalação, guarde a versão anterior e mantenha o workspace de produção separado. Preserve o vínculo privado e o arquivo de configuração do host quando aplicar o pacote ao mesmo ambiente. Abra uma nova conversa com a conta configurada já conectada e peça para começar em uma pasta ou retomar um episódio. O agente valida o vínculo pela leitura atual. O arquivo V3 original permanece privado e seu fingerprint está em `legacy`.
+Extraia o ZIP em uma pasta nova e mantenha a estrutura, inclusive `SKILL.md`, `scripts`, `panels` e `integrations`. A Skill está na versão 1.6.2 e o contrato de estado é 3.1.0. Valide a pasta extraída conforme o [README](README.md). Para atualizar uma instalação, guarde a versão anterior e mantenha o workspace de produção separado. Preserve o vínculo privado e o arquivo de configuração do host quando aplicar o pacote ao mesmo ambiente. Abra uma nova conversa com a conta configurada já conectada e peça para começar em uma pasta ou retomar um episódio. O agente valida o vínculo pela leitura atual. O arquivo V3 original permanece privado e seu fingerprint está em `legacy`.
 
 ## Produzir o episódio seguinte
 
@@ -35,7 +35,7 @@ Para testar uma entrada de som, peça **“prepare uma alternativa do SH06 adian
 
 “EP1” inicia briefing e prepara um novo projeto, sem inventar aprovação. “Retomar projeto…” reconstrói contexto pelo Sheets. “NEXT” mostra a próxima etapa elegível; “STATUS” expõe progresso e pendências. “LOCATION” trabalha a locação preservando geometria; “JUDGE” avalia o material acessível; “EXPORT” prepara produção manual; “IMPORT” recebe resultado e começa nova avaliação. Linguagem natural funciona. A disponibilidade das ferramentas é consultada antes de assumir capacidade.
 
-Em cada decisão, o agente explica intenção, oferece poucas alternativas, recupera referências pertinentes e pede a escolha necessária. O usuário pode aprovar, reprovar, comparar, empatar, solicitar reparo, reutilizar versão ou retornar a uma fase. O silêncio não aprova. Uma aprovação pertence ao material, versão e contexto indicados.
+Em cada interação de produção, o agente relê a planilha e a fila, executa o runtime e recupera as referências da etapa. Apresenta na conversa o painel, a entrega e a escolha necessária. Em Chat, Work e Codex, usa os controles realmente oferecidos e, quando indisponíveis, apresenta opções com resposta natural. O usuário pode aprovar, reprovar, comparar, empatar, solicitar reparo, reutilizar versão ou retornar a uma fase. O silêncio não aprova. Uma aprovação pertence ao material, versão e contexto indicados.
 
 ## Guias especializados
 
@@ -89,6 +89,6 @@ Quando você devolver o take, informe o arquivo, a origem, os direitos e a entre
 
 ## Escolher o perfil de guerra de ação
 
-Diga a intenção do episódio no briefing e escolha entre propostas com conflitos e configurações de cena diferentes. No perfil 65/35, a distribuição é medida na linha do tempo. Em 100 segundos, 65 pertencem à ação física em quadro e 35 a história, personagens e diálogo. Quando aprovar a direção, o agente vincula cada acontecimento à sua janela e ao plano. Uma mudança de direção pede revisão da decisão aprovada. O [estudo independente](examples/action-study/README.md) permite acompanhar a aplicação.
+Diga a intenção do episódio no briefing e escolha entre propostas com conflitos e configurações de cena diferentes. Defina os percentuais de ação e história no briefing do projeto ou episódio. A distribuição é medida na linha do tempo. Em 100 segundos, 60/40 reserva 60 para ação física em quadro e 40 para história, personagens e diálogo. O exemplo 65/35 continua compatível. Quando aprovar a direção, o agente vincula cada acontecimento à sua janela e ao plano. Uma mudança de direção pede revisão da decisão aprovada. O [estudo independente](examples/action-study/README.md) permite acompanhar a aplicação.
 
 Na entrega manual, o agente mostra o prompt pronto para copiar, com o modelo, o modo, as referências e os requisitos separados. No retorno, a [checagem técnica](adapters/media-qc.md) mede também o áudio e os streams exigidos. O [contrato criativo](adapters/creative-intent.md) acompanha a revisão dos acontecimentos e suas consequências. A revisão técnica e a decisão artística têm resultados próprios.

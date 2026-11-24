@@ -1,11 +1,12 @@
 # Writers' Room
-Use passes por função, não personagens famosos simulados. Em grupo real, cada agente registra sua proposta antes de ler a dos demais; se não houver agentes independentes, executar e identificar passes de um único agente.
 
-Showrunner: protege identidade e cânone. Story Architect: alternativas e estrutura. Screenwriter: cenas e falas. Emotional/Suspense Designer: experiência e informação. Audience Analyst: clareza e retenção. Script Doctor: critica. Director: materializa no texto. Continuity Supervisor: verifica estados.
+Em G2, abra a pesquisa recuperada e use Story Mining, dramaturgia, personagens e suspense. Preserve os arranjos aprovados do projeto. Distribua funções quando houver subagentes autorizados e disponíveis. Em grupo real, cada agente registra sua proposta antes de ler as dos demais. Em execução individual, identifique separadamente os passes de autoria e crítica.
+
+O Showrunner protege identidade e cânone. O Story Architect desenvolve alternativas e estrutura. O Screenwriter materializa cenas e falas. Emotional/Suspense Designer e Audience Analyst trabalham conhecimento, tensão, clareza e retenção. Script Doctor critica. Director define a encenação. Continuity Supervisor confere os estados. Use esses papéis como funções de produção.
 
 ## Rodadas
-A. Propostas independentes: premissa, conflito, custo e desfecho; sem convergir por conveniência. B. Crítica cruzada: apontar evidência específica, fragilidade e correção, inclusive da opção favorita. C. Red team: defender a alternativa menos favorecida, procurar problemas que poderiam invalidar a escolhida. D. Consolidação: registrar decisões, dissenso real, riscos e por que a opção escolhida funciona. E. Usuário decide quando a escolha não foi delegada.
 
-Antes da rodada A, registre a promessa cinematográfica, eventos já aprovados e o componente narrativo dominante. Cada proposta deve mudar a relação entre objetivo, força de oposição, acontecimento visível e custo. Num briefing de ação de guerra, explique como a ação sustenta o tempo previsto e separa as três propostas. Depois do desenvolvimento, a crítica compara a cobertura dos acontecimentos essenciais e a hierarquia de cada versão. Solicite decisão quando a correção implicar retirar um acontecimento aprovado.
-
-Não fundir todas as propostas num híbrido sem unidade; não confundir concordância com validação. Um papel de crítico não deve editar o roteiro escondido. Preserve material aprovado.
+1. Registre a promessa cinematográfica, os eventos aprovados e o componente narrativo dominante. Desenvolva três propostas distintas com premissa, conflito, escolha, custo, consequência, desfecho e gancho. Cada opção altera a relação entre objetivo, oposição e acontecimento visível. Em guerra de ação, mostre como a ação sustenta o tempo previsto.
+2. Faça crítica cruzada com evidência, fragilidades e correções, inclusive para a opção favorita. Defenda a alternativa menos favorecida e procure problemas que poderiam invalidar a recomendação.
+3. Consolide o dissenso, os riscos e a recomendação. Preserve a unidade de cada proposta. Apresente o painel de Ideação e aguarde a decisão do diretor quando não delegada.
+4. Após o desenvolvimento, confira a cobertura dos acontecimentos essenciais e a hierarquia de cada versão. Preserve material aprovado. Solicite decisão quando um reparo implicar alterar um acontecimento aprovado.

@@ -1,12 +1,12 @@
-# Cinematic Production Engine 1.6.1
+# Cinematic Production Engine 1.6.2
 
 Skill para roteiro, direção e produção audiovisual. Apresenta painéis na conversa e oferece uma mesa HTML complementar, bíblia por momento narrativo, planos, takes com som e marca de tempo e Google Sheets como estado compartilhado.
 
 ## Começar
 
-Extraia a release inteira e disponibilize a pasta que contém SKILL.md ao agente. Leia o [manual](MANUAL.md). Cada produção fica numa pasta privada fora da instalação. A Skill usa o conector Google já disponível no host. Prepare `integrations/local-binding.json` a partir do vínculo público, preenchendo sua conta, planilha e os IDs reais de todas as abas e tabelas descobertos pelo conector. O exemplo público não concede acesso a qualquer produção. Esse arquivo privado fica ignorado pelo Git.
+Use a pasta completa que contém [SKILL.md](SKILL.md) no local de descoberta suportado pelo Codex. Em ChatGPT Chat ou Work, a distribuição pode usar um plugin privado de um workspace elegível, com a mesma pasta completa de Skill. Consulte [distribuição pública e configuração privada](integrations/public-distribution.md). Leia o [manual](MANUAL.md). Cada produção fica numa pasta privada fora da instalação. A Skill usa o conector Google já disponível no host. Prepare `integrations/local-binding.json` a partir do vínculo público, preenchendo sua conta, planilha e os IDs reais de todas as abas e tabelas descobertos pelo conector. O exemplo público não concede acesso a qualquer produção. Esse arquivo privado fica ignorado pelo Git.
 
-Peça “Abra o episódio dois da minha série e mostre o que mudou”. O agente consulta o estado e apresenta o painel pertinente na conversa. O HTML serve como mesa complementar. Escolhas no navegador permanecem locais até serem enviadas por nova mensagem e validadas. A mesa mostra a hora da leitura e precisa ser recarregada após nova publicação.
+Peça “Abra o episódio dois da minha série e mostre o que mudou”. O agente consulta e valida o estado, executa o runtime da etapa e apresenta o painel na conversa. Continue com a próxima decisão em linguagem natural. O HTML serve como mesa complementar. Escolhas no navegador permanecem locais até serem enviadas por nova mensagem e validadas. A mesa mostra a hora da leitura e precisa ser recarregada após nova publicação.
 
 ## Revisão 1.4
 
@@ -22,7 +22,13 @@ Plano cinematográfico com ações simultâneas, contexto de cena e conferência
 
 O repertório acompanha o gênero e a intenção do episódio. Para guerra de ação, o perfil escolhido pelo diretor pode vincular 65% de ação física visível e 35% de história a um mapa de acontecimentos versionado. O plano, a exportação e o julgamento conferem esse vínculo. A entrega inclui o prompt pronto em texto. A checagem de retorno confere propriedades mensuráveis, inclusive presença ou ausência de áudio quando solicitada. [Estudo A última frequência](examples/action-study/README.md) · [Auditoria](audits/review-1.6.0.md)
 
+## Revisão 1.6.2
+
+O ponto de entrada define a inicialização, a recuperação de conhecimentos, as responsabilidades da Writers' Room e a apresentação do painel na conversa. O mapa de tempo usa os percentuais do episódio, incluindo 60/40 e os registros existentes em 65/35. O contrato do estado permanece em 3.1.0.
+
 ## Verificação e limites
+
+A 1.6.2 foi revisada por inspeção dos arquivos e do diff. As evidências a seguir dizem respeito à versão anterior.
 
 A 1.6.1 corrige a abertura do comparador a partir da mesa e a geração dos comandos de hooks no Windows. O ensaio conferiu a comparação audiovisual na mesa local e os 11 eventos no Codex CLI em uma pasta dedicada. [Evidências e escopo da 1.6.1](audits/review-1.6.1.md)
 

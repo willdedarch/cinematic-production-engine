@@ -17,8 +17,11 @@ def same_time(a, b):
 
 def audit(profile, events):
     """Measure authored timeline seconds. Perceived intensity still needs direct review."""
-    require(isinstance(profile, dict) and profile == {'kind': ACTION_PROFILE, 'action_percent': 65,
-                                                      'story_percent': 35}, 'Invalid action-led war profile')
+    require(isinstance(profile, dict) and set(profile) == {'kind', 'action_percent', 'story_percent'}
+            and profile['kind'] == ACTION_PROFILE, 'Invalid action-led war profile')
+    targets = (profile['action_percent'], profile['story_percent'])
+    require(all(type(percent) in (int, float) and 0 <= percent <= 100 for percent in targets)
+            and same_time(sum(targets), 100), 'Creative profile percentages must be between 0 and 100 and sum to 100')
     require(isinstance(events, list) and events, 'An authored event timeline is required')
     end = 0
     totals = {'ACTION': 0, 'STORY': 0}
@@ -52,7 +55,12 @@ def audit(profile, events):
     story = totals['STORY'] / end * 100
     return {'kind':'AUTHORED_TIMELINE_AUDIT','duration_s':end,'action_s':totals['ACTION'],'story_s':totals['STORY'],
             'action_percent':round(action,6),'story_percent':round(story,6), 'hierarchy':list(HIERARCHY),
-            'ratio_matches':math.isclose(action,65,rel_tol=0,abs_tol=1e-6),'artistic_approval':False}
+            'ratio_matches':same_time(action, targets[0]) and same_time(story, targets[1]), 'artistic_approval':False}
+
+
+def _require_ratio(profile, measured):
+    action, story = profile['action_percent'], profile['story_percent']
+    require(measured['ratio_matches'], f'Creative timeline must preserve {action:g}/{story:g}')
 
 
 def decode(row):
@@ -61,7 +69,7 @@ def decode(row):
     except (ValueError,TypeError) as error:
         raise ValueError('Malformed recorded creative intent') from error
     require(isinstance(value,dict) and set(value)=={'profile','events','replaces'}, 'Malformed recorded creative intent')
-    require(audit(value['profile'],value['events'])['ratio_matches'], 'Creative timeline must preserve 65/35')
+    _require_ratio(value['profile'], audit(value['profile'], value['events']))
     require(row['episode_id'] and row['user_message_ref'].strip() and row['rationale'].strip(),
             'Creative intent needs an episode and authorization trace')
     return value
@@ -108,7 +116,7 @@ def plan(snapshot, spec):
     episode = index(snapshot)['Episodes'].get(spec['episode_id'])
     require(episode and episode['project_id']==spec['project_id'], 'Creative intent belongs to the selected episode')
     measured = audit(spec['profile'],spec['events'])
-    require(measured['ratio_matches'], 'Creative timeline must preserve 65/35')
+    _require_ratio(spec['profile'], measured)
     authorization = spec['authorization']
     prior = current(snapshot,episode['project_id'],episode['id'])
     expected = prior['decision'] if prior else None

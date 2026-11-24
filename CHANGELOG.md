@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.6.2 · 24/11/2026
+
+- Corrige o YAML e os metadados de invocação. O ponto de entrada orienta a inicialização, a etapa atual, a apresentação do painel e a continuidade entre mensagens.
+- Alinha o Knowledge Router, as responsabilidades dos agentes e os aliases `PROMPT` e `ANALISAR` às operações existentes.
+- Valida o mapa de acontecimentos pelos percentuais do episódio, preservando o formato dos registros existentes.
+
 ## 1.6.1 · 24/11/2026
 
 - A mesa abre diretamente o comparador quando há um único par. Quando há mais de um, preserva o plano e o par escolhidos.

@@ -26,7 +26,9 @@
     "G2": {
       "read": [
         "modules/writers-room.md",
+        "modules/story-mining.md",
         "modules/dramaturgy.md",
+        "modules/suspense-engine.md",
         "modules/anti-cliche.md",
         "knowledge/narrative-editing.md",
         "judgment-engine/protocol.md",
@@ -202,6 +204,7 @@
     "LOCATION": "G8",
     "PROPS": "G9",
     "PREVIS": "G10",
+    "PROMPT": "G10",
     "PROMPTS": "G10",
     "QC": "G14",
     "LEARN": "G15",

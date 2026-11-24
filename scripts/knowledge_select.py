@@ -61,25 +61,27 @@ def classify_intention(genres, intention='', creative_profile=''):
         return 'genre_default'
     if creative_profile == 'action_led_war':
         return 'action_led_war'
-    choices = ('65% ação','65% action','guerra de ação','ação intensa','ação cinematográfica intensa',
-               'predominância de ação','combate visível','combate em quadro','combates em quadro',
-               'action first','action led','intense action','visible combat','combat on screen')
-    # The input phrase is a retrieval cue. Avoid treating an explicit negation as a positive cue.
-    clauses = re.split('[,.;!?\n]',str(intention))
-    relevant = [clause for clause in clauses if _phrase_found(clause,choices)]
-    negative_words = {'nao','sem','evitar','dispensar','no','not','without','avoid','exclude'}
-    positive = False
-    for clause in relevant:
-        clause_terms = ' '.join(tokens(clause))
-        for cue in choices:
-            cue_terms = ' '.join(tokens(cue))
-            before, match, _ = (' ' + clause_terms + ' ').partition(' ' + cue_terms + ' ')
+    choices = ('guerra de ação', 'ação intensa', 'ação cinematográfica intensa',
+               'predominância de ação', 'ação dominante', 'ação física dominante',
+               'combate visível', 'combate em quadro', 'combates em quadro',
+               'action first', 'action led', 'action dominant', 'intense action',
+               'visible combat', 'combat on screen')
+    clauses = re.split(r'[;!?\n]|(?<!\d)[,.]|[,.](?!\d)', str(intention))
+    action_share = re.compile(r'\b(\d{1,3}(?:[.,]\d+)?)\s*%\s*(?:de\s+)?(?:ação|acao|action)\b', re.I)
+    negative_words = {'nao', 'sem', 'evitar', 'dispensar', 'no', 'not', 'without', 'avoid', 'exclude'}
+    relevant = False
+    for clause in clauses:
+        cues = [cue for cue in choices if _phrase_found(clause, (cue,))]
+        shares = list(action_share.finditer(clause))
+        relevant = relevant or bool(cues or shares)
+        cues.extend(share[0] for share in shares if 50 < float(share[1].replace(',', '.')) <= 100)
+        clause_terms = ' ' + ' '.join(tokens(clause)) + ' '
+        for cue in cues:
+            cue_terms = ' ' + ' '.join(tokens(cue)) + ' '
+            before, match, _ = clause_terms.partition(cue_terms)
             if match and not (set(before.split()[-4:]) & negative_words):
-                positive = True
-                break
-        if positive:
-            break
-    if positive or (not relevant and genres[0] in {'guerra','ação'} and 'ação' in genres):
+                return 'action_led_war'
+    if not relevant and genres[0] in {'guerra', 'ação'} and 'ação' in genres:
         return 'action_led_war'
     return 'genre_default'
 
