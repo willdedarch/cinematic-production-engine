@@ -1,11 +1,11 @@
 environment,status,available_or_fallback,limits
-Windows/Codex desta sessão,EXECUTADO,"Core, ferramentas locais, conector Sheets; UIHTTPS amostrada",Blender falhou; HTMLlocal bloqueado; hooks não ativados
+Windows/Codex desta sessão,EXECUTADO,"Core, ferramentas locais, leitura Sheets e Blender headless isolado",HTML local bloqueado na tentativa anterior; hooks nativos sem despacho confirmado
 Windows sem hooks,SUPORTADO PELO FLUXO; EXECUTADO,CLI/eventos explícitos + interação do agente,Não captura chamadas fora do harness
 Linux/macOS,PROJETADO; NÃO EXECUTADO,"Python pathlib, subprocess sem shell, executáveis via PATH/config","Verificar dependências, fontes, codecs e permissões antes de uso"
 Codex em outro computador,PARCIAL; NÃO CERTIFICADO,Skill/CLI portáveis; redescobrir conta/conector/ambiente,link_id é local ao host; receipts antigos não concedem acesso
 ChatGPT Work com filesystem/conectores,CONDICIONAL; NÃO EXECUTADO,Instruções e Sheets por ferramentas existentes,"Confirmar suporte real de Skill, arquivos, Python e hooks"
 Host sem filesystem,DEGRADAÇÃO DOCUMENTADA,"Conversa, referências e conector Sheets se disponíveis","Não prometer CLI, análise local, hashes de arquivos ou hooks"
 Host sem Google Sheets,OFFLINE NÃO SINCRONIZADO,"Rascunho/checkpoint local, nova leitura antes de reconciliar",Não declarar gravação nem substituir fonte silenciosamente
-Host sem geração nativa,SUPORTADO,"Referências, texto, cálculo,2D, overlay",Conceito não gerado; produção definitiva manual
+Host sem geração nativa,SUPORTADO,"Referências, texto, cálculo, previs 2D e overlay",Conceito não gerado; produção definitiva manual
 Host sem Pillow/NumPy/FFmpeg,DEGRADAÇÃO DOCUMENTADA E NEGATIVOS TESTADOS,Core e cálculos; descrição/inspeção manual,Sem prometer derivados de imagem/mídia
 Blender compatível em outro host,EXPERIMENTAL,"Factory-startup, isolado, escala, câmeras e save/reopen no adapter",Precisa executar e validar; existência de código não prova render

@@ -2,11 +2,11 @@
 
 ## Instalação e versão
 
-Extraia o ZIP em uma pasta nova e mantenha a estrutura, inclusive `SKILL.md`, `scripts`, `panels` e `integrations`. Disponibilize essa pasta pelo mecanismo de Skills do seu ambiente. A versão da Skill é 1.4.0 e o contrato de estado é 3.1.0. O arquivo V3 original permanece privado e seu fingerprint está em `legacy`. Cada produção usa outra pasta de trabalho, que deve ser mantida entre interações. Abra a conversa com a conta configurada já conectada. O ZIP pode ser atualizado sem mover a produção. Vincular a Skill ao host e autorizar o conector são operações distintas.
+Extraia o ZIP em uma pasta nova e mantenha a estrutura, inclusive `SKILL.md`, `scripts`, `panels` e `integrations`. A candidata é a 1.5.0 e o contrato de estado é 3.1.0. Valide a pasta extraída conforme o [README](README.md). Para atualizar uma instalação, guarde a versão anterior e mantenha o workspace de produção separado. Preserve o vínculo privado e o arquivo de configuração do host quando aplicar o pacote ao mesmo ambiente. Abra uma nova conversa com a conta configurada já conectada e peça para retomar um episódio. O agente valida o vínculo pela leitura atual. O arquivo V3 original permanece privado e seu fingerprint está em `legacy`.
 
 ## Produzir o episódio seguinte
 
-Peça **“Abra o episódio dois de [nome da série] e mostre o que mudou desde o primeiro”**. Na presença de títulos repetidos, o agente apresenta as opções. Um episódio de ensaio precisa ser solicitado como ensaio. Você recebe o link da mesa da série, o episódio aberto e a hora da leitura. Guarde esse endereço. Para rever mudanças de outro colaborador, peça “atualize meu episódio” e depois use **Recarregar mesa**. Duas abas abertas em momentos diferentes podem mostrar leituras diferentes.
+Peça **“Abra o episódio dois de [nome da série] e mostre o que mudou desde o primeiro”**. Na presença de títulos repetidos, o agente apresenta as opções. Um episódio de ensaio precisa ser solicitado como ensaio. Na conversa, o painel mostra o episódio, o plano, a próxima decisão e a hora da leitura. Para rever mudanças de outro colaborador, peça “atualize meu episódio”. Se estiver usando a mesa HTML como apoio, use **Recarregar mesa** depois da leitura. Duas abas abertas em momentos diferentes podem mostrar leituras diferentes.
 
 Na entrada, **Continuar episódio** retoma o último plano aberto naquele navegador. Na primeira visita a chamada identifica o plano de entrada. A próxima decisão mostra a proposta ou o par disponível naquela leitura. Também é possível começar pelo roteiro, por uma cena ou por dois takes. Para começar pelo texto, abra o roteiro registrado ou leia um arquivo local em texto. Quando quiser incorporá-lo à produção, indique o arquivo e a mudança na conversa.
 
@@ -22,7 +22,7 @@ Também é possível partir da fala. Em **Tenho um roteiro**, abra a versão do 
 
 1. Para trabalhar livremente, abra **Tenho dois takes** e escolha os arquivos locais. Para registrar uma preferência reutilizável, peça **“apresente dois takes deste plano para comparar a pausa”**. O agente verifica as mídias e prepara o par com versões identificadas.
 2. Entre no comparador pelo plano, marque 3,8 a 4,6 segundos, ative a repetição e alterne o áudio entre A e B. Marque o instante que motivou sua escolha. O link de retorno leva ao mesmo plano e às suas notas.
-3. Na conversa, diga **“Registre B neste plano pela pausa antes da fala aos 4,2 s. O trecho é de 3,8 a 4,6 s.”** Também cabem empate ou rejeição dos dois. O agente guarda marca, trecho, razão, alcance e versões. Se houver vários pares compatíveis, ele identifica o par pela pergunta e pelo contexto de apresentação.
+3. Na conversa, diga **“Registre B neste plano pela pausa antes da fala aos 4,2 s. O trecho é de 3,8 a 4,6 s.”** Também cabem empate ou rejeição dos dois. O agente guarda marca, trecho, razão, alcance e as versões do par que apresentou. A mensagem copiada do comparador carrega a identificação e a versão do par. Se não der para identificar a apresentação exata, o agente pede para rever o par antes de registrar.
 4. A preferência aparece no cartão com o recibo após a atualização. Uma versão posterior preserva o voto como histórico. Para usar uma alternativa na montagem, peça expressamente para escolher aquela versão para o corte e dê o motivo. Uma escolha sobre a pausa de um plano só ganha alcance de cena, episódio ou série se o diretor assim indicar.
 
 ## Trabalhar com a equipe
@@ -60,6 +60,8 @@ LIB-CPE31 identifica a biblioteca compartilhada. TEST-CPE31 identifica o ensaio 
 
 Se o conector falhar, guardar checkpoint local identificado como não sincronizado; seguir pesquisa/rascunho seguro e registrar pendência. Ao reconectar, ler estado atual e comparar antes de escrever. O CLI valida cópias e planos, sem prometer leitura remota. Fonte Google não é substituída silenciosamente por um JSON. Arquivo de teste não é estado de produção.
 
+Para recuperar uma operação da sessão anterior, indique o projeto e a entrega na conversa. O agente lê a planilha, localiza o checkpoint e compara com a leitura atual. Se divergir, apresenta as diferenças e mantém os dois registros para reconciliação. Um plano de escrita pendente pode ter chegado parcialmente ao Sheets. Consulte dados e histórico antes de retomar. Para voltar à versão anterior da Skill, carregue o pacote preservado e valide novamente o vínculo com a mesma planilha.
+
 Se uma ferramenta faltar, continue com referência, texto, diagrama ou revisão manual pertinente. Registre qual critério de imagem, som ou movimento precisa ser observado. Instalações e downloads ficam sob controle do usuário. Para atuar no Blender aberto, o agente precisa identificar a sessão e a cena pelo recurso disponível no ambiente. A abertura do programa depende do host e do mecanismo de integração. Hooks são pontos de execução que um host compatível pode acionar antes ou depois de uma operação. Os exemplos do pacote precisam ser configurados no host para funcionar. [Integração com Blender](integrations/blender.md) · [Operação das ferramentas](harness/manual.md)
 
 ## Verificação e aceitação
@@ -78,3 +80,9 @@ O compilador aceita plano temporal opcional autorado pelo agente/diretor, com in
 Use o modelo público `integrations/google-sheets.binding.json` para preparar `integrations/local-binding.json` privado, redescobrindo os IDs da própria planilha. Mantenha dados, feedback e host-setup privados. O scanner procura padrões conhecidos e exige revisão manual de contexto e procedência. Não publique exports ou originais privados com a Skill.
 
 `scripts/configure_hooks.py` prepara definições para um projeto dedicado. A confiança deve ser revista no painel Hooks do host. O script não altera os registros de confiança. Configuração e testes locais não comprovam acionamento nativo; a cobertura efetiva deve ser observada. Os recibos opcionais contêm somente metadados, sem mensagens ou resultados.
+
+## Entregar e conferir um plano cinematográfico
+
+Peça **“Prepare o plano SH05 para execução manual”**. O agente consulta a versão da cena, as referências, o estado herdado e o objetivo. Se o plano tiver ações que dependem de tempo, mostre a duração e o que acontece em paralelo. O [pacote manual](adapters/cinematic-plans.md) reúne o plano, o texto adaptado, os anexos, sua ordem e as verificações de retorno.
+
+Quando você devolver o take, informe o arquivo, a origem, os direitos e a entrega correspondente. A primeira conferência mede duração e proporção e mostra os trechos a revisar. A decisão sobre atuação, imagem, som e montagem é feita na conversa sobre a versão entregue. O [piloto A linha azul](examples/pilot15/README.md) permite percorrer esse caminho com material local de ensaio.

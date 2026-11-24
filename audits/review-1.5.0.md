@@ -22,6 +22,7 @@ O Blender 5.4.0 Alpha renderizou e reabriu o cenário de teste em processo separ
 ## Revisão e verificação
 
 - [Auditoria inicial independente](audit15-initial.md) e [matriz de 144 requisitos](audit15-coverage.csv), que registram a situação da tag 1.4.1 no início da auditoria.
+- [Situação das 39 seções na candidata](closure-1.5.0.csv), com evidência e pendência por frente.
 - [Reteste independente da candidata](audit15-independent.md), seguido de regressão adicional para prefixo longo em UTF-16 sem BOM. O verificador de distribuição procura padrões conhecidos e depende de inspeção complementar.
 - [Evidência das consultas nativas](connector-readback-1.5.json) sem exportar linhas ou a identidade da conta.
 

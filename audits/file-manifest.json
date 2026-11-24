@@ -72,8 +72,13 @@
     },
     {
       "path": "audits/capability-matrix.csv",
-      "sha256": "70de2e53d35ce3d085bdaaca98c2c63869108d900b669f6564d282e7391f6752",
-      "bytes": 1882
+      "sha256": "522069622b1a5eb6b7c61e455048c70a6338653cca1d159d3656f3c5e4c3d995",
+      "bytes": 1849
+    },
+    {
+      "path": "audits/closure-1.5.0.csv",
+      "sha256": "7cf86779caba896c91de2f0f1e151673ae82c23216655f235885ef48eaa9eba9",
+      "bytes": 4715
     },
     {
       "path": "audits/connector-readback-1.5.json",
@@ -82,8 +87,8 @@
     },
     {
       "path": "audits/environment-compatibility.csv",
-      "sha256": "3296f63e84e80734f9cc7bb385003151a226cb023313a5e35f45b492871d82d6",
-      "bytes": 1702
+      "sha256": "99df645e6ec16ea59edb46dc081f49bb95abc9c7cf1d5c4c1d1bbc57745163ea",
+      "bytes": 1743
     },
     {
       "path": "audits/evidence-classes.md",
@@ -207,8 +212,8 @@
     },
     {
       "path": "audits/review-1.5.0.md",
-      "sha256": "9bdcd2dfff81b907e3f8647f3d2ce4612851c2608aa590d060e474f4a900bdb7",
-      "bytes": 6925
+      "sha256": "43b8bf2d8070a1b0fc5526de915e9b7fd0209784e25607a6a1b082842f0feb2e",
+      "bytes": 7029
     },
     {
       "path": "audits/revision-1.2-series-and-state.md",
@@ -1417,8 +1422,8 @@
     },
     {
       "path": "MANUAL.md",
-      "sha256": "95d855872f5fcabe3b4b8e4a950a8b5962df5b9eb94b8bae897ce2545f82caf1",
-      "bytes": 12429
+      "sha256": "3c3c22ab298d8c399ec8289731ff0a6df1aff007e0cd573481e3fa099b23ea36",
+      "bytes": 13978
     },
     {
       "path": "modules/anti-cliche.md",

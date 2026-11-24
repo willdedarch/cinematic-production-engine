@@ -1,0 +1,40 @@
+secao,frente,situacao_candidata,evidencia,limite
+1,Missão,ENTREGA LOCAL,audits/review-1.5.0.md,Publicação e homologações externas pendentes
+2,Execução contínua,VERIFICADO,audits/audit15-independent.md,Correções após reprodução e nova suíte
+3,Organização,EXECUTADO,audits/review-1.5.0.md,Frentes simultâneas de código e pesquisa e auditoria e piloto
+4,Levantamento da base,VERIFICADO,audits/audit15-coverage.csv,144 linhas classificadas no início do trabalho
+5,Router,VERIFICADO LOCAL,evals/test_routes.py,Recuperação por contexto com aplicação demonstrada no piloto
+6,Cinematic Plan,VERIFICADO LOCAL,evals/test_shot_integrity.py,Direção encenada e percepção de qualidade pedem mídia e decisão humana
+7,Compilador e pacote,VERIFICADO LOCAL,audits/pilot-evidence-1.5.0.json,Seedance e MiniMax no mesmo plano em exportação manual
+8,Adaptadores,LEITURA NATIVA E TESTES LOCAIS,audits/connector-readback-1.5.json,Interface web e geração pendentes
+9,Fontes,REVISÃO DOCUMENTAL,sources/review-1.5.md,Acessos parciais e materiais indisponíveis identificados
+10,Métodos aplicados,REVISÃO E EXERCÍCIOS,sources/methodological-traceability-1.5.csv,33 aplicações com escopo de evidência
+11,Direção e fotografia,ESTUDOS,examples/pilot15/direcao-e-decupagem.md,Encenação escrita e geometria local
+12,Estudos de direção,ESTUDOS,references/professional-methods-1.5.md,Contrastes verificáveis no recorte registrado
+13,Guerra ficcional,ESTUDO E TESTE DE ROTA,examples/pilot15/README.md,Piloto e referências autorais sem validação de plateia
+14,Ambiente vivo,ESTUDO E PRÉVIA,examples/pilot15/direcao-e-decupagem.md,Causalidade escrita e bloqueio esquemático de um plano
+15,Referências positivas,EXEMPLOS E FICHAS,references/professional-study-cards-1.5.json,Aceite de referência visual segue humano
+16,Contrastes,ESTUDOS,examples/pilot15/revisao-e-estudos.md,Comparação editorial sem aprovação automática
+17,Análise de referências profissionais,INSPEÇÃO DOCUMENTAL,sources/coverage-1.5.json,Acesso integral à obra e áudio quando declarado
+18,Resultado do benchmark,INVESTIGADO,benchmarks/review-1.5.md,Efeito causal inconclusivo
+19,Criação e crítica,EXERCITADAS,benchmarks/review-1.5.md,Leitura editorial e revisor sem mascaramento de autoria
+20,Calibração artística,PARCIAL,judgment-engine/calibration-examples.json,Feedback real anterior permanece no escopo do ensaio
+21,Novos benchmarks,EXPLORATÓRIO,benchmarks/results-1.5.json,Três briefs e um parecerista sem decisões humanas novas
+22,Laboratório visual,PRÉVIA E COMPARAÇÃO LOCAL,audits/pilot-evidence-1.5.0.json,Prévia esquemática sem áudio e sem geração por modelo
+23,Ferramentas locais,EXECUÇÃO REAL,audits/capability-matrix.csv,Blender isolado e FFmpeg conferidos; dependências opcionais conforme host
+24,Hooks,SCRIPT VERIFICADO,hooks/README.md,Despacho nativo pendente da confiança
+25,Scripts no fluxo,VERIFICADO LOCAL,examples/pilot15/run-pilot.py,Eventos do CLI e fluxo efetivamente executado
+26,Custo,VERIFICADO LOCAL,harness/policies.json,Zero créditos e execução definitiva manual
+27,Painéis,DOM SIMULADO E PILOTO HISTÓRICO,audits/panel-tests-1.5.0.json,Piloto de votação no chat na 1.4.1
+28,Navegador,PENDENTE,audits/environment-compatibility.csv,Permissão de abrir o HTML e aceite visual e de áudio
+29,Google Sheets,LEITURA NATIVA E REGRESSÃO LOCAL,audits/connector-readback-1.5.json,39 abas e seis intervalos nativos; nova escrita pendente
+30,Distribuição e privacidade,ARQUIVOS VERIFICADOS E HISTÓRICO PENDENTE,audits/review-1.5.0.md,Objeto anterior responde anonimamente e depende de remoção pelo GitHub
+31,Resultados publicados,VERIFICADO LOCAL,audits/python-tests-1.5.0.txt,Resultados vigentes separados dos relatórios históricos
+32,Regressões,VERIFICADO LOCAL,audits/audit15-independent.md,Roteamento e integridade e estado e fluxos de mídia
+33,Distribuição,VALIDAÇÃO DO PACOTE,audits/package-validation.json,Recibo de validação externa ao ZIP informa hash e reteste de extração
+34,Estudo integrado,PRÉ-PRODUÇÃO EXECUTADA,examples/pilot15/README.md,Juízo artístico e produção definitiva pendentes
+35,Revisão adversarial,EXECUTADA,audits/audit15-independent.md,Novas regressões exercitadas após correção
+36,Conclusão técnica e artística,PARCIAL,audits/review-1.5.0.md,Pacote local e homologações externas com estados distintos
+37,Relatório,ENTREGUE,audits/review-1.5.0.md,Inclui quadro de limites e evidências
+38,Distribuição e manuais,ENTREGA LOCAL,MANUAL.md,Publicação e instalação da candidata requerem fluxo autorizado
+39,Restrições,RESPEITADAS,RELEASE-METADATA.json,Zero créditos e escrita remota e produção manual
