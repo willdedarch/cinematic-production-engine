@@ -1,0 +1,18 @@
+{
+  "A": {
+    "duration_s": 30,
+    "video_frames": 360,
+    "audio_decoded": true,
+    "impact_expected_s": 5.37,
+    "impact_window_peak": 32214,
+    "sha256": "ebbf49865716428b2d6ab6f28159c800b651e29d052af80bb67524a5ea66d506"
+  },
+  "B": {
+    "duration_s": 30,
+    "video_frames": 360,
+    "audio_decoded": true,
+    "impact_expected_s": 0.37,
+    "impact_window_peak": 32613,
+    "sha256": "8d12ca4786480da5a803c5b0c74f8217a92b5585b21e7c24a3eee9a724bb5ff7"
+  }
+}

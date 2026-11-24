@@ -208,9 +208,31 @@ def handoff(snapshot,spec):
     if any(p["name"]=="duration" for p in CAT["models"][model]["parameters"]):
         require("duration" not in params or params["duration"]==shot["duration_s"],"Duration differs from shot")
         params["duration"]=shot["duration_s"]
-    compiled=compile_prompt({"model_id":model,"aspect_ratio":ix["Episodes"][shot["episode_id"]]["aspect_ratio"],
-                             "intent":{k:v for k,v in fields.items() if k in ORDER[model]},"parameters":params,"references":references})
-    return {"shot":sheet["shot"],"delivery":compiled,"attachment_order":[{"id":r["id"],"field":r["role"],"position":r["position"],"file":r["uri"],"revision":r["revision"],"sha256":r["sha256"]} for r in references],
+    prompt_spec = {
+        "model_id": model, "aspect_ratio": ix["Episodes"][shot["episode_id"]]["aspect_ratio"],
+        "intent": {key: value for key, value in fields.items() if key in ORDER[model]},
+        "parameters": params, "references": references,
+    }
+    if "shot" in spec:
+        require(spec["shot"] == sheet["shot"], "Shot changed since the handoff was prepared")
+    plan = spec.get("cinematic_plan")
+    if plan is not None:
+        require(isinstance(plan, dict), "Cinematic plan must be an object")
+        require(plan.get("duration_s", shot["duration_s"]) == shot["duration_s"], "Cinematic plan duration differs from shot")
+        plan = {**plan, "duration_s": plan.get("duration_s", shot["duration_s"])}
+        prompt_spec["cinematic_plan"] = plan
+    compiled = compile_prompt(prompt_spec)
+    if plan is not None:
+        first_entry = plan["beats"][0].get("entry", {})
+        final_state = {}
+        for beat in plan["beats"]:
+            final_state.update(beat.get("entry", {}))
+            final_state.update(beat.get("exit", {}))
+        for name, facts in (("in", first_entry), ("out", final_state)):
+            expected = sheet["states"].get(name, {})
+            require(not isinstance(expected, dict) or all(facts[field] == expected[field] for field in facts.keys() & expected.keys()),
+                    "Cinematic plan conflicts with shot " + name + " state")
+    return {"shot":sheet["shot"],"delivery":compiled,**({"cinematic_plan":plan} if plan is not None else {}),"attachment_order":[{"id":r["id"],"field":r["role"],"position":r["position"],"file":r["uri"],"revision":r["revision"],"sha256":r["sha256"]} for r in references],
             "return_checklist":["Identificar plano, versão e origem","Conferir duração e ação no take","Registrar direitos e revisão técnica/artística"],"execution":"MANUAL"}
 
 def repair_changes(snapshot, spec):

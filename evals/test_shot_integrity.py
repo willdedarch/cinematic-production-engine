@@ -1,6 +1,8 @@
 """Independent checks of shot lineage, repair scope and episode initialization."""
 import copy
 import json
+import subprocess
+import sys
 import tempfile
 import unittest
 from pathlib import Path
@@ -125,3 +127,44 @@ class ShotIntegrity(unittest.TestCase):
               "episode_title":"EP3","target_seconds":45}
         with self.assertRaisesRegex(StateError,"scope differs"):
             initialize_episode(self.snapshot,spec,fixtures.example.auth("EP3"))
+
+    def test_normal_cli_handoff_compiles_timeline_with_current_shot_and_attachments(self):
+        normal = {'shot_id':'SH05','model_id':'seedance_2_5','parameters':{'mode':'omni_reference'}}
+        legacy = self.run_shot('shot-handoff',normal)
+        self.assertNotIn('cinematic_plan',legacy)
+        reference = legacy['attachment_order'][0]['id']
+        states = json.loads(self.row['start_end_state'])
+        plan = {'cast':{'davi':'Davi','lia':'Lia'},'beats':[
+            {'id':'hesitation','start_s':0,'end_s':4,'subjects':['davi'],'action':'Davi hesita antes da oferta.',
+             'entry':states['in'],'references':[reference]},
+            {'id':'handover','start_s':4,'end_s':self.row['duration_s'],'subjects':['davi','lia'],
+             'action':'Lia recebe o cantil.','exit':states['out']},
+        ]}
+        spec = {**normal,'shot':legacy['shot'],'cinematic_plan':plan}
+        with tempfile.TemporaryDirectory() as folder:
+            base = Path(folder)
+            snapshot, request = base/'snapshot.json', base/'request.json'
+            snapshot.write_text(json.dumps(self.snapshot),encoding='utf8')
+            request.write_text(json.dumps(spec),encoding='utf8')
+            run = subprocess.run([sys.executable,'-B',str(fixtures.ROOT/'scripts/cpe.py'),'shot-handoff',
+                                  '--workspace',str(base/'run'),'--snapshot',str(snapshot),'--input',str(request)],
+                                 capture_output=True,encoding='utf8')
+            self.assertEqual(run.returncode,0,run.stderr)
+            result = json.loads(Path(json.loads(run.stdout)['result']).read_text(encoding='utf8'))
+        self.assertIn('0–4 s',result['delivery']['prompt'])
+        self.assertIn('Lia recebe o cantil.',result['delivery']['prompt'])
+        self.assertEqual(result['attachment_order'],legacy['attachment_order'])
+        self.assertEqual(result['cinematic_plan']['duration_s'],self.row['duration_s'])
+        self.assertEqual(result['execution'],'MANUAL')
+
+        wrong_duration = {**spec,'cinematic_plan':{**plan,'duration_s':8}}
+        with self.assertRaisesRegex(StateError,'duration differs from shot'):
+            self.run_shot('shot-handoff',wrong_duration)
+        conflict = copy.deepcopy(spec)
+        field = next(iter(states['out']))
+        conflict['cinematic_plan']['beats'][-1]['exit'][field] = 'outra posição'
+        with self.assertRaisesRegex(StateError,'conflicts with shot out state'):
+            self.run_shot('shot-handoff',conflict)
+        stale = {**spec,'shot':{**spec['shot'],'revision':0}}
+        with self.assertRaisesRegex(StateError,'Shot changed'):
+            self.run_shot('shot-handoff',stale)

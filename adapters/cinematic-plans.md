@@ -21,4 +21,12 @@ O compilador verifica duração, sujeitos, referências efetivamente anexadas e 
 
 Use examples/prompt-specs/seedance_cinematic.json. O gesto muda da mão fechada à oferta e à reação. O estado da manta passa de um beat para outro, enquanto o irmão conserva posição. Uma troca de mão sem ação intermediária é recusada antes da exportação.
 
+Para um plano registrado, execute `cpe.py shot-handoff` com a leitura corrente e um input contendo `shot_id`, `model_id`, `parameters` e, quando preparado, `cinematic_plan`. Informe `shot` tal como devolvido por `shot-card` para conferir revisão e hash. A duração ausente é preenchida com a duração do plano registrado. As entradas e saídas que usam chaves já registradas precisam concordar com o cartão. Cada referência citada deve estar no manifesto de anexos conferidos. O handoff devolve os blocos estruturados e o texto compilado. Chamadas antigas sem plano temporal continuam válidas.
+
+As três fichas abaixo adaptam um mesmo segmento de *O pano vermelho* a capacidades diferentes do catálogo congelado. Elas compilam localmente. Revalide capacidades e papéis na próxima execução real.
+
+- [Kling](../examples/prompt-specs/kling3_0_turbo.json) usa quadro inicial e prioriza mudança visível de apoio. O áudio é orientação editorial externa ao prompt do modelo, quando necessário.
+- [MiniMax](../examples/prompt-specs/minimax_h3.json) usa início visível e preserva o vínculo entre cena e consequência. O plano especifica som como intenção textual. O modo com referência sonora exige também imagem ou vídeo.
+- [Wan](../examples/prompt-specs/wan2_7.json) usa a mesma âncora visual e detalha a queda e o retorno da ambiência. Uma referência sonora exigiria conferir as dependências na interface atual.
+
 Oito modelos foram consultados gratuitamente no catálogo em 24/11/2026 nesta revisão. Nenhuma chamada de geração desses modelos foi executada. O laboratório nativo de imagens do chat tem seu próprio registro de autorização e avaliação.

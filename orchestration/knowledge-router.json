@@ -33,7 +33,7 @@
         "knowledge/source-methods.md"
       ],
       "panel": "G2",
-      "example": "examples/genre-selection.md"
+      "example": "examples/last-water/production.md"
     },
     "G3": {
       "read": [
@@ -46,7 +46,7 @@
         "knowledge/collective-direction.md"
       ],
       "panel": "G3",
-      "example": "examples/genre-selection.md"
+      "example": "examples/benchmark14/README.md"
     },
     "G4": {
       "read": [
@@ -60,7 +60,7 @@
         "knowledge/source-methods.md"
       ],
       "panel": "G4",
-      "example": "examples/genre-selection.md"
+      "example": "examples/contrastive.md"
     },
     "G5": {
       "read": [
@@ -81,7 +81,7 @@
         "knowledge/collective-direction.md"
       ],
       "panel": "G5",
-      "example": "examples/genre-selection.md"
+      "example": "examples/integrated-case/REVISIONS.md"
     },
     "G6": {
       "read": [
@@ -89,7 +89,7 @@
         "departments/props-assets.md"
       ],
       "panel": "G6",
-      "example": "examples/genre-selection.md"
+      "example": "examples/series-worked/storyboard.json"
     },
     "G7": {
       "read": [
@@ -100,7 +100,7 @@
         "judgment-engine/protocol.md"
       ],
       "panel": "G7",
-      "example": "examples/genre-selection.md"
+      "example": "examples/native-lab/README.md"
     },
     "G8": {
       "read": [
@@ -114,7 +114,7 @@
         "harness/optics-previs.md"
       ],
       "panel": "G8",
-      "example": "examples/genre-selection.md"
+      "example": "examples/last-water/geo.svg"
     },
     "G9": {
       "read": [
@@ -124,7 +124,7 @@
         "judgment-engine/protocol.md"
       ],
       "panel": "G9",
-      "example": "examples/genre-selection.md"
+      "example": "examples/series-worked/impact-cantil.json"
     },
     "G10": {
       "read": [
@@ -143,7 +143,7 @@
         "knowledge/source-methods.md"
       ],
       "panel": "G10",
-      "example": "examples/genre-selection.md"
+      "example": "examples/series-worked/SH06-manual.json"
     },
     "G11": {
       "read": [
@@ -152,7 +152,7 @@
         "knowledge/narrative-editing.md"
       ],
       "panel": "G11",
-      "example": "examples/genre-selection.md"
+      "example": "examples/native-lab/README.md"
     },
     "G12": {
       "read": [
@@ -160,7 +160,7 @@
         "modules/continuity.md"
       ],
       "panel": "G12",
-      "example": "examples/genre-selection.md"
+      "example": "examples/integrated-case/import-spec.json"
     },
     "G13": {
       "read": [
@@ -172,7 +172,7 @@
         "knowledge/collective-direction.md"
       ],
       "panel": "G13",
-      "example": "examples/genre-selection.md"
+      "example": "examples/takes/README.md"
     },
     "G14": {
       "read": [
@@ -183,7 +183,7 @@
         "judgment-engine/protocol.md"
       ],
       "panel": "G14",
-      "example": "examples/genre-selection.md"
+      "example": "examples/integrated-case/REVISIONS.md"
     },
     "G15": {
       "read": [
@@ -191,7 +191,7 @@
         "references/series-continuity.md"
       ],
       "panel": "G15",
-      "example": "examples/genre-selection.md"
+      "example": "examples/benchmark14/README.md"
     }
   },
   "commands": {
@@ -211,22 +211,25 @@
     "MINE": "G1"
   },
   "conditions": {
-    "war": [
-      "engines/war-film.md",
-      "knowledge/war-film.md",
-      "examples/last-water/production.md"
-    ],
     "historical": [
       "references/series-continuity.md"
     ],
     "guerra": [
+      "engines/war-film.md",
       "knowledge/war-film.md",
-      "examples/last-water/production.md"
+      "engines/living-world.md"
     ],
     "project-profile": [
-      "project-profiles/project-template.md",
-      "knowledge/war-film.md",
-      "examples/last-water/production.md"
+      "project-profiles/project-template.md"
+    ],
+    "documentário": [
+      "modules/editorial-sound.md"
+    ],
+    "comédia": [
+      "modules/dialogue-engine.md"
+    ],
+    "suspense": [
+      "modules/suspense-engine.md"
     ]
   },
   "facets": {
@@ -234,11 +237,11 @@
       "knowledge/narrative-editing.md"
     ],
     "war": [
+      "engines/war-film.md",
       "knowledge/war-film.md",
-      "knowledge/genre-profiles.json",
       "engines/living-world.md",
       "knowledge/collective-direction.md",
-      "examples/shelter/caso14-roteiro-e-direcao.md"
+      "examples/war-action-pilot/README.md"
     ],
     "optics": [
       "knowledge/optics.md",
@@ -284,6 +287,18 @@
     ],
     "recovery": [
       "harness/manual.md"
+    ],
+    "performance": [
+      "modules/performance-direction.md",
+      "knowledge/collective-direction.md"
+    ],
+    "continuity": [
+      "modules/continuity.md",
+      "references/serie-e-planos.md"
+    ],
+    "sound": [
+      "modules/editorial-sound.md",
+      "harness/media-analysis.md"
     ]
   },
   "judgment": {
@@ -294,5 +309,108 @@
     "rubric_by": "department",
     "calibration": "judgment-engine/calibration-examples.json",
     "implementation": "scripts/judgment.py"
+  },
+  "genre_examples": {
+    "guerra": {
+      "G3": "examples/war-action-pilot/README.md",
+      "G4": "examples/war-action-pilot/README.md",
+      "G5": "examples/war-action-pilot/README.md",
+      "G8": "examples/war-action-pilot/README.md",
+      "G10": "examples/war-action-pilot/README.md",
+      "G11": "examples/war-action-pilot/README.md",
+      "G13": "examples/war-action-pilot/README.md",
+      "G14": "examples/war-action-pilot/README.md"
+    },
+    "documentário": {
+      "G5": "examples/genre-selection.md",
+      "G13": "examples/takes/DOC-01-pair.json"
+    },
+    "comédia": {
+      "G4": "examples/genre-selection.md",
+      "G13": "examples/takes/COM-01-pair.json"
+    },
+    "suspense": {
+      "G13": "examples/takes/SUS-01-pair.json"
+    }
+  },
+  "selectors": {
+    "department": {
+      "screenplay": [
+        "narrative"
+      ],
+      "direction": [
+        "direction",
+        "performance"
+      ],
+      "cinematography": [
+        "optics",
+        "composition",
+        "light"
+      ],
+      "art": [
+        "design"
+      ],
+      "casting": [
+        "performance"
+      ],
+      "editing": [
+        "continuity",
+        "sound"
+      ],
+      "sound": [
+        "sound"
+      ],
+      "continuity": [
+        "continuity"
+      ]
+    },
+    "purpose": {
+      "previs": [
+        "composition",
+        "laboratory"
+      ],
+      "handoff": [
+        "prompts",
+        "continuity"
+      ],
+      "compare": [
+        "media"
+      ],
+      "qc": [
+        "failure",
+        "continuity",
+        "media"
+      ],
+      "revise": [
+        "failure"
+      ]
+    },
+    "problem": {
+      "continuity": [
+        "continuity"
+      ],
+      "spatial": [
+        "composition"
+      ],
+      "performance": [
+        "performance"
+      ],
+      "materials": [
+        "design"
+      ],
+      "sound": [
+        "sound"
+      ]
+    }
+  },
+  "model_examples": {
+    "seedance_2_5": "examples/prompt-specs/seedance_cinematic.json",
+    "seedream_v5_pro": "examples/prompt-specs/seedream_v5_pro.json",
+    "gpt_image_2_6": "examples/prompt-specs/gpt_image_2_6.json",
+    "nano_banana_2_1": "examples/prompt-specs/nano_banana_2_1.json",
+    "flux_3_image": "examples/prompt-specs/flux_3_image.json",
+    "minimax_h3": "examples/prompt-specs/minimax_h3.json",
+    "wan2_7": "examples/prompt-specs/wan2_7.json",
+    "kling3_0_turbo": "examples/prompt-specs/kling3_0_turbo.json"
   }
 }

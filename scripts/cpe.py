@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""CPE 1.2 local CLI. No server, external generation or automatic Google writes."""
+"""CPE local CLI. No server, external generation or automatic Google writes."""
 import argparse,json,sys,traceback
 from pathlib import Path
 from harness_runtime import *
@@ -41,7 +41,10 @@ def execute(a,run):
  if c in {'optics','dof','exposure'}:
   cost_guard(c);return optics(spec) if c=='optics' else dof(spec) if c=='dof' else exposure(spec['fps'],spec['shutter_angle_deg'])
  if c=='task':
-  require(s is not None,'Agent must provide latest native read copy');gate=a.gate or a.task.upper();return context(s,a.project,a.episode,gate,a.facet,a.model,a.include_test,spec.get("intention",""),spec.get("target_ids",[]),spec.get("confirmed_messages",[]))
+  require(s is not None,'Agent must provide latest native read copy')
+  return context(s,a.project,a.episode,a.gate or a.task.upper(),a.facet,a.model,a.include_test,
+                 spec.get('intention',''),spec.get('target_ids',[]),spec.get('confirmed_messages',[]),
+                 department=spec.get('department',''),purpose=spec.get('purpose',''),problem=spec.get('problem',''))
  if c in {'status','resume','next'}:
   require(s is not None,'Latest shared-state read copy required');validate(s);wf=[w for w in s['tables']['Workflow'] if w['episode_id']==a.episode];require(wf,'Episode not found');done={'APPROVED','LOCKED','SKIPPED'};eligible=[w for w in wf if w['status'] not in done and all(next(x for x in wf if x['gate_id']==d)['status'] in done for d in w['depends_on'].split(',') if d)]
   return {'kind':'STATE_READ_COPY','source_read_at':s['read_at'],'remote_read_performed_by_cli':False,'episode_handoff':__import__('series_bible').handoff(s,wf[0]['project_id'],a.episode,before_episode=True),'workflow':wf,'eligible':[w['gate_id'] for w in eligible],'next':'Ask agent to present eligible stage; never approve automatically'}

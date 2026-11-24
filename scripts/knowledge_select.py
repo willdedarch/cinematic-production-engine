@@ -6,10 +6,13 @@ GATE_DEPTS={"G1":{"research","design"},"G2":{"narrative","story"},"G3":{"narrati
 def words(text):
     text=unicodedata.normalize("NFKD",str(text).lower())
     return set(re.findall("[a-z0-9]+","".join(c for c in text if not unicodedata.combining(c))))-{"de","a","as","os","o","em","do","da","um","para","com","the","e"}
-def genre_case(genre):
+def matching_genre_cases(genre):
     cases=json.loads((ROOT/"knowledge/genre-cases.json").read_text(encoding="utf-8"))
     terms=words(genre)
-    return next((case for case in cases if any(words(alias)<=terms for alias in [case["genre"],*case["aliases"]])),None)
+    return [case for case in cases if any(words(alias)<=terms for alias in [case["genre"],*case["aliases"]])]
+
+def genre_case(genre):
+    return next(iter(matching_genre_cases(genre)),None)
 
 def select(snapshot,project,episode,gate,facets,model,intention):
     project_id,episode_id=project["id"],episode["id"]

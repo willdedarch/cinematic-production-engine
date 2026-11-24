@@ -20,8 +20,9 @@ def load(name):return json.loads((ROOT/name).read_text(encoding='utf-8-sig'))
 def main():
     files=[p for p in ROOT.rglob('*') if p.is_file() and not set(p.parts)&{'.git','__pycache__'}]
     check(not any(p.suffix in {'.pyc','.pyo'} or p.is_symlink() for p in files),'Nonportable package file')
+    version=load('RELEASE-METADATA.json')['skill_version']
     front=(ROOT/'SKILL.md').read_text(encoding='utf8').split('---',2)
-    check(len(front)==3 and "version: '1.4.0'" in front[1],'Skill frontmatter/version')
+    check(len(front)==3 and "version: '"+version+"'" in front[1],'Skill frontmatter/version')
     check(re.search(r'^name: cinematic-production-engine$',front[1],re.M) is not None,'Skill name')
     description=re.search(r'^description: (.+)$',front[1],re.M)
     check(description is not None and 0<len(description[1])<=1024,'Skill description')
@@ -76,7 +77,7 @@ def main():
     expected={row['path']:row for row in manifest['files']}
     check(set(actual)==set(expected),'Inventory differs')
     for name,path in actual.items():check(digest(path)==expected[name]['sha256'] and path.stat().st_size==expected[name]['bytes'],'Inventory bytes '+name)
-    return {'status':'PASS','skill_version':'1.4.0','files':len(files),'parsed':parsed,'synthetic_journal_cases':3,
+    return {'status':'PASS','skill_version':version,'files':len(files),'parsed':parsed,'synthetic_journal_cases':3,
       'native_account_exports_included':False,'visual_references_hashed':len(library),'requirement_sections_checked':len(requirements),
       'gate_routes':16,'privacy':private['status'],'artistic_approval':False,'remote_read_performed':False}
 

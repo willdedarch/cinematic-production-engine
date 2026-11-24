@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.4.1 — candidata local de 24/11/2026
+
+- Unifica os aliases de guerra e escolhe exemplos por etapa e contexto, incluindo departamento, finalidade, problema e modelo.
+- Integra o plano temporal opcional a `shot-handoff`, com duração, dependências, estados e revisão do plano conferidos.
+- Acrescenta dois cortes de um animatic de ação ficcional, e ensaios textuais de comédia e documentário em três passes.
+- Identifica logs históricos e vincula as verificações da candidata ao pacote testado.
+
 ## 1.4.0 — 24/11/2026
 
 - Corrige a distribuição pública, substitui exports por fixtures sintéticas e separa configuração e perfis privados. V3 original preservado localmente com fingerprint público.
